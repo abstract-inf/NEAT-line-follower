@@ -43,7 +43,6 @@ def draw_stop_button(screen):
 
 
 def calculate_fitness(robots, genes):
-    """Balanced fitness function with speed incentives and progressive rewards"""
     for i, robot in enumerate(robots):
         try:
             angular_change, left_motor, right_motor = robot.move()
@@ -61,38 +60,39 @@ def calculate_fitness(robots, genes):
             # Smooth Operation Bonus
             smooth_bonus = max(0, 2 - abs(left_motor - right_motor)) * 0.5
             
+            # Sensor color detection
             sensor_color = robot.get_color()
-            # print(sensor_color)
+
+            # 1. Progressive off-track penalty
+            if not line_presence:
+                off_track_penalty = 50 + (robot.off_track_time * 10)  # Ramping penalty
+                robot.off_track_time += 1
+            else:
+                off_track_penalty = 0
+                robot.off_track_time = 0
+
+            # 2. Speed penalty adjustment
+            if avg_speed < 3.0 and center_strength < 2:  # Only penalize slow speeds when not centered
+                genes[i].fitness -= 1.5 * (3.0 - avg_speed)
+
+            # 3. Steering penalty refinement
+            steering_penalty = min(abs(angular_change) * 0.8, 30)  # Cap max penalty
+
+            # 4. Completion reward scaling
             if sensor_color == "green":
-                genes[i].fitness += 10000
+                genes[i].fitness += 5000 + (avg_speed * 100)  # Reward speed AND completion
                 robots.pop(i)
                 genes.pop(i)
-                # print("green")
                 continue
             elif sensor_color == "yellow":
                 genes[i].fitness += 200
-                # print("yellow")
                 continue
             elif sensor_color == "red":
                 genes[i].fitness -= 500
                 robots.pop(i)
                 genes.pop(i)
-                # print("red")
                 continue
 
-            # Progressive Off-Track Penalty
-            off_track_penalty = 0
-            if not line_presence:
-                off_track_penalty = 500  # Faster off-track = worse
-                
-            # Stagnation Penalty (prevents parked robots)
-            if avg_speed < 3.0:
-                genes[i].fitness -= 1.5 * (3.0 - avg_speed)
-                continue
-           
-            # Angular Change Penalty (proportional)
-            steering_penalty = abs(angular_change) * 1  # 0.1 per degree
-            
             # Total Fitness
             genes[i].fitness += (
                 speed_reward +
@@ -101,8 +101,6 @@ def calculate_fitness(robots, genes):
                 off_track_penalty -
                 steering_penalty
             )
-            
-            # robot.draw()
 
         except IndexError:
             genes[i].fitness -= 200
@@ -205,7 +203,7 @@ def main():
     population.add_reporter(neat.Checkpointer(generation_interval=10, filename_prefix=checkpoint_prefix))
 
     # Run the NEAT algorithm.
-    generations = 21 
+    generations = 12
     winner = population.run(eval_genomes, generations)
 
     print("\nBest genome:\n{!s}".format(winner))

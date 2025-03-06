@@ -27,14 +27,16 @@ class LineFollower:
         self.rectangle.fill(self.color)
 
         # Starting position (randomly chosen from two options)
-        self.rect_x, self.rect_y, self.rect_angle = random.choice([(140, 600, 0), 
-                                                                   (140, 600, 0)])
+        self.rect_x, self.rect_y, self.rect_angle = random.choice([(1350, 600, 180), 
+                                                                   (1350, 600, 180)])
         self.sensors_data = [0 for _ in range(self.num_sensors)]
         
         # motors control parameters
         self.MAX_SPEED = 8
         self.right_motor_speed = 0
         self.left_motor_speed = 0
+
+        self.off_track_time = 0  # Track consecutive off-track time
 
     def move(self):
         """
