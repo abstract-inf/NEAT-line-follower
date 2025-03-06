@@ -21,16 +21,16 @@ from robot import LineFollower
 pygame.init()
 
 # Screen setup
-WIDTH, HEIGHT = 1000, 1000
+WIDTH, HEIGHT = 1500, 700
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption("NEAT Line Follower")
 
 # Load and scale the line path image
-line_path = pygame.image.load("line_paths/line_path.png")
+line_path = pygame.image.load("line_paths/line_path5.png")
 line_path = pygame.transform.scale(line_path, (WIDTH, HEIGHT))
 
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
-GEN_MAX_TIME = 20
+GEN_MAX_TIME = 40
 
 def draw_stop_button(screen):
     """Draws a stop button in pygame and returns its rectangle for click detection."""
@@ -46,7 +46,6 @@ def calculate_fitness(robots, genes):
     """Balanced fitness function with speed incentives and progressive rewards"""
     for i, robot in enumerate(robots):
         try:
-            robot.draw()
             angular_change, left_motor, right_motor = robot.move()
             
             avg_speed = (left_motor + right_motor) / 2
@@ -62,6 +61,25 @@ def calculate_fitness(robots, genes):
             # Smooth Operation Bonus
             smooth_bonus = max(0, 2 - abs(left_motor - right_motor)) * 0.5
             
+            sensor_color = robot.get_color()
+            # print(sensor_color)
+            if sensor_color == "green":
+                genes[i].fitness += 10000
+                robots.pop(i)
+                genes.pop(i)
+                # print("green")
+                continue
+            elif sensor_color == "yellow":
+                genes[i].fitness += 200
+                # print("yellow")
+                continue
+            elif sensor_color == "red":
+                genes[i].fitness -= 500
+                robots.pop(i)
+                genes.pop(i)
+                # print("red")
+                continue
+
             # Progressive Off-Track Penalty
             off_track_penalty = 0
             if not line_presence:
@@ -73,7 +91,7 @@ def calculate_fitness(robots, genes):
                 continue
            
             # Angular Change Penalty (proportional)
-            steering_penalty = abs(angular_change) * 100  # 0.1 per degree
+            steering_penalty = abs(angular_change) * 1  # 0.1 per degree
             
             # Total Fitness
             genes[i].fitness += (
@@ -84,6 +102,7 @@ def calculate_fitness(robots, genes):
                 steering_penalty
             )
             
+            # robot.draw()
 
         except IndexError:
             genes[i].fitness -= 200

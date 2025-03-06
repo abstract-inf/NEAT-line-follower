@@ -11,12 +11,12 @@ from robot import LineFollower
 pygame.init()
 
 # Set up the drawing window
-WIDTH, HEIGHT = 1000, 1000
+WIDTH, HEIGHT = 1500, 700
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption("NEAT Line Follower")
 
 # load line path image
-line_path = pygame.image.load("line_paths/line_path.png")
+line_path = pygame.image.load("line_paths/line_path5.png")
 line_path = pygame.transform.scale(line_path, (WIDTH, HEIGHT))
 
 

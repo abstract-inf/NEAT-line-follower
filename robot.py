@@ -27,8 +27,8 @@ class LineFollower:
         self.rectangle.fill(self.color)
 
         # Starting position (randomly chosen from two options)
-        self.rect_x, self.rect_y, self.rect_angle = random.choice([(866, 531, -90), 
-                                                                   (100, 180, -90)])
+        self.rect_x, self.rect_y, self.rect_angle = random.choice([(140, 600, 0), 
+                                                                   (140, 600, 0)])
         self.sensors_data = [0 for _ in range(self.num_sensors)]
         
         # motors control parameters
@@ -42,7 +42,7 @@ class LineFollower:
         The network outputs represent the left and right motor speed factors.
         Returns the absolute angular change (in degrees) for potential fitness penalty.
         """
-        self.sensors_data = self.get_sensors_data()
+        self.sensors_data = self.get_sensors_data(draw=True)
         output = self.net.activate([self.right_motor_speed, self.left_motor_speed, *self.sensors_data])
 
         # network outputs two values in the range [-1, 1]
@@ -86,15 +86,34 @@ class LineFollower:
                 self.sensors_data[i] = 0
                 if draw:
                     pygame.draw.circle(self.screen, (125, 125, 125), (sensor_x, sensor_y), 5)
-            elif pixel_color == (0, 0, 0):  # Black line
+            elif pixel_color == (0, 0, 0) or pixel_color == (255, 255, 0):  # Black or Yellow line 
                 self.sensors_data[i] = 1
                 if draw:
-                    pygame.draw.circle(self.screen, (255, 0, 0), (sensor_x, sensor_y), 5)
+                    pygame.draw.circle(self.screen, (0, 0, 255), (sensor_x, sensor_y), 5)
 
         return self.sensors_data
+
+    def get_color(self):
+        """a method for checking the color of any of the sensors"""
+        angle_rad = math.radians(self.rect_angle)
+        sensor_x = int(self.rect_x + self.front_sensor_distance * math.cos(angle_rad))
+        sensor_y = int(self.rect_y - self.front_sensor_distance * math.sin(angle_rad))
+        # Check the color at the sensor position.
+        pixel_color = self.screen.get_at((sensor_x, sensor_y))
+        # pygame.draw.circle(self.screen, (100, 100, 255), (sensor_x, sensor_y), 5)
+        if pixel_color == (0, 255, 0):  # Green background
+            return "green"
+        elif pixel_color == (255, 0, 0):  # Red background
+            return "red"
+        elif pixel_color == (255, 255, 0): # Yellow background
+            return "yellow"
+            
+        return pixel_color
+
 
     def draw(self):
         """Draws the robot's rotated rectangle on the screen."""
         rotated_surface = pygame.transform.rotate(self.rectangle, self.rect_angle)
         rotated_rect = rotated_surface.get_rect(center=(self.rect_x, self.rect_y))
         self.screen.blit(rotated_surface, rotated_rect.topleft)
+
