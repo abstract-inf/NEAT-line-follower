@@ -3,14 +3,14 @@
 fitness_criterion     = max
 fitness_threshold     = 19290
 no_fitness_termination = True
-pop_size              = 200
+pop_size              = 500
 reset_on_extinction   = False
 
 [DefaultGenome]
 # node activation options
-activation_default      = sigmoid
-activation_mutate_rate  = 0.0
-activation_options      = sigmoid
+activation_default      = tanh
+activation_mutate_rate  = 0.1
+activation_options      = tanh sigmoid
 
 # node aggregation options
 aggregation_default     = sum
@@ -42,8 +42,8 @@ feed_forward            = False
 initial_connection      = full_nodirect
 
 # node add/remove rates
-node_add_prob           = 0.2
-node_delete_prob        = 0.2
+node_add_prob           = 0.07
+node_delete_prob        = 0.07
 
 # network parameters
 num_hidden              = 0
@@ -62,14 +62,14 @@ response_replace_rate   = 0.0
 # connection weight options
 weight_init_mean        = 0.0
 weight_init_stdev       = 1.0
-weight_max_value        = 30
-weight_min_value        = -30
+weight_max_value        = 10
+weight_min_value        = -10
 weight_mutate_power     = 0.5
 weight_mutate_rate      = 0.8
 weight_replace_rate     = 0.1
 
 [DefaultSpeciesSet]
-compatibility_threshold = 3.0
+compatibility_threshold = 2.9
 
 [DefaultStagnation]
 species_fitness_func = max
