@@ -29,7 +29,8 @@ def plot_stats(statistics, ylog=False, view=False, filename='avg_fitness.svg'):
     if ylog:
         plt.gca().set_yscale('symlog')
 
-    plt.savefig(filename)
+    if len(filename) != 0:
+        plt.savefig(filename)
     if view:
         plt.show()
 
@@ -102,7 +103,8 @@ def plot_species(statistics, view=False, filename='speciation.svg'):
     plt.ylabel("Size per Species")
     plt.xlabel("Generations")
 
-    plt.savefig(filename)
+    if len(filename) != 0:
+        plt.savefig(filename)
 
     if view:
         plt.show()

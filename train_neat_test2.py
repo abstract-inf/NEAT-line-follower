@@ -11,7 +11,6 @@ import math
 import pickle
 import random
 import datetime
-import colorsys
 
 import pygame
 import neat
@@ -29,7 +28,7 @@ pygame.display.set_caption("NEAT Line Follower")
 line_path = pygame.image.load("line_paths/line_path4.png")
 line_path = pygame.transform.scale(line_path, (WIDTH, HEIGHT))
 
-# Simulation time before moving to next generation (in relative to running the simulation at 60fps)
+# Simulation time before moving to next generation (in seconds, assuming 60fps)
 GEN_MAX_TIME = 20
 
 class LineFollower:
@@ -57,42 +56,58 @@ class LineFollower:
         # Starting position (randomly chosen from two options)
         self.rect_x, self.rect_y = random.choice([(775, 840), (200, 840)])
         self.rect_angle = 90  # Facing upwards initially
-        self.SPEED = 4        # Movement speed
-        self.ROTATION_SPEED = 7  # Rotation speed
-
         self.sensors_data = [0 for _ in range(self.num_sensors)]
+        
+        # motors control parameters
+        self.MAX_SPEED = 5
+        self.right_motor_speed = 0
+        self.left_motor_speed = 0
 
     def move(self):
-        """Activates the network to move the robot and returns True if it turns."""
+        """
+        Activates the network to move the robot using differential drive logic.
+        The network outputs represent the left and right motor speed factors.
+        Returns the absolute angular change (in degrees) for potential fitness penalty.
+        """
         self.sensors_data = self.get_sensors_data()
-        output = self.net.activate(self.sensors_data)
+        output = self.net.activate([self.right_motor_speed, self.left_motor_speed, *self.sensors_data])
 
-        # Update position based on the current angle
+        # Assume network outputs two values in the range [0, 1]
+        left_motor = output[0]   # left motor speed factor
+        right_motor = output[1]  # right motor speed factor
+
+        # Differential drive physics:
+        # Forward velocity = average of left and right motor speeds scaled by self.SPEED.
+        forward_velocity = ((left_motor + right_motor) / 2) * self.SPEED
+
+        # Angular velocity: difference between right and left speeds.
+        # wheel_distance is the distance between the two motors (pixels).
+        wheel_distance = 20.0
+        angular_velocity_rad = (right_motor - left_motor) / wheel_distance  # radians per tick
+        angular_velocity_deg = math.degrees(angular_velocity_rad)
+
+        # Update position: move forward in the current direction.
         angle_rad = math.radians(self.rect_angle)
-        self.rect_x += self.SPEED * math.cos(angle_rad)
-        self.rect_y -= self.SPEED * math.sin(angle_rad)
+        self.rect_x += forward_velocity * math.cos(angle_rad)
+        self.rect_y -= forward_velocity * math.sin(angle_rad)
 
-        # Adjust rotation based on network output
-        if output[0] > 0.5:  # Turn left
-            self.rect_angle = (self.rect_angle + self.ROTATION_SPEED) % 360
-            return True
-        elif output[1] > 0.5:  # Turn right
-            self.rect_angle = (self.rect_angle - self.ROTATION_SPEED) % 360
-            return True
-        else:
-            return False
+        # Update orientation: add angular velocity (in degrees).
+        self.rect_angle = (self.rect_angle + angular_velocity_deg) % 360
+
+        # Return the magnitude of the angular change for fitness adjustments.
+        return abs(angular_velocity_deg)
 
     def get_sensors_data(self, draw=True):
         """Computes sensor values based on the line path colors and optionally draws sensor circles."""
         for i in range(self.num_sensors):
-            # Calculate sensor angle offset from the center
+            # Calculate sensor angle offset from the center.
             offset = (i - (self.num_sensors - 1) / 2) * self.spacing
             angle_rad = math.radians(self.rect_angle)
             sensor_angle = angle_rad + math.radians(offset)
             sensor_x = int(self.rect_x + self.front_sensor_distance * math.cos(sensor_angle))
             sensor_y = int(self.rect_y - self.front_sensor_distance * math.sin(sensor_angle))
 
-            # Check the color at the sensor position
+            # Check the color at the sensor position.
             pixel_color = screen.get_at((sensor_x, sensor_y))[:3]
             if pixel_color == (255, 255, 255):  # White background
                 self.sensors_data[i] = 0
@@ -111,103 +126,92 @@ class LineFollower:
         rotated_rect = rotated_surface.get_rect(center=(self.rect_x, self.rect_y))
         screen.blit(rotated_surface, rotated_rect.topleft)
 
-def get_species_colors(species_ids):
-    """Assigns a unique color to each species ID."""
-    unique_species = list(set(species_ids))
-    num_species = len(unique_species)
-    
-    species_colors = {}
-    for i, species in enumerate(unique_species):
-        hue = i / max(1, num_species)  # Evenly distribute colors in the hue spectrum
-        rgb = colorsys.hsv_to_rgb(hue, 1, 1)  # Convert HSV to RGB
-        species_colors[species] = tuple(int(c * 255) for c in rgb)  # Convert to 0-255 range
-    
-    return species_colors
-
 
 def draw_stop_button(screen):
-    """Draws a stop button in pygame."""
+    """Draws a stop button in pygame and returns its rectangle for click detection."""
     font = pygame.font.Font(None, 30)
     button_rect = pygame.Rect(10, 10, 120, 40)  # (x, y, width, height)
-    
     pygame.draw.rect(screen, (200, 0, 0), button_rect)  # Red button
     text_surface = font.render("Stop", True, (255, 255, 255))
     screen.blit(text_surface, (button_rect.x + 30, button_rect.y + 10))
-    
-    return button_rect  # Return button rect for click detection
+    return button_rect
+
 
 def calculate_fitness(robots, genes):
-    # Process each robot
+    """
+    For each robot, moves it using differential drive logic,
+    penalizes excessive turning, and applies sensor-based fitness adjustments.
+    """
     for i, robot in enumerate(robots):
         try:
-            if robot.move():
-                genes[i].fitness -= 2  # Penalize turning
+            # Move the robot; get the absolute angular change (in degrees).
+            turning_amount = robot.move()
+            # Penalize excessive turning (adjust multiplier as needed).
+            genes[i].fitness -= turning_amount * 0.1
+
+            # Draw the robot.
             robot.draw()
 
-            # Fitness function: reward if any sensor is active
+            # Fitness function: reward if any sensor is active.
             if any(sensor == 1 for sensor in robot.sensors_data):
+                # For example, if the sensor just right of center is active, give a bigger reward.
                 if robot.sensors_data[robot.num_sensors // 2 + 1] == 1:
                     genes[i].fitness += 5
                 else:
                     genes[i].fitness += 0.5
             else:
-                genes[i].fitness -= 5  # Penalize if no sensor is active
+                # Penalize if no sensor is active.
+                genes[i].fitness -= 5
 
         except IndexError:
-            # In case of sensor index issues, heavily penalize and remove the robot
+            # In case of sensor index issues, heavily penalize and remove the robot.
             robot.genome.fitness -= 500
             robots.pop(i)
             genes.pop(i)
             break
-        
+
+
 def eval_genomes(genomes, config):
     """
     Evaluates each genome by simulating the robot's movement.
-    Adjusts fitness based on sensor activity and penalizes turning.
+    Adjusts fitness based on sensor activity and the differential drive behavior.
     """
     genes = [] 
     robots = []
     
     for genome_id, genome in genomes:
         genome.fitness = 0  # Initialize fitness
-
         line_follower = LineFollower(genome, config)
         genes.append(genome)
         robots.append(line_follower)
-
 
     running = True
     clock = pygame.time.Clock()
     ticks = 0
 
-    # Run simulation loop for 10 seconds (assuming 60 ticks per second)
+    # Run simulation loop for GEN_MAX_TIME seconds (assuming 60 ticks per second)
     while running and robots and ticks < 60 * GEN_MAX_TIME:
         ticks += 1
         clock.tick(0)
 
-        # Draw background
+        # Draw background and line path.
         screen.fill((255, 255, 255))
         screen.blit(line_path, (0, 0))
     
-        # Draw stop button
+        # Draw stop button.
         stop_button = draw_stop_button(screen)
        
-        # Check for events
+        # Check for events.
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False  # Quit program
-            
+                running = False
             elif event.type == pygame.MOUSEBUTTONDOWN:
-                if stop_button.collidepoint(event.pos):  # Check if button clicked
-                    # running = False  # Stop training
-                    return
-
-
+                if stop_button.collidepoint(event.pos):
+                    return  # Stop training if button is clicked.
         if pygame.key.get_pressed()[pygame.K_ESCAPE]:
             running = False
 
         calculate_fitness(robots, genes)
-        
         pygame.display.flip()
 
 
@@ -228,14 +232,14 @@ def main():
     checkpoint_dir = os.path.join(local_dir, "checkpoints")
     os.makedirs(checkpoint_dir, exist_ok=True)
 
-    # Load NEAT configuration
+    # Load NEAT configuration.
     config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
                                 neat.DefaultSpeciesSet, neat.DefaultStagnation,
                                 config_path)
 
     continue_learning = True
 
-    # Restore from the latest checkpoint if continuing training
+    # Restore from the latest checkpoint if continuing training.
     if continue_learning:
         print("Loading checkpoint from last model...")
         checkpoint_files = glob.glob(os.path.join(checkpoint_dir, "neat-checkpoint-*"))
@@ -250,23 +254,23 @@ def main():
         print("Training a new model...")
         population = neat.Population(config)
 
-    # Add NEAT reporters
+    # Add NEAT reporters.
     population.add_reporter(neat.StdOutReporter(True))
     stats = neat.StatisticsReporter()
     population.add_reporter(stats)
 
-    # Save a checkpoint every 5 generations into the checkpoint folder
+    # Save a checkpoint every 10 generations into the checkpoint folder.
     checkpoint_prefix = os.path.join(checkpoint_dir, "neat-checkpoint-")
     population.add_reporter(neat.Checkpointer(generation_interval=10, filename_prefix=checkpoint_prefix))
 
-    # Run the NEAT algorithm
-    generations = 20 if continue_learning else 30
+    # Run the NEAT algorithm.
+    generations = 30 if continue_learning else 50
     winner = population.run(eval_genomes, generations)
 
     print("\nBest genome:\n{!s}".format(winner))
     save_model(winner)
 
-    # Visualize training statistics and the best network
+    # Visualize training statistics and the best network.
     visualize.plot_stats(stats, ylog=False, view=True, filename="")
     visualize.plot_species(stats, view=True, filename="")
     visualize.draw_net(config, winner, view=True, filename="Net")

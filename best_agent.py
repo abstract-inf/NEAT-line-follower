@@ -15,7 +15,7 @@ screen = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption("NEAT Line Follower")
 
 # load line path image
-line_path = pygame.image.load("line_path2.png")
+line_path = pygame.image.load("line_paths/line_path4.png")
 line_path = pygame.transform.scale(line_path, (WIDTH, HEIGHT))
 
 class LineFollower:
@@ -38,7 +38,7 @@ class LineFollower:
         self.rectangle.fill((255, 115, 115))
 
         # Rectangle properties
-        self.rect_x, self.rect_y = 840,610  # starting position
+        self.rect_x, self.rect_y = 200, 840  # starting position
         self.rect_angle = 90  # Facing upwards initially
         self.SPEED = 4  # Movement speed
         self.ROTATION_SPEED = 7  # Rotation speed
@@ -102,7 +102,7 @@ def run_example(genome, config):
 
     running = True
     clock = pygame.time.Clock()
-    while running: # ticks is less than 10 seconds
+    while running:
         clock.tick(60)
 
         # Event handling
@@ -129,14 +129,22 @@ def run_example(genome, config):
 
 if __name__ == "__main__":
     local_dir = os.path.dirname(__file__)
-    config_path = os.path.join(local_dir, 'config_feedforward.txt')
+    config_path = os.path.join(local_dir, 'config.txt')
     
     config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
                          neat.DefaultSpeciesSet, neat.DefaultStagnation,
                          config_path)
     
-    # Load the saved genome
-    with open("best_genome.pickle", "rb") as f:
-        best_genome = pickle.load(f)
+    import glob
 
-    run_example(best_genome, config)
+    # Find the latest genome file
+    genome_files = glob.glob("models/best_genome_*.pkl")
+    latest_genome = max(genome_files, key=os.path.getctime)  # Sort by creation time
+
+    # Load the latest genome
+    with open(latest_genome, "rb") as f:
+        winner = pickle.load(f)
+
+    print(f"Loaded genome from {latest_genome}")
+
+    run_example(winner, config)
