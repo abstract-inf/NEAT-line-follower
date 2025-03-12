@@ -46,7 +46,7 @@ class LineFollowerBot:
 
         # set bot configs
         self.position = np.array(self.robot_config.get('start_xy', (0,0)), dtype=float)
-        self.yaw = robot_config.get('start_yaw', 0)
+        self.yaw = self.robot_config.get('start_yaw')
 
         # Differential drive state: wheel velocities (left and right)
         self.left_wheel_velocity = 0.0
