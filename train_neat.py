@@ -177,7 +177,7 @@ def eval_genomes(genomes, config):
 
 def save_model(winner):
     """Saves the best genome to a file with a timestamp."""
-    os.makedirs("models", exist_ok=True)
+    os.makedirs("neat_results/models", exist_ok=True)
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     filename = os.path.join("models", f"best_genome_{timestamp}.pkl")
     with open(filename, "wb") as f:
@@ -189,7 +189,7 @@ def main():
     """Main function to handle NEAT training and checkpointing."""
     local_dir = os.path.dirname(__file__)
     config_path = os.path.join(local_dir, 'config.txt')
-    checkpoint_dir = os.path.join(local_dir, "checkpoints")
+    checkpoint_dir = os.path.join(local_dir, "neat_results/checkpoints")
     os.makedirs(checkpoint_dir, exist_ok=True)
 
     # Load NEAT configuration.
