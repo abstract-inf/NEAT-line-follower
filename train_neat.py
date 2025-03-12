@@ -11,11 +11,12 @@ import math
 import pickle
 import random
 import datetime
+import json
 
 import pygame
 import neat
 import visualize
-from robot import LineFollower
+from agent import LineFollowerBot
 
 # Initialize Pygame
 pygame.init()
@@ -26,39 +27,46 @@ screen = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption("NEAT Line Follower")
 
 # Load and scale the line path image
-line_path = pygame.image.load("line_paths/line_path5.png")
+line_path = pygame.image.load("imgs/line_paths/line_path5.png")
 line_path = pygame.transform.scale(line_path, (WIDTH, HEIGHT))
 
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
 GEN_MAX_TIME = 40
 
-def draw_stop_button(screen):
-    """Draws a stop button in pygame and returns its rectangle for click detection."""
-    font = pygame.font.Font(None, 30)
-    button_rect = pygame.Rect(10, 10, 120, 40)  # (x, y, width, height)
-    pygame.draw.rect(screen, (200, 0, 0), button_rect)  # Red button
-    text_surface = font.render("Stop", True, (255, 255, 255))
-    screen.blit(text_surface, (button_rect.x + 30, button_rect.y + 10))
-    return button_rect
+# def draw_stop_button(screen):
+#     """Draws a stop button in pygame and returns its rectangle for click detection."""
+#     font = pygame.font.Font(None, 30)
+#     button_rect = pygame.Rect(10, 10, 120, 40)  # (x, y, width, height)
+#     pygame.draw.rect(screen, (200, 0, 0), button_rect)  # Red button
+#     text_surface = font.render("Stop", True, (255, 255, 255))
+#     screen.blit(text_surface, (button_rect.x + 30, button_rect.y + 10))
+#     return button_rect
 
-
-def calculate_fitness(robots, genes):
+def draw_robots(robots:LineFollowerBot):
+    for robot in robots:
+        robot.draw()
+    
+def calculate_fitness(robots:LineFollowerBot, genes):
     for i, robot in enumerate(robots):
         try:
-            angular_change, left_motor, right_motor = robot.move()
+            robot.step(dt)
             
-            avg_speed = (left_motor + right_motor) / 2
-            center_strength = sum(robot.sensors_data[len(robot.sensors_data)//2-1 : len(robot.sensors_data)//2+2])
-            line_presence = any(robot.sensors_data)
+            linear_velocity, angular_velocity_rad = robot.get_velocity()
+            angular_velocity_deg = angular_velocity_rad * 180/math.pi
+            
+            left_wheel_velocity, right_wheel_velocity = robot.left_wheel_velocity, robot.right_wheel_velocity
+            
+            center_strength = sum(robot.sensor_readings[len(robot.sensor_readings)//2-1 : len(robot.sensor_readings)//2+2])
+            line_presence = any(robot.sensor_readings)
             
             # Base Speed Reward (encourage movement)
-            speed_reward = avg_speed * 1.5
+            speed_reward = linear_velocity * 1.5
             
             # Center Alignment Bonus (strong center preference)
             center_bonus = center_strength ** 1.5 * 2
             
             # Smooth Operation Bonus
-            smooth_bonus = max(0, 2 - abs(left_motor - right_motor)) * 0.5
+            smooth_bonus = max(0, 2 - abs(left_wheel_velocity - right_wheel_velocity)) * 0.5
             
             # Sensor color detection
             sensor_color = robot.get_color()
@@ -72,15 +80,15 @@ def calculate_fitness(robots, genes):
                 robot.off_track_time = 0
 
             # 2. Speed penalty adjustment
-            if avg_speed < 3.0 and center_strength < 2:  # Only penalize slow speeds when not centered
-                genes[i].fitness -= 1.5 * (3.0 - avg_speed)
+            if linear_velocity < 3.0 and center_strength < 2:  # Only penalize slow speeds when not centered
+                genes[i].fitness -= 1.5 * (3.0 - linear_velocity)
 
             # 3. Steering penalty refinement
-            steering_penalty = min(abs(angular_change) * 0.8, 30)  # Cap max penalty
+            steering_penalty = min(abs(angular_velocity_deg) * 0.8, 30)  # Cap max penalty
 
             # 4. Completion reward scaling
             if sensor_color == "green":
-                genes[i].fitness += 5000 + (avg_speed * 100)  # Reward speed AND completion
+                genes[i].fitness += 5000 + (linear_velocity * 100)  # Reward speed AND completion
                 robots.pop(i)
                 genes.pop(i)
                 continue
@@ -114,12 +122,18 @@ def eval_genomes(genomes, config):
     Evaluates each genome by simulating the robot's movement.
     Adjusts fitness based on sensor activity and the differential drive behavior.
     """
+    # global robot_config
+
     genes = [] 
     robots = []
     
     for genome_id, genome in genomes:
         genome.fitness = 0  # Initialize fitness
-        line_follower = LineFollower(genome, config, screen)
+        line_follower = LineFollowerBot(genome=genome,
+                                        neat_config=config,
+                                        robot_config=robot_config,
+                                        screen=screen,
+                                        sensor_count=15)
         genes.append(genome)
         robots.append(line_follower)
 
@@ -131,9 +145,14 @@ def eval_genomes(genomes, config):
     while running and robots and ticks < 60 * GEN_MAX_TIME:
         ticks += 1
         clock.tick(0)
-
+        
+        # calculate dt for consisten physics update
+        global dt
+        dt = clock.get_time() / 1000.0  # multiply by 1000 to convert to ms (e.g 16 to 0.016)
+        dt = min(dt, 1/30.0)  # capping for maintaing stability if the simulation becomes too intensive
+        
         # Draw background and line path.
-        screen.fill((255, 255, 255))
+        # screen.fill((255, 255, 255))
         screen.blit(line_path, (0, 0))
         
         # Draw stop button.
@@ -150,6 +169,9 @@ def eval_genomes(genomes, config):
             running = False
 
         calculate_fitness(robots, genes)
+        # draw after calculating the fitness, so no robot sensor overlap
+        draw_robots(robots=robots)
+        
         pygame.display.flip()
 
 
@@ -174,6 +196,11 @@ def main():
     config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
                                 neat.DefaultSpeciesSet, neat.DefaultStagnation,
                                 config_path)
+
+    # load robot config
+    with open("agent/config_line_follower.json", "r") as f:
+        global robot_config
+        robot_config = json.load(f)
 
     continue_learning = True
 

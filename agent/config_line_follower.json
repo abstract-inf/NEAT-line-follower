@@ -1,0 +1,15 @@
+{
+    "robot_config": {
+      "start_xy": [500.0, 500.0],
+      "start_yaw": 90.0,
+      "sensor_range": 15.0,
+      "sensor_angle_range": 1.57,
+      "wheels_spacing": 8.0,
+      "meter_to_pixels": 1000,
+      "max_speed": 255,
+      "motor_nominal_voltage": 12.0,
+      "motor_no_load_rpm": 6000,
+      "motor_stall_torque": 0.5,
+      "volts": 12.0
+    }
+  }

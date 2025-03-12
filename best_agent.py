@@ -16,7 +16,7 @@ screen = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption("NEAT Line Follower")
 
 # load line path image
-line_path = pygame.image.load("line_paths/line_path5.png")
+line_path = pygame.image.load("line_paths/test.png")
 line_path = pygame.transform.scale(line_path, (WIDTH, HEIGHT))
 
 

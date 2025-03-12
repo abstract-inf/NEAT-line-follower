@@ -21,14 +21,14 @@ class LineFollower:
         self.screen = screen
 
         self.net = neat.nn.RecurrentNetwork.create(genome, config)
-
+        
         # Create a rectangle surface with the species color
         self.rectangle = pygame.Surface((self.rect_width, self.rect_height), pygame.SRCALPHA)
         self.rectangle.fill(self.color)
 
         # Starting position (randomly chosen from two options)
-        self.rect_x, self.rect_y, self.rect_angle = random.choice([(1350, 600, 180), 
-                                                                   (1350, 600, 180)])
+        self.rect_x, self.rect_y, self.rect_angle = random.choice([(1050, 420, 180), 
+                                                                   (1050, 420, 180)])
         self.sensors_data = [0 for _ in range(self.num_sensors)]
         
         # motors control parameters
