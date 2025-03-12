@@ -221,10 +221,16 @@ class LineFollowerBot:
             surface.blit(rotated_image, rect)
 
         # Draw sensor rays.
-        sensor_color = (0, 0, 255)
+        sensor_color = (125, 125, 125)
+        sensor_active_color = (0, 0, 255)
         angles = np.linspace(-self.sensor_angle_range / 2, self.sensor_angle_range / 2, self.sensor_count)
-        for sensor_angle in angles:
+        for i, sensor_angle in enumerate(angles):
             ray_angle = self.yaw + sensor_angle
             sensor_end_x = self.position[0] + self.sensor_range * np.cos(ray_angle)
             sensor_end_y = self.position[1] + self.sensor_range * np.sin(ray_angle)
-            pygame.draw.circle(surface, sensor_color, (int(sensor_end_x), int(sensor_end_y)), 2)
+            
+            if self.sensor_readings[i] == 1:
+                pygame.draw.circle(surface, sensor_active_color, (int(sensor_end_x), int(sensor_end_y)), 2)
+            else:
+                pygame.draw.circle(surface, sensor_color, (int(sensor_end_x), int(sensor_end_y)), 2)
+                
