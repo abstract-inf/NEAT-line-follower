@@ -179,7 +179,7 @@ def save_model(winner):
     """Saves the best genome to a file with a timestamp."""
     os.makedirs("neat_results/models", exist_ok=True)
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    filename = os.path.join("models", f"best_genome_{timestamp}.pkl")
+    filename = os.path.join("neat_results/models", f"best_genome_{timestamp}.pkl")
     with open(filename, "wb") as f:
         pickle.dump(winner, f)
     print("Genome saved as", filename)
