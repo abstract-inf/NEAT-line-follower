@@ -13,6 +13,7 @@ import random
 import datetime
 import json
 
+import neat.checkpoint
 import pygame
 import neat
 import visualize
@@ -22,25 +23,14 @@ from agent import LineFollowerBot
 pygame.init()
 
 # Screen setup
-WIDTH, HEIGHT = 1500, 700
-screen = pygame.display.set_mode([WIDTH, HEIGHT])
+# Load the line path image
+line_path = pygame.image.load("imgs/line_paths/test.png")
+# set the screen size to the image size
+screen = pygame.display.set_mode(line_path.get_size())
 pygame.display.set_caption("NEAT Line Follower")
 
-# Load and scale the line path image
-line_path = pygame.image.load("imgs/line_paths/line_path5.png")
-line_path = pygame.transform.scale(line_path, (WIDTH, HEIGHT))
-
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
-GEN_MAX_TIME = 40
-
-# def draw_stop_button(screen):
-#     """Draws a stop button in pygame and returns its rectangle for click detection."""
-#     font = pygame.font.Font(None, 30)
-#     button_rect = pygame.Rect(10, 10, 120, 40)  # (x, y, width, height)
-#     pygame.draw.rect(screen, (200, 0, 0), button_rect)  # Red button
-#     text_surface = font.render("Stop", True, (255, 255, 255))
-#     screen.blit(text_surface, (button_rect.x + 30, button_rect.y + 10))
-#     return button_rect
+GEN_MAX_TIME = 30
 
 def draw_robots(robots:LineFollowerBot):
     for robot in robots:
@@ -55,7 +45,7 @@ def calculate_fitness(robots:LineFollowerBot, genes):
             angular_velocity_deg = angular_velocity_rad * 180/math.pi
             
             left_wheel_velocity, right_wheel_velocity = robot.left_wheel_velocity, robot.right_wheel_velocity
-            
+
             center_strength = sum(robot.sensor_readings[len(robot.sensor_readings)//2-1 : len(robot.sensor_readings)//2+2])
             line_presence = any(robot.sensor_readings)
             
@@ -143,36 +133,26 @@ def eval_genomes(genomes, config):
 
     # Run simulation loop for GEN_MAX_TIME seconds (assuming 60 ticks per second)
     while running and robots and ticks < 60 * GEN_MAX_TIME:
-        ticks += 1
-        clock.tick(0)
-        
-        # calculate dt for consisten physics update
         global dt
-        dt = clock.get_time() / 1000.0  # multiply by 1000 to convert to ms (e.g 16 to 0.016)
-        dt = min(dt, 1/30.0)  # capping for maintaing stability if the simulation becomes too intensive
+
+        ticks += 1
+        clock.tick(1000)  # Allow high FPS
         
-        # Draw background and line path.
-        # screen.fill((255, 255, 255))
-        screen.blit(line_path, (0, 0))
-        
-        # Draw stop button.
-        # stop_button = draw_stop_button(screen)
-       
-        # Check for events.
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                # if stop_button.collidepoint(event.pos):
-                    pass  # Stop training if button is clicked.
-        if pygame.key.get_pressed()[pygame.K_ESCAPE]:
-            running = False
+        dt = clock.get_time() / 1000.0  # Remove artificial cap
+
+        screen.blit(line_path, (0, 0))  # Only draw the background
+
+        if ticks % 10 == 0:  # Only check events every 10 frames
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
 
         calculate_fitness(robots, genes)
         # draw after calculating the fitness, so no robot sensor overlap
-        draw_robots(robots=robots)
         
-        pygame.display.flip()
+        if ticks % 10 == 0:  # Render every 10 frames instead of every frame
+            draw_robots(robots)
+            pygame.display.flip()
 
 
 def save_model(winner):
@@ -230,11 +210,14 @@ def main():
     population.add_reporter(neat.Checkpointer(generation_interval=10, filename_prefix=checkpoint_prefix))
 
     # Run the NEAT algorithm.
-    generations = 12
-    winner = population.run(eval_genomes, generations)
-
-    print("\nBest genome:\n{!s}".format(winner))
-    save_model(winner)
+    generations = 71
+    try:
+        winner = population.run(eval_genomes, generations)
+    except KeyboardInterrupt:
+        print("Stopped training at generation: ", population.generation)
+    finally:
+        print("\nBest genome:\n{!s}".format(winner))
+        save_model(winner)
 
     # Visualize training statistics and the best network.
     visualize.plot_stats(stats, ylog=False, view=True, filename="")
