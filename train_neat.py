@@ -17,7 +17,7 @@ import neat.checkpoint
 import pygame
 import neat
 import visualize
-from agent import LineFollowerBot
+from agent import LineFollowerNEAT
 
 # Initialize Pygame
 pygame.init()
@@ -32,11 +32,11 @@ pygame.display.set_caption("NEAT Line Follower")
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
 GEN_MAX_TIME = 30
 
-def draw_robots(robots:LineFollowerBot):
+def draw_robots(robots:LineFollowerNEAT):
     for robot in robots:
         robot.draw()
     
-def calculate_fitness(robots:LineFollowerBot, genes):
+def calculate_fitness(robots:LineFollowerNEAT, genes):
     for i, robot in enumerate(robots):
         try:
             robot.step(dt)
@@ -119,7 +119,7 @@ def eval_genomes(genomes, config):
     
     for genome_id, genome in genomes:
         genome.fitness = 0  # Initialize fitness
-        line_follower = LineFollowerBot(genome=genome,
+        line_follower = LineFollowerNEAT(genome=genome,
                                         neat_config=config,
                                         robot_config=robot_config,
                                         screen=screen,
