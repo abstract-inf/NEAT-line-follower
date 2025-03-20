@@ -2,10 +2,7 @@
 
 import pygame
 import math
-import neat
-import os
-import pickle
-import visualize
+import random
 import json
 from agent import LineFollowerPID
 
@@ -14,13 +11,13 @@ pygame.init()
 
 # Screen setup
 # Load the line path image
-line_path = pygame.image.load("imgs/line_paths/test.png")
+line_path = pygame.image.load("imgs/line_paths/line_path0.png")
 # set the screen size to the image size
 screen = pygame.display.set_mode(line_path.get_size())
 pygame.display.set_caption("PID Line Follower")
 
 
-def applyPID(sensor_readings):
+def applyPID(sensor_readings) -> list[float, float]:
     # PID Constants
     Kp = 1.0
     Ki = 0.0
@@ -31,16 +28,30 @@ def applyPID(sensor_readings):
     prev_error = 0
 
     # PID Loop
-    error = sensor_readings[0] - sensor_readings[1]
+    # calculate error
+    sensor_count = len(sensor_readings)
+    center_index = (sensor_count - 1) / 2.0
+    weighted_sum = 0
+    total_readings = 0
+    for idx, reading in enumerate(sensor_readings):
+        weight = idx - center_index
+        weighted_sum += reading * weight
+        total_readings += reading
+
+    # Calculate PID
+    error = weighted_sum / total_readings if total_readings != 0 else 0
     integral += error
     derivative = error - prev_error
 
     action = Kp * error + Ki * integral + Kd * derivative
 
-    return action
+    left_motor = 0.5 + action
+    right_motor = 0.5 - action
+
+    return [left_motor, right_motor]
 
 
-def run_example(genome, config):
+def run_pid():
     with open("agent/config_line_follower.json", "r") as f:
         robot_config = json.load(f)
 
@@ -65,14 +76,14 @@ def run_example(genome, config):
             running = False
         
         # Fill the background with white
-        screen.fill((255, 255, 255))
+        # screen.fill((255, 255, 255))
         screen.blit(line_path, (0, 0))  # Draw the background line path once
 
-        sensor_readings = line_follower.get_sensor_readings()
+        sensor_readings = line_follower.get_line_sensor_readings()
 
         action = applyPID(sensor_readings)
 
-        line_follower.apply_action()  # example (0.5, 0.6)
+        line_follower.apply_action(action)
 
         line_follower.step(dt)
         line_follower.draw()
@@ -83,23 +94,4 @@ def run_example(genome, config):
 
 
 if __name__ == "__main__":
-    local_dir = os.path.dirname(__file__)
-    config_path = os.path.join(local_dir, 'config.txt')
-    
-    config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
-                         neat.DefaultSpeciesSet, neat.DefaultStagnation,
-                         config_path)
-    
-    import glob
-
-    # Find the latest genome file
-    genome_files = glob.glob("neat_results/models/best_genome_*.pkl")
-    latest_genome = max(genome_files, key=os.path.getctime)  # Sort by creation time
-
-    # Load the latest genome
-    with open(latest_genome, "rb") as f:
-        winner = pickle.load(f)
-
-    print(f"Loaded genome from {latest_genome}")
-
-    run_example(winner, config)
+    run_pid()
