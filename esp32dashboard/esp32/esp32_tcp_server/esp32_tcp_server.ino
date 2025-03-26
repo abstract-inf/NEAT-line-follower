@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include <ESPmDNS.h>
 
-const char* ssid = "wifi_ssid";
-const char* password = "wifi_password";
+const char* ssid = "ssid";
+const char* password = "password";
 
 WiFiServer server(5000);
 
