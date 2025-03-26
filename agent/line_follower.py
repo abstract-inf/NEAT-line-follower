@@ -185,12 +185,18 @@ class LineFollower:
         self.yaw += omega * dt
 
 
-    def draw(self, img_path=None, draw_robot=True, opacity=255, surface=None):
+    def draw(self,
+             img_path:str=None,
+             draw_robot:bool=True,
+             opacity:int=255,
+             image_size:tuple=(100, 70),
+             surface=None):
         """
         Draw the bot and its sensor rays on the given pygame surface.
         :parap img_path: Path to the robot image to draw on the surface.
         :param draw_robot: Boolean flag to draw the bot.
         :param opacity: Opacity of the bot and sensor rays (0 to 255).
+        :param image_size: Size of the robot image in pixels (width, height).
         :param surface: Pygame Surface object. This can be the main display surface (often called screen),
                         or any other surface for off-screen rendering.
         """
@@ -206,7 +212,7 @@ class LineFollower:
             robot_image = pygame.image.load(img_path).convert_alpha()
             robot_image.set_alpha(int(opacity))
             # Control the image size in pixels by setting desired dimensions.
-            desired_size = (100, 70)  # width and height in pixels
+            desired_size = image_size  # width and height in pixels
             robot_image = pygame.transform.scale(robot_image, desired_size)
             # Rotate the image to match the orientation of the bot.
             rotated_image = pygame.transform.rotate(robot_image, -np.degrees(self.yaw) - 90)  # -90 aligns image with bot's orientation
