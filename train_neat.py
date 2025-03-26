@@ -34,7 +34,7 @@ GEN_MAX_TIME = 30
 
 def draw_robots(robots:LineFollowerNEAT):
     for robot in robots:
-        robot.draw()
+        robot.draw("agent/robot.png", draw_robot=False, opacity=100)
     
 def calculate_fitness(robots:LineFollowerNEAT, genes):
     for i, robot in enumerate(robots):

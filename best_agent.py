@@ -7,7 +7,7 @@ import os
 import pickle
 import visualize
 import json
-from agent import LineFollowerBot
+from agent import LineFollowerNEAT
 
 # Initialize Pygame
 pygame.init()
@@ -24,7 +24,7 @@ def run_example(genome, config):
     with open("agent/config_line_follower.json", "r") as f:
         robot_config = json.load(f)
 
-    line_follower = LineFollowerBot(genome, config, robot_config, screen)
+    line_follower = LineFollowerNEAT(genome, config, robot_config, screen)
 
     running = True
     clock = pygame.time.Clock()
@@ -49,7 +49,7 @@ def run_example(genome, config):
         screen.blit(line_path, (0, 0))  # Draw the background line path once
 
         line_follower.step(dt)
-        line_follower.draw()
+        line_follower.draw(img_path="agent/robot.png", draw_robot=True)
 
 
         # Update the display
