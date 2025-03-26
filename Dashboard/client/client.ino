@@ -1,67 +1,53 @@
 #include <WiFi.h>
+#include <ESPmDNS.h>
 
-const char* ssid = "Damamax Fiber_72AF";
-const char* password = "atout4wifi";
-const char* serverIP = "192.168.100.25"; // Replace with your PC's local IP address
-const int serverPort = 12345;
+const char* ssid = "wifi_ssid";
+const char* password = "wifi_password";
 
-WiFiClient client;
+WiFiServer server(5000);
 
 void setup() {
-  Serial.begin(115200);
-  
-  // Connect to Wi-Fi
-  Serial.println("Connecting to Wi-Fi...");
-  WiFi.begin(ssid, password);
+    Serial.begin(115200);
+    WiFi.begin(ssid, password);
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+    }
+    Serial.println("\nWi-Fi connected!");
 
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.println("Connecting...");
-  }
-
-  Serial.println("Connected to Wi-Fi");
-  Serial.print("ESP32 IP Address: ");
-  Serial.println(WiFi.localIP());
-
-  // Connect to the server (PC)
-  if (client.connect(serverIP, serverPort)) {
-    Serial.println("Connected to server");
-  } else {
-    Serial.println("Connection to server failed");
-  }
-
-  // Seed the random number generator
-  randomSeed(analogRead(0));  
+    if (!MDNS.begin("esp32")) {
+        Serial.println("Error starting mDNS");
+        return;
+    }
+    Serial.println("mDNS responder started as esp32.local");
+    server.begin();
 }
 
 void loop() {
-  if (!client.connected()) {
-    Serial.println("Lost connection to server. Reconnecting...");
-    if (client.connect(serverIP, serverPort)) {
-      Serial.println("Reconnected to server");
-    } else {
-      Serial.println("Reconnection failed");
-      delay(1000);
-      return;
+    WiFiClient client = server.available();
+    if (client) {
+        // Serial.println("Client connected!");
+        String command = "";
+        
+        // Set a timeout to wait for data and read the full command
+        client.setTimeout(100); // Wait up to 100ms for data
+        command = client.readString();
+        command.trim(); // Remove any extra whitespace/newlines
+
+        if (command.length() > 0) {
+            Serial.print("Received command: ");
+            Serial.println(command);
+            
+            if (command == "LED_ON") {
+                client.println("LED turned ON");
+            } else if (command == "LED_OFF") {
+                client.println("LED turned OFF");
+            } else {
+                client.println("Unknown command");
+            }
+            client.flush(); // Ensure response is sent before closing
+        }
+        
+        client.stop();
     }
-  }
-
-  String message = String(random(0, 2));
-  for (int i=0; i<14; i++){
-    // Generate a random number
-    int randomNumber = random(0, 2); // Generate a random number between 0 and 99
-    message += "," + String(randomNumber);
-  }
-  // Send data to the server (PC)
-  client.print(message);
-  Serial.println("Sent to server: " + message);
-
-  // Check for incoming data from the server
-  if (client.available()) {
-    String incomingData = client.readStringUntil('\n');
-    Serial.print("Received from server: ");
-    Serial.println(incomingData);
-  }
-
-  delay(10);  // Wait before sending next data
 }
