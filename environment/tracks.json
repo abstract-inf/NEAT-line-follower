@@ -1,0 +1,66 @@
+{
+    "train":{
+        "track_1": {
+            "path": "environment/tracks/training_tracks/track (1).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_2": {
+            "path": "environment/tracks/training_tracks/track (2).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_3": {
+            "path": "environment/tracks/training_tracks/track (3).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_4": {
+            "path": "environment/tracks/training_tracks/track (4).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_5": {
+            "path": "environment/tracks/training_tracks/track (5).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_6": {
+            "path": "environment/tracks/training_tracks/track (6).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        }
+    }
+    "test":{
+        "track_1": {
+            "path": "environment/tracks/testing_tracks/track (1).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_2": {
+            "path": "environment/tracks/testing_tracks/track (2).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_3": {
+            "path": "environment/tracks/testing_tracks/track (3).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_4": {
+            "path": "environment/tracks/testing_tracks/track (4).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_5": {
+            "path": "environment/tracks/testing_tracks/track (5).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        },
+        "track_6": {
+            "path": "environment/tracks/testing_tracks/track (6).png",
+            "start_xy": [280.0, 800.0],
+            "start_yaw": 0.0
+        }
+    }
+}

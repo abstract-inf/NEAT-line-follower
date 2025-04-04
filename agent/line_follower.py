@@ -70,6 +70,10 @@ class LineFollower:
         # for fitness function purposes
         self.off_track_time = 0
 
+        # step count is for the number of steps the bot lasted in the simulation int he smae attempt
+        # this is used for logging the data of the bot in each attempt
+        self.step_count = 0
+
     def reset(self, start_xy=None, start_yaw=None):
         """
         Reset the bot's position and orientation.
@@ -138,15 +142,20 @@ class LineFollower:
         for i, sensor_angle in enumerate(angles):
             # Calculate the global angle for each sensor ray.
             ray_angle = self.yaw + sensor_angle
+            
             # Compute sensor tip position.
             sensor_x = int(self.position[0] + self.sensor_range * np.cos(ray_angle))
             sensor_y = int(self.position[1] + self.sensor_range * np.sin(ray_angle))
-            # Check the color at the sensor position.
-            pixel_color = self.screen.get_at((sensor_x, sensor_y))[:3]
-            if pixel_color == (255, 255, 255):  # White background
-                readings[i] = 0
-            elif pixel_color == (0, 0, 0) or pixel_color == (255, 255, 0):  # Black or Yellow line, yellow is checked for with black because detecting yellow is a reward 
-                readings[i] = 1
+            
+            # Check if the sensor position is within the screen bounds.
+            # Note: The screen is assumed to be the same size as the simulation area.
+            if 0 <= sensor_x < self.screen.get_width() and 0 <= sensor_y < self.screen.get_height():
+                # Check the color at the sensor position.
+                pixel_color = self.screen.get_at((sensor_x, sensor_y))[:3]
+                if pixel_color == (255, 255, 255):  # White background
+                    readings[i] = 0
+                elif pixel_color == (0, 0, 0) or pixel_color == (255, 255, 0):  # Black or Yellow line, yellow is checked for with black because detecting yellow is a reward 
+                    readings[i] = 1
             
         self.sensor_readings = readings
         return readings
@@ -189,7 +198,7 @@ class LineFollower:
              img_path:str=None,
              draw_robot:bool=True,
              opacity:int=255,
-             image_size:tuple=(100, 70),
+             image_size:tuple=(137, 195),
              surface=None):
         """
         Draw the bot and its sensor rays on the given pygame surface.
@@ -331,29 +340,58 @@ class LineFollowerNEAT(LineFollower):
 
 
 class LineFollowerPID(LineFollower):
-    """
-    Class simulating a line following bot with differential steering in a pygame environment.
-    This implementation uses a semi circle sensor array for line detection.
-    """
+    def __init__(self, config: dict, screen: pygame.display, sensor_count: int = 15):
+        # Extract robot config for parent class
+        super().__init__(config, screen, sensor_count)
+        
+        # PID parameters from config
+        self.Kp = config['PID']['Kp']
+        self.Ki = config['PID']['Ki']
+        self.Kd = config['PID']['Kd']
+        
+        # PID state
+        self.integral = 0.0
+        self.prev_error = 0.0
+        self.error_history = []
 
-    def __init__(self,
-                 robot_config   : dict,
-                 screen         :pygame.display,          
-                 sensor_count   : int = 15):
-        super().__init__(robot_config, screen, sensor_count)
+    def compute_pid_action(self, sensor_readings):
+        # Calculate weighted error position
+        sensor_count = len(sensor_readings)
+        center_index = (sensor_count - 1) / 2
+        weighted_sum = 0.0
+        total_weight = 0.0
+        
+        for i, reading in enumerate(sensor_readings):
+            distance_from_center = i - center_index
+            weighted_sum += reading * distance_from_center
+            total_weight += reading
 
-    def step(self, dt):
-        """
-        Update the bot's state over a time step.
-        :param dt: Time step in seconds.
-        :param track: Track object used for obtaining sensor readings.
-        """
-        # Compute differential drive kinematics.
-        v = (self.left_wheel_velocity + self.right_wheel_velocity) / 2.0
-        wheels_spacing = self.robot_config.get("wheels_spacing", 30.0)
-        omega = (self.right_wheel_velocity - self.left_wheel_velocity) / wheels_spacing
+        # Handle line detection failure
+        if total_weight == 0:
+            # Use decaying error from history
+            error = self.prev_error * 0.8 if self.error_history else 0
+            self.off_track_time += 1/60
+        else:
+            error = weighted_sum / total_weight
+            self.off_track_time = max(0, self.off_track_time - 1/60)
+            self.error_history.append(error)
 
-        # Update position and orientation.
-        self.position[0] += v * np.cos(self.yaw) * dt
-        self.position[1] += v * np.sin(self.yaw) * dt
-        self.yaw += omega * dt
+        # PID calculations
+        self.integral += error * self.Ki
+        derivative = (error - self.prev_error) * self.Kd
+        
+        # Anti-windup clamping
+        self.integral = np.clip(self.integral, -1.0, 1.0)
+        
+        # Combine terms
+        control = (error * self.Kp) + self.integral + derivative
+        
+        # Update state
+        self.prev_error = error
+        
+        # Calculate motor outputs
+        base_speed = 0.7  # From config if needed
+        left = np.clip(base_speed + control, 0.0, 1.0)
+        right = np.clip(base_speed - control, 0.0, 1.0)
+
+        return [left, right]
