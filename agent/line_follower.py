@@ -15,7 +15,13 @@ class LineFollower:
     def __init__(self,
                  robot_config   : dict,
                  screen         :pygame.display,          
-                 sensor_count   : int = 15):
+                 sensor_type    : str = "jsumo_xline_v2",
+                 sensor_count   : int = 15,
+                 draw_robot:bool=True,
+                 img_path:str=None,
+                 opacity:int=255,
+                 image_size:tuple=(137, 195)
+                 ):
         """
         Initialize the bot.
         :param genome: NEAT genome
@@ -32,6 +38,12 @@ class LineFollower:
                          for motor simulation, note that volts is the applied voltage to the motor in the simulation.
         :param screen: PyGame Screen (e.g. screen = pygame.display.set_mode([WIDTH, HEIGHT]))
         :param sensor_count: Number of sensors in the semi circle array.
+        :parap img_path: Path to the robot image to draw on the surface.
+        :param draw_robot: Boolean flag to draw the bot.
+        :param opacity: Opacity of the bot and sensor rays (0 to 255).
+        :param image_size: Size of the robot image in pixels (width, height).
+        :param surface: Pygame Surface object. This can be the main display surface (often called screen),
+                        or any other surface for off-screen rendering.
         """
         # convert normal units to pixels
         # Create a copy of the robot_config dictionary
@@ -66,6 +78,8 @@ class LineFollower:
 
         # For storing sensor readings
         self.sensor_readings = np.zeros(self.sensor_count)
+        self.sensor_coordinates = []
+        self.sensor_type = sensor_type
 
         # for fitness function purposes
         self.off_track_time = 0
@@ -73,6 +87,14 @@ class LineFollower:
         # step count is for the number of steps the bot lasted in the simulation int he smae attempt
         # this is used for logging the data of the bot in each attempt
         self.step_count = 0
+
+        # drawing stuff
+        self.img_path = img_path
+        self.draw_robot = draw_robot
+        self.opacity = opacity
+        self.image_size = image_size
+        self.sensor_color = (125, 125, 125)
+        self.sensor_active_color = (0, 0, 255)
 
     def reset(self, start_xy=None, start_yaw=None):
         """
@@ -131,12 +153,16 @@ class LineFollower:
         self.left_wheel_velocity = (l_volts / self.volts) * max_speed
         self.right_wheel_velocity = (r_volts / self.volts) * max_speed
 
-    def get_line_sensor_readings(self):
+    def read_semi_circle_sensor(self):
         """
         Get the line sensor readings by finding the pixel color under each sensor
         :return: numpy array of sensor readings.
         """
         readings = np.zeros(self.sensor_count)
+
+        # array of sensors coordinates
+        sensors_coordinates = []
+
         # Evenly distribute sensor rays over the sensor_angle_range.
         angles = np.linspace(-self.sensor_angle_range / 2, self.sensor_angle_range / 2, self.sensor_count)
         for i, sensor_angle in enumerate(angles):
@@ -147,6 +173,8 @@ class LineFollower:
             sensor_x = int(self.position[0] + self.sensor_range * np.cos(ray_angle))
             sensor_y = int(self.position[1] + self.sensor_range * np.sin(ray_angle))
             
+            sensors_coordinates.append((sensor_x, sensor_y))
+
             # Check if the sensor position is within the screen bounds.
             # Note: The screen is assumed to be the same size as the simulation area.
             if 0 <= sensor_x < self.screen.get_width() and 0 <= sensor_y < self.screen.get_height():
@@ -158,7 +186,92 @@ class LineFollower:
                     readings[i] = 1
             
         self.sensor_readings = readings
+        return sensors_coordinates, readings
+    
+    def jsumo_xline(self):
+        """
+        https://www.jsumo.com/xline-16-sensor-array-board-digital
+        """
+        # Not implemented yet
+        pass
+
+    def jsumo_xline_v2(self):
+        """
+        https://www.jsumo.com/xline-16-line-sensor-board-digital-v2
+        :return: numpy array of sensor readings.
+        """
+        # Constants
+        HORIZONTAL_SENSOR_DISTANCE = 9  # mm/pixels
+        VERTICAL_SENSOR_DISTANCE = 5    # mm/pixels
+        SENSOR_COUNT = 15
+
+        # Build the hardcoded XLINE-style layout
+        sensor_points_local = []
+        for i in range(SENSOR_COUNT):
+            if i < 4:  # Left arm
+                x = i* HORIZONTAL_SENSOR_DISTANCE
+                y = i * VERTICAL_SENSOR_DISTANCE
+            elif i < 10:  # Center
+                x = i * HORIZONTAL_SENSOR_DISTANCE
+                y = 4*VERTICAL_SENSOR_DISTANCE
+            else:  # Right arm
+                x = i* HORIZONTAL_SENSOR_DISTANCE
+                y = (14-i) * VERTICAL_SENSOR_DISTANCE
+            sensor_points_local.append((x-(128//2), y+self.sensor_range)) # 128 is to center the sensor (idk why it is 128 it is supposed to be 137 which is the width of the image but if it works it works)
+
+        # Rotation matrix for robot's yaw
+        cos_yaw = np.cos(self.yaw)
+        sin_yaw = np.sin(self.yaw)
+
+        # Prepare the reading array
+        readings = np.zeros(SENSOR_COUNT)
+
+        sensors_coordinates = []
+
+        for i, (x_local, y_local) in enumerate(sensor_points_local):
+            # Rotate 90° anti-clockwise in local frame
+            x_90 = y_local
+            y_90 = -x_local
+
+            # Then rotate to match robot yaw
+            x_rotated = x_90 * cos_yaw - y_90 * sin_yaw
+            y_rotated = x_90 * sin_yaw + y_90 * cos_yaw
+
+            # Translate to world coordinates
+            sensor_x = int(self.position[0] + x_rotated)
+            sensor_y = int(self.position[1] + y_rotated)
+
+            sensors_coordinates.append((sensor_x, sensor_y))
+
+            # Check boundaries
+            if 0 <= sensor_x < self.screen.get_width() and 0 <= sensor_y < self.screen.get_height():
+                pixel_color = self.screen.get_at((sensor_x, sensor_y))[:3]
+                if pixel_color == (255, 255, 255):  # White
+                    readings[i] = 0
+                    # pygame.draw.circle(self.screen, self.sensor_color, (int(x), int(y)), 2)
+                elif pixel_color == (0, 0, 0) or pixel_color == (255, 255, 0):  # Black or Yellow
+                    readings[i] = 1
+                    # pygame.draw.circle(self.screen, self.sensor_active_color, (int(x), int(y)), 2)
+
+        # Store the result
+        self.sensor_readings = readings
+        self.sensor_coordinates = sensors_coordinates
         return readings
+    
+    def get_line_sensor_readings(self):
+        """
+        Get the line sensor readings based on the specified sensor type.
+        :param sensor_type: Type of sensor array ('semi_circle' or 'full_circle').
+        :return: numpy array of sensor readings.
+        """
+        if self.sensor_type.lower() == "semi_circle":
+            return self.read_semi_circle_sensor()
+        elif self.sensor_type.lower() == "jsumo_xline":
+            return self.jsumo_xline()
+        elif self.sensor_type.lower() == "jsumo_xline_v2":
+            return self.jsumo_xline_v2()
+        else:
+            raise ValueError(f"Unknown sensor type: {self.sensor_type}")
     
     def get_color(self):
         """a method for checking the color of any of the sensors"""
@@ -209,13 +322,14 @@ class LineFollower:
         :param surface: Pygame Surface object. This can be the main display surface (often called screen),
                         or any other surface for off-screen rendering.
         """
-        # Draw the bot as a circle.
-        bot_color = (0, 255, 0)
-        bot_radius = 10  # in pixels
-
         # if no screen was provided use the default screen originaly defined
         if surface is None:
             surface = self.screen
+        if img_path is None:
+            img_path = self.img_path
+
+        # sensor circle radius
+        SENSOR_DRAW_RADIOUS = 4
 
         if draw_robot:
             robot_image = pygame.image.load(img_path).convert_alpha()
@@ -232,16 +346,48 @@ class LineFollower:
         # Draw sensor rays.
         sensor_color = (125, 125, 125)
         sensor_active_color = (0, 0, 255)
-        angles = np.linspace(-self.sensor_angle_range / 2, self.sensor_angle_range / 2, self.sensor_count)
-        for i, sensor_angle in enumerate(angles):
-            ray_angle = self.yaw + sensor_angle
-            sensor_end_x = self.position[0] + self.sensor_range * np.cos(ray_angle)
-            sensor_end_y = self.position[1] + self.sensor_range * np.sin(ray_angle)
-            
-            if self.sensor_readings[i] == 1:
-                pygame.draw.circle(surface, sensor_active_color, (int(sensor_end_x), int(sensor_end_y)), 2)
-            else:
-                pygame.draw.circle(surface, sensor_color, (int(sensor_end_x), int(sensor_end_y)), 2)
+        # Use sensor layout based on the specified sensor type.
+        if self.sensor_type.lower() == "semi_circle":
+            # Evenly distribute sensor rays over the sensor_angle_range.
+            angles = np.linspace(-self.sensor_angle_range / 2, self.sensor_angle_range / 2, self.sensor_count)
+            for i, sensor_angle in enumerate(angles):
+                # Calculate the global angle for each sensor ray.
+                ray_angle = self.yaw + sensor_angle
+                
+                # Compute sensor tip position.
+                sensor_end_x = self.position[0] + self.sensor_range * np.cos(ray_angle)
+                sensor_end_y = self.position[1] + self.sensor_range * np.sin(ray_angle)
+                
+                if self.sensor_readings[i] == 1:
+                    pygame.draw.circle(surface, sensor_active_color, (int(sensor_end_x), int(sensor_end_y)), SENSOR_DRAW_RADIOUS)
+                else:
+                    pygame.draw.circle(surface, sensor_color, (int(sensor_end_x), int(sensor_end_y)), SENSOR_DRAW_RADIOUS)
+        
+        elif self.sensor_type.lower() == "jsumo_xline_v2":
+            # print(f"self.sensor_coordinates: {self.sensor_coordinates}")
+            # print(f"self.sensor_readings: {self.sensor_readings}")
+            for i, (x, y) in enumerate(self.sensor_coordinates):
+                if self.sensor_readings[i] == 1:
+                    pygame.draw.circle(surface, sensor_active_color, (int(x), int(y)), SENSOR_DRAW_RADIOUS)
+                else:
+                    pygame.draw.circle(surface, sensor_color, (int(x), int(y)), SENSOR_DRAW_RADIOUS)
+
+        else:
+            # Fallback: default to semi_circle sensor drawing
+            angles = np.linspace(-self.sensor_angle_range / 2, self.sensor_angle_range / 2, self.sensor_count)
+            for i, sensor_angle in enumerate(angles):
+                # Calculate the global angle for each sensor ray.
+                ray_angle = self.yaw + sensor_angle
+                
+                # Compute sensor tip position.
+                sensor_end_x = self.position[0] + self.sensor_range * np.cos(ray_angle)
+                sensor_end_y = self.position[1] + self.sensor_range * np.sin(ray_angle)
+                
+                if self.sensor_readings[i] == 1:
+                    pygame.draw.circle(surface, sensor_active_color, (int(sensor_end_x), int(sensor_end_y)), SENSOR_DRAW_RADIOUS)
+                else:
+                    pygame.draw.circle(surface, sensor_color, (int(sensor_end_x), int(sensor_end_y)), SENSOR_DRAW_RADIOUS)
+
                 
 
 class LineFollowerNEAT(LineFollower):
@@ -255,7 +401,13 @@ class LineFollowerNEAT(LineFollower):
                  neat_config    : neat.config.Config,
                  robot_config   : dict,
                  screen         :pygame.display,          
-                 sensor_count   : int = 15):
+                 sensor_type    : str = "jsumo_xline_v2",
+                 sensor_count   : int = 15,
+                 draw_robot:bool=True,
+                 img_path:str=None,
+                 opacity:int=255,
+                 image_size:tuple=(137, 195)
+                 ):
         """
         Initialize the bot.
         :param genome: NEAT genome
@@ -273,45 +425,17 @@ class LineFollowerNEAT(LineFollower):
         :param screen: PyGame Screen (e.g. screen = pygame.display.set_mode([WIDTH, HEIGHT]))
         :param sensor_count: Number of sensors in the semi circle array.
         """
-        # convert normal units to pixels
-        # Create a copy of the robot_config dictionary
-        # this is done to not reference the same dictionary between different objects
-        self.robot_config = robot_config['robot_config'].copy()
-        self.robot_config["max_speed"] *= self.robot_config.get("meter_to_pixels")
-        self.robot_config["wheels_spacing"] *= self.robot_config.get("meter_to_pixels")
-
+        super().__init__(robot_config=robot_config,
+                         screen=screen,
+                         sensor_type=sensor_type,
+                         sensor_count=sensor_count,
+                         draw_robot=draw_robot,
+                         img_path=img_path,
+                         opacity=opacity,
+                         image_size=image_size)
+        
         # set the neural netwrok of the bot
         self.net = neat.nn.RecurrentNetwork.create(genome, neat_config)
-
-        # set bot configs
-        self.position = np.array(self.robot_config.get('start_xy', (0,0)), dtype=float)
-        self.yaw = self.robot_config.get('start_yaw')
-
-        # Differential drive state: wheel velocities (left and right)
-        self.left_wheel_velocity = 0.0
-        self.right_wheel_velocity = 0.0
-
-        # Motor initialization (if using motor dynamics)
-        self.volts = self.robot_config.get("volts", 12.0)
-        nom_volt = self.robot_config.get("motor_nominal_voltage", 12.0)
-        no_load_speed = self.robot_config.get("motor_no_load_rpm", 100.0) * 2*np.pi/60  # convert RPM to RAD/s
-        stall_torque = self.robot_config.get("motor_stall_torque", 1.0)  # torque in [Nm]
-        self.left_motor = DCMotor(nom_volt, no_load_speed, stall_torque)
-        self.right_motor = DCMotor(nom_volt, no_load_speed, stall_torque)
-
-        # Sensor configuration
-        self.sensor_count = sensor_count
-        self.sensor_range = self.robot_config.get("sensor_range", 50.0)  # in pixels or simulation units
-        self.sensor_angle_range = self.robot_config.get("sensor_angle_range", np.pi)  # radians; default is a semi circle
-
-        # pygame screen setup
-        self.screen = screen
-
-        # For storing sensor readings
-        self.sensor_readings = np.zeros(self.sensor_count)
-
-        # for fitness function purposes
-        self.off_track_time = 0
 
     def step(self, dt):
         """

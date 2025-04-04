@@ -30,7 +30,7 @@
             "start_xy": [280.0, 800.0],
             "start_yaw": 0.0
         }
-    }
+    },
     "test":{
         "track_1": {
             "path": "environment/tracks/testing_tracks/track (1).png",
