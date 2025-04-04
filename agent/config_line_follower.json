@@ -2,7 +2,7 @@
     "robot_config": {
       "start_xy": [3600.0, 3125.0],
       "start_yaw": 0.0,
-      "sensor_range": 110.0,
+      "sensor_range": 95.0,
       "sensor_angle_range": 1.57,
       "wheels_spacing": 0.15,
       "meter_to_pixels": 1000,

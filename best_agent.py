@@ -34,7 +34,7 @@ def run_example(genome, config):
         screen=temp_surface,
         sensor_type="jsumo_xline_v2",
         draw_robot=True,
-        img_path="agent/robot_center.png"
+        img_path="agent/robot.png"
         )
 
     # Main loop

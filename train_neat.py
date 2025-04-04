@@ -22,7 +22,7 @@ from environment.track import VirtualTrack, Viewport
 # Initialize Pygame
 pygame.init()
 
-DISPLAY_TRAINING_WINDOW = True  # Set this to False to disable rendering
+DISPLAY_TRAINING_WINDOW = False  # Set this to False to disable rendering
 
 # Screen setup
 # Replace screen setup with:
@@ -30,7 +30,7 @@ viewport = Viewport(1200, 800, DISPLAY_TRAINING_WINDOW)
 current_track = None
 
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
-GEN_MAX_TIME = 30
+GEN_MAX_TIME = 40
 
 
 def draw_robots(robots:LineFollowerNEAT):
@@ -253,7 +253,7 @@ def main():
     population.add_reporter(neat.Checkpointer(generation_interval=10, filename_prefix=checkpoint_prefix))
 
     # Run the NEAT algorithm.
-    GENERATIONS = 100
+    GENERATIONS = 500
 
     winner = None  # Explicit initialization
     
