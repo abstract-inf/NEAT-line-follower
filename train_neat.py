@@ -1,3 +1,5 @@
+# train_neat.py
+
 """
 Line Follower AI Agent using NEAT and Pygame
 ------------------------------------------------
@@ -20,17 +22,27 @@ from agent import LineFollowerNEAT
 from environment.track import VirtualTrack, Viewport
 
 # Initialize Pygame
+DISPLAY_TRAINING_WINDOW = True  # Set this to False to disable rendering
+
+# Set environment variables FIRST
+if not DISPLAY_TRAINING_WINDOW:
+    os.environ["SDL_VIDEODRIVER"] = "dummy"
+
+# Initialize Pygame ONCE regardless of display mode
 pygame.init()
 
-DISPLAY_TRAINING_WINDOW = False  # Set this to False to disable rendering
-
 # Screen setup
-# Replace screen setup with:
-viewport = Viewport(1200, 800, DISPLAY_TRAINING_WINDOW)
+if DISPLAY_TRAINING_WINDOW:
+    pygame.display.set_caption("Line Follower NEAT")
+    viewport = Viewport(1200, 800, DISPLAY_TRAINING_WINDOW)
+else:
+    # Create minimal viewport for headless mode
+    viewport = Viewport(1, 1, DISPLAY_TRAINING_WINDOW)
+
 current_track = None
 
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
-GEN_MAX_TIME = 40
+GEN_MAX_TIME = 60
 
 
 def draw_robots(robots:LineFollowerNEAT):
@@ -60,7 +72,7 @@ def calculate_fitness(robots:LineFollowerNEAT, genes):
             smooth_bonus = max(0, 2 - abs(left_wheel_velocity - right_wheel_velocity)) * 0.5
             
             # Sensor color detection
-            sensor_color = robot.get_color()
+            # sensor_color = robot.get_color()
 
             # 1. Progressive off-track penalty
             if not line_presence:
@@ -78,18 +90,27 @@ def calculate_fitness(robots:LineFollowerNEAT, genes):
             steering_penalty = min(abs(angular_velocity_deg) * 0.8, 30)  # Cap max penalty
 
             # 4. Completion reward scaling
-            if sensor_color == "green":
-                genes[i].fitness += 5000 + (linear_velocity * 100)  # Reward speed AND completion
+            # --- Special Zone Check (Middle Sensor Only) ---
+            # Call the specific method checking only the middle sensor
+            middle_sensor_zone_color = robot.check_middle_sensor_color()
+
+            zone_action = False # Flag to check if robot was removed by zone check
+            if middle_sensor_zone_color == "green":
+                genes[i].fitness += 5000 + (linear_velocity * 100) # Big reward for finishing
                 robots.pop(i)
                 genes.pop(i)
-                continue
-            elif sensor_color == "yellow":
-                genes[i].fitness += 200
-                continue
-            elif sensor_color == "red":
-                genes[i].fitness -= 500
+                zone_action = True
+            elif middle_sensor_zone_color == "red":
+                genes[i].fitness -= 500 # Penalty for hitting red
                 robots.pop(i)
                 genes.pop(i)
+                zone_action = True
+            elif middle_sensor_zone_color == "yellow":
+                genes[i].fitness += 200 # Smaller reward for yellow checkpoint
+                # Robot continues after yellow
+
+            # If robot was removed by zone check, skip final fitness update for this step
+            if zone_action:
                 continue
 
             # Total Fitness
@@ -108,36 +129,40 @@ def calculate_fitness(robots:LineFollowerNEAT, genes):
             break
 
 
-def eval_genomes(genomes, config): 
-    """ 
-    Evaluates each genome by simulating the robot's movement. 
-    Adjusts fitness based on sensor activity and the differential drive behavior. 
-    """ 
+def eval_genomes(genomes, config):
+    """
+    Evaluates each genome by simulating the robot's movement.
+    Adjusts fitness based on sensor activity and the differential drive behavior.
+    """
     global current_track, viewport, dt
-    
-    # Load new random track 
-    track_path = "environment/tracks/train/test.png" 
-    current_track = VirtualTrack(track_path) 
-    viewport.update_world_size(current_track.width, current_track.height)
-    
-    # Create temporary surface for accurate sensor readings 
-    temp_surface = pygame.Surface((current_track.width, current_track.height)) 
-    temp_surface.blit(current_track.surface, (0, 0)) 
 
-    genes = [] 
+    # Load new random track
+    track_path = "environment/tracks/train/test.png"
+    current_track = VirtualTrack(track_path)
+    viewport.update_world_size(current_track.width, current_track.height)
+
+    # Create temporary surface for accurate sensor readings
+    temp_surface = pygame.Surface((current_track.width, current_track.height))
+    temp_surface.blit(current_track.surface, (0, 0))
+
+    genes = []
     robots = []
-    
+
+    target_sensor_frequency = 30.0  # Example: ESP32 reads at 30 Hz
+    sensor_read_interval = 1.0 / target_sensor_frequency
+    time_since_last_sensor_read = 0.0
+
     for genome_id, genome in genomes:
         genome.fitness = 0  # Initialize fitness
         line_follower = LineFollowerNEAT(
-                        genome=genome,
-                        neat_config=config,
-                        robot_config=robot_config,
-                        screen=temp_surface,
-                        sensor_type="jsumo_xline_v2",
-                        draw_robot=True,
-                        img_path="agent/robot.png"
-                        )
+            genome=genome,
+            neat_config=config,
+            robot_config=robot_config,
+            screen=temp_surface,
+            sensor_type="jsumo_xline_v2",
+            draw_robot=True,
+            img_path="agent/robot.png",
+        )
         genes.append(genome)
         robots.append(line_follower)
 
@@ -154,30 +179,50 @@ def eval_genomes(genomes, config):
         current_time = pygame.time.get_ticks() / 1000.0
         frame_time = current_time - last_time
         last_time = current_time
-        
+
         # Prevent spiral of death on slow systems
         frame_time = min(frame_time, 0.25)
-        
+
         # Accumulate time for fixed timestep
         accumulator += frame_time
 
-        # Handle events
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-            elif DISPLAY_TRAINING_WINDOW:
-                viewport.handle_events(event)
+        if not DISPLAY_TRAINING_WINDOW:
+            # Handle events
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
+                elif DISPLAY_TRAINING_WINDOW:
+                    viewport.handle_events(event)
+
+        # Reset surface for sensor accuracy (critical for both modes)
+        temp_surface.blit(current_track.full_image, (0, 0))
 
         # Fixed timestep physics updates
         while accumulator >= fixed_dt:
+            pygame.event.pump() # Keep Pygame's event system alive
+
+            # Handle events ONCE per frame
+            if DISPLAY_TRAINING_WINDOW:
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        running = False
+                    elif DISPLAY_TRAINING_WINDOW:
+                        viewport.handle_events(event)
+
             # Update physics with consistent timestep
             dt = fixed_dt  # Use fixed timestep for physics
-            
-            # Reset surface for sensor accuracy (critical for both modes)
-            temp_surface.blit(current_track.full_image, (0, 0))
-            
+
+            # Update time since last sensor read
+            time_since_last_sensor_read += dt
+
+            # Check if it's time to read sensors for each robot
+            for robot in robots:
+                if time_since_last_sensor_read >= sensor_read_interval:
+                    robot.get_line_sensor_readings()  # Assuming you've added this method to LineFollowerNEAT
+                    time_since_last_sensor_read -= sensor_read_interval  # Reset the timer
+
             calculate_fitness(robots, genes)
-            
+
             accumulator -= fixed_dt
             ticks += 1
 
@@ -185,13 +230,13 @@ def eval_genomes(genomes, config):
         if DISPLAY_TRAINING_WINDOW:
             # Smooth viewport controls
             viewport.handle_viewport_controls()
-            
+
             # Render at display framerate
             temp_surface.blit(current_track.full_image, (0, 0))  # Fresh background
             draw_robots(robots)
             viewport.apply(temp_surface)
             pygame.display.flip()
-            
+
             # Cap rendering framerate
             clock.tick(60)
         else:
@@ -248,12 +293,12 @@ def main():
     stats = neat.StatisticsReporter()
     population.add_reporter(stats)
 
-    # Save a checkpoint every 10 generations into the checkpoint folder.
+    # Save a checkpoint every 1 generations into the checkpoint folder.
     checkpoint_prefix = os.path.join(checkpoint_dir, "neat-checkpoint-")
-    population.add_reporter(neat.Checkpointer(generation_interval=10, filename_prefix=checkpoint_prefix))
+    population.add_reporter(neat.Checkpointer(generation_interval=1, filename_prefix=checkpoint_prefix))
 
     # Run the NEAT algorithm.
-    GENERATIONS = 500
+    GENERATIONS = 15
 
     winner = None  # Explicit initialization
     
@@ -261,6 +306,10 @@ def main():
         winner = population.run(eval_genomes, GENERATIONS)
     except KeyboardInterrupt:
         print("\nTraining interrupted by user")
+    except Exception as e:
+        print(f"\nAn error occurred during training: {e}")
+        raise e
+
     finally:
         if winner:
             print(f"\nBest genome:\n{winner}")

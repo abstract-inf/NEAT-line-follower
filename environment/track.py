@@ -1,3 +1,7 @@
+# track.py
+# This file contains the VirtualTrack and Viewport classes for handling track images and viewport rendering in Pygame.
+# It includes methods for loading images, handling zoom and panning, and rendering the track on the screen.
+
 import pygame
 import os
 import json

@@ -1,3 +1,4 @@
+# line_follower.py
 import neat.config
 import neat.genome
 import numpy as np
@@ -273,13 +274,59 @@ class LineFollower:
         else:
             raise ValueError(f"Unknown sensor type: {self.sensor_type}")
     
+    def check_middle_sensor_color(self):
+        """
+        Checks the color under the front middle sensor (index 7 for 15 sensors).
+        Returns "red", "green", or "yellow" if the middle sensor detects that color.
+        Returns None otherwise.
+        Assumes self.sensor_coordinates is up-to-date.
+        """
+        # For a 15-sensor array (indices 0-14), the middle is index 7
+        MIDDLE_SENSOR_INDEX = self.sensor_count // 2
+
+        # Check if coordinates are available and list is long enough
+        if not hasattr(self, 'sensor_coordinates') or not self.sensor_coordinates or len(self.sensor_coordinates) <= MIDDLE_SENSOR_INDEX:
+            # print(f"Warn: Sensor coords not ready/long enough for middle sensor check (Idx: {MIDDLE_SENSOR_INDEX})")
+            return None
+
+        try:
+            # Get the world coordinates of the middle sensor
+            sx, sy = self.sensor_coordinates[MIDDLE_SENSOR_INDEX]
+            sx_int, sy_int = int(sx), int(sy)
+
+            # Check bounds before accessing screen pixel
+            if 0 <= sx_int < self.screen.get_width() and 0 <= sy_int < self.screen.get_height():
+                pixel_color = self.screen.get_at((sx_int, sy_int)) # Get RGBA
+
+                # Compare against RGBA (assuming opaque colors)
+                if pixel_color == (255, 0, 0, 255):       # Opaque Red
+                    return "red"
+                elif pixel_color == (0, 255, 0, 255):     # Opaque Green
+                    return "green"
+                elif pixel_color == (255, 255, 0, 255):   # Opaque Yellow
+                    return "yellow"
+                else:
+                    return None # Middle sensor on background or normal line
+            else:
+                return None # Middle sensor is off-screen
+
+        except IndexError:
+            print(f"Error: IndexError accessing middle sensor coord (Idx: {MIDDLE_SENSOR_INDEX}).")
+            return None
+        except Exception as e:
+            print(f"Error checking middle sensor color: {e}")
+            return None
+
+
     def get_color(self):
+
         """a method for checking the color of any of the sensors"""
         yaw_rad = np.radians(self.yaw)
         sensor_x = int(self.position[0] + self.sensor_range * np.cos(yaw_rad))
         sensor_y = int(self.position[1] - self.sensor_range * np.sin(yaw_rad))
         # Check the color at the sensor position.
         pixel_color = self.screen.get_at((sensor_x, sensor_y))
+
         # pygame.draw.circle(self.screen, (100, 100, 255), (sensor_x, sensor_y), 5)
         if pixel_color == (0, 255, 0):  # Green background
             return "green"
