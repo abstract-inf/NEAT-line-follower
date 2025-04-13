@@ -21,7 +21,7 @@ class LineFollower:
                  draw_robot:bool=True,
                  img_path:str=None,
                  opacity:int=255,
-                 image_size:tuple=(137, 195)
+                 image_size:tuple=(190, 167)
                  ):
         """
         Initialize the bot.
@@ -35,7 +35,10 @@ class LineFollower:
                        - 'wheels_spacing': Distance between the two wheels in m.
                        - 'meter_to_pixels': Represent each meter in this quantity of pixels in the simulation
                        - 'max_speed': Maximum speed of the bot in m/s.
-                       - 'motor_nominal_voltage': [V], 'motor_no_load_rpm': [RPM], 'motor_stall_torque': [Nm], 'volts': [V]
+                       - 'motor_nominal_voltage': [V], 
+                       - 'motor_no_load_rpm': [RPM], 
+                       - 'motor_stall_torque': [Nm], 
+                       - 'volts': [V]
                          for motor simulation, note that volts is the applied voltage to the motor in the simulation.
         :param screen: PyGame Screen (e.g. screen = pygame.display.set_mode([WIDTH, HEIGHT]))
         :param sensor_count: Number of sensors in the semi circle array.
@@ -46,6 +49,14 @@ class LineFollower:
         :param surface: Pygame Surface object. This can be the main display surface (often called screen),
                         or any other surface for off-screen rendering.
         """
+
+        self.wheel_radius = 0.0165  # meters (adjust based on real robot)
+        self.robot_mass = 0.55      # kg (adjust based on real robot)
+        # self.wheel_inertia = 0.5 * self.robot_mass * (self.wheel_radius ** 2) * 100  # Simplified inertia
+        self.wheel_inertia = 0.005 
+        self.friction_coeff = 0.75  # Adjust based on real-world testing
+
+
         # convert normal units to pixels
         # Create a copy of the robot_config dictionary
         # this is done to not reference the same dictionary between different objects
@@ -125,14 +136,12 @@ class LineFollower:
         return self.position.copy(), self.yaw
 
     def get_velocity(self):
-        """
-        Compute bot's linear and angular velocities based on wheel speeds.
-        :return: (linear_velocity, angular_velocity)
-        """
-        # Differential drive kinematics:
-        v = (self.left_wheel_velocity + self.right_wheel_velocity) / 2.0
-        wheels_spacing = self.robot_config.get("wheels_spacing", 30.0)  # default value if not provided
-        omega = (self.right_wheel_velocity - self.left_wheel_velocity) / wheels_spacing
+        # Convert rad/s to m/s using wheel radius
+        left_lin = self.left_wheel_velocity * self.wheel_radius
+        right_lin = self.right_wheel_velocity * self.wheel_radius
+        
+        v = (left_lin + right_lin) / 2.0
+        omega = (right_lin - left_lin) / self.robot_config["wheels_spacing"]
         return v, omega
 
     def _power_to_volts(self, l_pow, r_pow):
@@ -143,17 +152,43 @@ class LineFollower:
         r_pow = np.clip(r_pow, -1.0, 1.0)
         return l_pow * self.volts, r_pow * self.volts
 
-    def apply_action(self, action):
+    def apply_action(self, action, dt):
         """
-        Apply an action to the bot.
-        :param action: Tuple (left_power, right_power), each within [-1, 1].
+        Smoothly apply action to the bot.
+        Proportional ramping toward target speeds.
+        Wheels aiming for higher speeds accelerate faster.
+        :param action: Tuple (left_power, right_power), values in [-1, 1]
+        :param dt: Time step in seconds
         """
-        l_volts, r_volts = self._power_to_volts(*action)
-        # For simplicity, we assume instantaneous response.
+        # action = [0.96,1]
+        l_target_volts, r_target_volts = self._power_to_volts(*action)
         max_speed = self.robot_config.get("max_speed")  # in pixel/s
-        self.left_wheel_velocity = (l_volts / self.volts) * max_speed
-        self.right_wheel_velocity = (r_volts / self.volts) * max_speed
 
+        # Convert to target speeds
+        target_left_speed = (l_target_volts / self.volts) * max_speed
+        target_right_speed = (r_target_volts / self.volts) * max_speed
+
+        # Base acceleration rate
+        base_accel = 1500  # px/s²
+
+        # Proportional to command
+        left_accel = base_accel * abs(action[0])
+        right_accel = base_accel * abs(action[1])
+
+        max_delta_left = left_accel * dt
+        max_delta_right = right_accel * dt
+
+        def approach(current, target, max_delta):
+            if abs(target - current) <= max_delta:
+                return target
+            return current + np.sign(target - current) * max_delta
+
+        self.left_wheel_velocity = approach(self.left_wheel_velocity, target_left_speed, max_delta_left)
+        self.right_wheel_velocity = approach(self.right_wheel_velocity, target_right_speed, max_delta_right)
+
+
+
+    # this function is no longer used
     def read_semi_circle_sensor(self):
         """
         Get the line sensor readings by finding the pixel color under each sensor
@@ -196,6 +231,7 @@ class LineFollower:
         # Not implemented yet
         pass
 
+    # this is the default used line sensor function
     def jsumo_xline_v2(self):
         """
         https://www.jsumo.com/xline-16-line-sensor-board-digital-v2
@@ -453,7 +489,7 @@ class LineFollowerNEAT(LineFollower):
                  draw_robot:bool=True,
                  img_path:str=None,
                  opacity:int=255,
-                 image_size:tuple=(137, 195)
+                 image_size:tuple=(190, 167)
                  ):
         """
         Initialize the bot.
@@ -495,9 +531,11 @@ class LineFollowerNEAT(LineFollower):
 
         # activate the network
         output = self.net.activate([self.left_wheel_velocity, self.right_wheel_velocity, *self.sensor_readings])
+        # print(f"Output: {output}")
+
 
         # modify the motor speed (wheel velocity) based on the network's output
-        self.apply_action(output)
+        self.apply_action(output, dt)
 
         # Compute differential drive kinematics.
         v = (self.left_wheel_velocity + self.right_wheel_velocity) / 2.0

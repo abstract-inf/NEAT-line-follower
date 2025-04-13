@@ -8,9 +8,9 @@
       "meter_to_pixels": 1000,
       "max_speed": 2.5,
       "motor_nominal_voltage": 12.0,
-      "motor_no_load_rpm": 12000,
-      "motor_stall_torque": 1,
-      "volts": 12.0
+      "motor_no_load_rpm": 10165,
+      "motor_stall_torque": 0.08039,
+      "volts": 12.0      
     },
     "PID": {
         "Kp": -2.0,

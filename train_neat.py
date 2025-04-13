@@ -42,7 +42,7 @@ else:
 current_track = None
 
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
-GEN_MAX_TIME = 60
+GEN_MAX_TIME = 40
 
 max_fitness_index = -1  # Global variable to track the index of the genome with the highest fitness
 def find_highest_fitness_index():
@@ -312,7 +312,7 @@ def main():
     population.add_reporter(neat.Checkpointer(generation_interval=1, filename_prefix=checkpoint_prefix))
 
     # Run the NEAT algorithm.
-    GENERATIONS = 1
+    GENERATIONS = 50
 
     winner = None  # Explicit initialization
     
