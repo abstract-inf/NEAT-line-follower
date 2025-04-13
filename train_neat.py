@@ -44,10 +44,24 @@ current_track = None
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
 GEN_MAX_TIME = 60
 
+max_fitness_index = -1  # Global variable to track the index of the genome with the highest fitness
+def find_highest_fitness_index():
+    global max_fitness_index, genes
+    """Find the index of the genome with the highest fitness."""
+    max_fitness = -float('inf')
+    max_fitness_index = -1
+    for i, genome in enumerate(genes):
+        if genome.fitness > max_fitness:
+            max_fitness = genome.fitness
+            max_fitness_index = i
+    return max_fitness_index
 
 def draw_robots(robots:LineFollowerNEAT):
-    for robot in robots:
-        robot.draw(draw_robot=True, opacity=200)
+    for i, robot in enumerate(robots):
+        if i == find_highest_fitness_index():
+            robot.draw(draw_robot=True, opacity=255)
+        else:
+            robot.draw(draw_robot=True, opacity=50)
     
 def calculate_fitness(robots:LineFollowerNEAT, genes):
     for i, robot in enumerate(robots):
@@ -134,7 +148,7 @@ def eval_genomes(genomes, config):
     Evaluates each genome by simulating the robot's movement.
     Adjusts fitness based on sensor activity and the differential drive behavior.
     """
-    global current_track, viewport, dt
+    global current_track, viewport, dt, genes, robots
 
     # Load new random track
     track_path = "environment/tracks/train/test.png"
@@ -298,7 +312,7 @@ def main():
     population.add_reporter(neat.Checkpointer(generation_interval=1, filename_prefix=checkpoint_prefix))
 
     # Run the NEAT algorithm.
-    GENERATIONS = 15
+    GENERATIONS = 1
 
     winner = None  # Explicit initialization
     

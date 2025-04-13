@@ -345,7 +345,7 @@ class LineFollower:
         """
         # Compute differential drive kinematics.
         v = (self.left_wheel_velocity + self.right_wheel_velocity) / 2.0
-        wheels_spacing = self.robot_config.get("wheels_spacing", 30.0)
+        wheels_spacing = self.robot_config.get("wheels_spacing")
         omega = (self.right_wheel_velocity - self.left_wheel_velocity) / wheels_spacing
 
         # Update position and orientation.
@@ -358,7 +358,7 @@ class LineFollower:
              img_path:str=None,
              draw_robot:bool=True,
              opacity:int=255,
-             image_size:tuple=(137, 195),
+             image_size:tuple=(190, 167),
              surface=None):
         """
         Draw the bot and its sensor rays on the given pygame surface.
