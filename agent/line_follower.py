@@ -169,7 +169,7 @@ class LineFollower:
         target_right_speed = (r_target_volts / self.volts) * max_speed
 
         # Base acceleration rate
-        base_accel = 1500  # px/s²
+        base_accel = 2500  # px/s²
 
         # Proportional to command
         left_accel = base_accel * abs(action[0])

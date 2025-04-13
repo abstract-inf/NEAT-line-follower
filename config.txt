@@ -2,7 +2,7 @@
 fitness_criterion = max
 fitness_threshold = 2000000
 no_fitness_termination = True
-pop_size = 100
+pop_size = 300
 reset_on_extinction = False
 
 [DefaultGenome]
@@ -45,7 +45,7 @@ num_inputs = 17
 num_outputs = 2
 
 # node add/remove rates
-node_add_prob = 0.01
+node_add_prob = 0.02
 node_delete_prob = 0.01
 
 # node response options
@@ -76,4 +76,4 @@ species_elitism = 2
 
 [DefaultReproduction]
 elitism = 3
-survival_threshold = 0.35
+survival_threshold = 0.3

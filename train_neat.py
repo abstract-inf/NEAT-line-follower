@@ -54,93 +54,113 @@ def find_highest_fitness_index():
         if genome.fitness > max_fitness:
             max_fitness = genome.fitness
             max_fitness_index = i
-    return max_fitness_index
+    return max_fitness_index, max_fitness
 
 def draw_robots(robots:LineFollowerNEAT):
     for i, robot in enumerate(robots):
-        if i == find_highest_fitness_index():
+        if i == find_highest_fitness_index()[0]:
             robot.draw(draw_robot=True, opacity=255)
         else:
             robot.draw(draw_robot=True, opacity=50)
     
-def calculate_fitness(robots:LineFollowerNEAT, genes):
+def calculate_fitness(robots: LineFollowerNEAT, genes):
     for i, robot in enumerate(robots):
         try:
             robot.step(dt)
             
             linear_velocity, angular_velocity_rad = robot.get_velocity()
-            angular_velocity_deg = angular_velocity_rad * 180/math.pi
-            
+            angular_velocity_deg = angular_velocity_rad * 180 / math.pi
             left_wheel_velocity, right_wheel_velocity = robot.left_wheel_velocity, robot.right_wheel_velocity
 
-            center_strength = sum(robot.sensor_readings[len(robot.sensor_readings)//2-1 : len(robot.sensor_readings)//2+2])
+            # Process sensor readings: use the center 3 sensors and middle sensor separately.
+            center_indices = range(len(robot.sensor_readings)//2 - 1, len(robot.sensor_readings)//2 + 2)
+            center_strength = sum(robot.sensor_readings[j] for j in center_indices)
+            middle_sensor = robot.sensor_readings[len(robot.sensor_readings)//2]
             line_presence = any(robot.sensor_readings)
             
-            # Base Speed Reward (encourage movement)
-            speed_reward = linear_velocity * 1.5
-            
-            # Center Alignment Bonus (strong center preference)
-            center_bonus = center_strength ** 1.5 * 2
-            
-            # Smooth Operation Bonus
-            smooth_bonus = max(0, 2 - abs(left_wheel_velocity - right_wheel_velocity)) * 0.5
-            
-            # Sensor color detection
-            # sensor_color = robot.get_color()
+            # Use absolute speed so that fast reverse is not automatically penalized.
+            abs_speed = abs(linear_velocity)
+            # if i == find_highest_fitness_index()[0]:
+            #     print(f"Robot {i} - Linear Velocity: {linear_velocity}, Angular Velocity: {angular_velocity_deg}, Left Wheel: {left_wheel_velocity}, Right Wheel: {right_wheel_velocity}, Center Strength: {center_strength}, Middle Sensor: {middle_sensor}")
+            # Modulated Speed Reward:
+            #   - If well-centered (center_strength high), reward speed more.
+            #   - If the robot is turning sharply (angular_velocity high), reduce the reward.
+            if center_strength >= 2:
+                speed_reward = abs_speed * 2.0
+            else:
+                speed_reward = abs_speed * 0.5
 
-            # 1. Progressive off-track penalty
+            # If turning sharply, cut the speed reward to discourage excessive speed in curves.
+            if abs(angular_velocity_deg) > 20:
+                speed_reward *= 0.5
+
+            # # Bonus for the middle sensor being fully active.
+            # middle_bonus = 50 if middle_sensor == 1 else 0
+
+            # Center alignment bonus remains.
+            center_bonus = (center_strength ** 1.5) * 2 if linear_velocity > 10 and linear_velocity < 35 else 0
+
+            # Smooth operation bonus rewards similar wheel speeds.
+            smooth_bonus = max(0, 2 - abs(left_wheel_velocity - right_wheel_velocity)) * 0.5
+
+            # Progressive off-track penalty if no sensor sees the line.
             if not line_presence:
-                off_track_penalty = 50 + (robot.off_track_time * 10)  # Ramping penalty
+                off_track_penalty = 50 + (robot.off_track_time * 50)
                 robot.off_track_time += 1
             else:
                 off_track_penalty = 0
                 robot.off_track_time = 0
 
-            # 2. Speed penalty adjustment
-            if linear_velocity < 3.0 and center_strength < 2:  # Only penalize slow speeds when not centered
-                genes[i].fitness -= 1.5 * (3.0 - linear_velocity)
+            # Reward optimal speed (10 to 37), penalize too slow or too fast.
+            if linear_velocity <= 0:
+                speed_penalty = 200  # Big penalty for no movement or reverse
+            elif abs_speed < 6:
+                speed_penalty = 20 * (6 - abs_speed)  # Penalize slow speed
+            elif abs_speed > 27:
+                speed_penalty = 20 * (abs_speed - 27)  # Penalize high speed
+            else:
+                speed_penalty = -150 * (abs_speed - 8)  # Reward moderate speed
 
-            # 3. Steering penalty refinement
-            steering_penalty = min(abs(angular_velocity_deg) * 0.8, 30)  # Cap max penalty
 
-            # 4. Completion reward scaling
-            # --- Special Zone Check (Middle Sensor Only) ---
-            # Call the specific method checking only the middle sensor
+
+            # Steering penalty: high angular velocities indicate jitter or unstable turning.
+            steering_penalty = min(abs(angular_velocity_deg) * 0.8, 30)
+
+            # Completion reward scaling (middle sensor zone detection).
             middle_sensor_zone_color = robot.check_middle_sensor_color()
-
-            zone_action = False # Flag to check if robot was removed by zone check
+            zone_action = False
             if middle_sensor_zone_color == "green":
-                genes[i].fitness += 5000 + (linear_velocity * 100) # Big reward for finishing
+                genes[i].fitness += 5000 * linear_velocity
                 robots.pop(i)
                 genes.pop(i)
                 zone_action = True
             elif middle_sensor_zone_color == "red":
-                genes[i].fitness -= 500 # Penalty for hitting red
+                genes[i].fitness -= 500
                 robots.pop(i)
                 genes.pop(i)
                 zone_action = True
             elif middle_sensor_zone_color == "yellow":
-                genes[i].fitness += 200 # Smaller reward for yellow checkpoint
-                # Robot continues after yellow
+                genes[i].fitness += 500 * linear_velocity
 
-            # If robot was removed by zone check, skip final fitness update for this step
             if zone_action:
                 continue
 
-            # Total Fitness
+            # Total fitness update:
             genes[i].fitness += (
                 speed_reward +
+                # middle_bonus +
                 center_bonus +
                 smooth_bonus -
                 off_track_penalty -
+                speed_penalty -
                 steering_penalty
             )
-
         except IndexError:
             genes[i].fitness -= 200
             robots.pop(i)
             genes.pop(i)
             break
+
 
 
 def eval_genomes(genomes, config):
@@ -151,7 +171,7 @@ def eval_genomes(genomes, config):
     global current_track, viewport, dt, genes, robots
 
     # Load new random track
-    track_path = "environment/tracks/train/test.png"
+    track_path = "environment/tracks/train/track 1.png"
     current_track = VirtualTrack(track_path)
     viewport.update_world_size(current_track.width, current_track.height)
 
@@ -248,7 +268,15 @@ def eval_genomes(genomes, config):
             # Render at display framerate
             temp_surface.blit(current_track.full_image, (0, 0))  # Fresh background
             draw_robots(robots)
+            max_fitness = find_highest_fitness_index()[1]
+            max_fitness_text = f"Max Fitness: {max_fitness:.2f}"
+            font = pygame.font.SysFont("Arial", 120)
+            text_surface = font.render(max_fitness_text, True, (0,0,0))
+            temp_surface.blit(text_surface, (10, 10))
             viewport.apply(temp_surface)
+
+            # viewport.apply(temp_surface)
+
             pygame.display.flip()
 
             # Cap rendering framerate
@@ -312,7 +340,7 @@ def main():
     population.add_reporter(neat.Checkpointer(generation_interval=1, filename_prefix=checkpoint_prefix))
 
     # Run the NEAT algorithm.
-    GENERATIONS = 50
+    GENERATIONS = 100
 
     winner = None  # Explicit initialization
     
