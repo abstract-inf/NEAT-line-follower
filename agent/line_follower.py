@@ -53,7 +53,7 @@ class LineFollower:
         self.wheel_radius = 0.0165  # meters (adjust based on real robot)
         self.robot_mass = 0.55      # kg (adjust based on real robot)
         # self.wheel_inertia = 0.5 * self.robot_mass * (self.wheel_radius ** 2) * 100  # Simplified inertia
-        self.wheel_inertia = 0.005 
+        self.wheel_inertia = 0.005  # 0.005 kg*m^2 (adjust based on real robot) 
         self.friction_coeff = 0.75  # Adjust based on real-world testing
 
 
@@ -520,6 +520,10 @@ class LineFollowerNEAT(LineFollower):
         # set the neural netwrok of the bot
         self.net = neat.nn.RecurrentNetwork.create(genome, neat_config)
 
+        # this is because the network is recurrent and needs to have a previous output to be able to work
+        # the previous output is a list of the outputs of the network in the last step which is the speed of the motors in range between [-1,1]
+        self.previous_output = [0, 0] 
+
     def step(self, dt):
         """
         Update the bot's state over a time step.
@@ -530,7 +534,9 @@ class LineFollowerNEAT(LineFollower):
         self.get_line_sensor_readings()
 
         # activate the network
-        output = self.net.activate([self.left_wheel_velocity, self.right_wheel_velocity, *self.sensor_readings])
+        output = self.net.activate([*self.previous_output, *self.sensor_readings])
+        self.previous_output = output.copy()
+        print(f"previous_output: {self.previous_output}, \nsensor_readings: {self.sensor_readings}\nOutput: {output}")
         # print(f"Output: {output}")
 
 
@@ -551,7 +557,7 @@ class LineFollowerNEAT(LineFollower):
 class LineFollowerPID(LineFollower):
     def __init__(self, config: dict, screen: pygame.display, sensor_count: int = 15):
         # Extract robot config for parent class
-        super().__init__(config, screen, sensor_count)
+        super().__init__(config, screen, sensor_type="jsumo_xline_v2")
         
         # PID parameters from config
         self.Kp = config['PID']['Kp']
@@ -563,44 +569,42 @@ class LineFollowerPID(LineFollower):
         self.prev_error = 0.0
         self.error_history = []
 
-    def compute_pid_action(self, sensor_readings):
-        # Calculate weighted error position
-        sensor_count = len(sensor_readings)
-        center_index = (sensor_count - 1) / 2
-        weighted_sum = 0.0
-        total_weight = 0.0
-        
-        for i, reading in enumerate(sensor_readings):
-            distance_from_center = i - center_index
-            weighted_sum += reading * distance_from_center
-            total_weight += reading
+    def compute_pid_action(self, sensor_readings, dt):
+        # 1. Calculate digital-style weighted error
+        n = len(sensor_readings)
+        weights = np.linspace(-(n//2), n//2, n)  # e.g. [-7,...,7] if n=15 or 16
+        error_sum = 0.0
+        active = 0
 
-        # Handle line detection failure
-        if total_weight == 0:
-            # Use decaying error from history
-            error = self.prev_error * 0.8 if self.error_history else 0
-            self.off_track_time += 1/60
+        for i, val in enumerate(sensor_readings):
+            # print(f"sensor_readings[{i}]: {val}, weights[{i}]: {weights[i]}")
+            if not val:         # treat “below threshold” as line detected
+                error_sum += weights[i]
+                active += 1
+
+        if active == 0:
+            # no line → mimic last known error bias ±5
+            error = 5.0 if self.prev_error > 0 else -5.0
         else:
-            error = weighted_sum / total_weight
-            self.off_track_time = max(0, self.off_track_time - 1/60)
-            self.error_history.append(error)
+            error = error_sum / active      # normalized
 
-        # PID calculations
-        self.integral += error * self.Ki
-        derivative = (error - self.prev_error) * self.Kd
-        
-        # Anti-windup clamping
-        self.integral = np.clip(self.integral, -1.0, 1.0)
-        
-        # Combine terms
-        control = (error * self.Kp) + self.integral + derivative
-        
-        # Update state
+        # 2. PID terms
+        P = self.Kp * error
+        self.integral += self.Ki * error * dt
+        D = self.Kd * (error - self.prev_error) / dt
         self.prev_error = error
-        
-        # Calculate motor outputs
-        base_speed = 0.7  # From config if needed
-        left = np.clip(base_speed + control, 0.0, 1.0)
-        right = np.clip(base_speed - control, 0.0, 1.0)
+
+        # 3 prevent jitter around center
+        if abs(error) <= 1.0:
+            error = 0.0
+            self.integral = 0.0
+
+        # 4. total output
+        control = P + self.integral + D
+
+        # 5. differential drive speeds
+        base = 0.8
+        left  = np.clip(base - control, -1.0, 1.0)
+        right = np.clip(base + control, -1.0, 1.0)
 
         return [left, right]

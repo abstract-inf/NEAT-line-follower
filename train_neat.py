@@ -41,12 +41,18 @@ else:
 
 current_track = None
 
-# Simulation time before moving to next generation (in seconds, assuming 60fps)
-GEN_MAX_TIME = 40
-
+# best genome fitness, id, and highest fitness used for debugging
+max_fitness = -float('inf')  # for the current alive genomes
+max_fitness_key = -1
+highest_fitness = -1  # for the best genome in the population
+highest_fitness_key = -1
 max_fitness_index = -1  # Global variable to track the index of the genome with the highest fitness
+
+# Simulation time before moving to next generation (in seconds, assuming 60fps)
+GEN_MAX_TIME = 60
+
 def find_highest_fitness_index():
-    global max_fitness_index, genes
+    global max_fitness_index, genes, max_fitness, highest_fitness, highest_fitness_key, max_fitness_key
     """Find the index of the genome with the highest fitness."""
     max_fitness = -float('inf')
     max_fitness_index = -1
@@ -54,6 +60,16 @@ def find_highest_fitness_index():
         if genome.fitness > max_fitness:
             max_fitness = genome.fitness
             max_fitness_index = i
+    
+    # Update global variables
+    max_fitness_key = genes[max_fitness_index].key
+
+    if max_fitness > highest_fitness:
+        highest_fitness = max_fitness
+        highest_fitness_key = genes[max_fitness_index].key
+    else:
+        max_fitness_key = highest_fitness_key
+
     return max_fitness_index, max_fitness
 
 def draw_robots(robots:LineFollowerNEAT):
@@ -86,7 +102,7 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
             #   - If well-centered (center_strength high), reward speed more.
             #   - If the robot is turning sharply (angular_velocity high), reduce the reward.
             if center_strength >= 2:
-                speed_reward = abs_speed * 2.0
+                speed_reward = abs_speed * 10.0
             else:
                 speed_reward = abs_speed * 0.5
 
@@ -94,11 +110,11 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
             if abs(angular_velocity_deg) > 20:
                 speed_reward *= 0.5
 
-            # # Bonus for the middle sensor being fully active.
-            # middle_bonus = 50 if middle_sensor == 1 else 0
+            # Bonus for the middle sensor being fully active.
+            middle_bonus = 50 if middle_sensor == 1 else 0
 
             # Center alignment bonus remains.
-            center_bonus = (center_strength ** 1.5) * 2 if linear_velocity > 10 and linear_velocity < 35 else 0
+            center_bonus = (center_strength ** 1.5) * 2 if linear_velocity > 3 else 0
 
             # Smooth operation bonus rewards similar wheel speeds.
             smooth_bonus = max(0, 2 - abs(left_wheel_velocity - right_wheel_velocity)) * 0.5
@@ -111,16 +127,17 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
                 off_track_penalty = 0
                 robot.off_track_time = 0
 
-            # Reward optimal speed (10 to 37), penalize too slow or too fast.
+            # Penalize very slow movement (absolute speed below threshold).
             if linear_velocity <= 0:
-                speed_penalty = 200  # Big penalty for no movement or reverse
-            elif abs_speed < 6:
-                speed_penalty = 20 * (6 - abs_speed)  # Penalize slow speed
-            elif abs_speed > 27:
-                speed_penalty = 20 * (abs_speed - 27)  # Penalize high speed
+                speed_penalty = 100 * (abs_speed + 5.0)
+            elif 0 < linear_velocity <= 3.0:
+                speed_penalty = 100 * (3.0 - abs_speed)
+            elif linear_velocity >= 25.0:
+                speed_penalty = 100 * (abs_speed - 25.0)
             else:
-                speed_penalty = -150 * (abs_speed - 8)  # Reward moderate speed
+                speed_penalty = 50 * (abs_speed - 25.0)   # Reward for moderate speed.
 
+            
 
 
             # Steering penalty: high angular velocities indicate jitter or unstable turning.
@@ -130,7 +147,7 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
             middle_sensor_zone_color = robot.check_middle_sensor_color()
             zone_action = False
             if middle_sensor_zone_color == "green":
-                genes[i].fitness += 5000 * linear_velocity
+                genes[i].fitness += 5000 + (abs_speed * 100)
                 robots.pop(i)
                 genes.pop(i)
                 zone_action = True
@@ -140,7 +157,7 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
                 genes.pop(i)
                 zone_action = True
             elif middle_sensor_zone_color == "yellow":
-                genes[i].fitness += 500 * linear_velocity
+                genes[i].fitness += 500
 
             if zone_action:
                 continue
@@ -148,7 +165,7 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
             # Total fitness update:
             genes[i].fitness += (
                 speed_reward +
-                # middle_bonus +
+                middle_bonus +
                 center_bonus +
                 smooth_bonus -
                 off_track_penalty -
@@ -252,7 +269,7 @@ def eval_genomes(genomes, config):
             # Check if it's time to read sensors for each robot
             for robot in robots:
                 if time_since_last_sensor_read >= sensor_read_interval:
-                    robot.get_line_sensor_readings()  # Assuming you've added this method to LineFollowerNEAT
+                    robot.get_line_sensor_readings()  # Reads and saves readings in the robot object
                     time_since_last_sensor_read -= sensor_read_interval  # Reset the timer
 
             calculate_fitness(robots, genes)
@@ -268,11 +285,48 @@ def eval_genomes(genomes, config):
             # Render at display framerate
             temp_surface.blit(current_track.full_image, (0, 0))  # Fresh background
             draw_robots(robots)
+
+
+
+            # Render fitness values and keys at the bottom left of the screen.
             max_fitness = find_highest_fitness_index()[1]
             max_fitness_text = f"Max Fitness: {max_fitness:.2f}"
+            max_fitness_key_text = f"Max Fitness Key: {max_fitness_key}"
+            highest_fitness_text = f"Highest Fitness: {highest_fitness:.2f}"
+            highest_fitness_key_text = f"Highest Fitness Key: {highest_fitness_key}"
+            max_fitness_index_text = f"Max Fitness Index: {max_fitness_index}"
+
+            # Get the height of the surface to position text at the bottom.
+            screen_height = temp_surface.get_height()
+            padding = 50
+
+            # Set up fonts.
             font = pygame.font.SysFont("Arial", 120)
-            text_surface = font.render(max_fitness_text, True, (0,0,0))
-            temp_surface.blit(text_surface, (10, 10))
+            fps_font = pygame.font.SysFont("Arial", 120, bold=True)
+
+            # Prepare text lines as tuples (text, color).
+            lines = [
+                (highest_fitness_text, (0, 255, 0)),       # highest fitness - green
+                (highest_fitness_key_text, (0, 255, 0)),     # highest fitness key - green
+                (max_fitness_text, (0, 0, 0)),           # max fitness - black
+                (max_fitness_key_text, (0, 0, 0)),         # max fitness key - black
+                (max_fitness_index_text, (0, 0, 0)),         # max fitness index - black
+            ]
+
+            # Render each line from bottom upwards.
+            for i, (line, color) in enumerate(reversed(lines)):
+                text_surface = font.render(line, True, color)
+                text_height = text_surface.get_height()
+                # Position text with padding from the left and stacked upwards from the bottom.
+                y = screen_height - padding - (i + 1) * text_height
+                temp_surface.blit(text_surface, (padding, y))
+
+            # Render the FPS indicator at the top-left corner in bold red.
+            fps = int(clock.get_fps())
+            fps_text = f"FPS: {fps}"
+            fps_surface = fps_font.render(fps_text, True, (255, 0, 0))
+            temp_surface.blit(fps_surface, (padding, 2575))
+                
             viewport.apply(temp_surface)
 
             # viewport.apply(temp_surface)
@@ -340,7 +394,7 @@ def main():
     population.add_reporter(neat.Checkpointer(generation_interval=1, filename_prefix=checkpoint_prefix))
 
     # Run the NEAT algorithm.
-    GENERATIONS = 100
+    GENERATIONS = 1
 
     winner = None  # Explicit initialization
     

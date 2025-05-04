@@ -16,5 +16,7 @@ x_coords, y_coords = zip(*sensor_points)
 
 print(sensor_points)
 plt.scatter(x_coords, y_coords, color='blue', label='Sensor Points')
-plt.grid(True)
+plt.grid(False)
+plt.xticks([])
+plt.yticks([])
 plt.show()

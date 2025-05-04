@@ -1,0 +1,63 @@
+// esp32_neat_rnn.h
+#ifndef ESP32_NEAT_RNN_H
+#define ESP32_NEAT_RNN_H
+
+#include <cmath>
+
+class NEATRNN {
+private:
+    // Internal state
+    float node_39 = 0.0f;
+    float node_1 = 0.0f;  // recurrent output node
+    float node_0 = 0.0f;
+
+    // Activation function: tanh
+    float activate(float x) {
+        return tanhf(x);
+    }
+
+public:
+    // Input count = 18 (index 1 to 17 used)
+    float inputs[18] = {0};
+
+    void step() {
+        // Cache previous states
+        float prev_node_39 = node_39;
+        float prev_node_1 = node_1;
+
+        // Reset nodes
+        node_39 = 0.0f;
+        node_0 = 0.0f;
+        node_1 = prev_node_1;
+
+        // --- Compute node 39 ---
+        node_39 += 1.576627f * inputs[1];
+        node_39 += -2.155677f * inputs[2];
+        node_39 += 0.831913f * inputs[3];
+        node_39 += 0.089562f * inputs[5];
+        node_39 += -1.832050f * inputs[6];
+        node_39 += -0.464902f * inputs[7];
+        node_39 += -0.602659f * inputs[8];
+        node_39 += -0.616103f * inputs[11];
+        node_39 += 0.069516f * inputs[12];
+        node_39 += -0.417831f * inputs[16];
+        node_39 += 0.288323f * prev_node_39;  // recurrent
+        node_39 += 1.530842f * node_0;        // from output 0
+        node_39 = activate(node_39);
+
+        // --- Compute output node 0 ---
+        node_0 += -0.972787f * node_39;
+        node_0 += -2.783396f * inputs[7];
+        node_0 += 2.292524f * inputs[14];
+        node_0 = activate(node_0);
+
+        // --- Compute output node 1 ---
+        node_1 += -0.304895f * prev_node_1;
+        node_1 = activate(node_1);
+    }
+
+    float get_output_0() const { return node_0; }
+    float get_output_1() const { return node_1; }
+};
+
+#endif // ESP32_NEAT_RNN_H

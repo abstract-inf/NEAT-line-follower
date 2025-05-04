@@ -76,7 +76,7 @@ def run_example(genome, config):
         line_follower.draw()
         viewport.apply(temp_surface)
         pygame.display.flip()
-        clock.tick(60)
+        clock.tick(7)
         
     pygame.quit()
 
