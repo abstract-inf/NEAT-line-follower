@@ -1,20 +1,20 @@
 {
     "robot_config": {
-      "start_xy": [3600.0, 3125.0],
+      "start_xy": [115.0, 780.0],
       "start_yaw": 0.0,
-      "sensor_range": 82.0,
+      "sensor_range": 50.0,
       "sensor_angle_range": 1.57,
       "wheels_spacing": 0.175,
       "meter_to_pixels": 1000,
-      "max_speed": 2.5,
+      "max_speed": 0.5,
       "motor_nominal_voltage": 12.0,
       "motor_no_load_rpm": 10165,
       "motor_stall_torque": 0.08039,
       "volts": 12.0      
     },
     "PID": {
-        "Kp": 5,
-        "Ki": 0,
-        "Kd": 1
+        "Kp": 2,
+        "Ki": 0.0001,
+        "Kd": 0.5
     }
   }

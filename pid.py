@@ -1,6 +1,5 @@
-import time
+# pid.py
 import pygame
-import math
 import json
 import csv
 import os
@@ -20,15 +19,13 @@ pygame.init()
 # Screen setup
 if DISPLAY_TRAINING_WINDOW:
     pygame.display.set_caption("PID Line Follower")
-    viewport = Viewport(1200, 800, DISPLAY_TRAINING_WINDOW)
+    viewport = Viewport(1200, 875, DISPLAY_TRAINING_WINDOW)
 else:
     viewport = Viewport(1, 1, DISPLAY_TRAINING_WINDOW)
 
 current_track = None
 
 def run_pid():
-    global attempt_id
-
     # File setup for logging
     file_name = 'PID_logged_data.csv'
     header = ['attempt_id', 'step', 'sensor0', 'sensor1', 'sensor2', 'sensor3', 'sensor4',
@@ -46,7 +43,7 @@ def run_pid():
         config = json.load(f)
 
     # Initialize track and surfaces
-    track_path = "environment/tracks/train/track 1.png"
+    track_path = "environment/tracks/track for the paper.png"
     current_track = VirtualTrack(track_path)
     viewport.update_world_size(current_track.width, current_track.height)
     temp_surface = pygame.Surface((current_track.width, current_track.height))
@@ -68,17 +65,20 @@ def run_pid():
                 running = False
             elif DISPLAY_TRAINING_WINDOW:
                 viewport.handle_events(event)
+        
+        if line_follower.check_middle_sensor_color() == "green":
+            running = False
 
         # Update viewport controls
         if DISPLAY_TRAINING_WINDOW:
             viewport.handle_viewport_controls()
 
         # Simulation logic
-        if (pygame.time.get_ticks() - start_time) >= 15000:
+        if (pygame.time.get_ticks() - start_time) >= 600000:
             running = False
 
         try:
-            if line_follower.get_color() == "green":
+            if line_follower.check_middle_sensor_color() == "green":
                 running = False
             sensor_readings = line_follower.get_line_sensor_readings()
         except IndexError:
@@ -133,9 +133,8 @@ def run_pid():
     print(f"Kp: {line_follower.Kp:.2f}  Ki: {line_follower.Ki:.2f}  Kd: {line_follower.Kd:.2f}")
     print(f"Total error: {total_error:.2f}")
     print("-"*40)
-    attempt_id += 1
 
 if __name__ == "__main__":
-    attempt_id = 0
+    attempt_id = 10
     run_pid()
     pygame.quit()

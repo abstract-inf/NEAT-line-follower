@@ -1,7 +1,7 @@
 import pickle
 import json
 
-with open("neat_results/models/best_genome_2025-04-13_22-35-44.pkl", "rb") as f:
+with open("neat_results/checkpoints/neat-checkpoint-153", "rb") as f:
     genome = pickle.load(f)
 
 def genome_to_dict(genome):

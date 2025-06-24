@@ -11,7 +11,6 @@ import os
 import glob
 import math
 import pickle
-import random
 import datetime
 import json
 
@@ -48,8 +47,11 @@ highest_fitness = -1  # for the best genome in the population
 highest_fitness_key = -1
 max_fitness_index = -1  # Global variable to track the index of the genome with the highest fitness
 
+# Global variable to track the current generation
+current_generation = 0 # Initialize current_generation
+
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
-GEN_MAX_TIME = 60
+GEN_MAX_TIME = 60 * 0.75
 
 def find_highest_fitness_index():
     global max_fitness_index, genes, max_fitness, highest_fitness, highest_fitness_key, max_fitness_key
@@ -139,7 +141,6 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
 
             
 
-
             # Steering penalty: high angular velocities indicate jitter or unstable turning.
             steering_penalty = min(abs(angular_velocity_deg) * 0.8, 30)
 
@@ -185,10 +186,13 @@ def eval_genomes(genomes, config):
     Evaluates each genome by simulating the robot's movement.
     Adjusts fitness based on sensor activity and the differential drive behavior.
     """
-    global current_track, viewport, dt, genes, robots
+    global current_track, viewport, dt, genes, robots, current_generation # Add current_generation to globals
+
+    # Increment the generation counter
+    current_generation += 1
 
     # Load new random track
-    track_path = "environment/tracks/train/track 1.png"
+    track_path = "environment/tracks/track for the paper.png"
     current_track = VirtualTrack(track_path)
     viewport.update_world_size(current_track.width, current_track.height)
 
@@ -203,6 +207,20 @@ def eval_genomes(genomes, config):
     sensor_read_interval = 1.0 / target_sensor_frequency
     time_since_last_sensor_read = 0.0
 
+    # Calculate max_speed for the current generation
+    # Start at 150 (initial value) and increment by 1, capping at 500
+    initial_max_speed = 100
+    max_allowed_speed = 500
+    # The max_speed for the current generation will be:
+    # initial_max_speed + (current_generation - 1)
+    # We subtract 1 from current_generation because the first generation (current_generation = 1)
+    # should have the initial_max_speed.
+    # Use max() to ensure it doesn't go below initial_max_speed if for some reason current_generation is less than 1.
+    # Use min() to cap it at max_allowed_speed.
+    current_max_speed = min(max_allowed_speed, initial_max_speed + (current_generation - 1))
+    
+    print(f"Generation: {current_generation}, Max Speed set to: {current_max_speed}")
+
     for genome_id, genome in genomes:
         genome.fitness = 0  # Initialize fitness
         line_follower = LineFollowerNEAT(
@@ -210,10 +228,11 @@ def eval_genomes(genomes, config):
             neat_config=config,
             robot_config=robot_config,
             screen=temp_surface,
-            sensor_type="jsumo_xline_v2",
+            sensor_type="semi_circle",
             draw_robot=True,
             img_path="agent/robot.png",
         )
+        line_follower.max_speed = current_max_speed  # Set maximum speed for the robot based on generation
         genes.append(genome)
         robots.append(line_follower)
 
@@ -287,45 +306,50 @@ def eval_genomes(genomes, config):
             draw_robots(robots)
 
 
-
             # Render fitness values and keys at the bottom left of the screen.
-            max_fitness = find_highest_fitness_index()[1]
+            # max_fitness = find_highest_fitness_index()[1]
             max_fitness_text = f"Max Fitness: {max_fitness:.2f}"
             max_fitness_key_text = f"Max Fitness Key: {max_fitness_key}"
             highest_fitness_text = f"Highest Fitness: {highest_fitness:.2f}"
             highest_fitness_key_text = f"Highest Fitness Key: {highest_fitness_key}"
             max_fitness_index_text = f"Max Fitness Index: {max_fitness_index}"
+            current_generation_text = f"Generation: {current_generation}" # Display current generation
+            current_max_speed_text = f"Current Max Speed: {current_max_speed}" # Display current max speed
 
             # Get the height of the surface to position text at the bottom.
             screen_height = temp_surface.get_height()
-            padding = 50
+            padding = 2
 
             # Set up fonts.
-            font = pygame.font.SysFont("Arial", 120)
-            fps_font = pygame.font.SysFont("Arial", 120, bold=True)
+            font = pygame.font.SysFont("Arial", 20)
+            fps_font = pygame.font.SysFont("Arial", 20, bold=True)
 
             # Prepare text lines as tuples (text, color).
             lines = [
-                (highest_fitness_text, (0, 255, 0)),       # highest fitness - green
-                (highest_fitness_key_text, (0, 255, 0)),     # highest fitness key - green
-                (max_fitness_text, (0, 0, 0)),           # max fitness - black
-                (max_fitness_key_text, (0, 0, 0)),         # max fitness key - black
+                (highest_fitness_text, (0, 255, 0)),      # highest fitness - green
+                (highest_fitness_key_text, (0, 255, 0)),    # highest fitness key - green
+                (max_fitness_text, (0, 0, 0)),          # max fitness - black
+                (max_fitness_key_text, (0, 0, 0)),        # max fitness key - black
                 (max_fitness_index_text, (0, 0, 0)),         # max fitness index - black
+                (current_generation_text, (0, 0, 255)),     # Current generation - blue
+                (current_max_speed_text, (255, 165, 0)),   # Current max speed - orange
             ]
 
             # Render each line from bottom upwards.
+            # Adjust the starting y position to make space for the new lines
+            initial_y_offset = 135 + (2 * font.get_linesize()) # Add space for 2 new lines
             for i, (line, color) in enumerate(reversed(lines)):
                 text_surface = font.render(line, True, color)
                 text_height = text_surface.get_height()
                 # Position text with padding from the left and stacked upwards from the bottom.
-                y = screen_height - padding - (i + 1) * text_height
+                y = initial_y_offset - (i + 1) * text_height
                 temp_surface.blit(text_surface, (padding, y))
-
+                
             # Render the FPS indicator at the top-left corner in bold red.
             fps = int(clock.get_fps())
             fps_text = f"FPS: {fps}"
             fps_surface = fps_font.render(fps_text, True, (255, 0, 0))
-            temp_surface.blit(fps_surface, (padding, 2575))
+            temp_surface.blit(fps_surface, (padding, 0))
                 
             viewport.apply(temp_surface)
 
@@ -358,8 +382,8 @@ def main():
 
     # Load NEAT configuration.
     config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
-                                neat.DefaultSpeciesSet, neat.DefaultStagnation,
-                                config_path)
+                                 neat.DefaultSpeciesSet, neat.DefaultStagnation,
+                                 config_path)
 
     # load robot config
     with open("agent/config_line_follower.json", "r") as f:
@@ -374,15 +398,27 @@ def main():
         checkpoint_files = glob.glob(os.path.join(checkpoint_dir, "neat-checkpoint-*"))
         if checkpoint_files:
             latest_checkpoint = max(checkpoint_files, key=os.path.getctime)
+            latest_checkpoint = "neat_results/checkpoints/neat-checkpoint-153"
             population = neat.Checkpointer.restore_checkpoint(latest_checkpoint)
             population.config = config
             print("Restored from checkpoint:", latest_checkpoint)
+            # When restoring from a checkpoint, we need to try and infer the current_generation
+            # The checkpoint filename format is "neat-checkpoint-X" where X is the generation number.
+            try:
+                global current_generation
+                current_generation = int(latest_checkpoint.split('-')[-1])
+                print(f"Inferred starting generation: {current_generation}")
+            except ValueError:
+                print("Could not infer generation from checkpoint filename. Starting generation count from 0.")
+                current_generation = 0 # Default if filename format is unexpected
         else:
             print("No checkpoint found. Starting a new population.")
             population = neat.Population(config)
+            current_generation = 0 # Reset generation count for a new population
     else:
         print("Training a new model...")
         population = neat.Population(config)
+        current_generation = 0 # Reset generation count for a new population
 
     # Add NEAT reporters.
     population.add_reporter(neat.StdOutReporter(True))

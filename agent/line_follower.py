@@ -16,7 +16,7 @@ class LineFollower:
     def __init__(self,
                  robot_config   : dict,
                  screen         :pygame.display,          
-                 sensor_type    : str = "jsumo_xline_v2",
+                 sensor_type    : str = "semi_circle",
                  sensor_count   : int = 15,
                  draw_robot:bool=True,
                  img_path:str=None,
@@ -62,6 +62,7 @@ class LineFollower:
         # this is done to not reference the same dictionary between different objects
         self.robot_config = robot_config['robot_config'].copy()
         self.robot_config["max_speed"] *= self.robot_config.get("meter_to_pixels")
+        self.max_speed = self.robot_config["max_speed"] * self.robot_config.get("meter_to_pixels")
         self.robot_config["wheels_spacing"] *= self.robot_config.get("meter_to_pixels")
 
         # set bot configs
@@ -162,8 +163,9 @@ class LineFollower:
         """
         # action = [0.96,1]
         l_target_volts, r_target_volts = self._power_to_volts(*action)
-        max_speed = self.robot_config.get("max_speed")  # in pixel/s
-
+        # max_speed = self.robot_config.get("max_speed")  # in pixel/s
+        max_speed = self.max_speed  # in pixel/s
+        
         # Convert to target speeds
         target_left_speed = (l_target_volts / self.volts) * max_speed
         target_right_speed = (r_target_volts / self.volts) * max_speed
@@ -218,11 +220,12 @@ class LineFollower:
                 pixel_color = self.screen.get_at((sensor_x, sensor_y))[:3]
                 if pixel_color == (255, 255, 255):  # White background
                     readings[i] = 0
-                elif pixel_color == (0, 0, 0) or pixel_color == (255, 255, 0):  # Black or Yellow line, yellow is checked for with black because detecting yellow is a reward 
+                elif pixel_color == (0, 0, 0) or pixel_color == (255, 255, 0) or pixel_color == (0, 255, 0):  # Black or Yellow or Green line, yellow is checked for with black because detecting yellow is a reward
                     readings[i] = 1
             
         self.sensor_readings = readings
-        return sensors_coordinates, readings
+        self.sensor_coordinates = sensors_coordinates
+        return readings
     
     def jsumo_xline(self):
         """
@@ -322,7 +325,7 @@ class LineFollower:
 
         # Check if coordinates are available and list is long enough
         if not hasattr(self, 'sensor_coordinates') or not self.sensor_coordinates or len(self.sensor_coordinates) <= MIDDLE_SENSOR_INDEX:
-            # print(f"Warn: Sensor coords not ready/long enough for middle sensor check (Idx: {MIDDLE_SENSOR_INDEX})")
+            print(f"Warn: Sensor coords not ready/long enough for middle sensor check (Idx: {MIDDLE_SENSOR_INDEX})")
             return None
 
         try:
@@ -394,7 +397,7 @@ class LineFollower:
              img_path:str=None,
              draw_robot:bool=True,
              opacity:int=255,
-             image_size:tuple=(190, 167),
+             image_size:tuple=(100, 87),
              surface=None):
         """
         Draw the bot and its sensor rays on the given pygame surface.
@@ -412,7 +415,7 @@ class LineFollower:
             img_path = self.img_path
 
         # sensor circle radius
-        SENSOR_DRAW_RADIOUS = 4
+        SENSOR_DRAW_RADIOUS = 3
 
         if draw_robot:
             robot_image = pygame.image.load(img_path).convert_alpha()
@@ -518,7 +521,7 @@ class LineFollowerNEAT(LineFollower):
                          image_size=image_size)
         
         # set the neural netwrok of the bot
-        self.net = neat.nn.RecurrentNetwork.create(genome, neat_config)
+        self.net = neat.nn.FeedForwardNetwork.create(genome, neat_config)
 
         # this is because the network is recurrent and needs to have a previous output to be able to work
         # the previous output is a list of the outputs of the network in the last step which is the speed of the motors in range between [-1,1]
@@ -536,7 +539,7 @@ class LineFollowerNEAT(LineFollower):
         # activate the network
         output = self.net.activate([*self.previous_output, *self.sensor_readings])
         self.previous_output = output.copy()
-        print(f"previous_output: {self.previous_output}, \nsensor_readings: {self.sensor_readings}\nOutput: {output}")
+        # print(f"previous_output: {self.previous_output}, \nsensor_readings: {self.sensor_readings}\nOutput: {output}")
         # print(f"Output: {output}")
 
 
@@ -557,7 +560,7 @@ class LineFollowerNEAT(LineFollower):
 class LineFollowerPID(LineFollower):
     def __init__(self, config: dict, screen: pygame.display, sensor_count: int = 15):
         # Extract robot config for parent class
-        super().__init__(config, screen, sensor_type="jsumo_xline_v2")
+        super().__init__(config, screen, sensor_type="semi_circle")
         
         # PID parameters from config
         self.Kp = config['PID']['Kp']
@@ -578,13 +581,13 @@ class LineFollowerPID(LineFollower):
 
         for i, val in enumerate(sensor_readings):
             # print(f"sensor_readings[{i}]: {val}, weights[{i}]: {weights[i]}")
-            if not val:         # treat “below threshold” as line detected
+            if val:  # Treat 1 as "line detected"
                 error_sum += weights[i]
                 active += 1
 
         if active == 0:
-            # no line → mimic last known error bias ±5
-            error = 5.0 if self.prev_error > 0 else -5.0
+            # no line → mimic last known error bias ±7
+            error = 7.0 if self.prev_error > 0 else -7.0
         else:
             error = error_sum / active      # normalized
 
@@ -606,5 +609,7 @@ class LineFollowerPID(LineFollower):
         base = 0.8
         left  = np.clip(base - control, -1.0, 1.0)
         right = np.clip(base + control, -1.0, 1.0)
+
+        print(error)
 
         return [left, right]
