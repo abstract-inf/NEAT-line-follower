@@ -21,8 +21,8 @@ def run_example(genome, config):
         with open(file_name, 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(header)
-    
-    attempt_id = 0  # Set based on your needs
+
+    attempt_id = 10  # the attempt id to be saved in the log file (invcremented it manually time the script is run)
 
     # Pygame and track initialization
     viewport = Viewport(1200, 800)
@@ -84,7 +84,6 @@ def run_example(genome, config):
 
             temp_surface.blit(current_track.full_image, (0, 0))
 
-            print(line_follower.check_middle_sensor_color())
             if line_follower.check_middle_sensor_color() == "green":
                 has_finished = True
                 print("Robot has reached the end of the track.")

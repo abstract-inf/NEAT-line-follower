@@ -1,18 +1,11 @@
-# train_neat.py
-
-"""
-Line Follower AI Agent using NEAT and Pygame
-------------------------------------------------
-This script trains a line follower using the NEAT algorithm, simulating the agent with Pygame.
-It supports saving checkpoints in a folder and saving the best genome with a timestamp.
-"""
-
 import os
 import glob
 import math
 import pickle
 import datetime
 import json
+import csv # Import the csv module
+import statistics # Import statistics for std dev
 
 import pygame
 import neat
@@ -53,28 +46,32 @@ current_generation = 0 # Initialize current_generation
 # Simulation time before moving to next generation (in seconds, assuming 60fps)
 GEN_MAX_TIME = 60 * 0.75
 
+# List to store fitness statistics for each generation
+generation_fitness_data = []
+
 def find_highest_fitness_index():
     global max_fitness_index, genes, max_fitness, highest_fitness, highest_fitness_key, max_fitness_key
     """Find the index of the genome with the highest fitness."""
     max_fitness = -float('inf')
     max_fitness_index = -1
     for i, genome in enumerate(genes):
-        if genome.fitness > max_fitness:
+        if genome.fitness is not None and genome.fitness > max_fitness: # Ensure fitness is not None
             max_fitness = genome.fitness
             max_fitness_index = i
     
     # Update global variables
-    max_fitness_key = genes[max_fitness_index].key
+    if genes and max_fitness_index != -1: # Ensure genes is not empty and an index was found
+        max_fitness_key = genes[max_fitness_index].key
 
-    if max_fitness > highest_fitness:
-        highest_fitness = max_fitness
-        highest_fitness_key = genes[max_fitness_index].key
-    else:
-        max_fitness_key = highest_fitness_key
+        if max_fitness > highest_fitness:
+            highest_fitness = max_fitness
+            highest_fitness_key = genes[max_fitness_index].key
+        else:
+            max_fitness_key = highest_fitness_key
 
     return max_fitness_index, max_fitness
 
-def draw_robots(robots:LineFollowerNEAT):
+def draw_robots(robots: LineFollowerNEAT):
     for i, robot in enumerate(robots):
         if i == find_highest_fitness_index()[0]:
             robot.draw(draw_robot=True, opacity=255)
@@ -82,7 +79,14 @@ def draw_robots(robots:LineFollowerNEAT):
             robot.draw(draw_robot=True, opacity=50)
     
 def calculate_fitness(robots: LineFollowerNEAT, genes):
-    for i, robot in enumerate(robots):
+    # Create a copy of the lists to iterate over, as elements might be popped
+    robots_copy = list(robots)
+    genes_copy = list(genes)
+
+    for i, robot in enumerate(robots_copy):
+        if robot not in robots: # Skip if robot was already removed due to another robot in this iteration
+            continue
+
         try:
             robot.step(dt)
             
@@ -138,9 +142,7 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
                 speed_penalty = 100 * (abs_speed - 25.0)
             else:
                 speed_penalty = 50 * (abs_speed - 25.0)   # Reward for moderate speed.
-
             
-
             # Steering penalty: high angular velocities indicate jitter or unstable turning.
             steering_penalty = min(abs(angular_velocity_deg) * 0.8, 30)
 
@@ -149,13 +151,13 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
             zone_action = False
             if middle_sensor_zone_color == "green":
                 genes[i].fitness += 5000 + (abs_speed * 100)
-                robots.pop(i)
-                genes.pop(i)
+                robots.pop(robots.index(robot)) # Remove robot from original list
+                genes.pop(genes.index(genes_copy[i])) # Remove corresponding genome
                 zone_action = True
             elif middle_sensor_zone_color == "red":
                 genes[i].fitness -= 500
-                robots.pop(i)
-                genes.pop(i)
+                robots.pop(robots.index(robot)) # Remove robot from original list
+                genes.pop(genes.index(genes_copy[i])) # Remove corresponding genome
                 zone_action = True
             elif middle_sensor_zone_color == "yellow":
                 genes[i].fitness += 500
@@ -173,12 +175,10 @@ def calculate_fitness(robots: LineFollowerNEAT, genes):
                 speed_penalty -
                 steering_penalty
             )
-        except IndexError:
-            genes[i].fitness -= 200
-            robots.pop(i)
-            genes.pop(i)
-            break
-
+        except ValueError: # Catch ValueError if robot/genome already popped
+            pass
+        except IndexError: # Catch IndexError if robot/genome already popped
+            pass
 
 
 def eval_genomes(genomes, config):
@@ -186,7 +186,7 @@ def eval_genomes(genomes, config):
     Evaluates each genome by simulating the robot's movement.
     Adjusts fitness based on sensor activity and the differential drive behavior.
     """
-    global current_track, viewport, dt, genes, robots, current_generation # Add current_generation to globals
+    global current_track, viewport, dt, genes, robots, current_generation, generation_fitness_data # Add generation_fitness_data to globals
 
     # Increment the generation counter
     current_generation += 1
@@ -289,7 +289,9 @@ def eval_genomes(genomes, config):
             for robot in robots:
                 if time_since_last_sensor_read >= sensor_read_interval:
                     robot.get_line_sensor_readings()  # Reads and saves readings in the robot object
-                    time_since_last_sensor_read -= sensor_read_interval  # Reset the timer
+                    # time_since_last_sensor_read -= sensor_read_interval  # Reset the timer moved outside to reset once for all
+            if time_since_last_sensor_read >= sensor_read_interval:
+                time_since_last_sensor_read -= sensor_read_interval  # Reset the timer once for all
 
             calculate_fitness(robots, genes)
 
@@ -315,6 +317,7 @@ def eval_genomes(genomes, config):
             max_fitness_index_text = f"Max Fitness Index: {max_fitness_index}"
             current_generation_text = f"Generation: {current_generation}" # Display current generation
             current_max_speed_text = f"Current Max Speed: {current_max_speed}" # Display current max speed
+            currently_alive = f"Alive: {len(robots)}" # Display currently alive robots
 
             # Get the height of the surface to position text at the bottom.
             screen_height = temp_surface.get_height()
@@ -333,11 +336,12 @@ def eval_genomes(genomes, config):
                 (max_fitness_index_text, (0, 0, 0)),         # max fitness index - black
                 (current_generation_text, (0, 0, 255)),     # Current generation - blue
                 (current_max_speed_text, (255, 165, 0)),   # Current max speed - orange
+                (currently_alive, (255, 0, 0)),            # Currently alive robots - red
             ]
 
             # Render each line from bottom upwards.
             # Adjust the starting y position to make space for the new lines
-            initial_y_offset = 135 + (2 * font.get_linesize()) # Add space for 2 new lines
+            initial_y_offset = 155 + (2 * font.get_linesize()) # Add space for 2 new lines
             for i, (line, color) in enumerate(reversed(lines)):
                 text_surface = font.render(line, True, color)
                 text_height = text_surface.get_height()
@@ -358,10 +362,35 @@ def eval_genomes(genomes, config):
             pygame.display.flip()
 
             # Cap rendering framerate
-            clock.tick(60)
+            clock.tick(0)
         else:
             # Run physics as fast as possible in headless mode
             pass
+
+    # Collect fitness data at the end of the generation
+    if genes: # Only proceed if there are still genomes left
+        fitness_values = [g.fitness for g in genes if g.fitness is not None]
+        if fitness_values: # Ensure there are valid fitness values
+            best_fitness = max(fitness_values)
+            avg_fitness = statistics.mean(fitness_values)
+            
+            # Calculate standard deviation, handle case with too few data points
+            if len(fitness_values) > 1:
+                std_dev_fitness = statistics.stdev(fitness_values)
+            else:
+                std_dev_fitness = 0.0 # If only one or no fitness value, std dev is 0
+
+            plus_1_std = avg_fitness + std_dev_fitness
+            minus_1_std = avg_fitness - std_dev_fitness
+
+            generation_fitness_data.append({
+                'generation': current_generation,
+                'best_fitness': best_fitness,
+                'average_fitness': avg_fitness,
+                'plus_1_std': plus_1_std,
+                'minus_1_std': minus_1_std
+            })
+
 
 def save_model(winner):
     """Saves the best genome to a file with a timestamp."""
@@ -371,6 +400,21 @@ def save_model(winner):
     with open(filename, "wb") as f:
         pickle.dump(winner, f)
     print("Genome saved as", filename)
+
+def save_fitness_data_to_csv():
+    """Saves the collected fitness data to a CSV file."""
+    os.makedirs("neat_results/statistics", exist_ok=True)
+    filename = os.path.join("neat_results/statistics", "generation_fitness_stats.csv")
+    
+    # Define the CSV header
+    fieldnames = ['generation', 'best_fitness', 'average_fitness', 'plus_1_std', 'minus_1_std']
+
+    with open(filename, 'w', newline='') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for data_row in generation_fitness_data:
+            writer.writerow(data_row)
+    print(f"Fitness statistics saved to {filename}")
 
 
 def main():
@@ -398,7 +442,7 @@ def main():
         checkpoint_files = glob.glob(os.path.join(checkpoint_dir, "neat-checkpoint-*"))
         if checkpoint_files:
             latest_checkpoint = max(checkpoint_files, key=os.path.getctime)
-            latest_checkpoint = "neat_results/checkpoints/neat-checkpoint-153"
+            # latest_checkpoint = "neat_results/checkpoints/neat-checkpoint-200"
             population = neat.Checkpointer.restore_checkpoint(latest_checkpoint)
             population.config = config
             print("Restored from checkpoint:", latest_checkpoint)
@@ -430,7 +474,7 @@ def main():
     population.add_reporter(neat.Checkpointer(generation_interval=1, filename_prefix=checkpoint_prefix))
 
     # Run the NEAT algorithm.
-    GENERATIONS = 1
+    GENERATIONS = 10
 
     winner = None  # Explicit initialization
     
@@ -448,6 +492,9 @@ def main():
             save_model(winner)
         else:
             print("\nNo winner genome available")
+
+        # Save the collected fitness data to CSV
+        save_fitness_data_to_csv()
 
         # Visualize training statistics and the best network.
         visualize.plot_stats(stats, ylog=False, view=True, filename="stats")
