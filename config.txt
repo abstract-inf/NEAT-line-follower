@@ -2,7 +2,7 @@
 fitness_criterion = max
 fitness_threshold = 2000000
 no_fitness_termination = True
-pop_size = 300
+pop_size = 200
 reset_on_extinction = True
 
 [DefaultGenome]
@@ -41,7 +41,7 @@ initial_connection = full_direct
 
 # network parameters
 num_hidden = 0
-num_inputs = 17
+num_inputs = 15
 num_outputs = 2
 
 # node add/remove rates

@@ -524,9 +524,6 @@ class LineFollowerNEAT(LineFollower):
         self.net = neat.nn.FeedForwardNetwork.create(genome, neat_config)
 
         # this is because the network is recurrent and needs to have a previous output to be able to work
-        # the previous output is a list of the outputs of the network in the last step which is the speed of the motors in range between [-1,1]
-        self.previous_output = [0, 0] 
-
     def step(self, dt):
         """
         Update the bot's state over a time step.
@@ -537,8 +534,7 @@ class LineFollowerNEAT(LineFollower):
         self.get_line_sensor_readings()
 
         # activate the network
-        output = self.net.activate([*self.previous_output, *self.sensor_readings])
-        self.previous_output = output.copy()
+        output = self.net.activate([*self.sensor_readings])
         # print(f"previous_output: {self.previous_output}, \nsensor_readings: {self.sensor_readings}\nOutput: {output}")
         # print(f"Output: {output}")
 

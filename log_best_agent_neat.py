@@ -44,7 +44,7 @@ def run_example(genome, config):
         draw_robot=True,
         img_path="agent/robot.png"
     )
-    line_follower.max_speed = 253
+    line_follower.max_speed = 100
 
     # Logging variables
     step_count = 0
@@ -124,7 +124,7 @@ def run_example(genome, config):
         line_follower.draw()
         viewport.apply(temp_surface)
         pygame.display.flip()
-        clock.tick(60)
+        clock.tick(0)
         
     pygame.quit()
 
@@ -141,7 +141,7 @@ if __name__ == "__main__":
 
     # Load best genome
     import glob
-    genome_files = glob.glob("neat_results/models/best_genome_*.pkl")
+    genome_files = glob.glob("neat_results/100/models/best_genome_*.pkl")
     latest_genome = max(genome_files, key=os.path.getctime)
 
     with open(latest_genome, "rb") as f:

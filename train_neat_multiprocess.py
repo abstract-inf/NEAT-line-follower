@@ -198,7 +198,7 @@ def calculate_fitness_visual(dt):
 
             if center_strength >= 2: speed_reward = abs_speed * 10.0
             else: speed_reward = abs_speed * 0.5
-            if abs(angular_velocity_deg) > 20: speed_reward *= 0.5
+            if abs(angular_velocity_deg) > 20: speed_reward *= -0.5
 
             middle_bonus = 50 if middle_sensor == 1 else 0
             center_bonus = (center_strength ** 1.5) * 2 if linear_velocity > 3 else 0
@@ -214,11 +214,11 @@ def calculate_fitness_visual(dt):
             min_speed = (MAX_SPEED/1000)/2  # min speed is in m/s, e.g., 30 pixels/sec = 0.03 m/s
 
             if linear_velocity <= 0:
-                speed_penalty = 100 * (abs_speed + 0.05)
+                speed_penalty = 1000 * (abs_speed + 0.05)
             elif 0 < linear_velocity < min_speed:
-                speed_penalty = 100 * (min_speed - abs_speed)
+                speed_penalty = -100 * (min_speed - abs_speed)
             elif linear_velocity >= min_speed:
-                speed_penalty = 100 * (abs_speed - min_speed)
+                speed_penalty = -100 * (abs_speed - min_speed)
             else:
                 speed_penalty = 0  # No penalty in the optimal range
             
@@ -237,7 +237,10 @@ def calculate_fitness_visual(dt):
                 genes.pop(genes.index(genes_copy[i]))
                 zone_action = True
             elif middle_sensor_zone_color == "yellow":
-                genes[i].fitness += 500
+                if linear_velocity >= min_speed:
+                    genes[i].fitness += 500
+                else:
+                    genes[i].fitness -= 1000
             
             if zone_action: continue
 
@@ -388,6 +391,7 @@ def eval_genomes(genomes, config):
             'plus_1_std': avg_fitness + std_dev,
             'minus_1_std': avg_fitness - std_dev
         })
+        save_fitness_data_to_csv()
 
 # -----------------------------------------------------------------------------
 # FILE I/O AND MAIN FUNCTION
@@ -412,16 +416,19 @@ def save_fitness_data_to_csv():
         writer.writerows(generation_fitness_data)
     print(f"Fitness statistics saved to {filename}")
 
-def main():
-    global DISPLAY_TRAINING_WINDOW, robot_config, viewport, current_generation, MAX_SPEED
+def main(MAX_SPEED):
+    global DISPLAY_TRAINING_WINDOW, robot_config, viewport, current_generation
 
     # --- Argument Parsing ---
     parser = argparse.ArgumentParser(description="Train a line-following robot using NEAT.")
     parser.add_argument('--headless', action='store_true', help="Run in headless mode without visualization for faster training.")
     args = parser.parse_args()
-    DISPLAY_TRAINING_WINDOW = args.headless  # just add 'not' before args.headless to invert the logic
 
-    MAX_SPEED = 100  # Set a fixed max speed for all generations (in pixels/sec)
+    # --- Global Configurations ---
+    DISPLAY_TRAINING_WINDOW = args.headless  # just add 'not' before args.headless to invert the logic
+    # MAX_SPEED = 100  # Set a fixed max speed for all generations (in pixels/sec)
+    GENERATIONS = 300  # Number of generations to run NEAT
+
     print(f"Running in {'headless' if not DISPLAY_TRAINING_WINDOW else 'visual'} mode.")
 
     # --- Pygame Initialization ---
@@ -471,7 +478,6 @@ def main():
     population.add_reporter(neat.Checkpointer(generation_interval=1, filename_prefix=os.path.join(checkpoint_dir, "neat-checkpoint-")))
 
     # --- Run NEAT ---
-    GENERATIONS = 300
     winner = None
     try:
         winner = population.run(eval_genomes, GENERATIONS)
@@ -499,4 +505,7 @@ def main():
 if __name__ == "__main__":
     # This is required for multiprocessing to work correctly on some platforms
     multiprocessing.freeze_support() 
-    main()
+    for speed in [100, 200, 300, 400, 500]:
+        MAX_SPEED = speed
+        print(f"Starting training with MAX_SPEED = {MAX_SPEED}")
+        main(MAX_SPEED)
