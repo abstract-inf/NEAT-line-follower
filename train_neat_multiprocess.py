@@ -496,9 +496,9 @@ def main(MAX_SPEED):
         save_fitness_data_to_csv()
 
         if stats.best_genome():
-             visualize.plot_stats(stats, ylog=False, view=True, filename=f"neat_results/{MAX_SPEED}/statistics/stats.svg")
-             visualize.plot_species(stats, view=True, filename=f"neat_results/{MAX_SPEED}/statistics/species.svg")
-             visualize.draw_net(config, stats.best_genome(), view=True, filename=f"neat_results/{MAX_SPEED}/statistics/net.svg")
+             visualize.plot_stats(stats, ylog=False, view=False, filename=f"neat_results/{MAX_SPEED}/statistics/stats.svg")
+             visualize.plot_species(stats, view=False, filename=f"neat_results/{MAX_SPEED}/statistics/species.svg")
+             visualize.draw_net(config, stats.best_genome(), view=False, filename=f"neat_results/{MAX_SPEED}/statistics/net.svg")
         
         pygame.quit()
 
@@ -508,4 +508,12 @@ if __name__ == "__main__":
     for speed in [100, 200, 300, 400, 500]:
         MAX_SPEED = speed
         print(f"Starting training with MAX_SPEED = {MAX_SPEED}")
+        # Reset for each speed
+        locals()['generation_fitness_data'] = [] 
+        globals()['current_generation'] = 0
+        globals()['highest_fitness'] = -float('inf')
+        globals()['highest_fitness_key'] = -1
+        globals()['genes'] = []
+        globals()['robots'] = []
+
         main(MAX_SPEED)
