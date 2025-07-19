@@ -325,7 +325,7 @@ class LineFollower:
 
         # Check if coordinates are available and list is long enough
         if not hasattr(self, 'sensor_coordinates') or not self.sensor_coordinates or len(self.sensor_coordinates) <= MIDDLE_SENSOR_INDEX:
-            print(f"Warn: Sensor coords not ready/long enough for middle sensor check (Idx: {MIDDLE_SENSOR_INDEX})")
+            # print(f"Warn: Sensor coords not ready/long enough for middle sensor check (Idx: {MIDDLE_SENSOR_INDEX})")
             return None
 
         try:
@@ -602,10 +602,10 @@ class LineFollowerPID(LineFollower):
         control = P + self.integral + D
 
         # 5. differential drive speeds
-        base = 0.8
+        base = 1 # was 0.8
         left  = np.clip(base - control, -1.0, 1.0)
         right = np.clip(base + control, -1.0, 1.0)
 
-        print(error)
+        # print(error)
 
         return [left, right]

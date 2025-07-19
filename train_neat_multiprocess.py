@@ -115,11 +115,11 @@ def eval_single_genome_headless(genome, config, robot_cfg, max_speed):
         min_speed = (max_speed/1000)/2  # min speed is in m/s, e.g., 30 pixels/sec = 0.03 m/s
 
         if linear_velocity <= 0:
-            speed_penalty = 100 * (abs_speed + 0.05)
+            speed_penalty = 1000 * (abs_speed + 0.05)
         elif 0 < linear_velocity < min_speed:
-            speed_penalty = 100 * (min_speed - abs_speed)
-        elif linear_velocity > min_speed:
-            speed_penalty = 100 * (abs_speed - min_speed)
+            speed_penalty = -100 * (min_speed - abs_speed)
+        elif linear_velocity >= min_speed:
+            speed_penalty = -100 * (abs_speed - min_speed)
         else:
             speed_penalty = 0  # No penalty in the optimal range
         
@@ -128,13 +128,34 @@ def eval_single_genome_headless(genome, config, robot_cfg, max_speed):
         # Check for zone completion
         middle_sensor_zone_color = line_follower.check_middle_sensor_color()
         if middle_sensor_zone_color == "green":
-            genome.fitness += 5000 + (abs_speed * 100)
+            genome.fitness += 10000 + (abs_speed * 100)
             break # End simulation for this robot
         elif middle_sensor_zone_color == "red":
             genome.fitness -= 500
             break # End simulation for this robot
         elif middle_sensor_zone_color == "yellow":
-            genome.fitness += 500
+            if linear_velocity >= min_speed:
+                genome.fitness += 500
+            else:
+                genome.fitness -= 1000
+        
+        '''
+        if middle_sensor_zone_color == "green":
+            genes[i].fitness += 10000 + (abs_speed * 100)
+            robots.pop(robots.index(robot))
+            genes.pop(genes.index(genes_copy[i]))
+            zone_action = True
+        elif middle_sensor_zone_color == "red":
+            genes[i].fitness -= 500
+            robots.pop(robots.index(robot))
+            genes.pop(genes.index(genes_copy[i]))
+            zone_action = True
+        elif middle_sensor_zone_color == "yellow":
+            if linear_velocity >= min_speed:
+                genes[i].fitness += 500
+            else:
+                genes[i].fitness -= 1000
+        '''
 
         # Update total fitness
         genome.fitness += (speed_reward + middle_bonus + center_bonus + smooth_bonus - 
@@ -198,7 +219,7 @@ def calculate_fitness_visual(dt):
 
             if center_strength >= 2: speed_reward = abs_speed * 10.0
             else: speed_reward = abs_speed * 0.5
-            if abs(angular_velocity_deg) > 20: speed_reward *= -0.5
+            if abs(angular_velocity_deg) > 20: speed_reward *= 0.5
 
             middle_bonus = 50 if middle_sensor == 1 else 0
             center_bonus = (center_strength ** 1.5) * 2 if linear_velocity > 3 else 0
@@ -227,7 +248,7 @@ def calculate_fitness_visual(dt):
             middle_sensor_zone_color = robot.check_middle_sensor_color()
             zone_action = False
             if middle_sensor_zone_color == "green":
-                genes[i].fitness += 5000 + (abs_speed * 100)
+                genes[i].fitness += 10000 + (abs_speed * 100)
                 robots.pop(robots.index(robot))
                 genes.pop(genes.index(genes_copy[i]))
                 zone_action = True
@@ -363,8 +384,9 @@ def eval_genomes(genomes, config):
                 (f"Highest Fitness: {highest_fitness:.2f}", (0, 255, 0)),
                 (f"Max Fitness: {max_fitness:.2f}", (0, 0, 0)),
                 (f"Generation: {current_generation}", (0, 0, 255)),
-                (f"Max Speed: {MAX_SPEED}", (255, 165, 0)),
-                (f"Alive: {len(robots)}", (255, 0, 0)),
+                (f"Max Speed: {MAX_SPEED} px/s", (255, 165, 0)),
+                (f"Linear Velocity: {robots[max_fitness_index].get_velocity()[0]*1000:.2f} px/s", (0, 0, 255)),
+                (f"Alive: {len(robots)}", (255, 0, 0))
             ]
             for i, (line, color) in enumerate(lines):
                 text_surface = font.render(line, True, color)
@@ -427,7 +449,7 @@ def main(MAX_SPEED):
     # --- Global Configurations ---
     DISPLAY_TRAINING_WINDOW = args.headless  # just add 'not' before args.headless to invert the logic
     # MAX_SPEED = 100  # Set a fixed max speed for all generations (in pixels/sec)
-    GENERATIONS = 300  # Number of generations to run NEAT
+    GENERATIONS = 500  # Number of generations to run NEAT
 
     print(f"Running in {'headless' if not DISPLAY_TRAINING_WINDOW else 'visual'} mode.")
 
@@ -505,7 +527,7 @@ def main(MAX_SPEED):
 if __name__ == "__main__":
     # This is required for multiprocessing to work correctly on some platforms
     multiprocessing.freeze_support() 
-    for speed in [100, 200, 300, 400, 500]:
+    for speed in [100, 150, 200, 250, 300, 350, 400, 450, 500]:
         MAX_SPEED = speed
         print(f"Starting training with MAX_SPEED = {MAX_SPEED}")
         # Reset for each speed

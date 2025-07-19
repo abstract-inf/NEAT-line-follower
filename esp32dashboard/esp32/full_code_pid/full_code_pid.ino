@@ -21,8 +21,8 @@ MPU6050 mpu;
 #define MOTOR2_PWM 25
 
 // Line Sensors
-#define s0 15 // was 2
-#define s1 2 // was 15
+#define s0 18 // was 2
+#define s1 19 // was 15
 #define s2 4
 #define s3 16
 #define Sens 17
