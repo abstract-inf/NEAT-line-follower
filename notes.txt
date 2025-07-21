@@ -1,0 +1,11 @@
+NEAT
+speed 350 was too slow and when faced the first turn it accelerated and eventually hit the red line
+
+speed 400 was too slow at first but then suddenly increased it's speed in the middle of the starting line and crashed on the right most red line
+
+speed 450 was similar to 250
+500 started out drifting from the line then corrected it self then it was similar to 250 but this time when it reached the first run it turned to the opposite side meaning that the NEAT controller did not manage to learn to steer the robot correctly at high speeds.
+
+apparently all fast speeds did not manage to control their speed and eventually kept crashing while training so the algorithm figured out that slowing down is the best action
+
+the low speeds [100, 300] faced the same issue of needing to stop at any sharp turn and then turn then move. unlike the PID algorithm it managed to steer all the curves the sharp and normal turns smoothly
