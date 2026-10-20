@@ -12,7 +12,7 @@ Using NEAT algorithm in line following robots
 
 A comprehensive research paper on this topic was developed and is available in the repository:
 
-**[NEAT-Based Neural Controller for Robust Line Following Robots](https://github.com/abstract-inf/NEAT-line-follower/blob/main/NEAT_Based_Neural_Controller_for_RobustLine_Following_Robots.pdf)**
+**[NEAT-Based Neural Controller for Robust Line Following Robots](https://github.com/abstract-inf/NEAT-line-follower/blob/main/NEAT_Based_Neural_Controller_for_Robust_Line_Following_Robots.pdf)**
 
 This paper provides detailed analysis and theoretical foundations for applying NEAT to line-following robotic systems.
 
