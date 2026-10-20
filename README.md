@@ -62,7 +62,7 @@ This approach is particularly suited for robotic tasks like line following, wher
 
 - [NEAT Research Paper](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf)
 - [NEAT-Python Documentation](https://neat-python.readthedocs.io/)
-- [Research Paper - NEAT-Based Neural Controller for Robust Line Following Robots](https://github.com/abstract-inf/NEAT-line-follower/blob/main/NEAT_Based_Neural_Controller_for_RobustLine_Following_Robots.pdf)
+- [Research Paper - NEAT-Based Neural Controller for Robust Line Following Robots](https://github.com/abstract-inf/NEAT-line-follower/blob/main/NEAT_Based_Neural_Controller_for_Robust_Line_Following_Robots.pdf)
 
 ## License
 
