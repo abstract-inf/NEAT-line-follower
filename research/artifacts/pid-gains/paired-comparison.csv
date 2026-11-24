@@ -1,0 +1,3 @@
+family,both_complete,baseline_only_complete,selected_only_complete,neither_complete,completion_delta,baseline_common_time_s,selected_common_time_s,paired_time_change_s
+pid_filtered,51,0,0,39,0,12.42908496732004,12.42908496732004,0.0
+pid_corner_supervised,77,1,7,5,6,29.228138528127424,29.518614718603363,0.290476190475939

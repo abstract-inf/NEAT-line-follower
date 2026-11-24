@@ -1,0 +1,44 @@
+# Python environments and caches
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.cache/
+*.egg-info/
+build/
+dist/
+
+# Generated experiment data and historical raw archives
+/runs/
+/output/
+/research/archive/
+/research/artifacts/**/telemetry/
+
+# Downloaded literature and local presentation
+/Related Work/
+/simple-presentation.pptx
+
+# Rendered media and simulator exports
+*.mp4
+*.avi
+*.mov
+*.mjpg
+*.mjb
+
+# Local secrets and temporary files
+.env
+.env.*
+!.env.example
+*.tmp
+*.bak
+
+# Local OS/editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+/.idea/
+/.vscode/

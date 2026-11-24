@@ -1,0 +1,55 @@
+{
+  "evaluator_version": "progress-1.2",
+  "episode": {
+    "minimum_time_limit": 45.0,
+    "time_multiplier": 3.0,
+    "stall_seconds": 5.0,
+    "progress_increment": 0.01,
+    "corridor_half_width": 0.1,
+    "departure_seconds": 2.0,
+    "gate_radius": 0.035,
+    "completion_speed_bonus": 0.0,
+    "maximum_time_limit": 120,
+    "time_reference_speed": 0.1
+  },
+  "slots": [
+    0,
+    1,
+    31,
+    32,
+    17
+  ],
+  "speed_caps_m_s": [
+    1.5,
+    0.5
+  ],
+  "neat_generation": 98,
+  "neat_sha256": "ec6e424bae763b6bef21b838449f5e677bc2a229ca71458b4c6fd406cead2d48",
+  "pid_settings": {
+    "pid-plain": {
+      "kp": 0.7239850053219836,
+      "ki": 0.1681344890402374,
+      "kd": 0.021582281714272438,
+      "base": 0.75
+    },
+    "pid-filtered": {
+      "kp": 0.7239850053219836,
+      "ki": 0.1681344890402374,
+      "kd": 0.021582281714272438,
+      "base": 0.75,
+      "minimum_command": 0.03689846560293942,
+      "derivative_filter_s": 0.01921304669141327,
+      "integral_limit": 0.4,
+      "slowdown_gain": 0.5675464177752183,
+      "loss_hold_s": 0.7382309523604921,
+      "search_command": 0.5070105586192023,
+      "corner_supervision": false,
+      "approach_command": 0.40813894373330745,
+      "turn_lead_m": 0.016964705975112876,
+      "pivot_command": 0.5789689902404036
+    }
+  },
+  "departure_requires_no_sensor_contact": true,
+  "retrospective": true,
+  "recorder_sha256": "d9d9c492239c82bee14118f74039cd5ec64e05a5e71625ad29af22fd4d5a2eda"
+}

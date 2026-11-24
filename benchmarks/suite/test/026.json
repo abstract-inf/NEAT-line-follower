@@ -1,0 +1,183 @@
+{
+  "name": "advanced-12559664227863243354",
+  "sections": [
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.015466151800647527,
+      "feature": "hairpin"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -3.141592653589793,
+      "radius": 0.1797789495817003,
+      "width": 0.015466151800647527,
+      "feature": "hairpin"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.015466151800647527,
+      "feature": "hairpin"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02217797832964845,
+      "feature": "corner"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.02217797832964845,
+      "feature": "corner"
+    },
+    {
+      "kind": "straight",
+      "length": 0.36615879202768564,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02217797832964845,
+      "feature": "corner"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 1.3050689829310314,
+      "radius": 0.3573670744520573,
+      "width": 0.01231770455193335,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.01231770455193335,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.0471975511965976,
+      "radius": 0.2153932572763211,
+      "width": 0.0236039854219766,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 2.0943951023931953,
+      "radius": 0.2153932572763211,
+      "width": 0.0236039854219766,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.0471975511965976,
+      "radius": 0.2153932572763211,
+      "width": 0.0236039854219766,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.2440315717325694,
+      "radius": 0.16510845929313012,
+      "width": 0.026951979440170012,
+      "feature": "tight_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.026951979440170012,
+      "feature": "tight_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.01800330573860304,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 3.141592653589793,
+      "radius": 0.13147395560830977,
+      "width": 0.01800330573860304,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.01800330573860304,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "straight",
+      "length": 0.29012787231310794,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.012963016495953803,
+      "feature": "straight"
+    },
+    {
+      "kind": "straight",
+      "length": 0.6898525864080444,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.017756378123451842,
+      "feature": "straight"
+    }
+  ],
+  "start": [
+    0.30010431164094703,
+    0.018217773606807652,
+    0.5763249667191337
+  ],
+  "gaps": [
+    [
+      1.349087455319538,
+      1.3903405804392988
+    ]
+  ],
+  "branches": [
+    {
+      "at": 0.8705445664117083,
+      "length": 0.1022159249149933,
+      "angle": 1.5707963267948966,
+      "width": 0.02,
+      "crossing": true
+    },
+    {
+      "at": 4.482631578929484,
+      "length": 0.1089872244969585,
+      "angle": 1.5707963267948966,
+      "width": 0.02,
+      "crossing": false
+    }
+  ],
+  "arena_size": 4.0,
+  "resolution": 0.001,
+  "seed": 12559664227863243354,
+  "difficulty": "advanced",
+  "split": "test",
+  "generator_version": "1.0",
+  "runout": 0.25
+}

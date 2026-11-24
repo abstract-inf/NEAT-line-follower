@@ -1,0 +1,1051 @@
+{
+  "runs": {
+    "28-10-2026": {
+      "configuration": {
+        "settings": {
+          "strategy": "curriculum",
+          "seed": 0,
+          "generations": 100,
+          "population": 200,
+          "workers": 4,
+          "time_limit": 60,
+          "excluded_features": [],
+          "backend": "gpu",
+          "gpu_batch_size": 200,
+          "episodes_per_genome": 4
+        },
+        "robot": {
+          "design": "competition",
+          "design_revision": "integrated-pcb-1",
+          "total_mass": 0.55,
+          "wheel_spacing": 0.175,
+          "wheel_radius": 0.0165,
+          "wheel_width": 0.012,
+          "chassis_length": 0.09,
+          "chassis_width": 0.13,
+          "chassis_height": 0.0025,
+          "caster_offset": 0.045,
+          "max_speed": 0.3,
+          "max_torque": 0.03,
+          "motor_time_constant": 0.05,
+          "motor_gain": 0.005,
+          "wheel_friction": 0.75,
+          "caster_friction": 0.05,
+          "physics_hz": 600,
+          "control_hz": 60,
+          "sensor_layout": "semicircle",
+          "sensor_radius": 0.11,
+          "sensor_offset": 0.09,
+          "sensor_angle": 1.7,
+          "sensor_height": 0.006,
+          "sensor_max_distance": 0.025
+        },
+        "episode": {
+          "minimum_time_limit": 45.0,
+          "time_multiplier": 3.0,
+          "stall_seconds": 5.0,
+          "progress_increment": 0.01,
+          "corridor_half_width": 0.045,
+          "departure_seconds": 1.0,
+          "gate_radius": 0.035
+        },
+        "live_population_observer": false,
+        "geometry_freeze": {
+          "format_version": 1,
+          "selected_for_training": true,
+          "robot": {
+            "design": "competition",
+            "design_revision": "integrated-pcb-1",
+            "total_mass": 0.55,
+            "wheel_spacing": 0.175,
+            "wheel_radius": 0.0165,
+            "wheel_width": 0.012,
+            "chassis_length": 0.09,
+            "chassis_width": 0.13,
+            "chassis_height": 0.0025,
+            "caster_offset": 0.045,
+            "max_speed": 0.3,
+            "max_torque": 0.03,
+            "motor_time_constant": 0.05,
+            "motor_gain": 0.005,
+            "wheel_friction": 0.75,
+            "caster_friction": 0.05,
+            "physics_hz": 600,
+            "control_hz": 60,
+            "sensor_layout": "semicircle",
+            "sensor_radius": 0.11,
+            "sensor_offset": 0.09,
+            "sensor_angle": 1.7,
+            "sensor_height": 0.006,
+            "sensor_max_distance": 0.025
+          },
+          "configuration_sha256": "560706c9e4361226f14a6a10ea8578ead6fc96df33263d78f3fe2898f7c7b424",
+          "mjcf_sha256": "c12fa88243a61a98fa69bdb6a5c4b19cbe4e7375b1c6f85b814285c1d93e3afb"
+        },
+        "suite_sha256": "1e24fd7d847e76768069aa07caae2a1da4c581f7ae27b7a208fdbf7375eea4dc",
+        "suite_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\benchmarks\\suite\\suite.json",
+        "validation_hashes": [
+          "9e83abfbd69adc2628cb2f32dcf14088fc9900d5850abe066967a1764ce68b36",
+          "4f3900de995881b509f2e42deb8ab85d989dc16a96b3f68d3075e579d2353753",
+          "1a59e9be0d59d7454e42c4255d9904b649480cd6e3e40a07fb3b712d4d7f11bd",
+          "2b157806de012537e580d2e49c333e519ad50a66823dfc0f64054dcb57c3bca1",
+          "7f8471389f153f4fc9123e6bf2b0313abf74315757e8876eae912b9145e8d7a0",
+          "d538f6350b32c4bb997b569ef194e74b3be84db93294d997741957c0893861d5",
+          "d3ca1e628af511e7d1f622358167611d4bfa0781a248cc812c51c049defa5f77",
+          "3baccf528f13e220496a27c51906c0b4e95a8c0f5a149d5824da950c88cbd278",
+          "6e84829660e71e786af3da50a2ab89c5d78c1258fb5147841736310f21461e94",
+          "79418c0bfe73d15ac33756bce39c5ab36322abb41c49682e59cf1d72e820dcb8",
+          "2ed71bca73dcf3628bcddc813106f2d736639e622cb054edf69a6a8d09f2572b",
+          "ccaa1e0b3bb3bcbb73cd0b12b588e49649027a1ddad3df7c7b73e785cc6a57a0",
+          "bbcd7e244c6e1b7298165ba2668abc982a00ef6a50f9b8a4143f5d708cc4cd16",
+          "285fa86bc996a19188d005222dd0fd079abc53d0e9d3badfcd925ed425c8744d",
+          "9df13c21508061b464092a9ef38307d5e6bcb54eb241fbf67fd14d94030f7f74",
+          "bc78426bae1dc48db655b397a41ed0ce331fa57884b6ac11e9ef74c7455a7aba",
+          "37da8c2955882aa201bb65aaecbd282105a1c4df8ad2d101c5a942e6f07b415e",
+          "0673bebfbdd7cad84267caa98f72dbf76d91e59bca9720b85c072be11b226358",
+          "533319c6150936cbbeeec4a8d3f0895baf425bc0134bc7c096b4af9664887e52",
+          "93c00f05364cc84c2642fb2951a2f5f1a08f89cb6eddb09cfe909f3e4a51719a",
+          "9bac47b9f2bdf9b35afb20f1877259115d6f7b5bc25dede73d77e12322595769",
+          "b0d433a70771e5075fb0036fc590803cbcce8bfa08e3443668ad27200b244223",
+          "491faea92d202f79a854a525a85db49269c43bd4f23a0e2be961a871e1846cf9",
+          "9581eb09c7f97619c53325e9a59703f928f035de5e4e0a05c5bfc26065c9f25c",
+          "5e383c0541756bb3a74dfe607dfc2a9f3b46085479e31a4e7e5f16542260740c",
+          "86806191c42ceca81758e9a4d351bdb1962d129fa43e25a46be77548cdb34df7",
+          "ac5a4ddac8b69874be33305d782f37921de0be27a259743f01ebca4b23e7e910",
+          "20a53c0e904a17baace19b71be14b14e6323b373d73ac545d78ba0a26919ade9",
+          "7934961cb37a18e319fa16c7bd98a6811dc2fdcbb371658d3ce625377bd873a6",
+          "33eb1e8b62c39c4e8e91ce4955ea7e08d63f709ccddab794333eb41b9c04457d"
+        ],
+        "generator": {
+          "arena_size": 4.0,
+          "resolution": 0.001,
+          "edge_margin": 0.16,
+          "minimum_clearance": 0.2,
+          "minimum_radius": 0.12,
+          "width_min": 0.012,
+          "width_max": 0.028,
+          "max_attempts": 800,
+          "excluded_features": []
+        },
+        "environment": {
+          "started_utc": "2026-10-28T10:31:18.566325+00:00",
+          "platform": "Windows-11-10.0.26200-SP0",
+          "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+          "logical_cpus": 12,
+          "python": "3.12.14",
+          "dependencies": {
+            "mujoco": "3.17.0",
+            "numpy": "2.5.4",
+            "Pillow": "12.3.0",
+            "neat-python": "0.92",
+            "mujoco-warp": "3.17.0",
+            "warp-lang": "1.18.0"
+          },
+          "source_sha256": "eacb3caf4cb87bbe2a4dbbd1097fd5a3bda21814ba56b6374ed06943c5ce8d21",
+          "fitness_version": "progress-1.0",
+          "physical_parameters_calibrated": false
+        },
+        "backend_details": {
+          "physics": "gpu",
+          "gpu_experimental": true,
+          "gpu_batch_layout": "track-major",
+          "gpu_finished_world_compaction": true,
+          "gpu_diagnostic_difference": "AUTORESET disable flag omitted; invalid states and overflow raise explicitly"
+        },
+        "claim_scope": "Track generalization only; no hardware calibration or fault robustness claims",
+        "single_track_repeat_semantics": "4 budget slots; deterministic repeats are not independent trials"
+      },
+      "generation_count": 100,
+      "generation_range": [
+        0,
+        99
+      ],
+      "next_checkpoint_generation": 100,
+      "checkpoint_population_size": 202,
+      "selected_generation": 38,
+      "selected_genome": 5963,
+      "model_sha256": "7f96dd5f23c19a7135471a48b0a170717aac75e5b422ea5003e94ce4a7159d4b",
+      "validation": {
+        "all": {
+          "episodes": 30,
+          "completed": 16,
+          "completion_rate": 0.5333333333333333,
+          "mean_lateral_rmse_m": 0.024986870513323545,
+          "mean_absolute_lateral_error_m": null,
+          "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+          "mean_progress": 0.7345171239292122,
+          "mean_failed_progress": 0.43110812270545457,
+          "mean_success_completion_s": 11.484375,
+          "mean_elapsed_all_s": 11.034444444444444,
+          "failure_distribution": {
+            "completed": 16,
+            "off_route": 14
+          },
+          "mean_line_loss_events": 0.5
+        },
+        "beginner": {
+          "episodes": 10,
+          "completed": 10,
+          "completion_rate": 1.0,
+          "mean_lateral_rmse_m": 0.005536729464686213,
+          "mean_absolute_lateral_error_m": null,
+          "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+          "mean_progress": 1.0,
+          "mean_failed_progress": null,
+          "mean_success_completion_s": 7.4816666666666665,
+          "mean_elapsed_all_s": 7.4816666666666665,
+          "failure_distribution": {
+            "completed": 10
+          },
+          "mean_line_loss_events": 0.2
+        },
+        "intermediate": {
+          "episodes": 10,
+          "completed": 3,
+          "completion_rate": 0.3,
+          "mean_lateral_rmse_m": 0.040962689953213324,
+          "mean_absolute_lateral_error_m": null,
+          "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+          "mean_progress": 0.5653268478061907,
+          "mean_failed_progress": 0.3790383540088439,
+          "mean_success_completion_s": 15.933333333333332,
+          "mean_elapsed_all_s": 10.355,
+          "failure_distribution": {
+            "off_route": 7,
+            "completed": 3
+          },
+          "mean_line_loss_events": 0.0
+        },
+        "advanced": {
+          "episodes": 10,
+          "completed": 3,
+          "completion_rate": 0.3,
+          "mean_lateral_rmse_m": 0.028461192122071093,
+          "mean_absolute_lateral_error_m": null,
+          "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+          "mean_progress": 0.6382245239814457,
+          "mean_failed_progress": 0.4831778914020652,
+          "mean_success_completion_s": 20.377777777777776,
+          "mean_elapsed_all_s": 15.266666666666666,
+          "failure_distribution": {
+            "completed": 3,
+            "off_route": 7
+          },
+          "mean_line_loss_events": 1.3
+        }
+      },
+      "validation_zigzag": {
+        "episodes": 9,
+        "completed": 0,
+        "completion_rate": 0.0,
+        "mean_lateral_rmse_m": 0.0451246820247205,
+        "mean_absolute_lateral_error_m": null,
+        "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+        "mean_progress": 0.4335138466688356,
+        "mean_failed_progress": 0.4335138466688356,
+        "mean_success_completion_s": null,
+        "mean_elapsed_all_s": 11.237037037037036,
+        "failure_distribution": {
+          "off_route": 9
+        },
+        "mean_line_loss_events": 0.3333333333333333
+      },
+      "population_zigzag": {
+        "episodes": 24054,
+        "completed": 0,
+        "completion_rate": 0.0,
+        "mean_lateral_rmse_m": 0.07510230611703979,
+        "mean_absolute_lateral_error_m": null,
+        "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+        "mean_progress": 0.09968742192384143,
+        "mean_failed_progress": 0.09968742192384143,
+        "mean_success_completion_s": null,
+        "mean_elapsed_all_s": 6.172953216374268,
+        "failure_distribution": {
+          "stalled": 3196,
+          "off_route": 20546,
+          "timeout": 312
+        },
+        "mean_line_loss_events": 1.3735761203957761
+      },
+      "population_corner": {
+        "episodes": 29641,
+        "completed": 124,
+        "completion_rate": 0.004183394622313687,
+        "mean_lateral_rmse_m": 0.07213396679546802,
+        "mean_absolute_lateral_error_m": null,
+        "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+        "mean_progress": 0.13393781404420094,
+        "mean_failed_progress": 0.13029951370681844,
+        "mean_success_completion_s": 24.4883064516129,
+        "mean_elapsed_all_s": 6.971698548182134,
+        "failure_distribution": {
+          "stalled": 4117,
+          "off_route": 24953,
+          "timeout": 447,
+          "completed": 124
+        },
+        "mean_line_loss_events": 1.529536790256739
+      },
+      "zigzag_unique_tracks": 120,
+      "recorded_wall_s": 34247.136922800215,
+      "logical_physics_steps": 440503700,
+      "training_mean_range": [
+        0.14256436963366748,
+        1.0820558296923106
+      ],
+      "training_best_range": [
+        0.2785607297140751,
+        1.998847222222222
+      ],
+      "initial_generation": {
+        "generation": "0",
+        "condition": "curriculum",
+        "seed": "0",
+        "training_mean": "0.43523276721644627",
+        "training_best": "1.9961909722222222",
+        "validation_completion_rate": "0.4",
+        "validation_score": "0.48783770119945213",
+        "physics_steps": "5613740",
+        "episode_slots": "830",
+        "wall_seconds": "316.68907680001575",
+        "backend": "gpu",
+        "gpu_world_steps_total": "7562600",
+        "gpu_padding_world_steps_total": "1948860"
+      },
+      "final_generation": {
+        "generation": "99",
+        "condition": "curriculum",
+        "seed": "0",
+        "training_mean": "0.2936662482846492",
+        "training_best": "0.9568493909524455",
+        "validation_completion_rate": "0.5",
+        "validation_score": "0.6303674270659925",
+        "physics_steps": "5777760",
+        "episode_slots": "834",
+        "wall_seconds": "217.68389069999103",
+        "backend": "gpu",
+        "gpu_world_steps_total": "618636910",
+        "gpu_padding_world_steps_total": "178133210"
+      },
+      "selected_generation_metrics": {
+        "generation": "38",
+        "condition": "curriculum",
+        "seed": "0",
+        "training_mean": "0.5537914344100108",
+        "training_best": "1.0482328929783957",
+        "validation_completion_rate": "0.5333333333333333",
+        "validation_score": "0.6490206224544584",
+        "physics_steps": "5454110",
+        "episode_slots": "810",
+        "wall_seconds": "261.1827381000039",
+        "backend": "gpu",
+        "gpu_world_steps_total": "264971330",
+        "gpu_padding_world_steps_total": "73208290"
+      }
+    },
+    "28-10-2026-hard": {
+      "configuration": {
+        "settings": {
+          "strategy": "adaptive",
+          "seed": 0,
+          "generations": 200,
+          "population": 200,
+          "workers": 4,
+          "time_limit": null,
+          "excluded_features": [],
+          "backend": "gpu",
+          "gpu_batch_size": 200,
+          "episodes_per_genome": 10,
+          "track_profile": "progressive",
+          "aggregation": "mean_min",
+          "cvar_fraction": 0.3,
+          "curriculum": {
+            "window": 5,
+            "minimum_generations": 5,
+            "maximum_generations": 25,
+            "elite_fraction": 0.1,
+            "beginner_threshold": 0.85,
+            "intermediate_threshold": 0.7,
+            "advanced_threshold": 0.55,
+            "length_scale": 1.0,
+            "motif_scale": 1.0
+          }
+        },
+        "robot": {
+          "design": "competition",
+          "design_revision": "integrated-pcb-1",
+          "total_mass": 0.55,
+          "wheel_spacing": 0.175,
+          "wheel_radius": 0.0165,
+          "wheel_width": 0.012,
+          "chassis_length": 0.09,
+          "chassis_width": 0.13,
+          "chassis_height": 0.0025,
+          "caster_offset": 0.045,
+          "max_speed": 0.35,
+          "max_torque": 0.03,
+          "motor_time_constant": 0.05,
+          "motor_gain": 0.005,
+          "wheel_friction": 0.75,
+          "caster_friction": 0.05,
+          "physics_hz": 600,
+          "control_hz": 60,
+          "sensor_layout": "semicircle",
+          "sensor_radius": 0.11,
+          "sensor_offset": 0.09,
+          "sensor_angle": 1.7,
+          "sensor_height": 0.006,
+          "sensor_max_distance": 0.025
+        },
+        "episode": {
+          "minimum_time_limit": 45.0,
+          "time_multiplier": 3.0,
+          "stall_seconds": 5.0,
+          "progress_increment": 0.01,
+          "corridor_half_width": 0.045,
+          "departure_seconds": 1.0,
+          "gate_radius": 0.035,
+          "completion_speed_bonus": 0.0,
+          "maximum_time_limit": 120.0,
+          "time_reference_speed": 0.1
+        },
+        "live_population_observer": false,
+        "geometry_freeze": {
+          "format_version": 1,
+          "selected_for_training": true,
+          "robot": {
+            "design": "competition",
+            "design_revision": "integrated-pcb-1",
+            "total_mass": 0.55,
+            "wheel_spacing": 0.175,
+            "wheel_radius": 0.0165,
+            "wheel_width": 0.012,
+            "chassis_length": 0.09,
+            "chassis_width": 0.13,
+            "chassis_height": 0.0025,
+            "caster_offset": 0.045,
+            "max_speed": 0.35,
+            "max_torque": 0.03,
+            "motor_time_constant": 0.05,
+            "motor_gain": 0.005,
+            "wheel_friction": 0.75,
+            "caster_friction": 0.05,
+            "physics_hz": 600,
+            "control_hz": 60,
+            "sensor_layout": "semicircle",
+            "sensor_radius": 0.11,
+            "sensor_offset": 0.09,
+            "sensor_angle": 1.7,
+            "sensor_height": 0.006,
+            "sensor_max_distance": 0.025
+          },
+          "configuration_sha256": "e3dee0ef00d4044dd9a96413cb8072a66896c3c700de414e49b31b237ac0d625",
+          "mjcf_sha256": "264810b8b3674ef676ad9e077348766b60f08d3a82a52a20ffa969fe02ef844c"
+        },
+        "suite_sha256": "ef9ee04f304d1d366ed129bb6313aec9dc552605a2476a43bdaf1cc178a10794",
+        "suite_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\28-10-2026-hard\\suite.json",
+        "validation_hashes": [
+          "9e83abfbd69adc2628cb2f32dcf14088fc9900d5850abe066967a1764ce68b36",
+          "4f3900de995881b509f2e42deb8ab85d989dc16a96b3f68d3075e579d2353753",
+          "1a59e9be0d59d7454e42c4255d9904b649480cd6e3e40a07fb3b712d4d7f11bd",
+          "2b157806de012537e580d2e49c333e519ad50a66823dfc0f64054dcb57c3bca1",
+          "7f8471389f153f4fc9123e6bf2b0313abf74315757e8876eae912b9145e8d7a0",
+          "d538f6350b32c4bb997b569ef194e74b3be84db93294d997741957c0893861d5",
+          "d3ca1e628af511e7d1f622358167611d4bfa0781a248cc812c51c049defa5f77",
+          "3baccf528f13e220496a27c51906c0b4e95a8c0f5a149d5824da950c88cbd278",
+          "6e84829660e71e786af3da50a2ab89c5d78c1258fb5147841736310f21461e94",
+          "79418c0bfe73d15ac33756bce39c5ab36322abb41c49682e59cf1d72e820dcb8",
+          "2ed71bca73dcf3628bcddc813106f2d736639e622cb054edf69a6a8d09f2572b",
+          "ccaa1e0b3bb3bcbb73cd0b12b588e49649027a1ddad3df7c7b73e785cc6a57a0",
+          "bbcd7e244c6e1b7298165ba2668abc982a00ef6a50f9b8a4143f5d708cc4cd16",
+          "285fa86bc996a19188d005222dd0fd079abc53d0e9d3badfcd925ed425c8744d",
+          "9df13c21508061b464092a9ef38307d5e6bcb54eb241fbf67fd14d94030f7f74",
+          "bc78426bae1dc48db655b397a41ed0ce331fa57884b6ac11e9ef74c7455a7aba",
+          "37da8c2955882aa201bb65aaecbd282105a1c4df8ad2d101c5a942e6f07b415e",
+          "0673bebfbdd7cad84267caa98f72dbf76d91e59bca9720b85c072be11b226358",
+          "533319c6150936cbbeeec4a8d3f0895baf425bc0134bc7c096b4af9664887e52",
+          "93c00f05364cc84c2642fb2951a2f5f1a08f89cb6eddb09cfe909f3e4a51719a",
+          "9bac47b9f2bdf9b35afb20f1877259115d6f7b5bc25dede73d77e12322595769",
+          "b0d433a70771e5075fb0036fc590803cbcce8bfa08e3443668ad27200b244223",
+          "491faea92d202f79a854a525a85db49269c43bd4f23a0e2be961a871e1846cf9",
+          "9581eb09c7f97619c53325e9a59703f928f035de5e4e0a05c5bfc26065c9f25c",
+          "5e383c0541756bb3a74dfe607dfc2a9f3b46085479e31a4e7e5f16542260740c",
+          "86806191c42ceca81758e9a4d351bdb1962d129fa43e25a46be77548cdb34df7",
+          "ac5a4ddac8b69874be33305d782f37921de0be27a259743f01ebca4b23e7e910",
+          "20a53c0e904a17baace19b71be14b14e6323b373d73ac545d78ba0a26919ade9",
+          "7934961cb37a18e319fa16c7bd98a6811dc2fdcbb371658d3ce625377bd873a6",
+          "33eb1e8b62c39c4e8e91ce4955ea7e08d63f709ccddab794333eb41b9c04457d"
+        ],
+        "generator": {
+          "arena_size": 4.0,
+          "resolution": 0.001,
+          "edge_margin": 0.16,
+          "minimum_clearance": 0.2,
+          "minimum_radius": 0.12,
+          "width_min": 0.012,
+          "width_max": 0.028,
+          "max_attempts": 1600,
+          "excluded_features": [],
+          "generator_version": "2.0",
+          "target_motifs": null,
+          "route_length_min": null,
+          "route_length_max": null,
+          "gap_count": 1,
+          "gap_max_length": 0.085,
+          "junctions_per_kind": 1
+        },
+        "environment": {
+          "started_utc": "2026-10-28T21:40:31.405721+00:00",
+          "platform": "Windows-11-10.0.26200-SP0",
+          "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+          "logical_cpus": 12,
+          "python": "3.12.14",
+          "dependencies": {
+            "mujoco": "3.17.0",
+            "numpy": "2.5.4",
+            "Pillow": "12.3.0",
+            "neat-python": "0.92",
+            "mujoco-warp": "3.17.0",
+            "warp-lang": "1.18.0"
+          },
+          "source_sha256": "e2cf5a043d888d347c959b1c4bc361c0e12efc716f8929f7663fb06f84f714b6",
+          "fitness_version": "progress-1.1",
+          "physical_parameters_calibrated": false
+        },
+        "backend_details": {
+          "physics": "gpu",
+          "gpu_experimental": true,
+          "gpu_batch_layout": "track-major",
+          "gpu_finished_world_compaction": true,
+          "gpu_diagnostic_difference": "AUTORESET disable flag omitted; invalid states and overflow raise explicitly"
+        },
+        "claim_scope": "Track generalization only; no hardware calibration or fault robustness claims",
+        "single_track_repeat_semantics": "4 budget slots; deterministic repeats are not independent trials",
+        "fitness_version": "progress-1.1",
+        "continuation": {
+          "created_utc": "2026-10-28T21:40:31.845528+00:00",
+          "parent_run": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\28-10-2026",
+          "parent_checkpoint": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\28-10-2026\\checkpoints\\latest.pkl.gz",
+          "parent_checkpoint_sha256": "94f2199c3c5139f4d893e89ba6c0586596db53f787aa1ac91bf83d90c4f8c71e",
+          "parent_source_sha256": "eacb3caf4cb87bbe2a4dbbd1097fd5a3bda21814ba56b6374ed06943c5ce8d21",
+          "source_changes": [
+            {
+              "file": "line_follower/__main__.py",
+              "before_sha256": "e7641440d32d6dc2587eb8d7dce1da1ebb4f4202cd43f8d402cca90e131055fd",
+              "after_sha256": "f8727b8b798d7da3a7f4c7d26d71c0a8542114a096ab73b985be5af4aaa1bda9"
+            },
+            {
+              "file": "line_follower/config.py",
+              "before_sha256": "90b73c73c2e356df26efa7071c554da445c9400beb051bda16d98c80b5a00504",
+              "after_sha256": "2bcf3d68a4f972e357dba753435e1401cafb3c5cac9375db9a47fe23f68cc23c"
+            },
+            {
+              "file": "line_follower/curriculum.py",
+              "before_sha256": null,
+              "after_sha256": "059ff12a5f8636d6de63354235096796333cf4dd0f87fea7703bec2e9a0c7717"
+            },
+            {
+              "file": "line_follower/diagnostics.py",
+              "before_sha256": null,
+              "after_sha256": "6c98b6d66607cf263c6244153c2bd6d051019ecf7b161a51ff72e9ed644110a1"
+            },
+            {
+              "file": "line_follower/episodes.py",
+              "before_sha256": "86e68e999d34fb16ce70253f7508834dde58a0cde074fda0760cfbff45d4b5b2",
+              "after_sha256": "aba9043d1142c2f54e9f6c1f422a2d40fe6b5d693e0e192cdebc4765e17d16f1"
+            },
+            {
+              "file": "line_follower/experiments.py",
+              "before_sha256": "fcce01a145eaa360176bf99dbb045d46410e00921d00bae03929337217882b64",
+              "after_sha256": "55ebe1e60d0c2c3de4b643713004ed0ed35c0605aa0de4ccb21c43c672f2f851"
+            },
+            {
+              "file": "line_follower/fitness.py",
+              "before_sha256": "d01c23c8df3d808f0a6ba4343324af4765571bf25f009fc41fa594a17043447b",
+              "after_sha256": "2a49f40951d2d9847c442a065a2a7fb7ee0598cd15c8bc133edc9f678db328d7"
+            },
+            {
+              "file": "line_follower/gpu_backend.py",
+              "before_sha256": "1d0663b4ef25d46eaaea42551a47f9f4107f17806f315ece7fe17e0e967a0be7",
+              "after_sha256": "d2612940c49be8b80a2a415f24e330e4fa70418747b0ebf0e275a542f200acb4"
+            },
+            {
+              "file": "line_follower/suites.py",
+              "before_sha256": "59e477e6ad34d1073127428ca1653115d305a788c6520aa38137fe0f1e19ef5d",
+              "after_sha256": "8d825700259c53ec0849a78f69099557185105f9959101ccbc3c55b3322f176f"
+            },
+            {
+              "file": "line_follower/tracks.py",
+              "before_sha256": "efe34bcb0ad89c5ac144744593c6a60a02ac8529277368147866e3894434a9e6",
+              "after_sha256": "b5b906a48147b4427c1f4c88a5138ea2b115e4c6eca60480466aa753df33dedc"
+            }
+          ],
+          "parent_best_validation_key": [
+            0.5333333333333333,
+            0.6490206224544584
+          ],
+          "start_generation": 100,
+          "target_generation": 200,
+          "population_count": 202,
+          "inherited_track_hashes": 400,
+          "parent_physics_steps_total": 440503700,
+          "parent_gpu_world_steps_total": 618636910,
+          "parent_gpu_padding_world_steps_total": 178133210,
+          "changes": {
+            "strategy": [
+              "curriculum",
+              "adaptive"
+            ],
+            "track_profile": [
+              "standard",
+              "progressive"
+            ],
+            "max_speed_m_s": [
+              0.3,
+              0.35
+            ],
+            "completion_speed_bonus": [
+              0.0,
+              0.0
+            ]
+          },
+          "fitness_history_reset": true,
+          "validation_model_selection_reset": true,
+          "initial_curriculum_stage": 1,
+          "curriculum_initialization": {
+            "source": "Parent training champions only",
+            "beginner_completion": 1.0,
+            "episodes": 5,
+            "csv_sha256": "d58c375accc285dc6157868b26c35d7f6927e8adbf9a8ea538d0d0d4babbe0e8"
+          },
+          "settings_before": {
+            "strategy": "curriculum",
+            "seed": 0,
+            "generations": 100,
+            "population": 200,
+            "workers": 4,
+            "time_limit": 60,
+            "excluded_features": [],
+            "backend": "gpu",
+            "gpu_batch_size": 200,
+            "episodes_per_genome": 4,
+            "track_profile": "standard",
+            "aggregation": "mean_min",
+            "cvar_fraction": 0.3,
+            "curriculum": {
+              "window": 5,
+              "minimum_generations": 5,
+              "maximum_generations": 25,
+              "elite_fraction": 0.1,
+              "beginner_threshold": 0.85,
+              "intermediate_threshold": 0.7,
+              "advanced_threshold": 0.55,
+              "length_scale": 1.0,
+              "motif_scale": 1.0
+            }
+          },
+          "settings_after": {
+            "strategy": "adaptive",
+            "seed": 0,
+            "generations": 200,
+            "population": 200,
+            "workers": 4,
+            "time_limit": null,
+            "excluded_features": [],
+            "backend": "gpu",
+            "gpu_batch_size": 200,
+            "episodes_per_genome": 10,
+            "track_profile": "progressive",
+            "aggregation": "mean_min",
+            "cvar_fraction": 0.3,
+            "curriculum": {
+              "window": 5,
+              "minimum_generations": 5,
+              "maximum_generations": 25,
+              "elite_fraction": 0.1,
+              "beginner_threshold": 0.85,
+              "intermediate_threshold": 0.7,
+              "advanced_threshold": 0.55,
+              "length_scale": 1.0,
+              "motif_scale": 1.0
+            }
+          },
+          "parent_suite_sha256": "1e24fd7d847e76768069aa07caae2a1da4c581f7ae27b7a208fdbf7375eea4dc",
+          "suite_sha256": "ef9ee04f304d1d366ed129bb6313aec9dc552605a2476a43bdaf1cc178a10794",
+          "training_started": false
+        }
+      },
+      "generation_count": 74,
+      "generation_range": [
+        100,
+        173
+      ],
+      "next_checkpoint_generation": 174,
+      "checkpoint_population_size": 199,
+      "selected_generation": 109,
+      "selected_genome": 17934,
+      "model_sha256": "4cf2d8af1bc4b7759f4ede52b00ff12b78c8ecec316fa7aaea623d8662540dcd",
+      "validation": {
+        "all": {
+          "episodes": 30,
+          "completed": 16,
+          "completion_rate": 0.5333333333333333,
+          "mean_lateral_rmse_m": 0.01774236806283496,
+          "mean_absolute_lateral_error_m": null,
+          "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+          "mean_progress": 0.7587183021151458,
+          "mean_failed_progress": 0.482967790246741,
+          "mean_success_completion_s": 14.773958333333333,
+          "mean_elapsed_all_s": 14.416111111111112,
+          "failure_distribution": {
+            "completed": 16,
+            "off_route": 14
+          },
+          "mean_line_loss_events": 1.0666666666666667
+        },
+        "beginner": {
+          "episodes": 10,
+          "completed": 10,
+          "completion_rate": 1.0,
+          "mean_lateral_rmse_m": 0.008008455090896437,
+          "mean_absolute_lateral_error_m": null,
+          "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+          "mean_progress": 1.0,
+          "mean_failed_progress": null,
+          "mean_success_completion_s": 9.808333333333334,
+          "mean_elapsed_all_s": 9.808333333333334,
+          "failure_distribution": {
+            "completed": 10
+          },
+          "mean_line_loss_events": 1.2
+        },
+        "intermediate": {
+          "episodes": 10,
+          "completed": 3,
+          "completion_rate": 0.3,
+          "mean_lateral_rmse_m": 0.02471288589500524,
+          "mean_absolute_lateral_error_m": null,
+          "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+          "mean_progress": 0.5672447985286133,
+          "mean_failed_progress": 0.38177828361230454,
+          "mean_success_completion_s": 21.055555555555554,
+          "mean_elapsed_all_s": 13.085000000000003,
+          "failure_distribution": {
+            "off_route": 7,
+            "completed": 3
+          },
+          "mean_line_loss_events": 0.3
+        },
+        "advanced": {
+          "episodes": 10,
+          "completed": 3,
+          "completion_rate": 0.3,
+          "mean_lateral_rmse_m": 0.02050576320260319,
+          "mean_absolute_lateral_error_m": null,
+          "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+          "mean_progress": 0.7089101078168243,
+          "mean_failed_progress": 0.5841572968811776,
+          "mean_success_completion_s": 25.04444444444444,
+          "mean_elapsed_all_s": 20.355,
+          "failure_distribution": {
+            "completed": 3,
+            "off_route": 7
+          },
+          "mean_line_loss_events": 1.7
+        }
+      },
+      "validation_zigzag": {
+        "episodes": 9,
+        "completed": 0,
+        "completion_rate": 0.0,
+        "mean_lateral_rmse_m": 0.03088319285233255,
+        "mean_absolute_lateral_error_m": null,
+        "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+        "mean_progress": 0.4430025428288776,
+        "mean_failed_progress": 0.4430025428288776,
+        "mean_success_completion_s": null,
+        "mean_elapsed_all_s": 13.598148148148148,
+        "failure_distribution": {
+          "off_route": 9
+        },
+        "mean_line_loss_events": 0.3333333333333333
+      },
+      "population_zigzag": {
+        "episodes": 83226,
+        "completed": 0,
+        "completion_rate": 0.0,
+        "mean_lateral_rmse_m": 0.07963084743939791,
+        "mean_absolute_lateral_error_m": null,
+        "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+        "mean_progress": 0.11659626923492811,
+        "mean_failed_progress": 0.11659626923492811,
+        "mean_success_completion_s": null,
+        "mean_elapsed_all_s": 5.7851829155952865,
+        "failure_distribution": {
+          "stalled": 10209,
+          "off_route": 71972,
+          "timeout": 1045
+        },
+        "mean_line_loss_events": 1.695996443419124
+      },
+      "population_corner": {
+        "episodes": 71410,
+        "completed": 245,
+        "completion_rate": 0.003430892031928301,
+        "mean_lateral_rmse_m": 0.07996331162829162,
+        "mean_absolute_lateral_error_m": null,
+        "mae_note": "Not recorded in historical episode summaries; cannot infer from RMSE",
+        "mean_progress": 0.12613368184643883,
+        "mean_failed_progress": 0.1231252191478142,
+        "mean_success_completion_s": 18.87578231292517,
+        "mean_elapsed_all_s": 6.037997712738645,
+        "failure_distribution": {
+          "stalled": 8690,
+          "off_route": 61454,
+          "timeout": 1021,
+          "completed": 245
+        },
+        "mean_line_loss_events": 1.592199971992718
+      },
+      "zigzag_unique_tracks": 417,
+      "recorded_wall_s": 30257.08157830016,
+      "logical_physics_steps": 621544040,
+      "training_mean_range": [
+        0.10219758707358777,
+        0.4673606497106822
+      ],
+      "training_best_range": [
+        0.2683800760264481,
+        0.9249779215125371
+      ],
+      "initial_generation": {
+        "generation": "100",
+        "condition": "adaptive",
+        "seed": "0",
+        "training_mean": "0.3223282807491233",
+        "training_best": "0.6146592712842315",
+        "validation_completion_rate": "0.36666666666666664",
+        "validation_score": "0.4981535031626227",
+        "physics_steps": "7646790",
+        "episode_slots": "2050",
+        "wall_seconds": "308.25917460001074",
+        "backend": "gpu",
+        "track_generation_wall_seconds": "0.11095729999942705",
+        "training_eval_wall_seconds": "297.29556439997396",
+        "validation_eval_wall_seconds": "10.564480900007766",
+        "curriculum_stage": "1",
+        "curriculum_stage_next": "1",
+        "gpu_world_steps_total": "10632830",
+        "gpu_padding_world_steps_total": "2986040"
+      },
+      "final_generation": {
+        "generation": "173",
+        "condition": "adaptive",
+        "seed": "0",
+        "training_mean": "0.13876611554931675",
+        "training_best": "0.2805643239884543",
+        "validation_completion_rate": "0.4",
+        "validation_score": "0.5353113431388116",
+        "physics_steps": "8789950",
+        "episode_slots": "2000",
+        "wall_seconds": "615.7183868000284",
+        "backend": "gpu",
+        "track_generation_wall_seconds": "16.801778200024273",
+        "training_eval_wall_seconds": "575.8581284999964",
+        "validation_eval_wall_seconds": "22.588175599987153",
+        "curriculum_stage": "3",
+        "curriculum_stage_next": "3",
+        "gpu_world_steps_total": "876095770",
+        "gpu_padding_world_steps_total": "254551730"
+      },
+      "selected_generation_metrics": {
+        "generation": "109",
+        "condition": "adaptive",
+        "seed": "0",
+        "training_mean": "0.28932722811886086",
+        "training_best": "0.6080131170250519",
+        "validation_completion_rate": "0.5333333333333333",
+        "validation_score": "0.664078347584577",
+        "physics_steps": "8069230",
+        "episode_slots": "2030",
+        "wall_seconds": "371.03586040000664",
+        "backend": "gpu",
+        "track_generation_wall_seconds": "0.3261071000015363",
+        "training_eval_wall_seconds": "346.3056130000041",
+        "validation_eval_wall_seconds": "24.056874500005506",
+        "curriculum_stage": "1",
+        "curriculum_stage_next": "1",
+        "gpu_world_steps_total": "134594190",
+        "gpu_padding_world_steps_total": "36366290"
+      }
+    }
+  },
+  "inventory": [
+    {
+      "directory": "runs\\28-10-2026",
+      "settings": {
+        "strategy": "curriculum",
+        "seed": 0,
+        "generations": 100,
+        "population": 200,
+        "workers": 4,
+        "time_limit": 60,
+        "excluded_features": [],
+        "backend": "gpu",
+        "gpu_batch_size": 200,
+        "episodes_per_genome": 4
+      },
+      "source_sha256": "eacb3caf4cb87bbe2a4dbbd1097fd5a3bda21814ba56b6374ed06943c5ce8d21",
+      "source_archive_sha256": "dbbb89e8c59cf2f05d56a1a2cc106bee5976d0ac5dc4d32d6c476f9d5e0a8044",
+      "status": {
+        "next_generation": 100,
+        "target_generations": 100,
+        "complete": true,
+        "best_validation_key": [
+          0.5333333333333333,
+          0.6490206224544584
+        ],
+        "physics_steps_total": 440503700,
+        "wall_seconds_this_invocation": 34261.04085019999
+      },
+      "recorded_generation_rows": 100
+    },
+    {
+      "directory": "runs\\28-10-2026-hard",
+      "settings": {
+        "strategy": "adaptive",
+        "seed": 0,
+        "generations": 200,
+        "population": 200,
+        "workers": 4,
+        "time_limit": null,
+        "excluded_features": [],
+        "backend": "gpu",
+        "gpu_batch_size": 200,
+        "episodes_per_genome": 10,
+        "track_profile": "progressive",
+        "aggregation": "mean_min",
+        "cvar_fraction": 0.3,
+        "curriculum": {
+          "window": 5,
+          "minimum_generations": 5,
+          "maximum_generations": 25,
+          "elite_fraction": 0.1,
+          "beginner_threshold": 0.85,
+          "intermediate_threshold": 0.7,
+          "advanced_threshold": 0.55,
+          "length_scale": 1.0,
+          "motif_scale": 1.0
+        }
+      },
+      "source_sha256": "e2cf5a043d888d347c959b1c4bc361c0e12efc716f8929f7663fb06f84f714b6",
+      "source_archive_sha256": "fb790a8b25b88abb12edccbfcd5249f75dc654be5e668ec87503a3c73598c6da",
+      "status": {
+        "next_generation": 100,
+        "target_generations": 200,
+        "complete": false,
+        "training_started": false
+      },
+      "recorded_generation_rows": 75
+    },
+    {
+      "directory": "runs\\my-curriculum-run",
+      "settings": {
+        "strategy": "curriculum",
+        "seed": 0,
+        "generations": 5,
+        "population": 200,
+        "workers": 4,
+        "time_limit": null,
+        "excluded_features": [],
+        "backend": "gpu",
+        "gpu_batch_size": 200,
+        "episodes_per_genome": 4
+      },
+      "source_sha256": "4b3e41e2e93caa47d62b213e7de7d95e3941533e5e9a01feee33c9c77c8182a1",
+      "source_archive_sha256": "39549f7f7f7bf132049d6941fce7a5107e1a0b469945798870ddcab6cfb2ee18",
+      "status": {
+        "next_generation": 5,
+        "target_generations": 5,
+        "complete": true,
+        "best_validation_key": [
+          0.43333333333333335,
+          0.5486475763641809
+        ],
+        "physics_steps_total": 23783080,
+        "wall_seconds_this_invocation": 835.3413417000556
+      },
+      "recorded_generation_rows": 2
+    },
+    {
+      "directory": "runs\\pid-research-20261029",
+      "settings": {
+        "seed": 20261029,
+        "workers": 4,
+        "initial_candidates": 96,
+        "refinements": 24,
+        "promoted_per_family": 6,
+        "validation_per_family": 3
+      },
+      "source_sha256": "78acab6866de9a70228f5c8e6b3e84a74592c0d00290927a0c87ccdc5909da8d",
+      "source_archive_sha256": "60037b47180db2fdc91e80d962cc3b05870d2ad30fa710261fa6b71f1ba7b647",
+      "status": {
+        "complete": true,
+        "wall_seconds": 189.31954520003637,
+        "candidates": 120,
+        "selected": [
+          "pid-112",
+          "pid-111"
+        ],
+        "overall": "pid-111",
+        "test_episodes": 270,
+        "neat_training_started": false
+      },
+      "recorded_generation_rows": 0
+    },
+    {
+      "directory": "runs\\smoke-single",
+      "settings": {
+        "strategy": "single",
+        "seed": 0,
+        "generations": 2,
+        "population": 6,
+        "workers": 1,
+        "time_limit": 0.4,
+        "excluded_features": []
+      },
+      "source_sha256": "09070b00b1e0bd8fde46040e796372db4e19a006908efb0fb23c8d58404499be",
+      "source_archive_sha256": null,
+      "status": {
+        "next_generation": 1,
+        "target_generations": 2,
+        "complete": false,
+        "best_validation_key": [
+          0.0,
+          -0.08850102858336331
+        ],
+        "physics_steps_total": 6480,
+        "wall_seconds_this_invocation": 1.2420106999925338
+      },
+      "recorded_generation_rows": 1
+    },
+    {
+      "directory": "runs\\validation\\population-view-20261028",
+      "settings": null,
+      "source_sha256": null,
+      "source_archive_sha256": null,
+      "status": null,
+      "recorded_generation_rows": 0
+    }
+  ],
+  "duplicate_count_by_file": {
+    "runs/28-10-2026-hard/generations.csv": 1,
+    "runs/28-10-2026-hard/champion-episodes.csv": 40,
+    "runs/28-10-2026-hard/training-episodes.csv": 2010,
+    "runs/28-10-2026-hard/episode-fitness.csv": 10,
+    "runs/28-10-2026-hard/diagnostics.csv": 55,
+    "runs/28-10-2026-hard/gpu-profile.csv": 12,
+    "runs/28-10-2026-hard/curriculum.csv": 1
+  }
+}

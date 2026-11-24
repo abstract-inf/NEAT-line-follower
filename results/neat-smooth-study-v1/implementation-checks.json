@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-23",
+  "protocol_sha256": "75340b6df9645700814951d8408bf2d79190e18fceaac824caaf025eb0daaccc",
+  "tests": {
+    "passed": 58,
+    "warnings": 18,
+    "elapsed_seconds": 78.26,
+    "command": ".\\.venv\\Scripts\\python.exe -m pytest tests/test_neat_smooth_study.py tests/test_neat_fast_study.py tests/test_pid_fullspeed_100.py tests/test_fast_study_memory.py tests/test_episodes.py -q",
+    "warning_kind": "Existing itertools pickle/copy/deepcopy deprecation warnings"
+  },
+  "legacy_preflight": "passed",
+  "frozen_source_verify": "passed",
+  "prepared_geometry": {
+    "valid": 360,
+    "unique": 360,
+    "overlap_with_protected_prior_tracks": 0
+  },
+  "parent_generations": [
+    134,
+    136,
+    131,
+    107,
+    134
+  ],
+  "real_neat_evolution_started": false,
+  "pid_tuning_started": false,
+  "final_test_tracks_generated": false,
+  "simulation_scope": "Small deterministic implementation smoke checks only; no experiment audit, optimization or assessment performed."
+}

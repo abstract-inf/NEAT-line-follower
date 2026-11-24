@@ -1,0 +1,16 @@
+{
+  "kp": 0.7239850053219836,
+  "ki": 0.1681344890402374,
+  "kd": 0.021582281714272438,
+  "base": 0.75,
+  "minimum_command": 0.03689846560293942,
+  "derivative_filter_s": 0.01921304669141327,
+  "integral_limit": 0.4,
+  "slowdown_gain": 0.5675464177752183,
+  "loss_hold_s": 0.7382309523604921,
+  "search_command": 0.5070105586192023,
+  "corner_supervision": false,
+  "approach_command": 0.40813894373330745,
+  "turn_lead_m": 0.016964705975112876,
+  "pivot_command": 0.5789689902404036
+}

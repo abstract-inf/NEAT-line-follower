@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "selected_for_training": true,
+  "robot": {
+    "design": "competition",
+    "design_revision": "integrated-pcb-1",
+    "total_mass": 0.55,
+    "wheel_spacing": 0.175,
+    "wheel_radius": 0.0165,
+    "wheel_width": 0.012,
+    "chassis_length": 0.09,
+    "chassis_width": 0.13,
+    "chassis_height": 0.0025,
+    "caster_offset": 0.045,
+    "max_speed": 0.3,
+    "max_torque": 0.03,
+    "motor_time_constant": 0.05,
+    "motor_gain": 0.005,
+    "wheel_friction": 0.75,
+    "caster_friction": 0.05,
+    "physics_hz": 600,
+    "control_hz": 60,
+    "sensor_layout": "semicircle",
+    "sensor_radius": 0.11,
+    "sensor_offset": 0.09,
+    "sensor_angle": 1.7,
+    "sensor_height": 0.006,
+    "sensor_max_distance": 0.025
+  },
+  "configuration_sha256": "560706c9e4361226f14a6a10ea8578ead6fc96df33263d78f3fe2898f7c7b424",
+  "mjcf_sha256": "c12fa88243a61a98fa69bdb6a5c4b19cbe4e7375b1c6f85b814285c1d93e3afb"
+}

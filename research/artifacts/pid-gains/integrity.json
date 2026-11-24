@@ -1,0 +1,23 @@
+{
+  "verified_client_date": "2026-11-02",
+  "original_neat_csvs_unchanged": 353,
+  "historical_files_unchanged": 531,
+  "frozen_executable_files_match": 33,
+  "fresh_validation_test_geometry_verified": true,
+  "frozen_choices_match_validation_ranking": true,
+  "baseline_legacy_replays_match_prior_metrics": 180,
+  "test_trace_replays_match_primary_metrics": 15,
+  "technical_episode_errors": 0,
+  "phase_rows": {
+    "coarse-episodes.csv": 4800,
+    "expanded-episodes.csv": 1080,
+    "legacy-test-episodes.csv": 270,
+    "refine-episodes.csv": 2160,
+    "representative-episodes.csv": 27,
+    "test-episodes.csv": 270,
+    "validation-episodes.csv": 240,
+    "test-trace-replays.csv": 15
+  },
+  "total_recorded_episodes_including_replays": 8862,
+  "physical_steps_including_replays": 85330250
+}

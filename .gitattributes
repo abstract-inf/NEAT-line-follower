@@ -1,0 +1,2 @@
+# Protocols fingerprint exact file bytes; preserve their original line endings.
+* -text

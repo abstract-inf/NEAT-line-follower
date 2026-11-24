@@ -1,0 +1,43 @@
+{
+  "paired": [
+    {
+      "family": "pid_filtered",
+      "both_complete": 51,
+      "baseline_only_complete": 0,
+      "selected_only_complete": 0,
+      "neither_complete": 39,
+      "completion_delta": 0,
+      "baseline_common_time_s": 12.42908496732004,
+      "selected_common_time_s": 12.42908496732004,
+      "paired_time_change_s": 0.0
+    },
+    {
+      "family": "pid_corner_supervised",
+      "both_complete": 77,
+      "baseline_only_complete": 1,
+      "selected_only_complete": 7,
+      "neither_complete": 5,
+      "completion_delta": 6,
+      "baseline_common_time_s": 29.228138528127424,
+      "selected_common_time_s": 29.518614718603363,
+      "paired_time_change_s": 0.290476190475939
+    }
+  ],
+  "status": {
+    "complete": true,
+    "wall_seconds": 1766.94091569999,
+    "candidates": 368,
+    "baseline_ids": {
+      "pid_filtered": "gain-000",
+      "pid_corner_supervised": "gain-160"
+    },
+    "selected": {
+      "pid_filtered": "gain-000",
+      "pid_corner_supervised": "gain-350"
+    },
+    "test_tracks": 90,
+    "neat_training_started": false,
+    "old_records_unchanged": 531
+  },
+  "preserved_files_verified": 531
+}

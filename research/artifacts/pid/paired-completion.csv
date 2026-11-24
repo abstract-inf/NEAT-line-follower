@@ -1,0 +1,3 @@
+condition,both_complete,pid_only_complete,neat_only_complete,neither_complete
+pid_filtered,34,9,1,46
+pid_corner_supervised,34,42,1,13

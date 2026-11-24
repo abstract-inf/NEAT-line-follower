@@ -1,0 +1,22 @@
+{
+  "client_date": "2026-11-02",
+  "evaluation_only": true,
+  "neat_training_started": false,
+  "model_sha256": "4cf2d8af1bc4b7759f4ede52b00ff12b78c8ecec316fa7aaea623d8662540dcd",
+  "model_unchanged": true,
+  "original_neat_csvs_unchanged": 353,
+  "preserved_files_unchanged": 760,
+  "policies_on_identical_new_tracks": 4,
+  "tracks_per_policy": 90,
+  "technical_episode_errors": 0,
+  "evaluation_status": {
+    "complete": true,
+    "episodes": 90,
+    "completed": 38,
+    "wall_seconds": 20.05487540003378,
+    "generation": 109,
+    "model_sha256_unchanged": true,
+    "preserved_files_unchanged": 760,
+    "neat_training_started": false
+  }
+}

@@ -1,0 +1,1538 @@
+{
+  "suite_version": 1,
+  "generator_version": "1.0",
+  "root_seed": 20261027,
+  "generator_config": {
+    "arena_size": 4.0,
+    "resolution": 0.001,
+    "edge_margin": 0.16,
+    "minimum_clearance": 0.2,
+    "minimum_radius": 0.12,
+    "width_min": 0.012,
+    "width_max": 0.028,
+    "max_attempts": 800,
+    "excluded_features": []
+  },
+  "splits": {
+    "training": [
+      {
+        "path": "training/000.json",
+        "geometry_hash": "a6fde03bcb915db33f560b3e1285498250ba74d613bf90ae1963ce844f837357",
+        "seed": 2749824721432223938,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "s_curve",
+          "tight_curve",
+          "u_turn"
+        ]
+      }
+    ],
+    "validation": [
+      {
+        "path": "validation/000.json",
+        "geometry_hash": "9e83abfbd69adc2628cb2f32dcf14088fc9900d5850abe066967a1764ce68b36",
+        "seed": 8970290788961211504,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/001.json",
+        "geometry_hash": "4f3900de995881b509f2e42deb8ab85d989dc16a96b3f68d3075e579d2353753",
+        "seed": 7681813100906273232,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "validation/002.json",
+        "geometry_hash": "1a59e9be0d59d7454e42c4255d9904b649480cd6e3e40a07fb3b712d4d7f11bd",
+        "seed": 14013853301830039844,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "tight_curve",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "validation/003.json",
+        "geometry_hash": "2b157806de012537e580d2e49c333e519ad50a66823dfc0f64054dcb57c3bca1",
+        "seed": 14125471249871300615,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/004.json",
+        "geometry_hash": "7f8471389f153f4fc9123e6bf2b0313abf74315757e8876eae912b9145e8d7a0",
+        "seed": 18411437146539937327,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "s_curve",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "validation/005.json",
+        "geometry_hash": "d538f6350b32c4bb997b569ef194e74b3be84db93294d997741957c0893861d5",
+        "seed": 4984383320422114035,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "gap",
+          "s_curve",
+          "tight_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "validation/006.json",
+        "geometry_hash": "d3ca1e628af511e7d1f622358167611d4bfa0781a248cc812c51c049defa5f77",
+        "seed": 12797613484511220627,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/007.json",
+        "geometry_hash": "3baccf528f13e220496a27c51906c0b4e95a8c0f5a149d5824da950c88cbd278",
+        "seed": 16000555853426127780,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "validation/008.json",
+        "geometry_hash": "6e84829660e71e786af3da50a2ab89c5d78c1258fb5147841736310f21461e94",
+        "seed": 8172639850996766321,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "crossing",
+          "gap",
+          "hairpin",
+          "s_curve",
+          "straight",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "validation/009.json",
+        "geometry_hash": "79418c0bfe73d15ac33756bce39c5ab36322abb41c49682e59cf1d72e820dcb8",
+        "seed": 5772186774140018188,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/010.json",
+        "geometry_hash": "2ed71bca73dcf3628bcddc813106f2d736639e622cb054edf69a6a8d09f2572b",
+        "seed": 12050223241084202701,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "validation/011.json",
+        "geometry_hash": "ccaa1e0b3bb3bcbb73cd0b12b588e49649027a1ddad3df7c7b73e785cc6a57a0",
+        "seed": 4915888567115101289,
+        "difficulty": "advanced",
+        "features": [
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "tight_curve",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "validation/012.json",
+        "geometry_hash": "bbcd7e244c6e1b7298165ba2668abc982a00ef6a50f9b8a4143f5d708cc4cd16",
+        "seed": 8877162659680180318,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/013.json",
+        "geometry_hash": "285fa86bc996a19188d005222dd0fd079abc53d0e9d3badfcd925ed425c8744d",
+        "seed": 10180385483216554454,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "validation/014.json",
+        "geometry_hash": "9df13c21508061b464092a9ef38307d5e6bcb54eb241fbf67fd14d94030f7f74",
+        "seed": 4081428544083665347,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "s_curve"
+        ]
+      },
+      {
+        "path": "validation/015.json",
+        "geometry_hash": "bc78426bae1dc48db655b397a41ed0ce331fa57884b6ac11e9ef74c7455a7aba",
+        "seed": 10939002421674422901,
+        "difficulty": "beginner",
+        "features": [
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/016.json",
+        "geometry_hash": "37da8c2955882aa201bb65aaecbd282105a1c4df8ad2d101c5a942e6f07b415e",
+        "seed": 12809860513477236033,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "s_curve",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "validation/017.json",
+        "geometry_hash": "0673bebfbdd7cad84267caa98f72dbf76d91e59bca9720b85c072be11b226358",
+        "seed": 721910043626247435,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "s_curve",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "validation/018.json",
+        "geometry_hash": "533319c6150936cbbeeec4a8d3f0895baf425bc0134bc7c096b4af9664887e52",
+        "seed": 6166200907293494269,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/019.json",
+        "geometry_hash": "93c00f05364cc84c2642fb2951a2f5f1a08f89cb6eddb09cfe909f3e4a51719a",
+        "seed": 9501334822326713441,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "validation/020.json",
+        "geometry_hash": "9bac47b9f2bdf9b35afb20f1877259115d6f7b5bc25dede73d77e12322595769",
+        "seed": 16314815944149307512,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "s_curve",
+          "tight_curve"
+        ]
+      },
+      {
+        "path": "validation/021.json",
+        "geometry_hash": "b0d433a70771e5075fb0036fc590803cbcce8bfa08e3443668ad27200b244223",
+        "seed": 13209056352908199221,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/022.json",
+        "geometry_hash": "491faea92d202f79a854a525a85db49269c43bd4f23a0e2be961a871e1846cf9",
+        "seed": 604032185711809007,
+        "difficulty": "intermediate",
+        "features": [
+          "gentle_curve",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "validation/023.json",
+        "geometry_hash": "9581eb09c7f97619c53325e9a59703f928f035de5e4e0a05c5bfc26065c9f25c",
+        "seed": 3118325835826274905,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "straight",
+          "tight_curve",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "validation/024.json",
+        "geometry_hash": "5e383c0541756bb3a74dfe607dfc2a9f3b46085479e31a4e7e5f16542260740c",
+        "seed": 15205808741167360743,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/025.json",
+        "geometry_hash": "86806191c42ceca81758e9a4d351bdb1962d129fa43e25a46be77548cdb34df7",
+        "seed": 11467556959913166574,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "straight",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "validation/026.json",
+        "geometry_hash": "ac5a4ddac8b69874be33305d782f37921de0be27a259743f01ebca4b23e7e910",
+        "seed": 10936251658820241521,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "gap",
+          "s_curve",
+          "tight_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "validation/027.json",
+        "geometry_hash": "20a53c0e904a17baace19b71be14b14e6323b373d73ac545d78ba0a26919ade9",
+        "seed": 6228125414875173951,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "validation/028.json",
+        "geometry_hash": "7934961cb37a18e319fa16c7bd98a6811dc2fdcbb371658d3ce625377bd873a6",
+        "seed": 3633212692723067257,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "s_curve",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "validation/029.json",
+        "geometry_hash": "33eb1e8b62c39c4e8e91ce4955ea7e08d63f709ccddab794333eb41b9c04457d",
+        "seed": 11675424199576861387,
+        "difficulty": "advanced",
+        "features": [
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "s_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      }
+    ],
+    "test": [
+      {
+        "path": "test/000.json",
+        "geometry_hash": "7782968f39c092ee89ff8a742026528e2e5ea4e8a58354e77eb58f678a0675a6",
+        "seed": 12427270954754980586,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/001.json",
+        "geometry_hash": "07d343f3f1a2a72cfcce5a6fc2826a34cc0d54601256cdb380a945e4ecd0a53b",
+        "seed": 17530075109910956218,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "straight",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/002.json",
+        "geometry_hash": "d83cf4a620586dbceb4a90325be9706b2e7e28ee6f3aef267740725dbf689109",
+        "seed": 578283735715900961,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "gap",
+          "gentle_curve",
+          "s_curve",
+          "tight_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/003.json",
+        "geometry_hash": "3b890ced9eb219682c3f6c3ed53b8f781a8048f7d12ad08761dd43e069daa1f7",
+        "seed": 7891930404930799833,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/004.json",
+        "geometry_hash": "6ca455eda57140ebdc40b421c7480575456d776e85ffbc2e55a026dfdc2de6da",
+        "seed": 11858954259920321611,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/005.json",
+        "geometry_hash": "3d5530ce1c571e5793c75db257cf62acbbe66366dd31f378f2e56d1693eb09da",
+        "seed": 14654951616007074337,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "s_curve",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/006.json",
+        "geometry_hash": "b472a60ec15a50585cc1b6f2f205c5a014477b42981e7198c6b40aa1ee67cf50",
+        "seed": 5561920257906057451,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/007.json",
+        "geometry_hash": "118beeb9ee3766d3acafedd5209d50674f8247d5cb652f3c251b4aff17027baf",
+        "seed": 17222999852969023246,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "s_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/008.json",
+        "geometry_hash": "7b1c8dc53a5bdfd3cd583549df20eebe9456a55df9e777f919fcfe59b044c7ca",
+        "seed": 9403995101259138055,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "straight",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/009.json",
+        "geometry_hash": "359feee6cf09b5cf3ace1d8430216e52d56cf612c6fdcd9fb2f53f194046af9a",
+        "seed": 9247139895978177475,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/010.json",
+        "geometry_hash": "8532bff68a76cb6f4a75c456ad0cb38ecc7f6bb895dde37b2187e460f9de4fd4",
+        "seed": 10878843111502879161,
+        "difficulty": "intermediate",
+        "features": [
+          "s_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/011.json",
+        "geometry_hash": "c5391cde4679b0b154989a95d9b6c6ee7378da91c4ee60f3ca46d3a225582cb7",
+        "seed": 7063515166663932687,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "hairpin",
+          "straight",
+          "tight_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/012.json",
+        "geometry_hash": "b7ebc873c406f3e5f758bd574db1bdecd63f0d1ab0dfc640737704995582b8ad",
+        "seed": 4648023598197015138,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/013.json",
+        "geometry_hash": "cf4005cb12ce7cf989c74a3126c4e0fa68feb2601e20f1caf858e5f3820b2adb",
+        "seed": 8383836728196931062,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "straight",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/014.json",
+        "geometry_hash": "89a17e66a486ecdb4a64762a2cc3e746356ff8d1740ae786ee2b1b75d2e74482",
+        "seed": 3998957258496045250,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "hairpin",
+          "s_curve",
+          "straight",
+          "tight_curve"
+        ]
+      },
+      {
+        "path": "test/015.json",
+        "geometry_hash": "67576395f1e35f3d471fbb47d0755d0700fe3cec0d151b9f92024a6d374e321d",
+        "seed": 4734863755346432693,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/016.json",
+        "geometry_hash": "60279be49fe21f53c528892fa1629896c65eb9b95a5830f9065bb0fcf5d33b6e",
+        "seed": 14958528482547514586,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve"
+        ]
+      },
+      {
+        "path": "test/017.json",
+        "geometry_hash": "fd0ca65e3a66d3f313a58c30ed233d30e063e09a316156973a8ea0ece6428660",
+        "seed": 16854178629720649012,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "s_curve",
+          "straight",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/018.json",
+        "geometry_hash": "5cd1bd523abd489de9e703e970a2d8bdd9804c54aba88761f8b611c4c1781ca4",
+        "seed": 13090928598568622809,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/019.json",
+        "geometry_hash": "fff205a9104293668355111248f0c55dbbae278f62d52a5a88aeb404b9ff70b9",
+        "seed": 12002538054742965559,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/020.json",
+        "geometry_hash": "820045d835710d65754b30644343e3723acb7eac3d3ee06c7ea12e00f93e503b",
+        "seed": 5080330486138791404,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "s_curve",
+          "straight",
+          "tight_curve"
+        ]
+      },
+      {
+        "path": "test/021.json",
+        "geometry_hash": "50470e7e8e4013529a158c8a638d6f2b6c2ea23b7eba14525b4b6ab66ef704d1",
+        "seed": 3474013999334772060,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/022.json",
+        "geometry_hash": "2022b2c781c649c15a9fd7c296cfa13914efd681bffbe9a12b9b588e2dea7862",
+        "seed": 6780823760513521753,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/023.json",
+        "geometry_hash": "2f9299c4e4f8315edafe2a63383764b226b8c697d7e8ccee76341e42314c0258",
+        "seed": 13159261883187534207,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/024.json",
+        "geometry_hash": "cebfe0cb34676acb92db69bdf4a78eff4b90b6cbaf5dbc8f8f1d83050aed940d",
+        "seed": 8247866707290073908,
+        "difficulty": "beginner",
+        "features": [
+          "straight"
+        ]
+      },
+      {
+        "path": "test/025.json",
+        "geometry_hash": "8c60eebeddaaf08bdec51fb729c86da20cfa6a3c20fd756bd6e446f5a93fffb5",
+        "seed": 17580302069865837971,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/026.json",
+        "geometry_hash": "699571a48172c2709c5d41dd8db9c73631a408e8c52ba3d078d32f6cc40cc67d",
+        "seed": 12559664227863243354,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "s_curve",
+          "straight",
+          "tight_curve",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/027.json",
+        "geometry_hash": "1d5ec250684c45a3561132a8df81a49ee73e74710485f81f81f8bb972b25a503",
+        "seed": 14772557825049362697,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/028.json",
+        "geometry_hash": "b26f66fd43b25aef54d4e4f69471be3dab7c22d1643d3da8e4b9c705db18dd27",
+        "seed": 5117288319090407131,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/029.json",
+        "geometry_hash": "e4014b64ae3e0717f84b459d79b32810d7778ab9eb982dfb38752795940434f1",
+        "seed": 7239078682552625573,
+        "difficulty": "advanced",
+        "features": [
+          "corner",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/030.json",
+        "geometry_hash": "b63e6135b7e30cd59f11d9a5d69fa5f52cd69402d8ce16115a3d7aa8f09dbbc2",
+        "seed": 10666392094902300913,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve"
+        ]
+      },
+      {
+        "path": "test/031.json",
+        "geometry_hash": "79ce04410a780b2a3016912840fb42cdfce322ee02f8a9fc94503ee89339b67b",
+        "seed": 13789758565095339626,
+        "difficulty": "intermediate",
+        "features": [
+          "s_curve",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/032.json",
+        "geometry_hash": "53a88504376fa8fcd91c9c52b49cb2d8dd99c57dea65d2cb507ccca5697f391a",
+        "seed": 136485311034759504,
+        "difficulty": "advanced",
+        "features": [
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/033.json",
+        "geometry_hash": "a46afc8c761d2baefa088811d5f881a5f89c0f47501c573eba8d0db97855d13e",
+        "seed": 17079702811227126424,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/034.json",
+        "geometry_hash": "45244ba57cdb35e8db2eca7c709283ac208cc25dcd9c19a5545e8f0fe0d0bcbe",
+        "seed": 4964242456769927274,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/035.json",
+        "geometry_hash": "60cd932782ed04e44da062b682aa278375e15df8722ea1b4a40154e41ec18ad9",
+        "seed": 4425662400606791603,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "s_curve",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/036.json",
+        "geometry_hash": "d526d44a974d6248cf7a8ff03a648fe0daa29d230bf4fc5676c00dcee381a7ef",
+        "seed": 16460119624044505559,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/037.json",
+        "geometry_hash": "d1aeb79c0dca10b2e7b39e1cf6fd70895972174887fee35033803c1999ab64a5",
+        "seed": 10911129188288204208,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/038.json",
+        "geometry_hash": "1de5f5b5b3a2ece8f01c55d3cb29cb285801b15230d667c3ba96ef4865eee9eb",
+        "seed": 16775328009876615836,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "straight",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/039.json",
+        "geometry_hash": "eab59f5c6c203385af75cef6917168e5c6c83b82d5c09d9f563645be23303330",
+        "seed": 15370370807675659399,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/040.json",
+        "geometry_hash": "224d95fcacbdc684de67a07e4c10ae925f65aa98851a952f3e55a36111c97f48",
+        "seed": 11116521799589524835,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve"
+        ]
+      },
+      {
+        "path": "test/041.json",
+        "geometry_hash": "6d64c12459aa9971e60caf613f9bd072eefe8c81f2a7f9df683e495ccfb7a7b8",
+        "seed": 8492595256806358813,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "gap",
+          "hairpin",
+          "s_curve",
+          "tight_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/042.json",
+        "geometry_hash": "e272f878f2b8fa78a91d80e75f4fbabd6ce1b5ef9874fe6b8f202988e767f449",
+        "seed": 17846562979606342228,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/043.json",
+        "geometry_hash": "210d8cabab3806474dce6f29c8a01974dca73c86fee5f1091f2137b3eb343084",
+        "seed": 7450716891142725871,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/044.json",
+        "geometry_hash": "f0936a1582d221483ea52543bbd91f5b0be8f4bb1df4b92d0cf08b5aceeca2f5",
+        "seed": 4360804431066657698,
+        "difficulty": "advanced",
+        "features": [
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "s_curve",
+          "straight",
+          "tight_curve"
+        ]
+      },
+      {
+        "path": "test/045.json",
+        "geometry_hash": "f28fef42e828836dabb1b7e24b0b57030099db8c191d8af83d24e1a8a941edfe",
+        "seed": 15775590576079262762,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/046.json",
+        "geometry_hash": "f7fb304d7dd3a4f6384d4b3605da94db3f163de785777342c3f43879b759f076",
+        "seed": 1341470401553228189,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/047.json",
+        "geometry_hash": "0770bab277010c5499a65fbc0190c62006be90dd9a31eb5198db90227c0f6433",
+        "seed": 11747147151669951940,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/048.json",
+        "geometry_hash": "6b35cca46e78d7e157988ca60c18a8569f2f358d00b59110882ea0f0638ce21c",
+        "seed": 6141450553727851101,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/049.json",
+        "geometry_hash": "988fa91a0f4920e5dd14f4857cc75f4aa3536e246db24f3fac880356eb0f658d",
+        "seed": 395562592993663972,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "straight",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/050.json",
+        "geometry_hash": "ad8b864595f2f0f403bc080313d4bbc54057165994e5457e250532d886443466",
+        "seed": 18266735546224879124,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "straight",
+          "tight_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/051.json",
+        "geometry_hash": "910b80621c8017c8f0aee046665f26c8a0224fedcad5852495fbd5f019dd5f7c",
+        "seed": 9370771063023131904,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/052.json",
+        "geometry_hash": "17949d98e0c270836f26ef7a9d466ab82a4edd4a9fc11bb079ca3751258ecce2",
+        "seed": 2952269126686358780,
+        "difficulty": "intermediate",
+        "features": [
+          "s_curve",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/053.json",
+        "geometry_hash": "ff776bded616a6ed431e0a721b15d1780e9dbb732d88ebf9bedc0b1947b74beb",
+        "seed": 6796243475577617951,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "hairpin",
+          "straight",
+          "tight_curve",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/054.json",
+        "geometry_hash": "a1041908b70c964f9ab336b4471d81a279797cbd616d70c8eea4432e5b2706a6",
+        "seed": 5279759199418379193,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/055.json",
+        "geometry_hash": "2230fbc42859f3644a76dd0e6b0b873bb69fdc7bc5a18093b039cf457a984c4f",
+        "seed": 16450712282627651180,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/056.json",
+        "geometry_hash": "f8f2428774e00bc3d623f0e0c70282a295935fab1bdef55661853e275b967663",
+        "seed": 4887540006981372675,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "straight",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/057.json",
+        "geometry_hash": "03ca15bcaac5ec20995cdd45b22dcadd10d4e6eb3278e0404aca508995487115",
+        "seed": 10934916280384655133,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/058.json",
+        "geometry_hash": "85e39ccccb916b79f5d22d359311947c774b9881859ff86f54413a69c728424b",
+        "seed": 15764149599660512814,
+        "difficulty": "intermediate",
+        "features": [
+          "gentle_curve",
+          "s_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/059.json",
+        "geometry_hash": "f48d8af4fcb5dd205766f9831e9df46002a073eed3a363fdd0d0d89617802d04",
+        "seed": 18298155317613300211,
+        "difficulty": "advanced",
+        "features": [
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "s_curve",
+          "straight",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/060.json",
+        "geometry_hash": "22dd8457321b205b766f62d96e7719674627f399cd52ff2db54a2e4a610378a3",
+        "seed": 14773447533674784231,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve"
+        ]
+      },
+      {
+        "path": "test/061.json",
+        "geometry_hash": "4df931a2314f71462e264b30548614ab561dfb5f8c69a1fc244f3671f380dcc3",
+        "seed": 5663764716525075358,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/062.json",
+        "geometry_hash": "eca34d6e7df90746c1b36ff146f3d5f4f3939d74e334f11533d0befedbb045cc",
+        "seed": 3946815281738260729,
+        "difficulty": "advanced",
+        "features": [
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "s_curve",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/063.json",
+        "geometry_hash": "ae24d40d89e8aa3e3176cf90ce02f437e628fb1edeab1deb1a690ddfc730b268",
+        "seed": 7788830136375312028,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/064.json",
+        "geometry_hash": "7b2b7d34062cb108bca34a672a5f4882bc2b6ba06cba6f80020d67238eb07ebe",
+        "seed": 18064604187076579117,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/065.json",
+        "geometry_hash": "cbaaf6fe6ff6a81e9a7caaa35532fa8aeda50aaa66bbec1e5723735591f5cdb3",
+        "seed": 14006232785855168878,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "hairpin",
+          "s_curve",
+          "tight_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/066.json",
+        "geometry_hash": "34e7d3d9a8acef0db8f69e76e18c8e030d2df05deb9e1c8b845dd1674d1708e7",
+        "seed": 11277182956707978793,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/067.json",
+        "geometry_hash": "c58fd27f521842110a0b384d074d11f61e110a0327a396438ec4fc5eec721af0",
+        "seed": 17320792299965278972,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "s_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/068.json",
+        "geometry_hash": "264ebe952acd8515c3a0d0f88df0da83e271fdeed004f4316410a22dffe110ae",
+        "seed": 2096100168279616585,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "s_curve",
+          "straight",
+          "tight_curve",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/069.json",
+        "geometry_hash": "b3562b4d2e2287762f413df46eaa39eaab245d2c2a5a779b887c5c33cb7a8e07",
+        "seed": 8318298627990988210,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/070.json",
+        "geometry_hash": "d077d518b961d645ac0ab200079ff7100f9908779aed3dc7e48a9b6c96e3a6f0",
+        "seed": 16749416926621485161,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "s_curve",
+          "straight",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/071.json",
+        "geometry_hash": "7195532a3413ab10ab5f92f8d7818e0bebe4b12b8561a900a378fdc710f012f6",
+        "seed": 17979329754967071243,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "s_curve",
+          "tight_curve",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/072.json",
+        "geometry_hash": "38b89c54d98ac6346325ca6515e48d77da0135921abfbe640d1bfc1e56580bba",
+        "seed": 17108670272321411247,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/073.json",
+        "geometry_hash": "ab768617ce23bd826412757471d50d64da5a32538dc28e979a286dba54451c80",
+        "seed": 6944026118787318628,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "straight",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/074.json",
+        "geometry_hash": "935ba9ef4a0498dd522aed5c407472ca9ea24c1b5ae3b46ba80f7eafd8ef4095",
+        "seed": 6435751975330232188,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "straight",
+          "tight_curve",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/075.json",
+        "geometry_hash": "2d79b87f0f0b0a01ae810542c49fe9262ae5ba788eab6789b5bcda119ed3c6a5",
+        "seed": 17657783219789208433,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/076.json",
+        "geometry_hash": "706cd4b89bbeaab4580ec831f13d4e28f5b2d10fe03a4821e0440dda66a9b5c0",
+        "seed": 13107766743671887893,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/077.json",
+        "geometry_hash": "a6624a76ad65d41435c39ab782c4fdbb71680cd5ecb2c1a060393666e6d8c93e",
+        "seed": 4454181345467565790,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/078.json",
+        "geometry_hash": "477bce0a32145c73cfff6bf7fd7caa31c43e7eda69f58033a75b833738960971",
+        "seed": 18160403969226467510,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/079.json",
+        "geometry_hash": "c1de31c677f9344f7615e88e0816a1de460bb0070daff45301b7b43649129f3c",
+        "seed": 9521437937714824552,
+        "difficulty": "intermediate",
+        "features": [
+          "s_curve",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/080.json",
+        "geometry_hash": "35655ef63de230ce7b273678824b15df7c73aa9b4791e7fd968f213a37fb16a5",
+        "seed": 13960414161654614781,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "straight",
+          "tight_curve"
+        ]
+      },
+      {
+        "path": "test/081.json",
+        "geometry_hash": "59c3584b0e7b358fd0769bee21b4d5c3eb04060c9660386abee29b5b3771af9f",
+        "seed": 12492881137062768907,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/082.json",
+        "geometry_hash": "b4ad25148bd1a3ebf894dd4eb3b4c572642ff3ad363576e9c7ceeb87aa87f3fd",
+        "seed": 13761146078273569803,
+        "difficulty": "intermediate",
+        "features": [
+          "gentle_curve",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/083.json",
+        "geometry_hash": "0612744823dfcfdde8cc1c761d36a383f9317b4d5498a7b3df8c77b50623cca2",
+        "seed": 13008216352392018792,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "gap",
+          "hairpin",
+          "tight_curve",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/084.json",
+        "geometry_hash": "55c2afbd41b09f335382a993329f3ff3ce858360ffb70f0797cb045923a1f0cb",
+        "seed": 8678094822492784949,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve",
+          "straight"
+        ]
+      },
+      {
+        "path": "test/085.json",
+        "geometry_hash": "78565adf35bdba924e9fe232c01f4cd7b864b5c5bbf2fd61dee8fc33d12a5c0f",
+        "seed": 6585423552117381327,
+        "difficulty": "intermediate",
+        "features": [
+          "gentle_curve",
+          "straight",
+          "u_turn"
+        ]
+      },
+      {
+        "path": "test/086.json",
+        "geometry_hash": "bc4e39be500be0716483f6deaaa6ede08f3e0c0b20878e231b51b1edd18a767d",
+        "seed": 3786621074195965686,
+        "difficulty": "advanced",
+        "features": [
+          "corner",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/087.json",
+        "geometry_hash": "bb6f443a900ba3e5113df76bfd9de27b11c0bd0eeae45ee246aab5e363bf76d1",
+        "seed": 4200080922098005593,
+        "difficulty": "beginner",
+        "features": [
+          "gentle_curve"
+        ]
+      },
+      {
+        "path": "test/088.json",
+        "geometry_hash": "7b91a3e63defcd9f33617c0552cbeb2dff80bf8496d10d4c5d8d4b9f6ff4a3e8",
+        "seed": 6412592879815726463,
+        "difficulty": "intermediate",
+        "features": [
+          "corner",
+          "gentle_curve",
+          "straight",
+          "u_turn",
+          "zigzag"
+        ]
+      },
+      {
+        "path": "test/089.json",
+        "geometry_hash": "d5b84c8960ef2f312430b84811ecf969cc13295f99812f6f1046f49e22a14fce",
+        "seed": 16897310932761753571,
+        "difficulty": "advanced",
+        "features": [
+          "branch",
+          "corner",
+          "crossing",
+          "gap",
+          "gentle_curve",
+          "hairpin",
+          "straight",
+          "tight_curve"
+        ]
+      }
+    ]
+  }
+}

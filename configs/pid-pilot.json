@@ -1,0 +1,7 @@
+{
+  "kp": 0.12,
+  "ki": 0.0001,
+  "kd": 0.001,
+  "base": 0.6,
+  "sensor_layout": "semicircle"
+}

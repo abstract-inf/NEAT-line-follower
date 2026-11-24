@@ -1,0 +1,437 @@
+{
+  "summaries": [
+    {
+      "policy": "gain-000",
+      "label": "Filtered PID",
+      "difficulty": "all",
+      "episodes": 90,
+      "completed": 51,
+      "completion_rate": 0.5666666666666667,
+      "rmse_m": 0.030107851145132772,
+      "mae_m": 0.0177118011450148,
+      "mean_progress": 0.7602170069259595,
+      "failed_mean_progress": 0.44665463136759864,
+      "successful_time_s": 12.42908496732004,
+      "failures": {
+        "off_route": 39
+      }
+    },
+    {
+      "policy": "gain-000",
+      "label": "Filtered PID",
+      "difficulty": "beginner",
+      "episodes": 30,
+      "completed": 30,
+      "completion_rate": 1.0,
+      "rmse_m": 0.006969538835422329,
+      "mae_m": 0.005563143482934716,
+      "mean_progress": 1.0,
+      "failed_mean_progress": null,
+      "successful_time_s": 8.074444444444932,
+      "failures": {}
+    },
+    {
+      "policy": "gain-000",
+      "label": "Filtered PID",
+      "difficulty": "intermediate",
+      "episodes": 30,
+      "completed": 11,
+      "completion_rate": 0.36666666666666664,
+      "rmse_m": 0.03784213360932791,
+      "mae_m": 0.020821121812177587,
+      "mean_progress": 0.6973040561810545,
+      "failed_mean_progress": 0.5220590360753491,
+      "successful_time_s": 16.922727272727364,
+      "failures": {
+        "off_route": 19
+      }
+    },
+    {
+      "policy": "gain-000",
+      "label": "Filtered PID",
+      "difficulty": "advanced",
+      "episodes": 30,
+      "completed": 10,
+      "completion_rate": 0.3333333333333333,
+      "rmse_m": 0.04551188099064807,
+      "mae_m": 0.026751138139932105,
+      "mean_progress": 0.5833469645968239,
+      "failed_mean_progress": 0.3750204468952359,
+      "successful_time_s": 20.54999999999732,
+      "failures": {
+        "off_route": 20
+      }
+    },
+    {
+      "policy": "gain-160",
+      "label": "PID + corner supervision, original gains",
+      "difficulty": "all",
+      "episodes": 90,
+      "completed": 78,
+      "completion_rate": 0.8666666666666667,
+      "rmse_m": 0.008605564343790673,
+      "mae_m": 0.0055930135917065405,
+      "mean_progress": 0.9217628570172566,
+      "failed_mean_progress": 0.413221427629424,
+      "successful_time_s": 29.26773504272391,
+      "failures": {
+        "off_route": 12
+      }
+    },
+    {
+      "policy": "gain-160",
+      "label": "PID + corner supervision, original gains",
+      "difficulty": "beginner",
+      "episodes": 30,
+      "completed": 30,
+      "completion_rate": 1.0,
+      "rmse_m": 0.004081031058784276,
+      "mae_m": 0.003150339696321327,
+      "mean_progress": 1.0,
+      "failed_mean_progress": null,
+      "successful_time_s": 14.970555555556576,
+      "failures": {}
+    },
+    {
+      "policy": "gain-160",
+      "label": "PID + corner supervision, original gains",
+      "difficulty": "intermediate",
+      "episodes": 30,
+      "completed": 29,
+      "completion_rate": 0.9666666666666667,
+      "rmse_m": 0.006807802701177258,
+      "mae_m": 0.005018878209999761,
+      "mean_progress": 0.974487967679935,
+      "failed_mean_progress": 0.234639030398052,
+      "successful_time_s": 35.21954022986905,
+      "failures": {
+        "off_route": 1
+      }
+    },
+    {
+      "policy": "gain-160",
+      "label": "PID + corner supervision, original gains",
+      "difficulty": "advanced",
+      "episodes": 30,
+      "completed": 19,
+      "completion_rate": 0.6333333333333333,
+      "rmse_m": 0.014927859271410488,
+      "mae_m": 0.008609822868798533,
+      "mean_progress": 0.7908006033718347,
+      "failed_mean_progress": 0.4294561910140942,
+      "successful_time_s": 42.75789473681923,
+      "failures": {
+        "off_route": 11
+      }
+    },
+    {
+      "policy": "gain-350",
+      "label": "PID + corner supervision, tuned gains",
+      "difficulty": "all",
+      "episodes": 90,
+      "completed": 84,
+      "completion_rate": 0.9333333333333333,
+      "rmse_m": 0.006654003809421973,
+      "mae_m": 0.00447940482774488,
+      "mean_progress": 0.9670001332816182,
+      "failed_mean_progress": 0.5050019992242708,
+      "successful_time_s": 30.52063492062269,
+      "failures": {
+        "off_route": 6
+      }
+    },
+    {
+      "policy": "gain-350",
+      "label": "PID + corner supervision, tuned gains",
+      "difficulty": "beginner",
+      "episodes": 30,
+      "completed": 30,
+      "completion_rate": 1.0,
+      "rmse_m": 0.0037472278745655247,
+      "mae_m": 0.0028409159973490565,
+      "mean_progress": 1.0,
+      "failed_mean_progress": null,
+      "successful_time_s": 15.069444444445395,
+      "failures": {}
+    },
+    {
+      "policy": "gain-350",
+      "label": "PID + corner supervision, tuned gains",
+      "difficulty": "intermediate",
+      "episodes": 30,
+      "completed": 29,
+      "completion_rate": 0.9666666666666667,
+      "rmse_m": 0.006201812658605609,
+      "mae_m": 0.004403721378335757,
+      "mean_progress": 0.9743878606443123,
+      "failed_mean_progress": 0.23163581932936836,
+      "successful_time_s": 35.58390804596067,
+      "failures": {
+        "off_route": 1
+      }
+    },
+    {
+      "policy": "gain-350",
+      "label": "PID + corner supervision, tuned gains",
+      "difficulty": "advanced",
+      "episodes": 30,
+      "completed": 25,
+      "completion_rate": 0.8333333333333334,
+      "rmse_m": 0.010012970895094788,
+      "mae_m": 0.0061935771075498245,
+      "mean_progress": 0.9266125392005419,
+      "failed_mean_progress": 0.5596752352032512,
+      "successful_time_s": 43.18866666664339,
+      "failures": {
+        "off_route": 5
+      }
+    },
+    {
+      "policy": "neat-g109",
+      "label": "Frozen NEAT g109",
+      "difficulty": "all",
+      "episodes": 90,
+      "completed": 38,
+      "completion_rate": 0.4222222222222222,
+      "rmse_m": 0.02319393525708819,
+      "mae_m": 0.015307931425899004,
+      "mean_progress": 0.6814127699338345,
+      "failed_mean_progress": 0.448599024885483,
+      "successful_time_s": 11.697368421052504,
+      "failures": {
+        "off_route": 52
+      }
+    },
+    {
+      "policy": "neat-g109",
+      "label": "Frozen NEAT g109",
+      "difficulty": "beginner",
+      "episodes": 30,
+      "completed": 30,
+      "completion_rate": 1.0,
+      "rmse_m": 0.007368543431918011,
+      "mae_m": 0.0065205642170159134,
+      "mean_progress": 1.0,
+      "failed_mean_progress": null,
+      "successful_time_s": 9.212222222222888,
+      "failures": {}
+    },
+    {
+      "policy": "neat-g109",
+      "label": "Frozen NEAT g109",
+      "difficulty": "intermediate",
+      "episodes": 30,
+      "completed": 5,
+      "completion_rate": 0.16666666666666666,
+      "rmse_m": 0.025987735575964326,
+      "mae_m": 0.016549775598162775,
+      "mean_progress": 0.6267329881128254,
+      "failed_mean_progress": 0.5520795857353905,
+      "successful_time_s": 19.916666666664565,
+      "failures": {
+        "off_route": 25
+      }
+    },
+    {
+      "policy": "neat-g109",
+      "label": "Frozen NEAT g109",
+      "difficulty": "advanced",
+      "episodes": 30,
+      "completed": 3,
+      "completion_rate": 0.1,
+      "rmse_m": 0.03622552676338223,
+      "mae_m": 0.022853454462518328,
+      "mean_progress": 0.41750532168867804,
+      "failed_mean_progress": 0.352783690765198,
+      "successful_time_s": 22.84999999999523,
+      "failures": {
+        "off_route": 27
+      }
+    }
+  ],
+  "paired": [
+    {
+      "pid_policy": "gain-000",
+      "both_complete": 36,
+      "pid_only_complete": 15,
+      "neat_only_complete": 2,
+      "neither_complete": 37,
+      "pid_common_time_s": 9.773611111111402,
+      "neat_common_time_s": 11.258333333333299
+    },
+    {
+      "pid_policy": "gain-160",
+      "both_complete": 36,
+      "pid_only_complete": 42,
+      "neat_only_complete": 2,
+      "neither_complete": 10,
+      "pid_common_time_s": 18.018518518517,
+      "neat_common_time_s": 11.155555555555615
+    },
+    {
+      "pid_policy": "gain-350",
+      "both_complete": 38,
+      "pid_only_complete": 46,
+      "neat_only_complete": 0,
+      "neither_complete": 6,
+      "pid_common_time_s": 18.99166666666434,
+      "neat_common_time_s": 11.697368421052504
+    }
+  ],
+  "zigzag": {
+    "episodes": 32,
+    "completed": 0,
+    "completion_rate": 0.0,
+    "rmse_m": 0.03838748078555283,
+    "mae_m": 0.024919497690018683,
+    "mean_progress": 0.3786282252367277,
+    "failed_mean_progress": 0.3786282252367277,
+    "successful_time_s": null,
+    "failures": {
+      "off_route": 32
+    }
+  },
+  "run": {
+    "study": "frozen-neat-new90-1",
+    "evaluation_only": true,
+    "started_utc": "2026-11-02T07:36:32.853964+00:00",
+    "model": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\28-10-2026-hard\\best.pkl",
+    "model_sha256": "4cf2d8af1bc4b7759f4ede52b00ff12b78c8ecec316fa7aaea623d8662540dcd",
+    "model_metadata": {
+      "condition": "neat_adaptive_progressive",
+      "evolution_seed": 0,
+      "track_profile": "progressive",
+      "generation": 109,
+      "validation_key": [
+        0.5333333333333333,
+        0.664078347584577
+      ],
+      "robot": {
+        "design": "competition",
+        "design_revision": "integrated-pcb-1",
+        "total_mass": 0.55,
+        "wheel_spacing": 0.175,
+        "wheel_radius": 0.0165,
+        "wheel_width": 0.012,
+        "chassis_length": 0.09,
+        "chassis_width": 0.13,
+        "chassis_height": 0.0025,
+        "caster_offset": 0.045,
+        "max_speed": 0.35,
+        "max_torque": 0.03,
+        "motor_time_constant": 0.05,
+        "motor_gain": 0.005,
+        "wheel_friction": 0.75,
+        "caster_friction": 0.05,
+        "physics_hz": 600,
+        "control_hz": 60,
+        "sensor_layout": "semicircle",
+        "sensor_radius": 0.11,
+        "sensor_offset": 0.09,
+        "sensor_angle": 1.7,
+        "sensor_height": 0.006,
+        "sensor_max_distance": 0.025
+      },
+      "training_backend": "gpu",
+      "validation_backend": "gpu",
+      "episode": {
+        "minimum_time_limit": 45.0,
+        "time_multiplier": 3.0,
+        "stall_seconds": 5.0,
+        "progress_increment": 0.01,
+        "corridor_half_width": 0.045,
+        "departure_seconds": 1.0,
+        "gate_radius": 0.035,
+        "completion_speed_bonus": 0.0,
+        "maximum_time_limit": 120.0,
+        "time_reference_speed": 0.1
+      },
+      "time_limit_override": null,
+      "aggregation": "mean_min",
+      "cvar_fraction": 0.3,
+      "suite_sha256": "ef9ee04f304d1d366ed129bb6313aec9dc552605a2476a43bdaf1cc178a10794",
+      "fitness_version": "progress-1.1"
+    },
+    "suite": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\pid-gains-20261029\\suite\\suite.json",
+    "suite_sha256": "16399ef0aa1d6d07ac5779b2126cd597cd3a006e1b943c4c8cce9d89a0922ef7",
+    "reference_pid_csv_sha256": "c590b1c88adb127d1941a32e82fce78d14bf0387342cd42493b1363fee17a370",
+    "robot": {
+      "design": "competition",
+      "design_revision": "integrated-pcb-1",
+      "total_mass": 0.55,
+      "wheel_spacing": 0.175,
+      "wheel_radius": 0.0165,
+      "wheel_width": 0.012,
+      "chassis_length": 0.09,
+      "chassis_width": 0.13,
+      "chassis_height": 0.0025,
+      "caster_offset": 0.045,
+      "max_speed": 0.35,
+      "max_torque": 0.03,
+      "motor_time_constant": 0.05,
+      "motor_gain": 0.005,
+      "wheel_friction": 0.75,
+      "caster_friction": 0.05,
+      "physics_hz": 600,
+      "control_hz": 60,
+      "sensor_layout": "semicircle",
+      "sensor_radius": 0.11,
+      "sensor_offset": 0.09,
+      "sensor_angle": 1.7,
+      "sensor_height": 0.006,
+      "sensor_max_distance": 0.025
+    },
+    "episode": {
+      "minimum_time_limit": 45.0,
+      "time_multiplier": 3.0,
+      "stall_seconds": 5.0,
+      "progress_increment": 0.01,
+      "corridor_half_width": 0.045,
+      "departure_seconds": 1.0,
+      "gate_radius": 0.035,
+      "completion_speed_bonus": 0.0,
+      "maximum_time_limit": 120,
+      "time_reference_speed": 0.1
+    },
+    "environment": {
+      "started_utc": "2026-11-02T07:36:32.033539+00:00",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+      "logical_cpus": 12,
+      "python": "3.12.14",
+      "dependencies": {
+        "mujoco": "3.17.0",
+        "numpy": "2.5.4",
+        "Pillow": "12.3.0",
+        "neat-python": "0.92",
+        "mujoco-warp": "3.17.0",
+        "warp-lang": "1.18.0"
+      },
+      "source_sha256": "78acab6866de9a70228f5c8e6b3e84a74592c0d00290927a0c87ccdc5909da8d",
+      "fitness_version": "progress-1.1",
+      "physical_parameters_calibrated": false
+    },
+    "workers": 4,
+    "trace_slots": [
+      0,
+      1,
+      2,
+      31,
+      62
+    ],
+    "runner_sha256": "b9d66d42310db7c07527f40e395c2ac3d6b6de44eb857df9d26c86dd0bea2d5d",
+    "selection": "Previously frozen model; no reselection",
+    "neat_training_started": false
+  },
+  "status": {
+    "complete": true,
+    "episodes": 90,
+    "completed": 38,
+    "wall_seconds": 20.05487540003378,
+    "generation": 109,
+    "model_sha256_unchanged": true,
+    "preserved_files_unchanged": 760,
+    "neat_training_started": false
+  },
+  "analysis_sha256": "1e1794176ab7e12e4fb39c36a47cdc9640e9903a35c3dfa96a51a6f7f0d7595d"
+}

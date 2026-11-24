@@ -1,0 +1,131 @@
+{
+  "name": "intermediate-17320792299965278972",
+  "sections": [
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 1.0471975511965976,
+      "radius": 0.221947530386425,
+      "width": 0.014496756779362062,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -2.0943951023931953,
+      "radius": 0.221947530386425,
+      "width": 0.014496756779362062,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 1.0471975511965976,
+      "radius": 0.221947530386425,
+      "width": 0.014496756779362062,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -0.9613341121964475,
+      "radius": 0.3437695757601306,
+      "width": 0.017960832819014276,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.017960832819014276,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.018818078967772538,
+      "feature": "corner"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.018818078967772538,
+      "feature": "corner"
+    },
+    {
+      "kind": "straight",
+      "length": 0.22487509824260415,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.018818078967772538,
+      "feature": "corner"
+    },
+    {
+      "kind": "straight",
+      "length": 0.6907502709651044,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.023785288488762067,
+      "feature": "straight"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 1.2077935316817814,
+      "radius": 0.27735024157014154,
+      "width": 0.022535596148936493,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.022535596148936493,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.020908963064837985,
+      "feature": "corner"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.020908963064837985,
+      "feature": "corner"
+    },
+    {
+      "kind": "straight",
+      "length": 0.4182913182848265,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.020908963064837985,
+      "feature": "corner"
+    }
+  ],
+  "start": [
+    -0.15056812241109557,
+    -0.11788566498889064,
+    -2.2024924334661207
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 4.0,
+  "resolution": 0.001,
+  "seed": 17320792299965278972,
+  "difficulty": "intermediate",
+  "split": "test",
+  "generator_version": "1.0",
+  "runout": 0.25
+}

@@ -1,0 +1,217 @@
+{
+  "study": "neat-smooth-study-v1",
+  "snapshot_date": "2026-11-24",
+  "source_run": "runs/neat-smooth-study-v1",
+  "files": {
+    "audit-complete.json": {
+      "sha256": "26fc5601c9b11d5a4142e63227951581c98983bb1b0a538b827be7ef3a544bd4",
+      "bytes": 143
+    },
+    "audit-episodes/s1-g0127.json": {
+      "sha256": "b644f55d8f6ea85d36f9dc412ca03c53cd4fc5c91a8e55c1d30585d56c0b2ea7",
+      "bytes": 156648
+    },
+    "audit-episodes/s1-g0134.json": {
+      "sha256": "d5a574cea1fd89e703055ee33acfdca6b9a683ac3e89c269682def75b68685f3",
+      "bytes": 157081
+    },
+    "audit-episodes/s1-g0138.json": {
+      "sha256": "a58f6823383c52927ca5240eb15d0ed154bbed3b2a84a169bcec48fe0f76cd73",
+      "bytes": 156567
+    },
+    "audit-episodes/s2-g0109.json": {
+      "sha256": "700dbb5059f00ad0f3108935251a1e09a16395808bdb63e93f020f3a644905f8",
+      "bytes": 156663
+    },
+    "audit-episodes/s2-g0136.json": {
+      "sha256": "ce7ecd907f27fa6e2b8df84441828365059f3c84e017f0d3ffd3b25d6b84a5e3",
+      "bytes": 156998
+    },
+    "audit-episodes/s2-g0137.json": {
+      "sha256": "27adf6993147e27bf716f270f85aee3ffa49eda63f3b59aba512fd853acd8373",
+      "bytes": 156722
+    },
+    "audit-episodes/s3-g0106.json": {
+      "sha256": "ee5d79127f0312594c0e13955635398782f62df7ab3228685c099126ff3cd462",
+      "bytes": 157249
+    },
+    "audit-episodes/s3-g0121.json": {
+      "sha256": "8894168a2fa9b2f6163a8f94be756a6861832081d8b54394742a2a12fd7fe5a9",
+      "bytes": 157150
+    },
+    "audit-episodes/s3-g0131.json": {
+      "sha256": "f884491949128bbda8a46c01a42cc281fc193f3338f8487291bb7233b46d6195",
+      "bytes": 157037
+    },
+    "audit-episodes/s4-g0107.json": {
+      "sha256": "b58d608bc2351dcebd6239a2034a6cf013fd5eb2db368a42b0b3b964753283fb",
+      "bytes": 156917
+    },
+    "audit-episodes/s4-g0140.json": {
+      "sha256": "bc6cea120e3a30ffff991f314753a12089bfa159c167ec7374d52040e153972f",
+      "bytes": 157078
+    },
+    "audit-episodes/s5-g0110.json": {
+      "sha256": "1e6900c52c6f20329d845674d56afd81fd9321f3e27d21e9d76f1ce44c73c536",
+      "bytes": 157218
+    },
+    "audit-episodes/s5-g0134.json": {
+      "sha256": "e2c5eecc59985678785f3f1bc6415cdce2aab52c608989f7af4b98b2a67343af",
+      "bytes": 157087
+    },
+    "audit-episodes/s5-g0136.json": {
+      "sha256": "4b7c93241fa53b1fbe0c674d1730d51f10054670ebd488882b88504f357f2ea5",
+      "bytes": 157060
+    },
+    "audit-report.md": {
+      "sha256": "304101eaf766dc30bef3a3142790c388552c6beef1d9502467cc8a50623ac142",
+      "bytes": 5641
+    },
+    "audit-summary.json": {
+      "sha256": "3d979ac1f6a0179b9657b33d86e798d2eb660bb5037bf2bded3dbdb43ac132f8",
+      "bytes": 26596
+    },
+    "frozen-inputs/audit-s1-g0127.pkl": {
+      "sha256": "d6782cf188e751b99a30fcc793bad31bff38cbcc2732900a54eceb40a5da3423",
+      "bytes": 8891
+    },
+    "frozen-inputs/audit-s1-g0134.pkl": {
+      "sha256": "6114a6859544fec99c26dad124d7ac44d9b0e077a43102532f5fca02114b4314",
+      "bytes": 9239
+    },
+    "frozen-inputs/audit-s1-g0138.pkl": {
+      "sha256": "914d41dd2b852999afc583a9feb0612840b24f13399284d4dbfd63f2b44aeb20",
+      "bytes": 8891
+    },
+    "frozen-inputs/audit-s2-g0109.pkl": {
+      "sha256": "01ef9d54e9bcde8e8b6c846f9fa7e2385155b60ff214e3af4c71e50709e1a8dc",
+      "bytes": 8967
+    },
+    "frozen-inputs/audit-s2-g0136.pkl": {
+      "sha256": "aaefcd0c5fda90ee04bc793d573afb3d0793b55c9e38377f5cc211abd099b236",
+      "bytes": 8778
+    },
+    "frozen-inputs/audit-s2-g0137.pkl": {
+      "sha256": "278e36f3de39a1e378f466fce70b818bf181efbd02eafa85da4be32fd0000ec8",
+      "bytes": 8967
+    },
+    "frozen-inputs/audit-s3-g0106.pkl": {
+      "sha256": "440546b0703d76abb88e140085d84ff19cf180d21ccc4f78996a45d62f3b2859",
+      "bytes": 10029
+    },
+    "frozen-inputs/audit-s3-g0121.pkl": {
+      "sha256": "c95e5f501a4219fc59e746e976ea14fe425a4f922f30c13288f20a53ae04a3c8",
+      "bytes": 10072
+    },
+    "frozen-inputs/audit-s3-g0131.pkl": {
+      "sha256": "441cc0f96ba378ab7c16e57a4cca390241811a0cc3607c29e814fbc380e551db",
+      "bytes": 9992
+    },
+    "frozen-inputs/audit-s4-g0107.pkl": {
+      "sha256": "5e98a3b88a584146280c243512548817e194dbb9fdc30d9c7d1ffadeaf91901b",
+      "bytes": 9667
+    },
+    "frozen-inputs/audit-s4-g0140.pkl": {
+      "sha256": "69671f71ca78387cbefa65ecc6845b279767e274d8bcca4756e0525cb46a1249",
+      "bytes": 9038
+    },
+    "frozen-inputs/audit-s5-g0110.pkl": {
+      "sha256": "3d76401071aa27166528dca485881c3dc2a2d1f3e7045c6605d8cc08651d0067",
+      "bytes": 9762
+    },
+    "frozen-inputs/audit-s5-g0134.pkl": {
+      "sha256": "40f4da6b38f9c08f6c22ce100ebfcab42966c555a5918436fbea008c18e7fccc",
+      "bytes": 9797
+    },
+    "frozen-inputs/audit-s5-g0136.pkl": {
+      "sha256": "5d1d793d33d23d66623e0599d294d1c7dd270c70478188a9042804d427f620f3",
+      "bytes": 9643
+    },
+    "frozen-inputs/geometry-freeze.json": {
+      "sha256": "5d1068e6047e0eaa6fb75d1243d3269b9fa76aaf3a5a004ea923101b73f23711",
+      "bytes": 959
+    },
+    "frozen-inputs/pid-fullspeed-100.json": {
+      "sha256": "c6c68b53342600db0078e991bbb729064d829d360c4840a720dbf5e66d94c24b",
+      "bytes": 470
+    },
+    "frozen-inputs/pid-legacy-050.json": {
+      "sha256": "583f74c2e056b08375dbe82738c3ee7580f56d28ab660e7fdcda88560ec40952",
+      "bytes": 500
+    },
+    "frozen-inputs/pid-legacy-100.json": {
+      "sha256": "c68abdce0593b632fc31f8945ad556cf7cac0347277337baa6ef0425f58b2400",
+      "bytes": 500
+    },
+    "frozen-inputs/pid-legacy-150.json": {
+      "sha256": "85620a52d84eb0e079c8e8e65613daea684d2b4105fe378bad71fefc515556a5",
+      "bytes": 498
+    },
+    "frozen-inputs/seed-01.pkl": {
+      "sha256": "6114a6859544fec99c26dad124d7ac44d9b0e077a43102532f5fca02114b4314",
+      "bytes": 9239
+    },
+    "frozen-inputs/seed-02.pkl": {
+      "sha256": "aaefcd0c5fda90ee04bc793d573afb3d0793b55c9e38377f5cc211abd099b236",
+      "bytes": 8778
+    },
+    "frozen-inputs/seed-03.pkl": {
+      "sha256": "441cc0f96ba378ab7c16e57a4cca390241811a0cc3607c29e814fbc380e551db",
+      "bytes": 9992
+    },
+    "frozen-inputs/seed-04.pkl": {
+      "sha256": "5e98a3b88a584146280c243512548817e194dbb9fdc30d9c7d1ffadeaf91901b",
+      "bytes": 9667
+    },
+    "frozen-inputs/seed-05.pkl": {
+      "sha256": "40f4da6b38f9c08f6c22ce100ebfcab42966c555a5918436fbea008c18e7fccc",
+      "bytes": 9797
+    },
+    "frozen-inputs/showcase-track.json": {
+      "sha256": "0b0b459734395b3bfd7b7e0ff48cb89ba39a50ecf33c82f10837b9fbff909dd1",
+      "bytes": 9351
+    },
+    "implementation-checks.json": {
+      "sha256": "2f6acd9e50d44bb98a635aa410c0ba80b7796d2e28578a543989bfc38d82486e",
+      "bytes": 1026
+    },
+    "parent-references/seed-01.json": {
+      "sha256": "804710a90dd01910030ced266e1b2f91800f0771afce94d1fc00251725bdc6f8",
+      "bytes": 156492
+    },
+    "parent-references/seed-02.json": {
+      "sha256": "9f5af1c8a7570f9450de1d562f75a2687b612fc1b07852325c47e10b2c3abe05",
+      "bytes": 156411
+    },
+    "parent-references/seed-03.json": {
+      "sha256": "41409bc83dde521e7eb9c006ffd70f349cdd6831e089f41ea3f937784be7e373",
+      "bytes": 156449
+    },
+    "parent-references/seed-04.json": {
+      "sha256": "3a623817ebc4cc5bed963e90587f817e0ec2e16dfae46a34f53f94b584ebac96",
+      "bytes": 156329
+    },
+    "parent-references/seed-05.json": {
+      "sha256": "ac2b839832fa3dc3e2218c9fc5295bd9c38a895fbc4bb80ca49696467fcca27f",
+      "bytes": 156499
+    },
+    "preparation-summary.json": {
+      "sha256": "e9085a9ef0cd26309f370612183a94215edfcc38a6fa0b0ee241cf232b081d81",
+      "bytes": 410
+    },
+    "protocol.json": {
+      "sha256": "75340b6df9645700814951d8408bf2d79190e18fceaac824caaf025eb0daaccc",
+      "bytes": 1262153
+    },
+    "straight-recovery-audit.png": {
+      "sha256": "23cb68d60b12bf386298dc1d11f3e6c7d0198bf6f3df35c1487a93de899097c9",
+      "bytes": 138700
+    },
+    "straight-recovery-audit.svg": {
+      "sha256": "10a6e1c49a33b2d8151f718f67affe86746072323f758b68569f6d3b29edfbac",
+      "bytes": 107646
+    }
+  },
+  "selection": "Frozen study parents, historical audit candidates and PID references; these are not new pilot winners.",
+  "scope": "Completed validation audit. No new training results or final-test performance claimed."
+}

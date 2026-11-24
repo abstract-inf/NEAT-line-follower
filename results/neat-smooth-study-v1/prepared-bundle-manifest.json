@@ -1,0 +1,10 @@
+{
+  "file": "results/neat-smooth-study-v1/prepared-bundle.zip",
+  "sha256": "ea78f721418931019d4a74273cd3b5732257d3eda300184a72030f1b89adf86b",
+  "bytes": 1887356,
+  "files": 463,
+  "scope": "Exact frozen prepared tree, completed audit, audit review and parent references; excludes live pilot training/checkpoints.",
+  "restore": "Extract at repository root, retaining runs/neat-smooth-study-v1/... paths, then run run_neat_smooth_study.py verify.",
+  "local_archive_copy": "output/github-artifacts/neat-smooth-study-v1-prepared-20261124.zip",
+  "included_in_git": true
+}

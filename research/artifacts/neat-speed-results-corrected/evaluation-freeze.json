@@ -1,0 +1,87 @@
+{
+  "evaluator_version": "progress-1.2",
+  "episode": {
+    "minimum_time_limit": 45.0,
+    "time_multiplier": 3.0,
+    "stall_seconds": 5.0,
+    "progress_increment": 0.01,
+    "corridor_half_width": 0.1,
+    "departure_seconds": 2.0,
+    "gate_radius": 0.035,
+    "completion_speed_bonus": 0.0,
+    "maximum_time_limit": 120,
+    "time_reference_speed": 0.1
+  },
+  "suite_sha256": "025cff0715444146e2cf4d80476d3ca44bcd2e60f37c0b26801b3e8c0a14b48c",
+  "pid_sha256": "583f74c2e056b08375dbe82738c3ee7580f56d28ab660e7fdcda88560ec40952",
+  "pid_settings": {
+    "kp": 0.7239850053219836,
+    "ki": 0.1681344890402374,
+    "kd": 0.021582281714272438,
+    "base": 0.75,
+    "minimum_command": 0.03689846560293942,
+    "derivative_filter_s": 0.01921304669141327,
+    "integral_limit": 0.4,
+    "slowdown_gain": 0.5675464177752183,
+    "loss_hold_s": 0.7382309523604921,
+    "search_command": 0.5070105586192023,
+    "corner_supervision": false,
+    "approach_command": 0.40813894373330745,
+    "turn_lead_m": 0.016964705975112876,
+    "pivot_command": 0.5789689902404036
+  },
+  "pid_tuning_cap_m_s": 0.35,
+  "source": {
+    "started_utc": "2026-11-05T08:45:09.205514+00:00",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpus": 12,
+    "python": "3.12.14",
+    "dependencies": {
+      "mujoco": "3.17.0",
+      "numpy": "2.5.4",
+      "Pillow": "12.3.0",
+      "neat-python": "0.92",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.18.0"
+    },
+    "source_sha256": "32f4020463c53df1ed47433d5e03652109fb565c091c32863a07c54b81592e5e",
+    "fitness_version": "progress-1.2",
+    "physical_parameters_calibrated": false
+  },
+  "retrospective": true,
+  "metric": "Exact minimum chassis-center distance to any segment of the intended route polyline.",
+  "conditions": [
+    {
+      "policy": "g94-parent",
+      "cap_m_s": 0.5,
+      "model_sha256": "c518a514256320b4c49672324a35b46e1ffe43c202c7611535c9d5eac5087d1b"
+    },
+    {
+      "policy": "speed-g98",
+      "cap_m_s": 1.5,
+      "model_sha256": "ec6e424bae763b6bef21b838449f5e677bc2a229ca71458b4c6fd406cead2d48"
+    },
+    {
+      "policy": "pid-filtered",
+      "cap_m_s": 0.5,
+      "model_sha256": null
+    },
+    {
+      "policy": "pid-filtered",
+      "cap_m_s": 1.5,
+      "model_sha256": null
+    },
+    {
+      "policy": "speed-g00",
+      "cap_m_s": 0.5,
+      "model_sha256": "74493168187fd1195493b8c8022733a3fc0b35a8c87e1813184e926975d81a89"
+    },
+    {
+      "policy": "speed-g98",
+      "cap_m_s": 0.5,
+      "model_sha256": "ec6e424bae763b6bef21b838449f5e677bc2a229ca71458b4c6fd406cead2d48"
+    }
+  ],
+  "previous_results_sha256": "adeb4c8c4d26b3a398ef9335d7dd0741ab0a585b2357ab3a372a1dafe0dacbbc"
+}

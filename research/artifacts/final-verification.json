@@ -1,0 +1,26 @@
+{
+  "verified_utc": "2026-10-29T07:14:48.897887+00:00",
+  "original_csvs_unchanged": 353,
+  "last_completed_neat_generation": 173,
+  "neat_checkpoint_sha256": "f618b4887c69977af3c2a8ba112bd3c95dbcc20a90f528d7e470fcaadd9cda27",
+  "pid_source_sha256": "78acab6866de9a70228f5c8e6b3e84a74592c0d00290927a0c87ccdc5909da8d",
+  "frozen_parameters_and_source_match": true,
+  "candidate_count": 120,
+  "episode_counts": {
+    "coarse": 576,
+    "expanded": 180,
+    "refine": 360,
+    "validation": 180,
+    "test": 270,
+    "representative": 12
+  },
+  "same_test_tracks_per_policy": 90,
+  "split_isolation_verified": true,
+  "technical_episode_errors": 0,
+  "prior_test_result": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_pid.py tests/test_robot.py tests/test_tracks.py -q --disable-warnings --basetemp=.cache/pytest-pid-final",
+    "passed": 22,
+    "elapsed_seconds": 15.95,
+    "note": "Recorded from the completed test invocation; packaging does not rerun tests."
+  }
+}

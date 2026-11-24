@@ -1,0 +1,17 @@
+{
+  "prepared": true,
+  "protocol_sha256": "75340b6df9645700814951d8408bf2d79190e18fceaac824caaf025eb0daaccc",
+  "distinct_prepared_tracks": 360,
+  "audit_candidates": 14,
+  "parents": [
+    134,
+    136,
+    131,
+    107,
+    134
+  ],
+  "legacy_fingerprints_verified": true,
+  "simulation_or_evolution_started": false,
+  "source_bundle_verified": true,
+  "final_test_tracks_generated": false
+}

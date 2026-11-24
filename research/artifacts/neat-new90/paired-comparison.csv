@@ -1,0 +1,4 @@
+pid_policy,both_complete,pid_only_complete,neat_only_complete,neither_complete,pid_common_time_s,neat_common_time_s
+gain-000,36,15,2,37,9.773611111111402,11.258333333333299
+gain-160,36,42,2,10,18.018518518517,11.155555555555615
+gain-350,38,46,0,6,18.99166666666434,11.697368421052504

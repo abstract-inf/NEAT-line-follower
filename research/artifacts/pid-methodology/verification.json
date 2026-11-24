@@ -1,0 +1,12 @@
+{
+  "checked_client_date": "2026-11-02",
+  "documentation_only": true,
+  "controller_source_sha256": "51f45b9adb64a46d63da7d937aab7933b8e607bc28b5e3c7e6719c12e5c4204e",
+  "package_source_sha256": "78acab6866de9a70228f5c8e6b3e84a74592c0d00290927a0c87ccdc5909da8d",
+  "methodology_sha256": "4c228bab7d595f25f36a3ed080f1b83c383fbb4f4e181d32a1ec6617c18f4772",
+  "relative_links_verified": 13,
+  "configuration_values_verified": 26,
+  "preserved_historical_files_unchanged": 531,
+  "prior_research_archives_unchanged": true,
+  "report_generator_syntax_valid": true
+}

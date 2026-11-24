@@ -1,0 +1,111 @@
+{
+  "fps": 30,
+  "size": [
+    1536,
+    720
+  ],
+  "neat_generation": 98,
+  "evaluator_version": "progress-1.2",
+  "corridor_half_width_m": 0.1,
+  "departure_seconds": 2.0,
+  "departure_requires_no_sensor_contact": true,
+  "neat_sha256": "ec6e424bae763b6bef21b838449f5e677bc2a229ca71458b4c6fd406cead2d48",
+  "suite_sha256": "025cff0715444146e2cf4d80476d3ca44bcd2e60f37c0b26801b3e8c0a14b48c",
+  "pid_settings": {
+    "pid-plain": {
+      "kp": 0.7239850053219836,
+      "ki": 0.1681344890402374,
+      "kd": 0.021582281714272438,
+      "base": 0.75
+    },
+    "pid-filtered": {
+      "kp": 0.7239850053219836,
+      "ki": 0.1681344890402374,
+      "kd": 0.021582281714272438,
+      "base": 0.75,
+      "minimum_command": 0.03689846560293942,
+      "derivative_filter_s": 0.01921304669141327,
+      "integral_limit": 0.4,
+      "slowdown_gain": 0.5675464177752183,
+      "loss_hold_s": 0.7382309523604921,
+      "search_command": 0.5070105586192023,
+      "corner_supervision": false,
+      "approach_command": 0.40813894373330745,
+      "turn_lead_m": 0.016964705975112876,
+      "pivot_command": 0.5789689902404036
+    }
+  },
+  "recorder_sha256": "d9d9c492239c82bee14118f74039cd5ec64e05a5e71625ad29af22fd4d5a2eda",
+  "videos": [
+    {
+      "path": "01-1.50-mps/track-000-beginner.mp4",
+      "slot": 0,
+      "wheel_speed_cap_m_s": 1.5,
+      "frames": 193,
+      "sha256": "855984f75afc424ba4b45f2b2219c70216d22679085e77ae2c9f736b3a964f6b"
+    },
+    {
+      "path": "02-0.50-mps/track-000-beginner.mp4",
+      "slot": 0,
+      "wheel_speed_cap_m_s": 0.5,
+      "frames": 454,
+      "sha256": "96e70e10cee23616d0412a174153ab7e84c8ea69f56feace4b3aca0e47e6c808"
+    },
+    {
+      "path": "01-1.50-mps/track-001-intermediate.mp4",
+      "slot": 1,
+      "wheel_speed_cap_m_s": 1.5,
+      "frames": 246,
+      "sha256": "2b5590c4db11657e40f204af1673080b62049ad51811a9e580a62055078dce00"
+    },
+    {
+      "path": "02-0.50-mps/track-001-intermediate.mp4",
+      "slot": 1,
+      "wheel_speed_cap_m_s": 0.5,
+      "frames": 607,
+      "sha256": "9646f9538cc611705dc556927d093684b95b4e4136ef4520b5b18192f152d522"
+    },
+    {
+      "path": "01-1.50-mps/track-031-intermediate.mp4",
+      "slot": 31,
+      "wheel_speed_cap_m_s": 1.5,
+      "frames": 278,
+      "sha256": "2a2f88aec8dc610af6d0dd6d1b374c668c7a71c1b44dccfa3a41d7010f8ba10d"
+    },
+    {
+      "path": "02-0.50-mps/track-031-intermediate.mp4",
+      "slot": 31,
+      "wheel_speed_cap_m_s": 0.5,
+      "frames": 675,
+      "sha256": "32d4591d8336875a100444d359ceec9e1784dd33c1f48e6e382ed27a61a7bc2f"
+    },
+    {
+      "path": "01-1.50-mps/track-032-advanced.mp4",
+      "slot": 32,
+      "wheel_speed_cap_m_s": 1.5,
+      "frames": 341,
+      "sha256": "96b7f73b9170a830e691b5784afa80b1da905fb75e69c93862243e37fe647285"
+    },
+    {
+      "path": "02-0.50-mps/track-032-advanced.mp4",
+      "slot": 32,
+      "wheel_speed_cap_m_s": 0.5,
+      "frames": 700,
+      "sha256": "fb76bdbaf5b291f5959fd9be351a966b2a526be8b25ffa219b47f23ad7f3a287"
+    },
+    {
+      "path": "01-1.50-mps/track-017-advanced.mp4",
+      "slot": 17,
+      "wheel_speed_cap_m_s": 1.5,
+      "frames": 369,
+      "sha256": "5787b96ab3555cc0f95b6e7c286e2721ebbd6f2dfe6ba67214c3d75e7789177f"
+    },
+    {
+      "path": "02-0.50-mps/track-017-advanced.mp4",
+      "slot": 17,
+      "wheel_speed_cap_m_s": 0.5,
+      "frames": 565,
+      "sha256": "74d23d0b7a2cfa50c1e3415e2d0ad8e7c93e3e9b9eedbd0674944e49ea3586a3"
+    }
+  ]
+}

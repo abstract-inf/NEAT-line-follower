@@ -1,0 +1,97 @@
+{
+  "overall": [
+    {
+      "policy": "gain-000",
+      "label": "Filtered PID",
+      "difficulty": "all",
+      "episodes": 90,
+      "completed": 51,
+      "completion_rate": 0.5666666666666667,
+      "rmse_m": 0.030107851145132772,
+      "mae_m": 0.0177118011450148,
+      "mean_progress": 0.7602170069259595,
+      "failed_mean_progress": 0.44665463136759864,
+      "successful_time_s": 12.42908496732004,
+      "failures": {
+        "off_route": 39
+      }
+    },
+    {
+      "policy": "gain-160",
+      "label": "PID + corner supervision, original gains",
+      "difficulty": "all",
+      "episodes": 90,
+      "completed": 78,
+      "completion_rate": 0.8666666666666667,
+      "rmse_m": 0.008605564343790673,
+      "mae_m": 0.0055930135917065405,
+      "mean_progress": 0.9217628570172566,
+      "failed_mean_progress": 0.413221427629424,
+      "successful_time_s": 29.26773504272391,
+      "failures": {
+        "off_route": 12
+      }
+    },
+    {
+      "policy": "gain-350",
+      "label": "PID + corner supervision, tuned gains",
+      "difficulty": "all",
+      "episodes": 90,
+      "completed": 84,
+      "completion_rate": 0.9333333333333333,
+      "rmse_m": 0.006654003809421973,
+      "mae_m": 0.00447940482774488,
+      "mean_progress": 0.9670001332816182,
+      "failed_mean_progress": 0.5050019992242708,
+      "successful_time_s": 30.52063492062269,
+      "failures": {
+        "off_route": 6
+      }
+    },
+    {
+      "policy": "neat-g109",
+      "label": "Frozen NEAT g109",
+      "difficulty": "all",
+      "episodes": 90,
+      "completed": 38,
+      "completion_rate": 0.4222222222222222,
+      "rmse_m": 0.02319393525708819,
+      "mae_m": 0.015307931425899004,
+      "mean_progress": 0.6814127699338345,
+      "failed_mean_progress": 0.448599024885483,
+      "successful_time_s": 11.697368421052504,
+      "failures": {
+        "off_route": 52
+      }
+    }
+  ],
+  "paired": [
+    {
+      "pid_policy": "gain-000",
+      "both_complete": 36,
+      "pid_only_complete": 15,
+      "neat_only_complete": 2,
+      "neither_complete": 37,
+      "pid_common_time_s": 9.773611111111402,
+      "neat_common_time_s": 11.258333333333299
+    },
+    {
+      "pid_policy": "gain-160",
+      "both_complete": 36,
+      "pid_only_complete": 42,
+      "neat_only_complete": 2,
+      "neither_complete": 10,
+      "pid_common_time_s": 18.018518518517,
+      "neat_common_time_s": 11.155555555555615
+    },
+    {
+      "pid_policy": "gain-350",
+      "both_complete": 38,
+      "pid_only_complete": 46,
+      "neat_only_complete": 0,
+      "neither_complete": 6,
+      "pid_common_time_s": 18.99166666666434,
+      "neat_common_time_s": 11.697368421052504
+    }
+  ]
+}

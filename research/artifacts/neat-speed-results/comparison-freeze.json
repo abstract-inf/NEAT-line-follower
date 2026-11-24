@@ -1,0 +1,164 @@
+{
+  "suite_sha256": "025cff0715444146e2cf4d80476d3ca44bcd2e60f37c0b26801b3e8c0a14b48c",
+  "original_assessment_sha256": "cba2224088bec334c35e5b489d47455105237b9a2251083f7d64fe56b75fd110",
+  "checkpoints_selected_by": "Within-speed validation completion then validation fitness. Earliest breaks exact ties.",
+  "phase_checkpoints": {
+    "speed-g00": {
+      "generation": 0,
+      "training_cap_m_s": 0.5,
+      "validation_completion": 0.9666666666666667,
+      "validation_score": 1.9194362361954393,
+      "path": "runs/neat-speed-100-20261104/training/champions/generation-0000.pkl",
+      "sha256": "74493168187fd1195493b8c8022733a3fc0b35a8c87e1813184e926975d81a89"
+    },
+    "speed-g20": {
+      "generation": 20,
+      "training_cap_m_s": 0.65,
+      "validation_completion": 0.9666666666666667,
+      "validation_score": 1.9238275205528432,
+      "path": "runs/neat-speed-100-20261104/training/champions/generation-0020.pkl",
+      "sha256": "b76c32980d10eb797d1b732085f38f49113a28a5b7e85b2eb4ba84d237822a8b"
+    },
+    "speed-g27": {
+      "generation": 27,
+      "training_cap_m_s": 0.8,
+      "validation_completion": 0.9,
+      "validation_score": 1.7004957554106364,
+      "path": "runs/neat-speed-100-20261104/training/champions/generation-0027.pkl",
+      "sha256": "2f0f621e7ce56ab3bfe2e9838c0d495512c463703feeb9b3ad7df28968f30ac5"
+    },
+    "speed-g53": {
+      "generation": 53,
+      "training_cap_m_s": 1.0,
+      "validation_completion": 0.9333333333333333,
+      "validation_score": 1.8305883701719305,
+      "path": "runs/neat-speed-100-20261104/training/champions/generation-0053.pkl",
+      "sha256": "a4ddb3b5d2714a23ac209d32eee2381c8ac12b883834aacdd8a23a7898e40af7"
+    },
+    "speed-g64": {
+      "generation": 64,
+      "training_cap_m_s": 1.25,
+      "validation_completion": 0.9,
+      "validation_score": 1.7773632669052062,
+      "path": "runs/neat-speed-100-20261104/training/champions/generation-0064.pkl",
+      "sha256": "5aa6828e7430f646daf79fcbd3a26e92f0e478dfcc7c04cde127408032353b58"
+    },
+    "speed-g98": {
+      "generation": 98,
+      "training_cap_m_s": 1.5,
+      "validation_completion": 0.9,
+      "validation_score": 1.767450038934506,
+      "path": "runs/neat-speed-100-20261104/assessment/frozen-best.pkl",
+      "sha256": "ec6e424bae763b6bef21b838449f5e677bc2a229ca71458b4c6fd406cead2d48"
+    }
+  },
+  "pid_settings": {
+    "pid-plain": {
+      "kp": 0.7239850053219836,
+      "ki": 0.1681344890402374,
+      "kd": 0.021582281714272438,
+      "base": 0.75
+    },
+    "pid-filtered": {
+      "kp": 0.7239850053219836,
+      "ki": 0.1681344890402374,
+      "kd": 0.021582281714272438,
+      "base": 0.75,
+      "minimum_command": 0.03689846560293942,
+      "derivative_filter_s": 0.01921304669141327,
+      "integral_limit": 0.4,
+      "slowdown_gain": 0.5675464177752183,
+      "loss_hold_s": 0.7382309523604921,
+      "search_command": 0.5070105586192023,
+      "corner_supervision": false,
+      "approach_command": 0.40813894373330745,
+      "turn_lead_m": 0.016964705975112876,
+      "pivot_command": 0.5789689902404036
+    }
+  },
+  "conditions": [
+    {
+      "policy_id": "speed-g00",
+      "wheel_speed_cap_m_s": 0.5
+    },
+    {
+      "policy_id": "speed-g00",
+      "wheel_speed_cap_m_s": 1.5
+    },
+    {
+      "policy_id": "speed-g20",
+      "wheel_speed_cap_m_s": 0.5
+    },
+    {
+      "policy_id": "speed-g20",
+      "wheel_speed_cap_m_s": 0.65
+    },
+    {
+      "policy_id": "speed-g20",
+      "wheel_speed_cap_m_s": 1.5
+    },
+    {
+      "policy_id": "speed-g27",
+      "wheel_speed_cap_m_s": 0.5
+    },
+    {
+      "policy_id": "speed-g27",
+      "wheel_speed_cap_m_s": 0.8
+    },
+    {
+      "policy_id": "speed-g27",
+      "wheel_speed_cap_m_s": 1.5
+    },
+    {
+      "policy_id": "speed-g53",
+      "wheel_speed_cap_m_s": 0.5
+    },
+    {
+      "policy_id": "speed-g53",
+      "wheel_speed_cap_m_s": 1.0
+    },
+    {
+      "policy_id": "speed-g53",
+      "wheel_speed_cap_m_s": 1.5
+    },
+    {
+      "policy_id": "speed-g64",
+      "wheel_speed_cap_m_s": 0.5
+    },
+    {
+      "policy_id": "speed-g64",
+      "wheel_speed_cap_m_s": 1.25
+    },
+    {
+      "policy_id": "speed-g64",
+      "wheel_speed_cap_m_s": 1.5
+    },
+    {
+      "policy_id": "pid-plain",
+      "wheel_speed_cap_m_s": 0.5
+    },
+    {
+      "policy_id": "pid-plain",
+      "wheel_speed_cap_m_s": 1.5
+    },
+    {
+      "policy_id": "pid-filtered",
+      "wheel_speed_cap_m_s": 0.5
+    },
+    {
+      "policy_id": "pid-filtered",
+      "wheel_speed_cap_m_s": 1.5
+    }
+  ],
+  "pid_no_line": "Plain: keep equal base wheel commands, hold integral, reset derivative history.",
+  "retrospective": true,
+  "backend": "cpu",
+  "trace_slots": [
+    1,
+    2,
+    31,
+    32
+  ],
+  "evaluator_sha256": "9c827f6a5c5de138f7e1a85033fd51d0da427a1479b5def3d1130436b3fb768a",
+  "source_sha256": "8990bcb5a63fa22d705df7f40591a6deb463a9111e451b98c33daa48d3e2bc54"
+}

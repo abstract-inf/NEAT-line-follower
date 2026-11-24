@@ -1,0 +1,59 @@
+{
+  "name": "beginner-6166200907293494269",
+  "sections": [
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 0.54141183653742,
+      "radius": 0.3886604108207333,
+      "width": 0.01950906311302276,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.01950906311302276,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.4630920117883338,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02567247771970578,
+      "feature": "straight"
+    },
+    {
+      "kind": "straight",
+      "length": 0.4322748805461879,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.026024263149935424,
+      "feature": "straight"
+    },
+    {
+      "kind": "straight",
+      "length": 0.4277856604034842,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.0137335461041939,
+      "feature": "straight"
+    }
+  ],
+  "start": [
+    0.16927378728551784,
+    -0.11687485129213188,
+    -0.45717949609268516
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 4.0,
+  "resolution": 0.001,
+  "seed": 6166200907293494269,
+  "difficulty": "beginner",
+  "split": "validation",
+  "generator_version": "1.0",
+  "runout": 0.25
+}
