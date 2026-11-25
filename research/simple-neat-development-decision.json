@@ -1,0 +1,12 @@
+{
+  "pilot_study": "neat-simple-pilot-50-v1",
+  "pilot_protocol_sha256": "a95c244174cc921b423827cde6e1789971d6e1044a71cfdca6f17cc0b8ffaac5",
+  "pilot_report_sha256": "5772a6f6b9fe887c41eedb3d907a6a572a5ffe375d477e7285826b87d309392f",
+  "pilot_snapshot_sha256": "5c4e5e5ea6f1f2461040cdaba557279f983f78da5daa11f47a382f5f373a673a",
+  "smoothness_weight": 0.0,
+  "selected_arm": "lambda-0",
+  "selection_context": "User explicitly chose lambda=0 for freezing the method for five independent runs, after accepting the observed development trade-offs.",
+  "rationale": "Among tested own-objective selections, lambda0 meets the declared0.95m/s minimum straight target and60/60 primary plus20/20 retention completion, has lower mean geometric error and worst straight physical yaw than lambda1 with nearly the same paired finish time, and removes the command-smoothness coefficient from the effective fitness. Command jitter and physical smoothness remain reported outcomes; equality with the old prototype is not claimed.",
+  "limitations": "One ancestry and consulted validation tracks. Acceptance does not change failed historical gates or establish five-seed repeatability.",
+  "next_training_status": "No new evolution authorized by this preparation; the prospective400-generation from-scratch curriculum is described separately for review."
+}
