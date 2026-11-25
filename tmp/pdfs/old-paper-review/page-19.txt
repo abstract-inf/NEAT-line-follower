@@ -1,0 +1,44 @@
+ThePIDalgorithmconsistentlycompletedthetrackatsignificantlyhigherspeeds,
+with the robot avegaring a lap time of 20.93 second at velocities between 350 and 500
+px/s.Incontrast,theNEATcontrollerstruggledtocompletethefulllapatthesehigh
+speeds.Itonlysucceededatamaximumvelocityof300px/s,withanaveragelaptime
+of48.20seconds.AttemptstoruntheNEATmodelatfasterspeedsresultedincrashes
+and an inability to finish the track. This finding suggests that for applications where
+high speed is the primary objective, a well-tuned PID controller is a more effective
+solution.
+Conversely,theNEATalgorithmprovedtobefarmorepreciseinitslinefollowing.
+It achieved a remarkably low average Root Mean Squared Error (RMSE) of 0.916,
+which is less than half the average RMSE of the PID controller (1.99). This data
+demonstrates the NEAT controller’s superior ability to keep the robot centered on
+the line. Additionally, the final trained NEAT model showed high reproducibility,
+consistently producing the same result across multiple simulation runs at the same
+speed.Thischaracteristic,whichPIDstruggledtoreplicate,makesNEATapotentially
+valuable solution for industrial applications such as warehouse robots that follow a
+predetermined path repeatedly.
+However, a key limitation of the NEAT controller identified in this study is the
+learnedasymmetricalmotorcontrolstrategy,whichsuggestsalackofgeneralizability.
+Future work must address this to encourage more symmetrical control policies.
+8 Conclusion
+Based on our findings, we can conclude that the NEAT-based control system is not a
+viableandeffectivealternativetotraditionalPIDcontrollersinscenarioswherespeed
+is the primary objective. While the NEAT controller demonstrated its adaptability
+and achieved a significantly lower Root Mean Squared Error in line deviation com-
+pared to PID, its performance at high speeds was insufficient. This indicates a clear
+trade-off: PID is the better choice for high-speed systems where lap time is crucial,
+whereas NEAT excels in applications where trajectory precision and reproducibility
+are necessary, such as in industrial warehouses.
+Theinsightsgainedfromthisstudyalsopavethewayforseveralavenuesoffuture
+research.WhiletheNEATcontrollerdemonstrateditsadaptability,thelearnedasym-
+metricalmotorcontrolstrategysuggestsalackofgeneralizability.Futureworkshould
+explore methods to encourage more generalized and symmetrical control policies,
+perhaps through modifications to the fitness function or training environment. For
+higher-fidelityvalidation,migratingscenariostoROS/Gazebowouldprovidestandard
+sensor/actuator models and reproducible physics [19, 20]. This enables apples-to-
+apples controller benchmarking under identical world files. Additionally, to fully
+validatetheefficiencyandreal-worldapplicabilityoftheNEATcontroller,itiscrucial
+tomovebeyondpurelysimulatedenvironments.Futureresearchshouldprioritizeinte-
+grating real-world testing on physical line-following robots and trying the algorithm
+on different track layouts and materials to identify and mitigate differences between
+simulatedandreal-worlddynamics,aswellastesttherobustnessoftheevolvedneural
+network.
+19

@@ -1,0 +1,31 @@
+NEAT-Based Neural Controller for Robust
+Line-Following Robots
+Yazan AlAtout1 and Raneem Qaddoura2
+1Department of Computer Science, Al Hussein Technical University,
+Amman, 11831, Amman Governorate, Jordan.
+Contributing authors: 23110209@htu.edu.jo;
+Raneem.Qaddoura@htu.edu.jo;
+Abstract
+This paper explores the question of whether a NeuroEvolution of Augment-
+ing Topologies (NEAT)-based control system can outperform a traditional
+Proportional-Integral-Derivative(PID)controllerforaline-followingrobot.Tra-
+ditional PID controllers, while widely used, suffer from limitations such as
+difficult manual tuning, poor adaptability to dynamic environments, and an
+inability to handle sharp turns. In contrast, this study proposes using NEAT, a
+genetic algorithm that evolves the topology and weights of neural networks, to
+enable the robot to autonomously learn optimal control behaviors. The study
+developed a 2D simulation using PyGame to train and test the NEAT algo-
+rithm, comparing its performance against an optimized PID controller. Results
+show a critical trade-off between speed and precision. While the PID controller
+demonstrated superior performance in terms of high-speed lap completion with
+anaveragetimeof20.93seconds,theNEATcontrollerstruggledatspeedsabove
+300px/s,withitsfastestcompletedlapbeing48.20seconds.However,theNEAT
+controller excelled in maintaining a precise trajectory, achieving a significantly
+lower average Root Mean Squared Error (RMSE) of 0.916 in line deviation,
+compared to the PID’s average RMSE of 1.99. This indicates that neuroevo-
+lution offers a promising path for developing more sophisticated and robust
+roboticcontrollersthatcanovercomethelimitationsofmanualtuningandstatic
+parameters, particularly in applications where precision is more critical than
+speed.
+Keywords:Robot,PID,NEAT,AI,line-follower,NeuroEvolution,NeuralNetworks
+1

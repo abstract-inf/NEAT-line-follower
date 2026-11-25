@@ -1,0 +1,17 @@
+{
+  "protocol_sha256": "20c6741dbac45b07a85bb935845dbcad1a803202a40e015895f4ce344605d884",
+  "policies": {
+    "stable-neat-g83": {
+      "file": "stable-neat-g83.pkl",
+      "sha256": "4cc2ae72f09495868f15a0845c552297fe88b25cfb0944380fe56c15d620a18c"
+    },
+    "fast-neat-g134": {
+      "file": "fast-neat-g134.pkl",
+      "sha256": "6114a6859544fec99c26dad124d7ac44d9b0e077a43102532f5fca02114b4314"
+    },
+    "pid-fullspeed-1m": {
+      "file": "pid-fullspeed-1m.json",
+      "sha256": "c6c68b53342600db0078e991bbb729064d829d360c4840a720dbf5e66d94c24b"
+    }
+  }
+}

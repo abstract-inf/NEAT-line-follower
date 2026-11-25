@@ -1,0 +1,46 @@
+2 Related Work
+Recent advances in autonomous robotics have explored different control methods in
+line-following robots, including classic PID controllers and those based on neural net-
+works. This section reviews important works such as optimized PID controllers, use
+of neural networks, and evolutionary algorithms in robotic control, with their perfor-
+mance, limitations, and importance in generalization in dynamic environments.
+The PID controller is the most popular controller for line-following robots, many
+researchers have discussed their implementation of it in their line following robots.
+O¨˘gu¨ten and Kabas [7] developed an inexpensive PID controller with heuristic tun-
+ing supported by an open-loop technique tailored for sharp turn navigation. Their
+improved PID implementation reduced lap time from 9.2 seconds to 7.8 seconds but
+required manual adjustments with limited generalizability outside of lab-tested track
+configurations.TheworkhighlightedthesensitivityofPIDcontrollerstonoiseintheir
+environment (e.g., dust) as well as in spacing of sensors, motivating quick fix such as
+conditional turn-specific logic. While successful under laboratory circumstances, this
+method lacked sufficient adaptability in case of changing line width or dynamic per-
+turbations. Balaji et al. [6] proposed an adaptive PID controller for high-speed line
+tracking, combining limited integral action (summing only the last 10 error values)
+and dynamic speed reduction to handle curvature changes. Their robot achieved 120
+cm/s on complex tracks, outperforming classical PID (90 cm/s). However, the system
+relied on IR sensors prone to ambient light interference, and tuning was empirical,
+lacking theoretical robustness. The study highlighted the trade-off between speed and
+stabilityinsharpturns,whichrequiredopen-loopsaturationhandling,whichisalim-
+itation for fully autonomous operation.
+Otherautonomousrobotimplementationsusedneuralnetwork-basedcontrollers.Leal
+etal.[8]didacomparisonofPID,LSTM,andCNNcontrollersinline-followingrobots.
+TheresultsshowedthatthePIDcontrolleroutperformedinpredeterminedtrackswith
+ameanabsoluteerror(MAE)of2257atan80Hzsamplingrate,therebyoutperform-
+ing LSTM (MAE: 3435) and CNN (MAE: 3857). However, the PID controller also
+sufferedfromsharpturnsandrequiredmanualtuning,whereasneuralnetworkmodels
+showed an ability to learn complex routes but suffered from problems with compu-
+tational delay (sampling rates: 24–25 Hz). A main limitation recognized involved the
+use of the PID controller to gather data for generating the data for training LSTM
+and CNN models, which limited their ability to learn behaviors that would surpass
+the performance of the PID itself. Lauckner and Kolivand [5] applied the NEAT algo-
+rithm to autonomous vehicles, demonstrating its potential to create neural networks
+thatimproveadaptabilityindynamicroadsituations.Theirsimulationresultsshowed
+that NEAT can improve safety by enabling vehicles to change their behavior in real-
+time through generational evolution. The study showed that there are limitations in
+terms of scalability for complex environments and the high computational demands.
+Although the focus was autonomous vehicles, their results show the broader applica-
+bilityofNEATinroboticsystemsthatrequireadaptivedecision-making.Minayaetal.
+(2024) compared a multilayer neural network to PID and fuzzy logic in line-following
+robots, finding the neural network corrected errors about 0.1 seconds faster than tra-
+ditional controllers [9]. Broader surveys concur that learning-based controllers can
+3

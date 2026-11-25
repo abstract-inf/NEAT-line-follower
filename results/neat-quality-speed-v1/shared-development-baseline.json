@@ -1,0 +1,168 @@
+{
+  "scope": "Shared previously consulted development courses, not final test data.",
+  "raw_policy_summaries": {
+    "stable-neat-g83": {
+      "primary": {
+        "completed": 60,
+        "courses": 60,
+        "geometric_rmse_m": 0.007353684471057115,
+        "command_jitter": 0.00605010140941421,
+        "mean_observed_chassis_speed_m_s": 0.6413766868829724,
+        "minimum_observed_straight_speed_m_s": 0.7134835809188471,
+        "maximum_observed_straight_yaw_rms_rad_s": 0.10167689039403562,
+        "missing_straight_windows": 0,
+        "failures": {}
+      },
+      "retention": {
+        "completed": 20,
+        "courses": 20,
+        "geometric_rmse_m": 0.00395822524330753,
+        "command_jitter": 0.004998443315699888,
+        "mean_observed_chassis_speed_m_s": 0.3328735476592258,
+        "minimum_observed_straight_speed_m_s": 0.3567417886666881,
+        "maximum_observed_straight_yaw_rms_rad_s": 0.025593210192237762,
+        "missing_straight_windows": 0,
+        "failures": {}
+      }
+    },
+    "fast-neat-g134": {
+      "primary": {
+        "completed": 60,
+        "courses": 60,
+        "geometric_rmse_m": 0.014492818735852146,
+        "command_jitter": 0.006529880738364467,
+        "mean_observed_chassis_speed_m_s": 0.7297425764456278,
+        "minimum_observed_straight_speed_m_s": 0.8297531528110975,
+        "maximum_observed_straight_yaw_rms_rad_s": 1.3956360889993387,
+        "missing_straight_windows": 0,
+        "failures": {}
+      },
+      "retention": {
+        "completed": 20,
+        "courses": 20,
+        "geometric_rmse_m": 0.0032700462455803854,
+        "command_jitter": 0.009404199319943294,
+        "mean_observed_chassis_speed_m_s": 0.3896506689386628,
+        "minimum_observed_straight_speed_m_s": 0.4138928261175972,
+        "maximum_observed_straight_yaw_rms_rad_s": 0.6977166853123062,
+        "missing_straight_windows": 0,
+        "failures": {}
+      }
+    },
+    "pid-fullspeed-1m": {
+      "primary": {
+        "completed": 59,
+        "courses": 60,
+        "geometric_rmse_m": 0.022102097319510742,
+        "command_jitter": 0.0011874663911380244,
+        "mean_observed_chassis_speed_m_s": 0.6269323024749909,
+        "minimum_observed_straight_speed_m_s": 0.9269472161412492,
+        "maximum_observed_straight_yaw_rms_rad_s": 0.07436762033682935,
+        "missing_straight_windows": 0,
+        "failures": {
+          "off_route": 1
+        }
+      },
+      "retention": {
+        "completed": 20,
+        "courses": 20,
+        "geometric_rmse_m": 0.013110211912473321,
+        "command_jitter": 0.0007038558181423774,
+        "mean_observed_chassis_speed_m_s": 0.31513099156624436,
+        "minimum_observed_straight_speed_m_s": 0.47584475087242356,
+        "maximum_observed_straight_yaw_rms_rad_s": 0.04008659855261593,
+        "missing_straight_windows": 0,
+        "failures": {}
+      }
+    }
+  },
+  "shared_success_comparisons": {
+    "stable-neat-g83": {
+      "shared_finishes": 59,
+      "completion_time_s": {
+        "neat": 6.723446327684012,
+        "pid": 7.122598870056898
+      },
+      "geometry_lateral_rmse_m": {
+        "neat": 0.0073457324140885115,
+        "pid": 0.020565365333523686
+      },
+      "command_jitter": {
+        "neat": 0.005990330431014853,
+        "pid": 0.0011714248032951684
+      }
+    },
+    "fast-neat-g134": {
+      "shared_finishes": 59,
+      "completion_time_s": {
+        "neat": 5.9932203389833365,
+        "pid": 7.122598870056898
+      },
+      "geometry_lateral_rmse_m": {
+        "neat": 0.014604944359650375,
+        "pid": 0.020565365333523686
+      },
+      "command_jitter": {
+        "neat": 0.006518668909553511,
+        "pid": 0.0011714248032951684
+      }
+    }
+  },
+  "failure_rows": {
+    "stable-neat-g83": [],
+    "fast-neat-g134": [],
+    "pid-fullspeed-1m": [
+      {
+        "track_name": "advanced-7332457145046129683",
+        "track_hash": "c88e3267bccd56c5d45ad79c1d980e5728b714b2f6d842fb987015881fdcd80d",
+        "track_seed": 7332457145046129683,
+        "split": "validation",
+        "difficulty": "advanced",
+        "features": "crossing;gap;gentle_curve;hairpin;straight;tight_curve;u_turn;zigzag",
+        "completed": false,
+        "termination": "off_route",
+        "error": "",
+        "elapsed_s": 8.38333333333387,
+        "completion_time_s": null,
+        "time_limit_s": 48.164232539819416,
+        "progress": 0.4888553995455345,
+        "progress_m": 2.354534514205745,
+        "route_length_m": 4.816423253981942,
+        "lateral_rmse_m": 0.43430958704249806,
+        "sensor_index_rmse": 2.8037858696969695,
+        "average_forward_speed_m_s": 0.42564119932431455,
+        "line_loss_events": 4,
+        "line_loss_seconds": 3.2,
+        "unplanned_line_loss_events": 3,
+        "mean_action_L": 0.41350071573250524,
+        "mean_action_R": 0.3898229177575986,
+        "motor_asymmetry": 0.4497336060749602,
+        "control_steps": 503,
+        "physics_steps": 5030,
+        "legacy_return": -126756.39873792049,
+        "score": 0.4661343376375919,
+        "command_jitter": 0.002133920073866531,
+        "peak_forward_speed_m_s": 0.9476421300672629,
+        "geometry_lateral_rmse_m": 0.11276928449274685,
+        "straight_speed_m_s": null,
+        "base_score": 0.4661343376375919,
+        "straight_windows": [],
+        "components": {
+          "progress_term": 0.4888553995455345,
+          "completion_term": 0.0,
+          "elapsed_term": -0.017405723897713957,
+          "legacy_term": -0.004888553995455345,
+          "speed_term": 0.0,
+          "jitter_term": -0.0004267840147733062,
+          "straight_yaw_term": 0.0,
+          "straight_steering_term": 0.0,
+          "tracking_term": 0.0,
+          "straight_speed_deficit_term": 0.0
+        },
+        "cap_m_s": 1.0,
+        "group": "mixed"
+      }
+    ]
+  },
+  "note": "This baseline is development evidence only. PID errors/jitter are compared on identical shared-success tracks separately from all-episode observed means."
+}

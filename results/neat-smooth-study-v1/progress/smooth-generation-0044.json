@@ -1,0 +1,108 @@
+{
+  "checked_utc": "2026-11-24T12:26:06.455232+00:00",
+  "status": "In progress; 45 of 100 generations completed at snapshot",
+  "last_completed_generation": 44,
+  "primary_quality": {
+    "eligible": false,
+    "reasons": [
+      "command_jitter",
+      "paired_time",
+      "straight_speed"
+    ],
+    "completed": 60,
+    "paired_time_ratio": 1.1230087269705078,
+    "shared_finishes": 60,
+    "straight_yaw_rms": 0.011636623783136289,
+    "command_jitter": 0.007449896772613927,
+    "geometric_rmse_m": 0.009720283218760947,
+    "generation": 44,
+    "branch": "smooth",
+    "drive_evaluated": true,
+    "steering_evaluated": true
+  },
+  "retention_completed": 20,
+  "candidate_straights": {
+    "isolated": {
+      "observed": 10,
+      "required": 10,
+      "speed_m_s": {
+        "mean": 0.6972416470456514,
+        "min": 0.6972416470453393,
+        "max": 0.6972416470458283
+      },
+      "yaw_rms_rad_s": {
+        "mean": 2.4640548133253622e-14,
+        "min": 1.818182029244161e-14,
+        "max": 3.4075444982380474e-14
+      },
+      "steering_rms": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    "post_turn": {
+      "observed": 10,
+      "required": 10,
+      "speed_m_s": {
+        "mean": 0.7045543125958695,
+        "min": 0.6984975239278194,
+        "max": 0.7115432373012468
+      },
+      "yaw_rms_rad_s": {
+        "mean": 0.023273247566247934,
+        "min": 0.008429103752152252,
+        "max": 0.03809736803684117
+      },
+      "steering_rms": {
+        "mean": 0.003490286791956476,
+        "min": 0.0019743036767924556,
+        "max": 0.005022115543278931
+      }
+    }
+  },
+  "parent_straights": {
+    "isolated": {
+      "observed": 10,
+      "required": 10,
+      "speed_m_s": {
+        "mean": 0.9716317863863173,
+        "min": 0.9716317863861709,
+        "max": 0.9716317863864172
+      },
+      "yaw_rms_rad_s": {
+        "mean": 4.023859132586416e-14,
+        "min": 2.1828558599255594e-14,
+        "max": 5.901809040189979e-14
+      },
+      "steering_rms": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    "post_turn": {
+      "observed": 10,
+      "required": 10,
+      "speed_m_s": {
+        "mean": 0.8303985590270732,
+        "min": 0.8297531528110975,
+        "max": 0.8307144265315328
+      },
+      "yaw_rms_rad_s": {
+        "mean": 1.3191921792295513,
+        "min": 1.2261733739350746,
+        "max": 1.3956360889993387
+      },
+      "steering_rms": {
+        "mean": 0.16505853483931968,
+        "min": 0.16474439595287663,
+        "max": 0.16766222369395234
+      }
+    }
+  },
+  "parent_rmse_m": 0.014492818735852146,
+  "parent_command_jitter": 0.006529880738364467,
+  "validation_sha256": "de1d36d45242144cb69a93686173e2c3476516e5783ad6c5b4f4b7447eedc709",
+  "scope": "Mid-run validation snapshot only; not final test results or a qualified winner."
+}

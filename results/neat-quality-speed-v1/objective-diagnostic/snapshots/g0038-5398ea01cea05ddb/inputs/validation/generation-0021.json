@@ -1,0 +1,66 @@
+{
+  "candidates": [
+    {
+      "eligible": false,
+      "reasons": [
+        "geometry_lateral_rmse_m",
+        "primary_corner_completion",
+        "straight_speed"
+      ],
+      "completed": 59,
+      "paired_time_ratio": 1.0250058099000718,
+      "shared_finishes": 59,
+      "straight_yaw_rms": 0.017600532486897795,
+      "command_jitter": 0.0061887465055290615,
+      "geometric_rmse_m": 0.015289775391159315,
+      "generation": 21,
+      "candidate_rank": 0,
+      "genome_id": 2078,
+      "genotype_sha256": "a4ccbb8c1f251fd34c82300545da3a6b850a962b8377ce8bdfed3792306a1172",
+      "model_file": "champions\\generation-0021-rank-0.pkl",
+      "training_fitness": 77.69981078986679,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.0164842776007779,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.04035303359213058,
+      "command_jitter": 0.00623726652972583,
+      "geometric_rmse_m": 0.01397259509890525,
+      "generation": 21,
+      "candidate_rank": 1,
+      "genome_id": 2081,
+      "genotype_sha256": "369c307f11d669f6a8c7913c2d8f83b163466b4a34d098207c5e01200d3803d0",
+      "model_file": "champions\\generation-0021-rank-1.pkl",
+      "training_fitness": 77.6451136343484,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.0287205060719429,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.030236601112514284,
+      "command_jitter": 0.005667818540128773,
+      "geometric_rmse_m": 0.014190668951576672,
+      "generation": 21,
+      "candidate_rank": 2,
+      "genome_id": 2080,
+      "genotype_sha256": "a90a9596bb3437df20abe674c5ffd380ca3e041ed9431272019352632e35c4c4",
+      "model_file": "champions\\generation-0021-rank-2.pkl",
+      "training_fitness": 77.46393703776705,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    }
+  ]
+}

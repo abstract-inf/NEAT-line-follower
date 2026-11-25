@@ -21,6 +21,7 @@ dist/
 # Downloaded literature and local presentation
 /Related Work/
 /simple-presentation.pptx
+/paper
 
 # Rendered media and simulator exports
 *.mp4

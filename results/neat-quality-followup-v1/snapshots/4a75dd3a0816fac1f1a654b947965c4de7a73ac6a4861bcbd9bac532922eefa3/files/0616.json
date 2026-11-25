@@ -1,0 +1,27 @@
+{
+  "name": "smooth-speed-17812491015195040137",
+  "sections": [
+    {
+      "kind": "straight",
+      "length": 5.5422528622538465,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "speed-straight"
+    }
+  ],
+  "start": [
+    -2.8961264311269233,
+    -0.0,
+    0
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 7,
+  "resolution": 0.002,
+  "seed": 17812491015195040137,
+  "difficulty": "speed",
+  "split": "training",
+  "generator_version": "2.0",
+  "runout": 0.25
+}

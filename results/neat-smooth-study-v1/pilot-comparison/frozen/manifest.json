@@ -1,0 +1,31 @@
+{
+  "old-final-g0099": {
+    "file": "frozen/old-final-g0099.pkl",
+    "sha256": "9708438738a5e6a59118a8e68e0851d12401504e0d786069d15a8a6925c26f02",
+    "source": "runs\\neat-smooth-study-v1\\pilot\\seed-01\\old\\champions\\generation-0099.pkl",
+    "generation": 99,
+    "branch": "old",
+    "purpose": "Illustrative validation trade-off; not an officially qualified winner."
+  },
+  "smooth-tradeoff-g0083": {
+    "file": "frozen/smooth-tradeoff-g0083.pkl",
+    "sha256": "4cc2ae72f09495868f15a0845c552297fe88b25cfb0944380fe56c15d620a18c",
+    "source": "runs\\neat-smooth-study-v1\\pilot\\seed-01\\smooth\\champions\\generation-0083.pkl",
+    "generation": 83,
+    "branch": "smooth",
+    "purpose": "Illustrative validation trade-off; not an officially qualified winner."
+  },
+  "smooth-final-g0099": {
+    "file": "frozen/smooth-final-g0099.pkl",
+    "sha256": "0d8d872d6ed21419f51d2078db1969ca2f6d20716e8d5b09e22121880134f431",
+    "source": "runs\\neat-smooth-study-v1\\pilot\\seed-01\\smooth\\champions\\generation-0099.pkl",
+    "generation": 99,
+    "branch": "smooth",
+    "purpose": "Illustrative validation trade-off; not an officially qualified winner."
+  },
+  "parent": {
+    "file": "frozen/parent-native-1m-g0134.pkl",
+    "sha256": "6114a6859544fec99c26dad124d7ac44d9b0e077a43102532f5fca02114b4314",
+    "purpose": "Original seed-1 reference."
+  }
+}

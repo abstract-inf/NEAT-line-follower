@@ -1,0 +1,179 @@
+{
+  "name": "intermediate-17474642828796002502",
+  "sections": [
+    {
+      "kind": "straight",
+      "length": 0.5857077763405666,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.018616272595671737,
+      "feature": "straight"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.0471975511965976,
+      "radius": 0.18499323098416012,
+      "width": 0.01814182585454947,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 2.0943951023931953,
+      "radius": 0.18499323098416012,
+      "width": 0.01814182585454947,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.0471975511965976,
+      "radius": 0.18499323098416012,
+      "width": 0.01814182585454947,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02450357208829291,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 3.141592653589793,
+      "radius": 0.24087149460337537,
+      "width": 0.02450357208829291,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02450357208829291,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "straight",
+      "length": 0.22243379634986732,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025409463164726323,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.027667888268122817,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.26808474564347884,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.027667888268122817,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.027667888268122817,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.27085227344523155,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.027667888268122817,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.027667888268122817,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.26028727561877846,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.027667888268122817,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.027667888268122817,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.22,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.027667888268122817,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.027667888268122817,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.0471975511965976,
+      "radius": 0.19113782319845193,
+      "width": 0.021981126790773478,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 2.0943951023931953,
+      "radius": 0.19113782319845193,
+      "width": 0.021981126790773478,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.0471975511965976,
+      "radius": 0.19113782319845193,
+      "width": 0.021981126790773478,
+      "feature": "s_curve"
+    }
+  ],
+  "start": [
+    0.3112242276017492,
+    0.20601720675235063,
+    1.9454038478535134
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 4.0,
+  "resolution": 0.001,
+  "seed": 17474642828796002502,
+  "difficulty": "intermediate",
+  "split": "training",
+  "generator_version": "1.0",
+  "runout": 0.25
+}

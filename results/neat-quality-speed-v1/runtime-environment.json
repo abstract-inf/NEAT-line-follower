@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-11-24T17:56:10.744865+00:00",
+  "python_version": "3.12.14",
+  "python_implementation": "CPython",
+  "full_python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "exact_reproduction": "Use this Python version and the frozen requirements-lock.txt; Python/package changes are separate reproducibility conditions."
+}

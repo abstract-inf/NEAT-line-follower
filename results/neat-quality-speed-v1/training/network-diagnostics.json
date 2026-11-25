@@ -1,0 +1,5025 @@
+{
+  "scope": "Offline architecture and synthetic sensor probes only; commands are not measured chassis speed.",
+  "stock_behavior": "NEAT-Python 0.92 FeedForwardNetwork.create and existing NEATController.act, without altering disconnected nodes.",
+  "probe_protocol": "Reset history, then repeat one active sensor (center 7, left 5, right 9) for 180 control steps at 60 Hz; record final commands. No physics, route or real replay.",
+  "logged_generations": 50,
+  "report_source_sha256": "d2c436e4151020d75664c853cf3ae8982b811ad4a917074ef8e61f1b7bd71144",
+  "records": [
+    {
+      "file": "runs\\neat-quality-speed-v1\\prepared\\inputs\\warm-start-g0083.pkl",
+      "sha256": "4cc2ae72f09495868f15a0845c552297fe88b25cfb0944380fe56c15d620a18c",
+      "generation": 83,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7203178864348169,
+          "right_command": 0.7203178864348169,
+          "mean_command": 0.7203178864348169,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.006183230189541589,
+          "right_command": 1.0,
+          "mean_command": 0.4969083849052292,
+          "steering": -0.5030916150947708
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.006183230189541589,
+          "mean_command": 0.4969083849052292,
+          "steering": 0.5030916150947708
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\prepared\\inputs\\reference-g0134.pkl",
+      "sha256": "6114a6859544fec99c26dad124d7ac44d9b0e077a43102532f5fca02114b4314",
+      "generation": 134,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 26,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9809388345124739,
+          "right_command": 0.9809388345124739,
+          "mean_command": 0.9809388345124739,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0006564795753459807,
+          "right_command": 1.0,
+          "mean_command": 0.499671760212327,
+          "steering": -0.5003282397876729
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0006564795753459807,
+          "mean_command": 0.499671760212327,
+          "steering": 0.5003282397876729
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0000-rank-0.pkl",
+      "sha256": "fc2845252d857587b383c3bb248f931536261b48f06be4d0cfe082100112284a",
+      "generation": 0,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7973813017431711,
+          "right_command": 0.7973813017431711,
+          "mean_command": 0.7973813017431711,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0033891123427715053,
+          "right_command": 1.0,
+          "mean_command": 0.49830544382861425,
+          "steering": -0.5016945561713857
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0033891123427715053,
+          "mean_command": 0.49830544382861425,
+          "steering": 0.5016945561713857
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0000-rank-1.pkl",
+      "sha256": "0bb09b5b3504f28b07c81ae1c9178c3957bce8b966c488e3d4b25329f512abc0",
+      "generation": 0,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7957634612537212,
+          "right_command": 0.7957634612537212,
+          "mean_command": 0.7957634612537212,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0042901988788768275,
+          "right_command": 1.0,
+          "mean_command": 0.4978549005605616,
+          "steering": -0.5021450994394384
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0042901988788768275,
+          "mean_command": 0.4978549005605616,
+          "steering": 0.5021450994394384
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0000-rank-2.pkl",
+      "sha256": "266cb400039dde7d0144319042b923be0d8acc4ef6a6df8acc8949bb46e188a2",
+      "generation": 0,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7950210543352563,
+          "right_command": 0.7950210543352563,
+          "mean_command": 0.7950210543352563,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0014771508692045243,
+          "right_command": 1.0,
+          "mean_command": 0.49926142456539774,
+          "steering": -0.5007385754346023
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0014771508692045243,
+          "mean_command": 0.49926142456539774,
+          "steering": 0.5007385754346023
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0001-rank-0.pkl",
+      "sha256": "132893a99adb676a645377be23c509f94e1e2e96c90638266d81006ca8936a7a",
+      "generation": 1,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8642839703936571,
+          "right_command": 0.8642839703936571,
+          "mean_command": 0.8642839703936571,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0052755624269335,
+          "right_command": 1.0,
+          "mean_command": 0.49736221878653325,
+          "steering": -0.5026377812134668
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0052755624269335,
+          "mean_command": 0.49736221878653325,
+          "steering": 0.5026377812134668
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0001-rank-1.pkl",
+      "sha256": "695c2c9f03c13f0f056ef0eeea215e2f38a860c33f1770e2ef3a0ec24618674c",
+      "generation": 1,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8416279253202626,
+          "right_command": 0.8416279253202626,
+          "mean_command": 0.8416279253202626,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0030291120449212894,
+          "right_command": 1.0,
+          "mean_command": 0.49848544397753936,
+          "steering": -0.5015145560224606
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0030291120449212894,
+          "mean_command": 0.49848544397753936,
+          "steering": 0.5015145560224606
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0001-rank-2.pkl",
+      "sha256": "6db75767e4633377e85904c73c700a3dcb5336863573fc2f65bae0b6f448dcf8",
+      "generation": 1,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8243128308821677,
+          "right_command": 0.8243128308821677,
+          "mean_command": 0.8243128308821677,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.006340387186636209,
+          "right_command": 1.0,
+          "mean_command": 0.4968298064066819,
+          "steering": -0.5031701935933182
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.006340387186636209,
+          "mean_command": 0.4968298064066819,
+          "steering": 0.5031701935933182
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0002-rank-0.pkl",
+      "sha256": "787b67bfa65873fd60e4df9c9893e47daadf3be239baa324f3a466a60a118926",
+      "generation": 2,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8351242674016933,
+          "right_command": 0.8351242674016933,
+          "mean_command": 0.8351242674016933,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005181507574385402,
+          "right_command": 1.0,
+          "mean_command": 0.4974092462128073,
+          "steering": -0.5025907537871928
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005181507574385402,
+          "mean_command": 0.4974092462128073,
+          "steering": 0.5025907537871928
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0002-rank-1.pkl",
+      "sha256": "2a791e9054ff78cdb584c27624c2fe763279947856d6383bc61993d887926d1f",
+      "generation": 2,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7957634612537212,
+          "right_command": 0.7957634612537212,
+          "mean_command": 0.7957634612537212,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002981840483872622,
+          "right_command": 1.0,
+          "mean_command": 0.4985090797580637,
+          "steering": -0.5014909202419363
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002981840483872622,
+          "mean_command": 0.4985090797580637,
+          "steering": 0.5014909202419363
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0002-rank-2.pkl",
+      "sha256": "715ca5102e5eee6316a86527bc1372f86ede8399778ea6ff57fbafab06624778",
+      "generation": 2,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7954128782065051,
+          "right_command": 0.7954128782065051,
+          "mean_command": 0.7954128782065051,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.003450476105750999,
+          "right_command": 1.0,
+          "mean_command": 0.4982747619471245,
+          "steering": -0.5017252380528755
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.003450476105750999,
+          "mean_command": 0.4982747619471245,
+          "steering": 0.5017252380528755
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0003-rank-0.pkl",
+      "sha256": "361c1d46041d66d8451bb5ea379b5a7c6d65257c8f480faf775a49d2d772dc37",
+      "generation": 3,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7954128782065051,
+          "right_command": 0.7954128782065051,
+          "mean_command": 0.7954128782065051,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.003450476105750999,
+          "right_command": 1.0,
+          "mean_command": 0.4982747619471245,
+          "steering": -0.5017252380528755
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.003450476105750999,
+          "mean_command": 0.4982747619471245,
+          "steering": 0.5017252380528755
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0003-rank-1.pkl",
+      "sha256": "f06e9f77b5ec2434bd7a46be580f6719e946404145c5750bdd5dee791bd5c18d",
+      "generation": 3,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7874048101790991,
+          "right_command": 0.7874048101790991,
+          "mean_command": 0.7874048101790991,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.01222442597416662,
+          "right_command": 1.0,
+          "mean_command": 0.4938877870129167,
+          "steering": -0.5061122129870833
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.01222442597416662,
+          "mean_command": 0.4938877870129167,
+          "steering": 0.5061122129870833
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0003-rank-2.pkl",
+      "sha256": "e63ca6a8e03d4d43a290c4f893053f60eebc6448473f62e187e432d5cd12c126",
+      "generation": 3,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7657653411713181,
+          "right_command": 0.7657653411713181,
+          "mean_command": 0.7657653411713181,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0017835534166108502,
+          "right_command": 1.0,
+          "mean_command": 0.4991082232916946,
+          "steering": -0.5008917767083054
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0017835534166108502,
+          "mean_command": 0.4991082232916946,
+          "steering": 0.5008917767083054
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0004-rank-0.pkl",
+      "sha256": "f56b8add5d1a373845cd4914c6bd32052180a4352bf3776534b666bdf316c521",
+      "generation": 4,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8383924545166018,
+          "right_command": 0.8383924545166018,
+          "mean_command": 0.8383924545166018,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002678276631856269,
+          "right_command": 1.0,
+          "mean_command": 0.49866086168407187,
+          "steering": -0.5013391383159281
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002678276631856269,
+          "mean_command": 0.49866086168407187,
+          "steering": 0.5013391383159281
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0004-rank-1.pkl",
+      "sha256": "1959dfa12f2a25dd760ae89cb8f1c7ca7b42340869e17e9ab20d73c9755a8eb1",
+      "generation": 4,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7954128782065051,
+          "right_command": 0.7954128782065051,
+          "mean_command": 0.7954128782065051,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.003450476105750999,
+          "right_command": 1.0,
+          "mean_command": 0.4982747619471245,
+          "steering": -0.5017252380528755
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.003450476105750999,
+          "mean_command": 0.4982747619471245,
+          "steering": 0.5017252380528755
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0004-rank-2.pkl",
+      "sha256": "ca8f84974a4cc70c60efa74a407be2074b10a26a79953f2db8c3ad325786e0b0",
+      "generation": 4,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7874048101790991,
+          "right_command": 0.7874048101790991,
+          "mean_command": 0.7874048101790991,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.01222442597416662,
+          "right_command": 1.0,
+          "mean_command": 0.4938877870129167,
+          "steering": -0.5061122129870833
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.01222442597416662,
+          "mean_command": 0.4938877870129167,
+          "steering": 0.5061122129870833
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0005-rank-0.pkl",
+      "sha256": "9a248401fc60a8ee2a7ad1e056b6e2558ff1e8cf1489dea8b404dd99c366a272",
+      "generation": 5,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8664193909231065,
+          "right_command": 0.8664193909231065,
+          "mean_command": 0.8664193909231065,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0016979347544282541,
+          "right_command": 1.0,
+          "mean_command": 0.4991510326227859,
+          "steering": -0.5008489673772141
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0016979347544282541,
+          "mean_command": 0.4991510326227859,
+          "steering": 0.5008489673772141
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0005-rank-1.pkl",
+      "sha256": "1a2aa6ec282d6b57d5bce86bbad83bc5ab26b56cae1b89e9f629ceaa07efd35c",
+      "generation": 5,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8339833023607417,
+          "right_command": 0.8339833023607417,
+          "mean_command": 0.8339833023607417,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002257013954019227,
+          "right_command": 1.0,
+          "mean_command": 0.4988714930229904,
+          "steering": -0.5011285069770096
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002257013954019227,
+          "mean_command": 0.4988714930229904,
+          "steering": 0.5011285069770096
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0005-rank-2.pkl",
+      "sha256": "0cf9de1ad966db5de18c8876bc214b5fbf7bafa445f6a68616cfa95d938fad19",
+      "generation": 5,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8240264182208143,
+          "right_command": 0.8240264182208143,
+          "mean_command": 0.8240264182208143,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.011060020264033299,
+          "right_command": 1.0,
+          "mean_command": 0.49446998986798335,
+          "steering": -0.5055300101320166
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.011060020264033299,
+          "mean_command": 0.49446998986798335,
+          "steering": 0.5055300101320166
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0006-rank-0.pkl",
+      "sha256": "5b499983f85bf0fce9ad7a21f8c359764e80762732dcfe6ff4297fa1b238bc00",
+      "generation": 6,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8664193909231065,
+          "right_command": 0.8664193909231065,
+          "mean_command": 0.8664193909231065,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0016979347544282541,
+          "right_command": 1.0,
+          "mean_command": 0.4991510326227859,
+          "steering": -0.5008489673772141
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0016979347544282541,
+          "mean_command": 0.4991510326227859,
+          "steering": 0.5008489673772141
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0006-rank-1.pkl",
+      "sha256": "ab1c51c2de479e12de991a1b53a2ddf397fef95a88c6d578de363e2ed325f1d2",
+      "generation": 6,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8339833023607417,
+          "right_command": 0.8339833023607417,
+          "mean_command": 0.8339833023607417,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002257013954019227,
+          "right_command": 1.0,
+          "mean_command": 0.4988714930229904,
+          "steering": -0.5011285069770096
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002257013954019227,
+          "mean_command": 0.4988714930229904,
+          "steering": 0.5011285069770096
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0006-rank-2.pkl",
+      "sha256": "7ebc7ee28abc650898555e642e96e2ab92af80f0316bf0dd7a10bbd2aaa379c4",
+      "generation": 6,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8240264182208143,
+          "right_command": 0.8240264182208143,
+          "mean_command": 0.8240264182208143,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0027002398673915406,
+          "right_command": 1.0,
+          "mean_command": 0.49864988006630423,
+          "steering": -0.5013501199336958
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0027002398673915406,
+          "mean_command": 0.49864988006630423,
+          "steering": 0.5013501199336958
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0007-rank-0.pkl",
+      "sha256": "5c8fff264dc5dd99cbde17d6b109c01a31304f952da84b3222a4e63bd935819c",
+      "generation": 7,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8469937283971186,
+          "right_command": 0.8469937283971186,
+          "mean_command": 0.8469937283971186,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.01272306343491858,
+          "right_command": 1.0,
+          "mean_command": 0.4936384682825407,
+          "steering": -0.5063615317174592
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.01272306343491858,
+          "mean_command": 0.4936384682825407,
+          "steering": 0.5063615317174592
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0007-rank-1.pkl",
+      "sha256": "e7e7c55b1e60aa4e5c935ec2758dd4bea04d6af60c93467d3797e15fae71c2ca",
+      "generation": 7,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8417647459726953,
+          "right_command": 0.8417647459726953,
+          "mean_command": 0.8417647459726953,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0015888158910601913,
+          "right_command": 1.0,
+          "mean_command": 0.4992055920544699,
+          "steering": -0.5007944079455301
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0015888158910601913,
+          "mean_command": 0.4992055920544699,
+          "steering": 0.5007944079455301
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0007-rank-2.pkl",
+      "sha256": "281131f3c35b8f2779afbfec377b23db0963582e6c2ec15cd394be7ea24a15e7",
+      "generation": 7,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8274839030912322,
+          "right_command": 0.8274839030912322,
+          "mean_command": 0.8274839030912322,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0028232088479483997,
+          "right_command": 1.0,
+          "mean_command": 0.4985883955760258,
+          "steering": -0.5014116044239743
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0028232088479483997,
+          "mean_command": 0.4985883955760258,
+          "steering": 0.5014116044239743
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0008-rank-0.pkl",
+      "sha256": "8bfccf6e6ddc6636fa635baca1baca82c8a455e4cf57ab5685839ad0d3edaf3e",
+      "generation": 8,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.859467749813422,
+          "right_command": 0.859467749813422,
+          "mean_command": 0.859467749813422,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0016675593942856448,
+          "right_command": 1.0,
+          "mean_command": 0.4991662203028572,
+          "steering": -0.5008337796971428
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0016675593942856448,
+          "mean_command": 0.4991662203028572,
+          "steering": 0.5008337796971428
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0008-rank-1.pkl",
+      "sha256": "767cb146e40b0a1fc9d165037cab5eb7bb132128bf8e04872fdb1f438d4ef2c2",
+      "generation": 8,
+      "nodes_in_genotype": 4,
+      "hidden_nodes_in_genotype": 2,
+      "enabled_connections": 26,
+      "evaluated_nodes": 3,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8541700319139562,
+          "right_command": 0.8541700319139562,
+          "mean_command": 0.8541700319139562,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002801646476303432,
+          "right_command": 1.0,
+          "mean_command": 0.4985991767618483,
+          "steering": -0.5014008232381517
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002801646476303432,
+          "mean_command": 0.4985991767618483,
+          "steering": 0.5014008232381517
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0008-rank-2.pkl",
+      "sha256": "68b20528a344f30a4a344b475a38a88bdeff020bc290d7e0210deffb86269bc4",
+      "generation": 8,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8469937283971186,
+          "right_command": 0.8469937283971186,
+          "mean_command": 0.8469937283971186,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.01272306343491858,
+          "right_command": 1.0,
+          "mean_command": 0.4936384682825407,
+          "steering": -0.5063615317174592
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.01272306343491858,
+          "mean_command": 0.4936384682825407,
+          "steering": 0.5063615317174592
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0009-rank-0.pkl",
+      "sha256": "8f29c0df3f128e95739d5faf413d1ee173f8071ff6acce4899e3e675cdd93c52",
+      "generation": 9,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8937631200127165,
+          "right_command": 0.8937631200127165,
+          "mean_command": 0.8937631200127165,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0390228994759001,
+          "right_command": 1.0,
+          "mean_command": 0.48048855026204995,
+          "steering": -0.51951144973795
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0390228994759001,
+          "mean_command": 0.48048855026204995,
+          "steering": 0.51951144973795
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0009-rank-1.pkl",
+      "sha256": "06795bc84e6eecc7c2c0d45320eafea09079ff8a7047e8951ac6f89fcd2dbeac",
+      "generation": 9,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8769742515791458,
+          "right_command": 0.8769742515791458,
+          "mean_command": 0.8769742515791458,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0062657242575405725,
+          "right_command": 1.0,
+          "mean_command": 0.4968671378712297,
+          "steering": -0.5031328621287703
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0062657242575405725,
+          "mean_command": 0.4968671378712297,
+          "steering": 0.5031328621287703
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0009-rank-2.pkl",
+      "sha256": "499cf3d3fa75584de93f3627a6086f063d10734899fef394fcb9ec314407df76",
+      "generation": 9,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8573363711979941,
+          "right_command": 0.8573363711979941,
+          "mean_command": 0.8573363711979941,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.013296202482710018,
+          "right_command": 1.0,
+          "mean_command": 0.493351898758645,
+          "steering": -0.5066481012413551
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.013296202482710018,
+          "mean_command": 0.493351898758645,
+          "steering": 0.5066481012413551
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0010-rank-0.pkl",
+      "sha256": "c299e1da4c67fd7dc7f7254af9d7a2661cfd6d18085fa7cc532904ed386d20f8",
+      "generation": 10,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8868114156095209,
+          "right_command": 0.8868114156095209,
+          "mean_command": 0.8868114156095209,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0042440944368364875,
+          "right_command": 1.0,
+          "mean_command": 0.49787795278158176,
+          "steering": -0.5021220472184182
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0042440944368364875,
+          "mean_command": 0.49787795278158176,
+          "steering": 0.5021220472184182
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0010-rank-1.pkl",
+      "sha256": "0fc9c2fdb6af9f1618f8db5aea1842f3b9025943631fa4f31d97ba8897c49aa8",
+      "generation": 10,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7737493635639032,
+          "right_command": 0.7737493635639032,
+          "mean_command": 0.7737493635639032,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.00948564562559906,
+          "right_command": 1.0,
+          "mean_command": 0.49525717718720047,
+          "steering": -0.5047428228127995
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.00948564562559906,
+          "mean_command": 0.49525717718720047,
+          "steering": 0.5047428228127995
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0010-rank-2.pkl",
+      "sha256": "d83c051a4d1e10c2133e4e813530d73515c34c4ba151497464f6fe5df4581350",
+      "generation": 10,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7816504707014165,
+          "right_command": 0.7816504707014165,
+          "mean_command": 0.7816504707014165,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0024975952137639146,
+          "right_command": 1.0,
+          "mean_command": 0.49875120239311804,
+          "steering": -0.501248797606882
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0024975952137639146,
+          "mean_command": 0.49875120239311804,
+          "steering": 0.501248797606882
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0011-rank-0.pkl",
+      "sha256": "af73c035b295b8f4ed0bf53db73bc1b2707e8057bedb8239a05100a5454dcb1e",
+      "generation": 11,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7494788156358135,
+          "right_command": 0.7494788156358135,
+          "mean_command": 0.7494788156358135,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.00852960954283144,
+          "right_command": 1.0,
+          "mean_command": 0.4957351952285843,
+          "steering": -0.5042648047714158
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.00852960954283144,
+          "mean_command": 0.4957351952285843,
+          "steering": 0.5042648047714158
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0011-rank-1.pkl",
+      "sha256": "d3fece781f8629311267c35c14e527add211e8dffe277e0d8ef685af0a633716",
+      "generation": 11,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7505276102536718,
+          "right_command": 0.7505276102536718,
+          "mean_command": 0.7505276102536718,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0013457793801369133,
+          "right_command": 1.0,
+          "mean_command": 0.49932711030993154,
+          "steering": -0.5006728896900685
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0013457793801369133,
+          "mean_command": 0.49932711030993154,
+          "steering": 0.5006728896900685
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0011-rank-2.pkl",
+      "sha256": "13c57fe198ea5c5a381eb4ae7f38c9c959898ca95b647eed5af3815c59aa5cbc",
+      "generation": 11,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7737493635639032,
+          "right_command": 0.7737493635639032,
+          "mean_command": 0.7737493635639032,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.00948564562559906,
+          "right_command": 1.0,
+          "mean_command": 0.49525717718720047,
+          "steering": -0.5047428228127995
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.00948564562559906,
+          "mean_command": 0.49525717718720047,
+          "steering": 0.5047428228127995
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0012-rank-0.pkl",
+      "sha256": "6a7c09ada6e4db3c9890a27ea8bcaa12656c3ef5b1f0d2e006f1b225c8ddbe1f",
+      "generation": 12,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8887943242043501,
+          "right_command": 0.8887943242043501,
+          "mean_command": 0.8887943242043501,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005007624586464088,
+          "right_command": 1.0,
+          "mean_command": 0.49749618770676796,
+          "steering": -0.502503812293232
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005007624586464088,
+          "mean_command": 0.49749618770676796,
+          "steering": 0.502503812293232
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0012-rank-1.pkl",
+      "sha256": "9856a6ee86c7dc3ebcfc39759861c0fb6a87219e56649b987eddceaeae8c6c5f",
+      "generation": 12,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8529112514072519,
+          "right_command": 0.8529112514072519,
+          "mean_command": 0.8529112514072519,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.00538192848324015,
+          "right_command": 1.0,
+          "mean_command": 0.4973090357583799,
+          "steering": -0.5026909642416201
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.00538192848324015,
+          "mean_command": 0.4973090357583799,
+          "steering": 0.5026909642416201
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0012-rank-2.pkl",
+      "sha256": "4f390791f7dcb960e2dabd57683295fcf42bc51966bba798917f71e34e567da9",
+      "generation": 12,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8441870861142963,
+          "right_command": 0.8441870861142963,
+          "mean_command": 0.8441870861142963,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.01115206374862543,
+          "right_command": 1.0,
+          "mean_command": 0.4944239681256873,
+          "steering": -0.5055760318743128
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.01115206374862543,
+          "mean_command": 0.4944239681256873,
+          "steering": 0.5055760318743128
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0013-rank-0.pkl",
+      "sha256": "a424dc7b9ea52b2cd6e67090e560a48dc24e605f11dbda91d7f0b6a313a0ccc1",
+      "generation": 13,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8887943242043501,
+          "right_command": 0.8887943242043501,
+          "mean_command": 0.8887943242043501,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005007624586464088,
+          "right_command": 1.0,
+          "mean_command": 0.49749618770676796,
+          "steering": -0.502503812293232
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005007624586464088,
+          "mean_command": 0.49749618770676796,
+          "steering": 0.502503812293232
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0013-rank-1.pkl",
+      "sha256": "8cc291dce1c039d5ac938236dd9f4ef497ac09a81eabaaa2f9a657ab0215f6c0",
+      "generation": 13,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8782270166890073,
+          "right_command": 0.8782270166890073,
+          "mean_command": 0.8782270166890073,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0050479826602116695,
+          "right_command": 1.0,
+          "mean_command": 0.49747600866989417,
+          "steering": -0.5025239913301058
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0050479826602116695,
+          "mean_command": 0.49747600866989417,
+          "steering": 0.5025239913301058
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0013-rank-2.pkl",
+      "sha256": "7c67be3a1eb1e2c487e5d4c3fce93a17dd8c7d8f659b17c47a0c86b9afce49ea",
+      "generation": 13,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8244017565746247,
+          "right_command": 0.8244017565746247,
+          "mean_command": 0.8244017565746247,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.001122441747950842,
+          "right_command": 1.0,
+          "mean_command": 0.4994387791260246,
+          "steering": -0.5005612208739754
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.001122441747950842,
+          "mean_command": 0.4994387791260246,
+          "steering": 0.5005612208739754
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0014-rank-0.pkl",
+      "sha256": "6aecbdf315b8030c9ff546ac477614530847e53ad6efe384e5278ddfb6acc43d",
+      "generation": 14,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8887943242043501,
+          "right_command": 0.8887943242043501,
+          "mean_command": 0.8887943242043501,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005007624586464088,
+          "right_command": 1.0,
+          "mean_command": 0.49749618770676796,
+          "steering": -0.502503812293232
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005007624586464088,
+          "mean_command": 0.49749618770676796,
+          "steering": 0.502503812293232
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0014-rank-1.pkl",
+      "sha256": "d0c18f88fd593931e38e04e03090ee105450824d5c2aad01862f801ee643b119",
+      "generation": 14,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8782270166890073,
+          "right_command": 0.8782270166890073,
+          "mean_command": 0.8782270166890073,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0050479826602116695,
+          "right_command": 1.0,
+          "mean_command": 0.49747600866989417,
+          "steering": -0.5025239913301058
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0050479826602116695,
+          "mean_command": 0.49747600866989417,
+          "steering": 0.5025239913301058
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0014-rank-2.pkl",
+      "sha256": "4e7d3b9b3a23ae9dc0092531b26595779b083c5017431e5e7cdf2e50a97528c3",
+      "generation": 14,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.818355926105341,
+          "right_command": 0.818355926105341,
+          "mean_command": 0.818355926105341,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0038616324225078102,
+          "right_command": 1.0,
+          "mean_command": 0.4980691837887461,
+          "steering": -0.5019308162112539
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0038616324225078102,
+          "mean_command": 0.4980691837887461,
+          "steering": 0.5019308162112539
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0015-rank-0.pkl",
+      "sha256": "ac6962ecdc557158a6959fbde49ea32f8181d51c822b8355877862877c70af6e",
+      "generation": 15,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.887743519851655,
+          "right_command": 0.887743519851655,
+          "mean_command": 0.887743519851655,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.003092496005143275,
+          "right_command": 1.0,
+          "mean_command": 0.49845375199742836,
+          "steering": -0.5015462480025716
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.003092496005143275,
+          "mean_command": 0.49845375199742836,
+          "steering": 0.5015462480025716
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0015-rank-1.pkl",
+      "sha256": "9e4a3d6599e4673f16cebfa19a0493e9b8b55bfb9f136e8472f246223a5a4932",
+      "generation": 15,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8887943242043501,
+          "right_command": 0.8887943242043501,
+          "mean_command": 0.8887943242043501,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005007624586464088,
+          "right_command": 1.0,
+          "mean_command": 0.49749618770676796,
+          "steering": -0.502503812293232
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005007624586464088,
+          "mean_command": 0.49749618770676796,
+          "steering": 0.502503812293232
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0015-rank-2.pkl",
+      "sha256": "8f7674523a3ab1845a95dc4464453686d68fb9eef879a430538fbb14e4eca201",
+      "generation": 15,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8782270166890073,
+          "right_command": 0.8782270166890073,
+          "mean_command": 0.8782270166890073,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0050479826602116695,
+          "right_command": 1.0,
+          "mean_command": 0.49747600866989417,
+          "steering": -0.5025239913301058
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0050479826602116695,
+          "mean_command": 0.49747600866989417,
+          "steering": 0.5025239913301058
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0016-rank-0.pkl",
+      "sha256": "090edf2b2f586fc83072e9756f07be757e4898e2f1c515af14870e3c4caca081",
+      "generation": 16,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8887943242043501,
+          "right_command": 0.8887943242043501,
+          "mean_command": 0.8887943242043501,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005007624586464088,
+          "right_command": 1.0,
+          "mean_command": 0.49749618770676796,
+          "steering": -0.502503812293232
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005007624586464088,
+          "mean_command": 0.49749618770676796,
+          "steering": 0.502503812293232
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0016-rank-1.pkl",
+      "sha256": "66174da228f3b957bef13ce223d05c81b597431e84f7725cf621f13693b12d08",
+      "generation": 16,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.887743519851655,
+          "right_command": 0.887743519851655,
+          "mean_command": 0.887743519851655,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.003092496005143275,
+          "right_command": 1.0,
+          "mean_command": 0.49845375199742836,
+          "steering": -0.5015462480025716
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.003092496005143275,
+          "mean_command": 0.49845375199742836,
+          "steering": 0.5015462480025716
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0016-rank-2.pkl",
+      "sha256": "21af75036a952bb92e132eb5b0c7ffa455c5bf0eb84b5946b82a43989d7540ae",
+      "generation": 16,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8211488369875932,
+          "right_command": 0.8211488369875932,
+          "mean_command": 0.8211488369875932,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0019807522757904206,
+          "right_command": 1.0,
+          "mean_command": 0.4990096238621048,
+          "steering": -0.5009903761378952
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0019807522757904206,
+          "mean_command": 0.4990096238621048,
+          "steering": 0.5009903761378952
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0017-rank-0.pkl",
+      "sha256": "650d18fe03d5c08a9fe22deeb9ed840a317fa16f16b4a3cb3aae79f7d6c11bbe",
+      "generation": 17,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8962186216016624,
+          "right_command": 0.8962186216016624,
+          "mean_command": 0.8962186216016624,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0009662958382361531,
+          "right_command": 1.0,
+          "mean_command": 0.4995168520808819,
+          "steering": -0.5004831479191181
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0009662958382361531,
+          "mean_command": 0.4995168520808819,
+          "steering": 0.5004831479191181
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0017-rank-1.pkl",
+      "sha256": "100cb287698671a064269eec952463d528d79ce1865e091b12e8644f120d0ec7",
+      "generation": 17,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8887943242043501,
+          "right_command": 0.8887943242043501,
+          "mean_command": 0.8887943242043501,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005007624586464088,
+          "right_command": 1.0,
+          "mean_command": 0.49749618770676796,
+          "steering": -0.502503812293232
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005007624586464088,
+          "mean_command": 0.49749618770676796,
+          "steering": 0.502503812293232
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0017-rank-2.pkl",
+      "sha256": "d8924a4543023a98c20f9f41fb45085bb2cc22c9e684fc60942087aa7359e9ed",
+      "generation": 17,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8225731767363509,
+          "right_command": 0.8225731767363509,
+          "mean_command": 0.8225731767363509,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.008580122893310449,
+          "right_command": 1.0,
+          "mean_command": 0.4957099385533448,
+          "steering": -0.5042900614466552
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.008580122893310449,
+          "mean_command": 0.4957099385533448,
+          "steering": 0.5042900614466552
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0018-rank-0.pkl",
+      "sha256": "b1682c1aed47202a29022f0ebf7139f2bdfdfa48e4466b255b01034a0b01254d",
+      "generation": 18,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 26,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.910775346754406,
+          "right_command": 0.910775346754406,
+          "mean_command": 0.910775346754406,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0038944237954249283,
+          "right_command": 1.0,
+          "mean_command": 0.49805278810228754,
+          "steering": -0.5019472118977124
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0038944237954249283,
+          "mean_command": 0.49805278810228754,
+          "steering": 0.5019472118977124
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0018-rank-1.pkl",
+      "sha256": "8978777de0cdd55475253ff04d1521dac0b8bd0276afc2dc3a860ef5fe9a5e06",
+      "generation": 18,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8962186216016624,
+          "right_command": 0.8962186216016624,
+          "mean_command": 0.8962186216016624,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0009662958382361531,
+          "right_command": 1.0,
+          "mean_command": 0.4995168520808819,
+          "steering": -0.5004831479191181
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0009662958382361531,
+          "mean_command": 0.4995168520808819,
+          "steering": 0.5004831479191181
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0018-rank-2.pkl",
+      "sha256": "bc2379257ff3268b84727cbeb1b878a34989ecf8b3d80a6df878d0b6961f4cfa",
+      "generation": 18,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8887943242043501,
+          "right_command": 0.8887943242043501,
+          "mean_command": 0.8887943242043501,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005007624586464088,
+          "right_command": 1.0,
+          "mean_command": 0.49749618770676796,
+          "steering": -0.502503812293232
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005007624586464088,
+          "mean_command": 0.49749618770676796,
+          "steering": 0.502503812293232
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0019-rank-0.pkl",
+      "sha256": "89033df6a3b157347c7190a19fc5a8ce53549274fbf2f08a11057b61e74cbacb",
+      "generation": 19,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 26,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.910775346754406,
+          "right_command": 0.910775346754406,
+          "mean_command": 0.910775346754406,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0038944237954249283,
+          "right_command": 1.0,
+          "mean_command": 0.49805278810228754,
+          "steering": -0.5019472118977124
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0038944237954249283,
+          "mean_command": 0.49805278810228754,
+          "steering": 0.5019472118977124
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0019-rank-1.pkl",
+      "sha256": "e279163698d169c28ca98f90fa2811c5ad260f31477bb95c1f82933518071c88",
+      "generation": 19,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8962186216016624,
+          "right_command": 0.8962186216016624,
+          "mean_command": 0.8962186216016624,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0009662958382361531,
+          "right_command": 1.0,
+          "mean_command": 0.4995168520808819,
+          "steering": -0.5004831479191181
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0009662958382361531,
+          "mean_command": 0.4995168520808819,
+          "steering": 0.5004831479191181
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0019-rank-2.pkl",
+      "sha256": "b36bde3b3faeb848cc6e0f80ffe866ffb98ae6c5117a0cdaa2816719b7f1c837",
+      "generation": 19,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8887943242043501,
+          "right_command": 0.8887943242043501,
+          "mean_command": 0.8887943242043501,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.006624434634304066,
+          "right_command": 1.0,
+          "mean_command": 0.49668778268284797,
+          "steering": -0.503312217317152
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.006624434634304066,
+          "mean_command": 0.49668778268284797,
+          "steering": 0.503312217317152
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0020-rank-0.pkl",
+      "sha256": "068dc87d1bcbfd2836a5ac2c8703328da69ca3025c2b79dccd3ac6f2fecf6202",
+      "generation": 20,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 26,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.910775346754406,
+          "right_command": 0.910775346754406,
+          "mean_command": 0.910775346754406,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0038944237954249283,
+          "right_command": 1.0,
+          "mean_command": 0.49805278810228754,
+          "steering": -0.5019472118977124
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0038944237954249283,
+          "mean_command": 0.49805278810228754,
+          "steering": 0.5019472118977124
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0020-rank-1.pkl",
+      "sha256": "1039d0ed417e72941190766a98c83829ecd484957f40c126835e81f8cbbb29fd",
+      "generation": 20,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8962186216016624,
+          "right_command": 0.8962186216016624,
+          "mean_command": 0.8962186216016624,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0009662958382361531,
+          "right_command": 1.0,
+          "mean_command": 0.4995168520808819,
+          "steering": -0.5004831479191181
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0009662958382361531,
+          "mean_command": 0.4995168520808819,
+          "steering": 0.5004831479191181
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0020-rank-2.pkl",
+      "sha256": "b2faa88757a130d02626c693c032e3aed278af896b2b36250cd1b6674a0f964c",
+      "generation": 20,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8887943242043501,
+          "right_command": 0.8887943242043501,
+          "mean_command": 0.8887943242043501,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.006271430593879801,
+          "right_command": 1.0,
+          "mean_command": 0.4968642847030601,
+          "steering": -0.5031357152969399
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.006271430593879801,
+          "mean_command": 0.4968642847030601,
+          "steering": 0.5031357152969399
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0021-rank-0.pkl",
+      "sha256": "b466376ddf27014855728108b5317833026edc59634cb855e6c80c908ac91b64",
+      "generation": 21,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8880087738187994,
+          "right_command": 0.8880087738187994,
+          "mean_command": 0.8880087738187994,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007098493273407391,
+          "right_command": 1.0,
+          "mean_command": 0.4964507533632963,
+          "steering": -0.5035492466367038
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007098493273407391,
+          "mean_command": 0.4964507533632963,
+          "steering": 0.5035492466367038
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0021-rank-1.pkl",
+      "sha256": "26e19823c830e87df70f8ddd65b5d80fb33bf71ebc922a5e87f8e68dc010c438",
+      "generation": 21,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8804942348297159,
+          "right_command": 0.8804942348297159,
+          "mean_command": 0.8804942348297159,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005461350934720222,
+          "right_command": 1.0,
+          "mean_command": 0.4972693245326399,
+          "steering": -0.5027306754673602
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005461350934720222,
+          "mean_command": 0.4972693245326399,
+          "steering": 0.5027306754673602
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0021-rank-2.pkl",
+      "sha256": "915a17b1326382ffb22638b8b60b7634a70294d5685c4d19d2f85e77a961a079",
+      "generation": 21,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8593369944604098,
+          "right_command": 0.8593369944604098,
+          "mean_command": 0.8593369944604098,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.001456641609446474,
+          "right_command": 1.0,
+          "mean_command": 0.49927167919527676,
+          "steering": -0.5007283208047233
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.001456641609446474,
+          "mean_command": 0.49927167919527676,
+          "steering": 0.5007283208047233
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0022-rank-0.pkl",
+      "sha256": "9f3cb4b8e1cd3bb452fb23deaaa4a6a56f8bc88a487ae4ed2de002b99c494499",
+      "generation": 22,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8880087738187994,
+          "right_command": 0.8880087738187994,
+          "mean_command": 0.8880087738187994,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007098493273407391,
+          "right_command": 1.0,
+          "mean_command": 0.4964507533632963,
+          "steering": -0.5035492466367038
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007098493273407391,
+          "mean_command": 0.4964507533632963,
+          "steering": 0.5035492466367038
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0022-rank-1.pkl",
+      "sha256": "ea164cc3b3d667e0082a46349230091dc1891a6f487eacc72cf28dd92068f720",
+      "generation": 22,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8468386382619104,
+          "right_command": 0.8468386382619104,
+          "mean_command": 0.8468386382619104,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.015140226680085411,
+          "right_command": 1.0,
+          "mean_command": 0.4924298866599573,
+          "steering": -0.5075701133400428
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.015140226680085411,
+          "mean_command": 0.4924298866599573,
+          "steering": 0.5075701133400428
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0022-rank-2.pkl",
+      "sha256": "673febe053186f90f2233490e28f573dfbcb1fc6039f23f324c66ce0908cd21e",
+      "generation": 22,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7771169343119543,
+          "right_command": 0.7771169343119543,
+          "mean_command": 0.7771169343119543,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0006824370675168057,
+          "right_command": 1.0,
+          "mean_command": 0.4996587814662416,
+          "steering": -0.5003412185337583
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0006824370675168057,
+          "mean_command": 0.4996587814662416,
+          "steering": 0.5003412185337583
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0023-rank-0.pkl",
+      "sha256": "4909f0b98c545b6db3a1a46c412ba06a8e2327ef5ac8989aebbc5705ebf77aa2",
+      "generation": 23,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8880087738187994,
+          "right_command": 0.8880087738187994,
+          "mean_command": 0.8880087738187994,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007098493273407391,
+          "right_command": 1.0,
+          "mean_command": 0.4964507533632963,
+          "steering": -0.5035492466367038
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007098493273407391,
+          "mean_command": 0.4964507533632963,
+          "steering": 0.5035492466367038
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0023-rank-1.pkl",
+      "sha256": "efc4f8c1198347e96976371d0ae67a0ce2cd4fc67dd8a746d247ce0f0b4fdada",
+      "generation": 23,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 25,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8537809166699045,
+          "right_command": 0.8537809166699045,
+          "mean_command": 0.8537809166699045,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007794854499638015,
+          "right_command": 1.0,
+          "mean_command": 0.496102572750181,
+          "steering": -0.503897427249819
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007794854499638015,
+          "mean_command": 0.496102572750181,
+          "steering": 0.503897427249819
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0023-rank-2.pkl",
+      "sha256": "f328e3cff4ba8438d0ade96bbf3c4416e70d942c7030e45c89994ea02270cd07",
+      "generation": 23,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8468386382619104,
+          "right_command": 0.8468386382619104,
+          "mean_command": 0.8468386382619104,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.015140226680085411,
+          "right_command": 1.0,
+          "mean_command": 0.4924298866599573,
+          "steering": -0.5075701133400428
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.015140226680085411,
+          "mean_command": 0.4924298866599573,
+          "steering": 0.5075701133400428
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0024-rank-0.pkl",
+      "sha256": "5bc85cdff01aab0b39655293f0fbcf0d2c25cd91b57605da06503c2b3c717229",
+      "generation": 24,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8880087738187994,
+          "right_command": 0.8880087738187994,
+          "mean_command": 0.8880087738187994,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007098493273407391,
+          "right_command": 1.0,
+          "mean_command": 0.4964507533632963,
+          "steering": -0.5035492466367038
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007098493273407391,
+          "mean_command": 0.4964507533632963,
+          "steering": 0.5035492466367038
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0024-rank-1.pkl",
+      "sha256": "d0b0a581cf0f38091db257003b1b39ccaa763dbb8091a49f6d1be77488046475",
+      "generation": 24,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8659272589499638,
+          "right_command": 0.8659272589499638,
+          "mean_command": 0.8659272589499638,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.013098724526292238,
+          "right_command": 1.0,
+          "mean_command": 0.4934506377368539,
+          "steering": -0.5065493622631461
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.013098724526292238,
+          "mean_command": 0.4934506377368539,
+          "steering": 0.5065493622631461
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0024-rank-2.pkl",
+      "sha256": "76b54ae57da546bfbf8c53cc235804c26a2a6788743efeebbaaae07fa20675ff",
+      "generation": 24,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 25,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8537809166699045,
+          "right_command": 0.8537809166699045,
+          "mean_command": 0.8537809166699045,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007794854499638015,
+          "right_command": 1.0,
+          "mean_command": 0.496102572750181,
+          "steering": -0.503897427249819
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007794854499638015,
+          "mean_command": 0.496102572750181,
+          "steering": 0.503897427249819
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0025-rank-0.pkl",
+      "sha256": "79a2b199c1341000d7df0614bd6b25de2af1d2254c85d208fffd8152efdae5c7",
+      "generation": 25,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8880087738187994,
+          "right_command": 0.8880087738187994,
+          "mean_command": 0.8880087738187994,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007098493273407391,
+          "right_command": 1.0,
+          "mean_command": 0.4964507533632963,
+          "steering": -0.5035492466367038
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007098493273407391,
+          "mean_command": 0.4964507533632963,
+          "steering": 0.5035492466367038
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0025-rank-1.pkl",
+      "sha256": "c4adf221a099fde34bbd356516bfc5af6a2841c1ada7db23f6d2122437588c3a",
+      "generation": 25,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8659272589499638,
+          "right_command": 0.8659272589499638,
+          "mean_command": 0.8659272589499638,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.013098724526292238,
+          "right_command": 1.0,
+          "mean_command": 0.4934506377368539,
+          "steering": -0.5065493622631461
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.013098724526292238,
+          "mean_command": 0.4934506377368539,
+          "steering": 0.5065493622631461
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0025-rank-2.pkl",
+      "sha256": "50b1610315c272021ff73bbfac70d58c76b23b164854cb1fbac4e6267b042ce0",
+      "generation": 25,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8639887376555878,
+          "right_command": 0.8639887376555878,
+          "mean_command": 0.8639887376555878,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0033584986914376724,
+          "right_command": 1.0,
+          "mean_command": 0.49832075065428116,
+          "steering": -0.5016792493457188
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0033584986914376724,
+          "mean_command": 0.49832075065428116,
+          "steering": 0.5016792493457188
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0026-rank-0.pkl",
+      "sha256": "a6f35addc4710a42b3ae55a1d66eb0bfb349eda5e2c57941c167205593208c40",
+      "generation": 26,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8659272589499638,
+          "right_command": 0.8659272589499638,
+          "mean_command": 0.8659272589499638,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.013098724526292238,
+          "right_command": 1.0,
+          "mean_command": 0.4934506377368539,
+          "steering": -0.5065493622631461
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.013098724526292238,
+          "mean_command": 0.4934506377368539,
+          "steering": 0.5065493622631461
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0026-rank-1.pkl",
+      "sha256": "9a3bdc9f7e0a97d9007a95aab3c944d33122f5d51df9bacab1f24b8c548322e3",
+      "generation": 26,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 27,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8639887376555878,
+          "right_command": 0.8639887376555878,
+          "mean_command": 0.8639887376555878,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.003219655413978839,
+          "right_command": 1.0,
+          "mean_command": 0.4983901722930106,
+          "steering": -0.5016098277069894
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.003219655413978839,
+          "mean_command": 0.4983901722930106,
+          "steering": 0.5016098277069894
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0026-rank-2.pkl",
+      "sha256": "df1c7504289f33b188115ad11df493a5931d6a155fb49e7a32a9abdc8b8a4230",
+      "generation": 26,
+      "nodes_in_genotype": 6,
+      "hidden_nodes_in_genotype": 4,
+      "enabled_connections": 30,
+      "evaluated_nodes": 6,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8548584335459215,
+          "right_command": 0.8548584335459215,
+          "mean_command": 0.8548584335459215,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002269551329728614,
+          "right_command": 1.0,
+          "mean_command": 0.4988652243351357,
+          "steering": -0.5011347756648643
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002269551329728614,
+          "mean_command": 0.4988652243351357,
+          "steering": 0.5011347756648643
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0027-rank-0.pkl",
+      "sha256": "0fccca2325b2bdc02601e719a40dc96d821b0ad84fca3d3061afb2047812d273",
+      "generation": 27,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8659272589499638,
+          "right_command": 0.8659272589499638,
+          "mean_command": 0.8659272589499638,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.013098724526292238,
+          "right_command": 1.0,
+          "mean_command": 0.4934506377368539,
+          "steering": -0.5065493622631461
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.013098724526292238,
+          "mean_command": 0.4934506377368539,
+          "steering": 0.5065493622631461
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0027-rank-1.pkl",
+      "sha256": "55d59c9250fdffcdcb2dfd14856be0bf55b7d8566ea23fb7bc7f8d1301f42408",
+      "generation": 27,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8494380036985612,
+          "right_command": 0.8494380036985612,
+          "mean_command": 0.8494380036985612,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0008776959293633757,
+          "right_command": 1.0,
+          "mean_command": 0.4995611520353183,
+          "steering": -0.5004388479646817
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0008776959293633757,
+          "mean_command": 0.4995611520353183,
+          "steering": 0.5004388479646817
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0027-rank-2.pkl",
+      "sha256": "8b36b28b9a1e435df9a13c7d377460e2f170fdde8c91833e499224289961751a",
+      "generation": 27,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8321885950475565,
+          "right_command": 0.8321885950475565,
+          "mean_command": 0.8321885950475565,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0028785954796227697,
+          "right_command": 1.0,
+          "mean_command": 0.4985607022601886,
+          "steering": -0.5014392977398114
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0028785954796227697,
+          "mean_command": 0.4985607022601886,
+          "steering": 0.5014392977398114
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0028-rank-0.pkl",
+      "sha256": "93c2b8bb1435720509d49f2aa34af40a3188074248e7b16bf1fcec826681be97",
+      "generation": 28,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8659272589499638,
+          "right_command": 0.8659272589499638,
+          "mean_command": 0.8659272589499638,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.013098724526292238,
+          "right_command": 1.0,
+          "mean_command": 0.4934506377368539,
+          "steering": -0.5065493622631461
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.013098724526292238,
+          "mean_command": 0.4934506377368539,
+          "steering": 0.5065493622631461
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0028-rank-1.pkl",
+      "sha256": "0c7a1891bb2a5eb8baa15b8c42bf85fd8ca10ad703ab52903de032f8e6882d8e",
+      "generation": 28,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8520176791391186,
+          "right_command": 0.8520176791391186,
+          "mean_command": 0.8520176791391186,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0027625652449145832,
+          "right_command": 1.0,
+          "mean_command": 0.4986187173775427,
+          "steering": -0.5013812826224573
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0027625652449145832,
+          "mean_command": 0.4986187173775427,
+          "steering": 0.5013812826224573
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0028-rank-2.pkl",
+      "sha256": "6a6678463c7142f8e2bc475e7d662d0c019b3e7e1d94616f7f6a830a4bfeea22",
+      "generation": 28,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8494380036985612,
+          "right_command": 0.8494380036985612,
+          "mean_command": 0.8494380036985612,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0008776959293633757,
+          "right_command": 1.0,
+          "mean_command": 0.4995611520353183,
+          "steering": -0.5004388479646817
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0008776959293633757,
+          "mean_command": 0.4995611520353183,
+          "steering": 0.5004388479646817
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0029-rank-0.pkl",
+      "sha256": "b446c4b0d99b5053c1859f222d53d4439e4f8ed9e0b3e1f9f2c84998f320ebf2",
+      "generation": 29,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8659272589499638,
+          "right_command": 0.8659272589499638,
+          "mean_command": 0.8659272589499638,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.013098724526292238,
+          "right_command": 1.0,
+          "mean_command": 0.4934506377368539,
+          "steering": -0.5065493622631461
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.013098724526292238,
+          "mean_command": 0.4934506377368539,
+          "steering": 0.5065493622631461
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0029-rank-1.pkl",
+      "sha256": "96f2e4ba651581a5fcf9fefba94c7f5c6199b1c8181e4b81497a6c1596e670e8",
+      "generation": 29,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 33,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.856706677176465,
+          "right_command": 0.856706677176465,
+          "mean_command": 0.856706677176465,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.04038138204772235,
+          "right_command": 1.0,
+          "mean_command": 0.4798093089761388,
+          "steering": -0.5201906910238612
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.04038138204772235,
+          "mean_command": 0.4798093089761388,
+          "steering": 0.5201906910238612
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0029-rank-2.pkl",
+      "sha256": "bc3b10a18dcb96888d8f75576664a6b2396615d3c8cb4e6bf0b9336dff4a91ff",
+      "generation": 29,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8520176791391186,
+          "right_command": 0.8520176791391186,
+          "mean_command": 0.8520176791391186,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0027625652449145832,
+          "right_command": 1.0,
+          "mean_command": 0.4986187173775427,
+          "steering": -0.5013812826224573
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0027625652449145832,
+          "mean_command": 0.4986187173775427,
+          "steering": 0.5013812826224573
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0030-rank-0.pkl",
+      "sha256": "1298f01cc11d2d106041316e0ab973b205b9022b86c7af57b047905bf0c64bde",
+      "generation": 30,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 33,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.856706677176465,
+          "right_command": 0.856706677176465,
+          "mean_command": 0.856706677176465,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.04038138204772235,
+          "right_command": 1.0,
+          "mean_command": 0.4798093089761388,
+          "steering": -0.5201906910238612
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.04038138204772235,
+          "mean_command": 0.4798093089761388,
+          "steering": 0.5201906910238612
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0030-rank-1.pkl",
+      "sha256": "cc08321d587deb15014e6932c2d6263de6adbadc8e85833d374ad09fbdc9e73a",
+      "generation": 30,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8532145916531217,
+          "right_command": 0.8532145916531217,
+          "mean_command": 0.8532145916531217,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0051374002080459835,
+          "right_command": 1.0,
+          "mean_command": 0.497431299895977,
+          "steering": -0.502568700104023
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0051374002080459835,
+          "mean_command": 0.497431299895977,
+          "steering": 0.502568700104023
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0030-rank-2.pkl",
+      "sha256": "ed0a350bd4e6b497106fa5c7a67022221af1b15bf93abb8fe3ead22d8a364a16",
+      "generation": 30,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8206990132550542,
+          "right_command": 0.8206990132550542,
+          "mean_command": 0.8206990132550542,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005288299334585633,
+          "right_command": 1.0,
+          "mean_command": 0.4973558503327072,
+          "steering": -0.5026441496672929
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005288299334585633,
+          "mean_command": 0.4973558503327072,
+          "steering": 0.5026441496672929
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0031-rank-0.pkl",
+      "sha256": "007dc90376d83dfc7dd6651544620de2c4b8034d3e092c09ffd9ac05bb1bf8e8",
+      "generation": 31,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 34,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9142167863467949,
+          "right_command": 0.9142167863467949,
+          "mean_command": 0.9142167863467949,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.03119848646531942,
+          "right_command": 1.0,
+          "mean_command": 0.4844007567673403,
+          "steering": -0.5155992432326597
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.03119848646531942,
+          "mean_command": 0.4844007567673403,
+          "steering": 0.5155992432326597
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0031-rank-1.pkl",
+      "sha256": "f9fbfae884fc23dd2e2befc162fb08904cd8b1facfcc53dd969ae10b71df48b1",
+      "generation": 31,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 33,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.856706677176465,
+          "right_command": 0.856706677176465,
+          "mean_command": 0.856706677176465,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.04038138204772235,
+          "right_command": 1.0,
+          "mean_command": 0.4798093089761388,
+          "steering": -0.5201906910238612
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.04038138204772235,
+          "mean_command": 0.4798093089761388,
+          "steering": 0.5201906910238612
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0031-rank-2.pkl",
+      "sha256": "e09372e1c7cf9f4c54aeda49c08ab3218f1f74adac944e2b7f676292eb52cd03",
+      "generation": 31,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8532145916531217,
+          "right_command": 0.8532145916531217,
+          "mean_command": 0.8532145916531217,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0051374002080459835,
+          "right_command": 1.0,
+          "mean_command": 0.497431299895977,
+          "steering": -0.502568700104023
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0051374002080459835,
+          "mean_command": 0.497431299895977,
+          "steering": 0.502568700104023
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0032-rank-0.pkl",
+      "sha256": "51eed0e86967fee0525561e1d5fc03a59dcc415f8b91344fc07c123f01ad1dfc",
+      "generation": 32,
+      "nodes_in_genotype": 6,
+      "hidden_nodes_in_genotype": 4,
+      "enabled_connections": 32,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8667480091797406,
+          "right_command": 0.8667480091797406,
+          "mean_command": 0.8667480091797406,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.010813795440449026,
+          "right_command": 1.0,
+          "mean_command": 0.4945931022797755,
+          "steering": -0.5054068977202245
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.010813795440449026,
+          "mean_command": 0.4945931022797755,
+          "steering": 0.5054068977202245
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0032-rank-1.pkl",
+      "sha256": "9bfe1666f51b4a0e54da219a00d9791e9fa2cb72e553aa456d403699ea037c6c",
+      "generation": 32,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 33,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.856706677176465,
+          "right_command": 0.856706677176465,
+          "mean_command": 0.856706677176465,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.04038138204772235,
+          "right_command": 1.0,
+          "mean_command": 0.4798093089761388,
+          "steering": -0.5201906910238612
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.04038138204772235,
+          "mean_command": 0.4798093089761388,
+          "steering": 0.5201906910238612
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0032-rank-2.pkl",
+      "sha256": "29d24ca207cba23e862e6a8a92b6b979a8dac9a9b1d08ea8827da3a44dc8ad0b",
+      "generation": 32,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 28,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8368997775338207,
+          "right_command": 0.8368997775338207,
+          "mean_command": 0.8368997775338207,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.012403057962312891,
+          "right_command": 1.0,
+          "mean_command": 0.49379847101884355,
+          "steering": -0.5062015289811564
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.012403057962312891,
+          "mean_command": 0.49379847101884355,
+          "steering": 0.5062015289811564
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0033-rank-0.pkl",
+      "sha256": "bd94a4a7395527fc47f91742863fa918ed84425ced87297dc1f18b040a737beb",
+      "generation": 33,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7987741828402551,
+          "right_command": 0.7987741828402551,
+          "mean_command": 0.7987741828402551,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005856073475222656,
+          "right_command": 1.0,
+          "mean_command": 0.49707196326238867,
+          "steering": -0.5029280367376113
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005856073475222656,
+          "mean_command": 0.49707196326238867,
+          "steering": 0.5029280367376113
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0033-rank-1.pkl",
+      "sha256": "b97fc69139eff84da8f85573da99b80a8cade77025fdc43bca6dc6619d016674",
+      "generation": 33,
+      "nodes_in_genotype": 6,
+      "hidden_nodes_in_genotype": 4,
+      "enabled_connections": 32,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8667480091797406,
+          "right_command": 0.8667480091797406,
+          "mean_command": 0.8667480091797406,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.010813795440449026,
+          "right_command": 1.0,
+          "mean_command": 0.4945931022797755,
+          "steering": -0.5054068977202245
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.010813795440449026,
+          "mean_command": 0.4945931022797755,
+          "steering": 0.5054068977202245
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0033-rank-2.pkl",
+      "sha256": "13d4988b79b1114112ef1ad80cd9d1f783e938d25b00791596f4e9b7b2ea1c11",
+      "generation": 33,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 33,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8611673626310536,
+          "right_command": 0.8611673626310536,
+          "mean_command": 0.8611673626310536,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.06008632473811626,
+          "right_command": 1.0,
+          "mean_command": 0.46995683763094187,
+          "steering": -0.5300431623690581
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.06008632473811626,
+          "mean_command": 0.46995683763094187,
+          "steering": 0.5300431623690581
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0034-rank-0.pkl",
+      "sha256": "6b17dbb6842cbcfc85c5f10852646b24b06c370b21548f6c30114501dbb48a91",
+      "generation": 34,
+      "nodes_in_genotype": 6,
+      "hidden_nodes_in_genotype": 4,
+      "enabled_connections": 32,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8667480091797406,
+          "right_command": 0.8667480091797406,
+          "mean_command": 0.8667480091797406,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.010813795440449026,
+          "right_command": 1.0,
+          "mean_command": 0.4945931022797755,
+          "steering": -0.5054068977202245
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.010813795440449026,
+          "mean_command": 0.4945931022797755,
+          "steering": 0.5054068977202245
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0034-rank-1.pkl",
+      "sha256": "0f21767d1f6ee1b6c259bfae26f6df18f22df7f97889ec111bf020ad4377d66e",
+      "generation": 34,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 33,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.866408949714682,
+          "right_command": 0.866408949714682,
+          "mean_command": 0.866408949714682,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.006479345325693275,
+          "right_command": 1.0,
+          "mean_command": 0.49676032733715336,
+          "steering": -0.5032396726628466
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.006479345325693275,
+          "mean_command": 0.49676032733715336,
+          "steering": 0.5032396726628466
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0034-rank-2.pkl",
+      "sha256": "4895df7956087c8aebef4bc362b501e6da36f9a9cf1f9ec34ea589be7c04dc65",
+      "generation": 34,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 33,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8209887363279271,
+          "right_command": 0.8209887363279271,
+          "mean_command": 0.8209887363279271,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": 0.23683017094743564,
+          "right_command": 1.0,
+          "mean_command": 0.6184150854737178,
+          "steering": -0.3815849145262822
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": 0.23683017094743564,
+          "mean_command": 0.6184150854737178,
+          "steering": 0.3815849145262822
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0035-rank-0.pkl",
+      "sha256": "768339918dd913eaa5fe575c2ebf88db71e6f106e507c07a90c81f0e32acbdd1",
+      "generation": 35,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 33,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.866408949714682,
+          "right_command": 0.866408949714682,
+          "mean_command": 0.866408949714682,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.006479345325693275,
+          "right_command": 1.0,
+          "mean_command": 0.49676032733715336,
+          "steering": -0.5032396726628466
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.006479345325693275,
+          "mean_command": 0.49676032733715336,
+          "steering": 0.5032396726628466
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0035-rank-1.pkl",
+      "sha256": "722b268419c4fea4d7e209ae46ee838797765c902d8b7f95320e9c21e847fea3",
+      "generation": 35,
+      "nodes_in_genotype": 6,
+      "hidden_nodes_in_genotype": 4,
+      "enabled_connections": 33,
+      "evaluated_nodes": 6,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8301234221611957,
+          "right_command": 0.8301234221611957,
+          "mean_command": 0.8301234221611957,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.008940098435163524,
+          "right_command": 1.0,
+          "mean_command": 0.49552995078241824,
+          "steering": -0.5044700492175818
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.008940098435163524,
+          "mean_command": 0.49552995078241824,
+          "steering": 0.5044700492175818
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0035-rank-2.pkl",
+      "sha256": "ab73ebf61161b9282b835a25ba953e6ca736a24e2edfd385a198b0da8ba1f4c2",
+      "generation": 35,
+      "nodes_in_genotype": 6,
+      "hidden_nodes_in_genotype": 4,
+      "enabled_connections": 31,
+      "evaluated_nodes": 4,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8283007793674857,
+          "right_command": 0.8283007793674857,
+          "mean_command": 0.8283007793674857,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.06942859230625287,
+          "right_command": 1.0,
+          "mean_command": 0.46528570384687357,
+          "steering": -0.5347142961531264
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.06942859230625287,
+          "mean_command": 0.46528570384687357,
+          "steering": 0.5347142961531264
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0036-rank-0.pkl",
+      "sha256": "f7350020721cf2e9ca1f255a8a631029428178a48bee2e3449810bcc23933914",
+      "generation": 36,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8381428249877556,
+          "right_command": 0.8381428249877556,
+          "mean_command": 0.8381428249877556,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007515214895866484,
+          "right_command": 1.0,
+          "mean_command": 0.49624239255206676,
+          "steering": -0.5037576074479333
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007515214895866484,
+          "mean_command": 0.49624239255206676,
+          "steering": 0.5037576074479333
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0036-rank-1.pkl",
+      "sha256": "4b339a031a834732ee3061997bbd691a4e8d80c5219f849609178c5eefc0136d",
+      "generation": 36,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.778267205421562,
+          "right_command": 0.778267205421562,
+          "mean_command": 0.778267205421562,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005195495853594467,
+          "right_command": 1.0,
+          "mean_command": 0.49740225207320277,
+          "steering": -0.5025977479267972
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005195495853594467,
+          "mean_command": 0.49740225207320277,
+          "steering": 0.5025977479267972
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0036-rank-2.pkl",
+      "sha256": "2d329925fa11f29b6b08fcc610cbbf91526b7c225bbd9e533044cda3e0171819",
+      "generation": 36,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7454726921083481,
+          "right_command": 0.7454726921083481,
+          "mean_command": 0.7454726921083481,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.010159525132878211,
+          "right_command": 1.0,
+          "mean_command": 0.4949202374335609,
+          "steering": -0.5050797625664392
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.010159525132878211,
+          "mean_command": 0.4949202374335609,
+          "steering": 0.5050797625664392
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0037-rank-0.pkl",
+      "sha256": "8facca7abbd9c5f10b6beb49537b6fb639a6e9bfcf5ee57e700dad9741bb05d8",
+      "generation": 37,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8381428249877556,
+          "right_command": 0.8381428249877556,
+          "mean_command": 0.8381428249877556,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007515214895866484,
+          "right_command": 1.0,
+          "mean_command": 0.49624239255206676,
+          "steering": -0.5037576074479333
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007515214895866484,
+          "mean_command": 0.49624239255206676,
+          "steering": 0.5037576074479333
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0037-rank-1.pkl",
+      "sha256": "4a164c2986bd23d169f8282b81536a7f73fb2f12dcc3ddabbcb2fb247c1360d9",
+      "generation": 37,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7833384738472285,
+          "right_command": 0.7833384738472285,
+          "mean_command": 0.7833384738472285,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": 0.4216129626719216,
+          "right_command": 1.0,
+          "mean_command": 0.7108064813359608,
+          "steering": -0.2891935186640392
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": 0.4216129626719216,
+          "mean_command": 0.7108064813359608,
+          "steering": 0.2891935186640392
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0037-rank-2.pkl",
+      "sha256": "f2f5f9021fadbb974a2f38ff10fd095b268db887e3344f928d3952959e10b942",
+      "generation": 37,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.778267205421562,
+          "right_command": 0.778267205421562,
+          "mean_command": 0.778267205421562,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.005195495853594467,
+          "right_command": 1.0,
+          "mean_command": 0.49740225207320277,
+          "steering": -0.5025977479267972
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.005195495853594467,
+          "mean_command": 0.49740225207320277,
+          "steering": 0.5025977479267972
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0038-rank-0.pkl",
+      "sha256": "bc35a2b89bae53d0c0e27ad8bf006ad02ad7adc0779ffc870355852332058211",
+      "generation": 38,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8457719874788876,
+          "right_command": 0.8457719874788876,
+          "mean_command": 0.8457719874788876,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.06925416927579953,
+          "right_command": 1.0,
+          "mean_command": 0.46537291536210024,
+          "steering": -0.5346270846378998
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.06925416927579953,
+          "mean_command": 0.46537291536210024,
+          "steering": 0.5346270846378998
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0038-rank-1.pkl",
+      "sha256": "97fe7c08b62e955c531099215d34e6559568942b7343917fc79cc683573f1b05",
+      "generation": 38,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8381428249877556,
+          "right_command": 0.8381428249877556,
+          "mean_command": 0.8381428249877556,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007515214895866484,
+          "right_command": 1.0,
+          "mean_command": 0.49624239255206676,
+          "steering": -0.5037576074479333
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007515214895866484,
+          "mean_command": 0.49624239255206676,
+          "steering": 0.5037576074479333
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0038-rank-2.pkl",
+      "sha256": "d4c89a9ba7a6f31e90c9721a946c66891979dfde0ddfc18540a252e756c885e4",
+      "generation": 38,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8187504171606228,
+          "right_command": 0.8187504171606228,
+          "mean_command": 0.8187504171606228,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0028003369999411998,
+          "right_command": 1.0,
+          "mean_command": 0.4985998315000294,
+          "steering": -0.5014001684999706
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0028003369999411998,
+          "mean_command": 0.4985998315000294,
+          "steering": 0.5014001684999706
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0039-rank-0.pkl",
+      "sha256": "74280c10cbcc7d778d2413098f762f7dc9708d36e3862d1caee3d7b9352dcdf8",
+      "generation": 39,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7271962039445503,
+          "right_command": 0.7271962039445503,
+          "mean_command": 0.7271962039445503,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.011034310426372151,
+          "right_command": 1.0,
+          "mean_command": 0.4944828447868139,
+          "steering": -0.5055171552131861
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.011034310426372151,
+          "mean_command": 0.4944828447868139,
+          "steering": 0.5055171552131861
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0039-rank-1.pkl",
+      "sha256": "53d3ea2d983de3dacbdbd3dbca0089e357da54d9bdca8e08b469a53512c622e3",
+      "generation": 39,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7036540453522306,
+          "right_command": 0.7036540453522306,
+          "mean_command": 0.7036540453522306,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.01535067943524493,
+          "right_command": 1.0,
+          "mean_command": 0.49232466028237754,
+          "steering": -0.5076753397176225
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.01535067943524493,
+          "mean_command": 0.49232466028237754,
+          "steering": 0.5076753397176225
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0039-rank-2.pkl",
+      "sha256": "5db59d736da5d72c0411194c9a74738be26804852a629b73bdf11db5bbdcde46",
+      "generation": 39,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 34,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.6818695341183323,
+          "right_command": 0.6818695341183323,
+          "mean_command": 0.6818695341183323,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.09203863994387385,
+          "right_command": 1.0,
+          "mean_command": 0.4539806800280631,
+          "steering": -0.546019319971937
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.09203863994387385,
+          "mean_command": 0.4539806800280631,
+          "steering": 0.546019319971937
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0040-rank-0.pkl",
+      "sha256": "1e01d81ab34bfe9fb20c8b71eff277c0df222e9914d205ed5c7bdd62bd898f74",
+      "generation": 40,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8926575364617553,
+          "right_command": 0.8926575364617553,
+          "mean_command": 0.8926575364617553,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0030846084100201177,
+          "right_command": 1.0,
+          "mean_command": 0.49845769579498994,
+          "steering": -0.50154230420501
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0030846084100201177,
+          "mean_command": 0.49845769579498994,
+          "steering": 0.50154230420501
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0040-rank-1.pkl",
+      "sha256": "e5ad1e5d7716c84c5168ed4946d8f59966bbf0f14be131763481be6a958b7755",
+      "generation": 40,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8709810178225725,
+          "right_command": 0.8709810178225725,
+          "mean_command": 0.8709810178225725,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.014842988225896359,
+          "right_command": 1.0,
+          "mean_command": 0.4925785058870518,
+          "steering": -0.5074214941129482
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.014842988225896359,
+          "mean_command": 0.4925785058870518,
+          "steering": 0.5074214941129482
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0040-rank-2.pkl",
+      "sha256": "1639cb0759c4b6202578aa33cd29992714c4f8d37555080d73d7237a4ce28b20",
+      "generation": 40,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8109333948655428,
+          "right_command": 0.8109333948655428,
+          "mean_command": 0.8109333948655428,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.008234695661202718,
+          "right_command": 1.0,
+          "mean_command": 0.49588265216939864,
+          "steering": -0.5041173478306014
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.008234695661202718,
+          "mean_command": 0.49588265216939864,
+          "steering": 0.5041173478306014
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0041-rank-0.pkl",
+      "sha256": "bcdebe47271e90bd293b20cc0b79fca9ef66a53ae116780cde61db10eeced5c5",
+      "generation": 41,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9062663120591509,
+          "right_command": 0.9062663120591509,
+          "mean_command": 0.9062663120591509,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.020876840768179195,
+          "right_command": 1.0,
+          "mean_command": 0.4895615796159104,
+          "steering": -0.5104384203840896
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.020876840768179195,
+          "mean_command": 0.4895615796159104,
+          "steering": 0.5104384203840896
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0041-rank-1.pkl",
+      "sha256": "0f8674a226ffc57dcec7c5a5f066c928124f04f37f281f1c3f370d79bcac0437",
+      "generation": 41,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8926575364617553,
+          "right_command": 0.8926575364617553,
+          "mean_command": 0.8926575364617553,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0030846084100201177,
+          "right_command": 1.0,
+          "mean_command": 0.49845769579498994,
+          "steering": -0.50154230420501
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0030846084100201177,
+          "mean_command": 0.49845769579498994,
+          "steering": 0.50154230420501
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0041-rank-2.pkl",
+      "sha256": "cfc89782a9204d704cc3c4ccacda63ca326d463e6d0593be50b302c6001eb923",
+      "generation": 41,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 29,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8709810178225725,
+          "right_command": 0.8709810178225725,
+          "mean_command": 0.8709810178225725,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.014842988225896359,
+          "right_command": 1.0,
+          "mean_command": 0.4925785058870518,
+          "steering": -0.5074214941129482
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.014842988225896359,
+          "mean_command": 0.4925785058870518,
+          "steering": 0.5074214941129482
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0042-rank-0.pkl",
+      "sha256": "ab6cd08980f5331e44da8edde513ae26ef0b293677b6ed01969aafe78d8e423d",
+      "generation": 42,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9145274592465201,
+          "right_command": 0.9145274592465201,
+          "mean_command": 0.9145274592465201,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.05426648364605147,
+          "right_command": 1.0,
+          "mean_command": 0.47286675817697427,
+          "steering": -0.5271332418230257
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.05426648364605147,
+          "mean_command": 0.47286675817697427,
+          "steering": 0.5271332418230257
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0042-rank-1.pkl",
+      "sha256": "5c67b2bf0c68900f96ac8958e05762b78857278e045c05ea8f93e4dd5f701e29",
+      "generation": 42,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9062663120591509,
+          "right_command": 0.9062663120591509,
+          "mean_command": 0.9062663120591509,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.020876840768179195,
+          "right_command": 1.0,
+          "mean_command": 0.4895615796159104,
+          "steering": -0.5104384203840896
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.020876840768179195,
+          "mean_command": 0.4895615796159104,
+          "steering": 0.5104384203840896
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0042-rank-2.pkl",
+      "sha256": "1df745eb1928bc68497097b5cc7700d17face450460c4e9a9a778dabccc1d14f",
+      "generation": 42,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9007657186121846,
+          "right_command": 0.9007657186121846,
+          "mean_command": 0.9007657186121846,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.007441817934790151,
+          "right_command": 1.0,
+          "mean_command": 0.4962790910326049,
+          "steering": -0.5037209089673951
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.007441817934790151,
+          "mean_command": 0.4962790910326049,
+          "steering": 0.5037209089673951
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0043-rank-0.pkl",
+      "sha256": "f9a42f3c4f1915457e1a446c5ee22f4c895f3d69a012d617f0483594ac9662d7",
+      "generation": 43,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9006994547672788,
+          "right_command": 0.9006994547672788,
+          "mean_command": 0.9006994547672788,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002805194914120679,
+          "right_command": 1.0,
+          "mean_command": 0.49859740254293966,
+          "steering": -0.5014025974570604
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002805194914120679,
+          "mean_command": 0.49859740254293966,
+          "steering": 0.5014025974570604
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0043-rank-1.pkl",
+      "sha256": "253529ba2044658e39b3a344460416298522f15bad4e545cd7ced728cd50c775",
+      "generation": 43,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8206780034508764,
+          "right_command": 0.8206780034508764,
+          "mean_command": 0.8206780034508764,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.01030075677703668,
+          "right_command": 1.0,
+          "mean_command": 0.49484962161148166,
+          "steering": -0.5051503783885183
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.01030075677703668,
+          "mean_command": 0.49484962161148166,
+          "steering": 0.5051503783885183
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0043-rank-2.pkl",
+      "sha256": "8bbbcf5ea6ef487070bdc31bf443a60ef8c5c25286d56745e49aa63279c8adaf",
+      "generation": 43,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8130261381892687,
+          "right_command": 0.8130261381892687,
+          "mean_command": 0.8130261381892687,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.008335836150022091,
+          "right_command": 1.0,
+          "mean_command": 0.49583208192498895,
+          "steering": -0.504167918075011
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.008335836150022091,
+          "mean_command": 0.49583208192498895,
+          "steering": 0.504167918075011
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0044-rank-0.pkl",
+      "sha256": "72b19da9a712d665468e6a78ded1d9880171add3fcb2373ba30ec500ac4bfe32",
+      "generation": 44,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9006994547672788,
+          "right_command": 0.9006994547672788,
+          "mean_command": 0.9006994547672788,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002805194914120679,
+          "right_command": 1.0,
+          "mean_command": 0.49859740254293966,
+          "steering": -0.5014025974570604
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002805194914120679,
+          "mean_command": 0.49859740254293966,
+          "steering": 0.5014025974570604
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0044-rank-1.pkl",
+      "sha256": "ff36d2f87048850fb07ced28b1ecfce878e505628288398ed938cff01dca5222",
+      "generation": 44,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9009289546504549,
+          "right_command": 0.9009289546504549,
+          "mean_command": 0.9009289546504549,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002174352702299598,
+          "right_command": 1.0,
+          "mean_command": 0.4989128236488502,
+          "steering": -0.5010871763511497
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002174352702299598,
+          "mean_command": 0.4989128236488502,
+          "steering": 0.5010871763511497
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0044-rank-2.pkl",
+      "sha256": "7e33957389b68cd673207ea8d07f8c184e9f9a18c93136b1d5b6c85a5d7f2abc",
+      "generation": 44,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8602229912452379,
+          "right_command": 0.8602229912452379,
+          "mean_command": 0.8602229912452379,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.001364754650237776,
+          "right_command": 1.0,
+          "mean_command": 0.4993176226748811,
+          "steering": -0.5006823773251189
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.001364754650237776,
+          "mean_command": 0.4993176226748811,
+          "steering": 0.5006823773251189
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0045-rank-0.pkl",
+      "sha256": "a74fe720840675731931debf5f10999a0cc4283e94902ecc10262234ca1ad4f3",
+      "generation": 45,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9006994547672788,
+          "right_command": 0.9006994547672788,
+          "mean_command": 0.9006994547672788,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002805194914120679,
+          "right_command": 1.0,
+          "mean_command": 0.49859740254293966,
+          "steering": -0.5014025974570604
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002805194914120679,
+          "mean_command": 0.49859740254293966,
+          "steering": 0.5014025974570604
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0045-rank-1.pkl",
+      "sha256": "85e7ac4a85fcb613f3a744133c70458859b46787acf1f43d7507c44025dfb753",
+      "generation": 45,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9009289546504549,
+          "right_command": 0.9009289546504549,
+          "mean_command": 0.9009289546504549,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002174352702299598,
+          "right_command": 1.0,
+          "mean_command": 0.4989128236488502,
+          "steering": -0.5010871763511497
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002174352702299598,
+          "mean_command": 0.4989128236488502,
+          "steering": 0.5010871763511497
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0045-rank-2.pkl",
+      "sha256": "bc13d1f219d9292652a02198e5fa36731aecf0056d1887bebfa7eca1b87e6d92",
+      "generation": 45,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7449145271864618,
+          "right_command": 0.7449145271864618,
+          "mean_command": 0.7449145271864618,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": 0.03749931132868256,
+          "right_command": 1.0,
+          "mean_command": 0.5187496556643413,
+          "steering": -0.4812503443356587
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": 0.03749931132868256,
+          "mean_command": 0.5187496556643413,
+          "steering": 0.4812503443356587
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0046-rank-0.pkl",
+      "sha256": "8282111c0fa498125805219c715b4f5c5383db1c23860c60389aad7294f0ac00",
+      "generation": 46,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9288743324229726,
+          "right_command": 0.9288743324229726,
+          "mean_command": 0.9288743324229726,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.000550143665358438,
+          "right_command": 1.0,
+          "mean_command": 0.4997249281673208,
+          "steering": -0.5002750718326792
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.000550143665358438,
+          "mean_command": 0.4997249281673208,
+          "steering": 0.5002750718326792
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0046-rank-1.pkl",
+      "sha256": "2f881bac87e4a5d65e285ccea49c32355fc670c8e646e55fa3c1e99ebdc7db58",
+      "generation": 46,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9009289546504549,
+          "right_command": 0.9009289546504549,
+          "mean_command": 0.9009289546504549,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.002174352702299598,
+          "right_command": 1.0,
+          "mean_command": 0.4989128236488502,
+          "steering": -0.5010871763511497
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.002174352702299598,
+          "mean_command": 0.4989128236488502,
+          "steering": 0.5010871763511497
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0046-rank-2.pkl",
+      "sha256": "8b4f6802e40dfed32eb41cfdf77ab70b45ff8d6fa1765859b17c917342311f89",
+      "generation": 46,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.905549156534981,
+          "right_command": 0.905549156534981,
+          "mean_command": 0.905549156534981,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.008825143434934124,
+          "right_command": 1.0,
+          "mean_command": 0.49558742828253294,
+          "steering": -0.504412571717467
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.008825143434934124,
+          "mean_command": 0.49558742828253294,
+          "steering": 0.504412571717467
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0047-rank-0.pkl",
+      "sha256": "90b973ed3d5008f1e87c1363749c58abd1df28d1689b72ee990f1c60f1fad8d5",
+      "generation": 47,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9378967532888354,
+          "right_command": 0.9378967532888354,
+          "mean_command": 0.9378967532888354,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0033694190185431516,
+          "right_command": 1.0,
+          "mean_command": 0.4983152904907284,
+          "steering": -0.5016847095092716
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0033694190185431516,
+          "mean_command": 0.4983152904907284,
+          "steering": 0.5016847095092716
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0047-rank-1.pkl",
+      "sha256": "aa072eedcd0883288fc117dc7578e83d45a1649d0e09c70596a50c20bc68c76a",
+      "generation": 47,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9012274273969529,
+          "right_command": 0.9012274273969529,
+          "mean_command": 0.9012274273969529,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -6.44266286055073e-05,
+          "right_command": 1.0,
+          "mean_command": 0.49996778668569725,
+          "steering": -0.5000322133143027
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -6.44266286055073e-05,
+          "mean_command": 0.49996778668569725,
+          "steering": 0.5000322133143027
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0047-rank-2.pkl",
+      "sha256": "ace0a01f73102ee885281fe7a1990861376b4bca7a6dd7e9b1a0a12dc7e0c345",
+      "generation": 47,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8971348694540632,
+          "right_command": 0.8971348694540632,
+          "mean_command": 0.8971348694540632,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.009884363428230625,
+          "right_command": 1.0,
+          "mean_command": 0.4950578182858847,
+          "steering": -0.5049421817141153
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.009884363428230625,
+          "mean_command": 0.4950578182858847,
+          "steering": 0.5049421817141153
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0048-rank-0.pkl",
+      "sha256": "cf03b510b6a80251d9edc24ae4c476b5a22b2356e78e354811b272f9851ec075",
+      "generation": 48,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9378967532888354,
+          "right_command": 0.9378967532888354,
+          "mean_command": 0.9378967532888354,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0033694190185431516,
+          "right_command": 1.0,
+          "mean_command": 0.4983152904907284,
+          "steering": -0.5016847095092716
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0033694190185431516,
+          "mean_command": 0.4983152904907284,
+          "steering": 0.5016847095092716
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0048-rank-1.pkl",
+      "sha256": "49131c67a9c2192fb724f77b267929376016e1006be89914132dc9030226d03d",
+      "generation": 48,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9012274273969529,
+          "right_command": 0.9012274273969529,
+          "mean_command": 0.9012274273969529,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -6.455498221880074e-05,
+          "right_command": 1.0,
+          "mean_command": 0.4999677225088906,
+          "steering": -0.5000322774911095
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -6.455498221880074e-05,
+          "mean_command": 0.4999677225088906,
+          "steering": 0.5000322774911095
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0048-rank-2.pkl",
+      "sha256": "a2dfa90de4be24b94e8c72341c2a85de1cee85f06a2f34be88dc8c0b18492eee",
+      "generation": 48,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 30,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.9012274273969529,
+          "right_command": 0.9012274273969529,
+          "mean_command": 0.9012274273969529,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -6.44266286055073e-05,
+          "right_command": 1.0,
+          "mean_command": 0.49996778668569725,
+          "steering": -0.5000322133143027
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -6.44266286055073e-05,
+          "mean_command": 0.49996778668569725,
+          "steering": 0.5000322133143027
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0049-rank-0.pkl",
+      "sha256": "0d100c6563fb4614a4182f3c6c13d133c62a7a9a3e5f7f642a414d91541a9fd5",
+      "generation": 49,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 32,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8301253553718484,
+          "right_command": 0.8301253553718484,
+          "mean_command": 0.8301253553718484,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": 0.1810751374953664,
+          "right_command": 1.0,
+          "mean_command": 0.5905375687476833,
+          "steering": -0.4094624312523168
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": 0.1810751374953664,
+          "mean_command": 0.5905375687476833,
+          "steering": 0.4094624312523168
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0049-rank-1.pkl",
+      "sha256": "40590459b9491303582d02ed2e531c4ffe00e96ac4cbfea2542f53ca06f800cf",
+      "generation": 49,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 33,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.8487462869972493,
+          "right_command": 0.8487462869972493,
+          "mean_command": 0.8487462869972493,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.010374240787941358,
+          "right_command": 1.0,
+          "mean_command": 0.4948128796060293,
+          "steering": -0.5051871203939706
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.010374240787941358,
+          "mean_command": 0.4948128796060293,
+          "steering": 0.5051871203939706
+        }
+      }
+    },
+    {
+      "file": "runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0049-rank-2.pkl",
+      "sha256": "1a77e25e09de3e999d5c79b601de588c71a6e3a118627b4aaa3fc6c27455b4ee",
+      "generation": 49,
+      "nodes_in_genotype": 5,
+      "hidden_nodes_in_genotype": 3,
+      "enabled_connections": 31,
+      "evaluated_nodes": 5,
+      "drive_evaluated": true,
+      "steering_evaluated": true,
+      "drive_graph_reachable_from_inputs": true,
+      "steering_graph_reachable_from_inputs": true,
+      "synthetic_constant_sensor_probes": {
+        "center": {
+          "left_command": 0.7617097379370851,
+          "right_command": 0.7617097379370851,
+          "mean_command": 0.7617097379370851,
+          "steering": 0.0
+        },
+        "left": {
+          "left_command": -0.0029748271535963156,
+          "right_command": 1.0,
+          "mean_command": 0.49851258642320184,
+          "steering": -0.5014874135767982
+        },
+        "right": {
+          "left_command": 1.0,
+          "right_command": -0.0029748271535963156,
+          "mean_command": 0.49851258642320184,
+          "steering": 0.5014874135767982
+        }
+      }
+    }
+  ]
+}

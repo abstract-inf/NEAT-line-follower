@@ -1,0 +1,1236 @@
+{
+  "scope": "Data-only counterfactual group weighting; no evolution, physics, selection or source changes.",
+  "training_weights": {
+    "speed": 0.3333333333333333,
+    "mixed": 0.3333333333333333,
+    "corner": 0.3333333333333333
+  },
+  "validation_weights": {
+    "speed": 0.3333333333333333,
+    "mixed": 0.5,
+    "corner": 0.16666666666666666
+  },
+  "joint_feasible_training_rows": 23,
+  "saved_validated_distinct_joint_feasible_genotypes_available": 17,
+  "cases": [
+    {
+      "generation": 49,
+      "genome_id": 4739,
+      "candidate_rank": 1,
+      "genotype_sha256": "f520e5e3592fcd8563156ad1ab8a7def8554aa83c72f42997d8760410ec7c3fa",
+      "training_joint_feasible": false,
+      "training_joint_violation": 0.09621508620257657,
+      "validation_failed_gates": [
+        "command_jitter",
+        "geometry_lateral_rmse_m"
+      ],
+      "retention_completed": 20,
+      "training_equal": {
+        "courses": 6,
+        "completed": 6,
+        "groups": {
+          "speed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.0016236416149454805,
+              "reference": 0.0014300701525871446,
+              "ratio": 1.135358018631565
+            },
+            "command_jitter": {
+              "candidate": 0.0008806739665335469,
+              "reference": 0.0018580227933886343,
+              "ratio": 0.4739844794516147
+            }
+          },
+          "mixed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.025638861019384777,
+              "reference": 0.019588776168554638,
+              "ratio": 1.3088546624235866
+            },
+            "command_jitter": {
+              "candidate": 0.01534154788601733,
+              "reference": 0.011884916821959003,
+              "ratio": 1.2908418389324972
+            }
+          },
+          "corner": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.03742762102350195,
+              "reference": 0.040836581175292624,
+              "ratio": 0.9165219013521828
+            },
+            "command_jitter": {
+              "candidate": 0.008137984844535507,
+              "reference": 0.00847916533804534,
+              "ratio": 0.9597624907750077
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.021563374552610735,
+          "reference": 0.0206184758321448,
+          "ratio": 1.0458277676855632,
+          "difference": 0.000944898720465933
+        },
+        "command_jitter": {
+          "candidate": 0.008120068899028794,
+          "reference": 0.007407368317797659,
+          "ratio": 1.0962150862025763,
+          "difference": 0.0007127005812311345
+        }
+      },
+      "training_validation_weights": {
+        "courses": 6,
+        "completed": 6,
+        "groups": {
+          "speed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.0016236416149454805,
+              "reference": 0.0014300701525871446,
+              "ratio": 1.135358018631565
+            },
+            "command_jitter": {
+              "candidate": 0.0008806739665335469,
+              "reference": 0.0018580227933886343,
+              "ratio": 0.4739844794516147
+            }
+          },
+          "mixed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.025638861019384777,
+              "reference": 0.019588776168554638,
+              "ratio": 1.3088546624235866
+            },
+            "command_jitter": {
+              "candidate": 0.01534154788601733,
+              "reference": 0.011884916821959003,
+              "ratio": 1.2908418389324972
+            }
+          },
+          "corner": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.03742762102350195,
+              "reference": 0.040836581175292624,
+              "ratio": 0.9165219013521828
+            },
+            "command_jitter": {
+              "candidate": 0.008137984844535507,
+              "reference": 0.00847916533804534,
+              "ratio": 0.9597624907750077
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.019598581218591208,
+          "reference": 0.01707717499768847,
+          "ratio": 1.1476477357199906,
+          "difference": 0.0025214062209027374
+        },
+        "command_jitter": {
+          "candidate": 0.009320662739275764,
+          "reference": 0.007974993565116602,
+          "ratio": 1.168736082753126,
+          "difference": 0.0013456691741591618
+        }
+      },
+      "validation_actual": {
+        "courses": 60,
+        "completed": 60,
+        "groups": {
+          "speed": {
+            "courses": 20,
+            "completed": 20,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.004574370218448598,
+              "reference": 0.004047814696214127,
+              "ratio": 1.130083900018188
+            },
+            "command_jitter": {
+              "candidate": 0.0011995259856613502,
+              "reference": 0.0019520514737698994,
+              "ratio": 0.6144950590594651
+            }
+          },
+          "mixed": {
+            "courses": 30,
+            "completed": 30,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.016344585180787272,
+              "reference": 0.012183282735503084,
+              "ratio": 1.3415583907576742
+            },
+            "command_jitter": {
+              "candidate": 0.010840284162772973,
+              "reference": 0.00869923317342194,
+              "ratio": 1.246119508084047
+            }
+          },
+          "corner": {
+            "courses": 10,
+            "completed": 10,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.04058996908781094,
+              "reference": 0.04231143481617537,
+              "ratio": 0.9593144090753849
+            },
+            "command_jitter": {
+              "candidate": 0.010241119899523818,
+              "reference": 0.009177481962381183,
+              "ratio": 1.115896488982765
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.016462077511178327,
+          "reference": 0.014492818735852146,
+          "ratio": 1.1358782450272875,
+          "difference": 0.0019692587753261815
+        },
+        "command_jitter": {
+          "candidate": 0.007526837393194239,
+          "reference": 0.006529880738364467,
+          "ratio": 1.1526760893154504,
+          "difference": 0.0009969566548297722
+        }
+      },
+      "weighting_shift_in_candidate_minus_reference": {
+        "geometry_lateral_rmse_m": 0.0015765075004368044,
+        "command_jitter": 0.0006329685929280272
+      },
+      "six_training_slots": [
+        {
+          "slot": 0,
+          "group": "speed",
+          "track_hash": "009cbda49b989f1a90b8eb927c62edca9110e5f8f21c23cf8fa350021695f604",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 2.846006225042701e-14,
+            "reference": 0.00034316807419245766
+          },
+          "command_jitter": {
+            "candidate": 0.0,
+            "reference": 4.521846162114692e-11
+          }
+        },
+        {
+          "slot": 1,
+          "group": "speed",
+          "track_hash": "eccc46df4b2b12220dd5e6ef0476a0604a7f51ffd38947b06e0a9517fc30db94",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.003247283229862501,
+            "reference": 0.0025169722309818315
+          },
+          "command_jitter": {
+            "candidate": 0.0017613479330670938,
+            "reference": 0.0037160455415588068
+          }
+        },
+        {
+          "slot": 2,
+          "group": "mixed",
+          "track_hash": "46c6edf5f1755f42d8a567307b12c8a2cf6d01f0a4afba88acadbf8ca3cf8b8e",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.02654416557606302,
+            "reference": 0.018009544753213255
+          },
+          "command_jitter": {
+            "candidate": 0.014524280796908996,
+            "reference": 0.011980623169250823
+          }
+        },
+        {
+          "slot": 3,
+          "group": "mixed",
+          "track_hash": "7e907dd5a7717aa2bb387d18d8ad9b0263fcc26fedbc3b9f6253813a55695935",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.024733556462706533,
+            "reference": 0.021168007583896024
+          },
+          "command_jitter": {
+            "candidate": 0.016158814975125665,
+            "reference": 0.011789210474667182
+          }
+        },
+        {
+          "slot": 4,
+          "group": "corner",
+          "track_hash": "4339e28ca98094f148b9c7e2963a1c2f242bc6c130c786d2296eec2414d41fd3",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.03975347618025745,
+            "reference": 0.03807228943437623
+          },
+          "command_jitter": {
+            "candidate": 0.009661808353861098,
+            "reference": 0.010167552561220731
+          }
+        },
+        {
+          "slot": 5,
+          "group": "corner",
+          "track_hash": "2dd8c4f87d4004b397c172f8f771568364457f1d4f5ef6696a9aed386ea91544",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.03510176586674645,
+            "reference": 0.04360087291620902
+          },
+          "command_jitter": {
+            "candidate": 0.006614161335209915,
+            "reference": 0.0067907781148699485
+          }
+        }
+      ]
+    },
+    {
+      "generation": 16,
+      "genome_id": 1461,
+      "candidate_rank": 0,
+      "genotype_sha256": "acbe95deddd78f88a127ac821b72e374dd3714d84b67133d37ad856f8ca1099e",
+      "training_joint_feasible": true,
+      "training_joint_violation": 0.0,
+      "validation_failed_gates": [
+        "command_jitter",
+        "geometry_lateral_rmse_m",
+        "straight_steering",
+        "straight_yaw"
+      ],
+      "retention_completed": 20,
+      "training_equal": {
+        "courses": 6,
+        "completed": 6,
+        "groups": {
+          "speed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.0020354682741719502,
+              "reference": 0.0014300701525871446,
+              "ratio": 1.4233345619371036
+            },
+            "command_jitter": {
+              "candidate": 0.0013607960404116535,
+              "reference": 0.0018580227933886343,
+              "ratio": 0.7323893147348607
+            }
+          },
+          "mixed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.03545903855328675,
+              "reference": 0.03532587939239242,
+              "ratio": 1.0037694507025634
+            },
+            "command_jitter": {
+              "candidate": 0.011350041400483441,
+              "reference": 0.009751239589726218,
+              "ratio": 1.1639588275978472
+            }
+          },
+          "corner": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.03813943373500624,
+              "reference": 0.04169030532396879,
+              "ratio": 0.9148274026450683
+            },
+            "command_jitter": {
+              "candidate": 0.0095137781039485,
+              "reference": 0.010970166268715453,
+              "ratio": 0.8672410126617445
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.025211313520821645,
+          "reference": 0.026148751622982785,
+          "ratio": 0.9641497951536163,
+          "difference": -0.0009374381021611394
+        },
+        "command_jitter": {
+          "candidate": 0.007408205181614532,
+          "reference": 0.007526476217276768,
+          "ratio": 0.9842860015433585,
+          "difference": -0.00011827103566223584
+        }
+      },
+      "training_validation_weights": {
+        "courses": 6,
+        "completed": 6,
+        "groups": {
+          "speed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.0020354682741719502,
+              "reference": 0.0014300701525871446,
+              "ratio": 1.4233345619371036
+            },
+            "command_jitter": {
+              "candidate": 0.0013607960404116535,
+              "reference": 0.0018580227933886343,
+              "ratio": 0.7323893147348607
+            }
+          },
+          "mixed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.03545903855328675,
+              "reference": 0.03532587939239242,
+              "ratio": 1.0037694507025634
+            },
+            "command_jitter": {
+              "candidate": 0.011350041400483441,
+              "reference": 0.009751239589726218,
+              "ratio": 1.1639588275978472
+            }
+          },
+          "corner": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.03813943373500624,
+              "reference": 0.04169030532396879,
+              "ratio": 0.9148274026450683
+            },
+            "command_jitter": {
+              "candidate": 0.0095137781039485,
+              "reference": 0.010970166268715453,
+              "ratio": 0.8672410126617445
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.024764580990535065,
+          "reference": 0.025088013967720056,
+          "ratio": 0.9871080677170723,
+          "difference": -0.00032343297718499114
+        },
+        "command_jitter": {
+          "candidate": 0.007714249064370355,
+          "reference": 0.007323321770778562,
+          "ratio": 1.0533811439436769,
+          "difference": 0.0003909272935917925
+        }
+      },
+      "validation_actual": {
+        "courses": 60,
+        "completed": 60,
+        "groups": {
+          "speed": {
+            "courses": 20,
+            "completed": 20,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.004930117290383426,
+              "reference": 0.004047814696214127,
+              "ratio": 1.217970104954287
+            },
+            "command_jitter": {
+              "candidate": 0.0013198185382588329,
+              "reference": 0.0019520514737698994,
+              "ratio": 0.6761187171514147
+            }
+          },
+          "mixed": {
+            "courses": 30,
+            "completed": 30,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.017884433704992663,
+              "reference": 0.012183282735503084,
+              "ratio": 1.4679486714098786
+            },
+            "command_jitter": {
+              "candidate": 0.01072699202187695,
+              "reference": 0.00869923317342194,
+              "ratio": 1.2330962750429837
+            }
+          },
+          "corner": {
+            "courses": 10,
+            "completed": 10,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.04160285851914726,
+              "reference": 0.04231143481617537,
+              "ratio": 0.9832533143792791
+            },
+            "command_jitter": {
+              "candidate": 0.01157169071837215,
+              "reference": 0.009177481962381183,
+              "ratio": 1.2608786119989026
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.01751939903581535,
+          "reference": 0.014492818735852146,
+          "ratio": 1.20883310245757,
+          "difference": 0.0030265802999632028
+        },
+        "command_jitter": {
+          "candidate": 0.0077320506434201105,
+          "reference": 0.006529880738364467,
+          "ratio": 1.1841028884329594,
+          "difference": 0.0012021699050556436
+        }
+      },
+      "weighting_shift_in_candidate_minus_reference": {
+        "geometry_lateral_rmse_m": 0.0006140051249761483,
+        "command_jitter": 0.0005091983292540283
+      },
+      "six_training_slots": [
+        {
+          "slot": 0,
+          "group": "speed",
+          "track_hash": "009cbda49b989f1a90b8eb927c62edca9110e5f8f21c23cf8fa350021695f604",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 3.874854663472644e-14,
+            "reference": 0.00034316807419245766
+          },
+          "command_jitter": {
+            "candidate": 5.184859541694812e-09,
+            "reference": 4.521846162114692e-11
+          }
+        },
+        {
+          "slot": 1,
+          "group": "speed",
+          "track_hash": "eccc46df4b2b12220dd5e6ef0476a0604a7f51ffd38947b06e0a9517fc30db94",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.004070936548305152,
+            "reference": 0.0025169722309818315
+          },
+          "command_jitter": {
+            "candidate": 0.002721586895963765,
+            "reference": 0.0037160455415588068
+          }
+        },
+        {
+          "slot": 2,
+          "group": "mixed",
+          "track_hash": "cd9f14f6783c4554765e13bd2a26d29d497e2477c71ddbb3b8790c0527534438",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.03392229001620143,
+            "reference": 0.029633434673434968
+          },
+          "command_jitter": {
+            "candidate": 0.010364676972548937,
+            "reference": 0.007940058601397557
+          }
+        },
+        {
+          "slot": 3,
+          "group": "mixed",
+          "track_hash": "92dd8daf69041b7b6d8e1c24823823e2f9933b2fc8e3ad808d79c3a3e9d949e8",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.03699578709037206,
+            "reference": 0.041018324111349876
+          },
+          "command_jitter": {
+            "candidate": 0.012335405828417946,
+            "reference": 0.01156242057805488
+          }
+        },
+        {
+          "slot": 4,
+          "group": "corner",
+          "track_hash": "218555b09c04a5767f8b5164237b3b2756a36104a316730bc34eb3b5b7805f34",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.037805811964343516,
+            "reference": 0.041095548663603314
+          },
+          "command_jitter": {
+            "candidate": 0.009333628955232674,
+            "reference": 0.008525285037345235
+          }
+        },
+        {
+          "slot": 5,
+          "group": "corner",
+          "track_hash": "43e23220beb632792820e728f6e557c35a7ed0ec55772aee919805b066235dab",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.03847305550566895,
+            "reference": 0.042285061984334266
+          },
+          "command_jitter": {
+            "candidate": 0.009693927252664325,
+            "reference": 0.013415047500085668
+          }
+        }
+      ]
+    },
+    {
+      "generation": 37,
+      "genome_id": 3589,
+      "candidate_rank": 0,
+      "genotype_sha256": "2d4a51e5ce9e92c2841c46b2f81a7904839cc3dbd0109725348d2a3d33bea267",
+      "training_joint_feasible": true,
+      "training_joint_violation": 0.0,
+      "validation_failed_gates": [
+        "command_jitter",
+        "geometry_lateral_rmse_m"
+      ],
+      "retention_completed": 20,
+      "training_equal": {
+        "courses": 6,
+        "completed": 6,
+        "groups": {
+          "speed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.0018950076277376307,
+              "reference": 0.0015329358979236823,
+              "ratio": 1.2361949578611633
+            },
+            "command_jitter": {
+              "candidate": 0.0010879581166683592,
+              "reference": 0.001755000724082897,
+              "ratio": 0.6199188990288814
+            }
+          },
+          "mixed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.019917937392874126,
+              "reference": 0.01851938624778309,
+              "ratio": 1.0755182232488105
+            },
+            "command_jitter": {
+              "candidate": 0.013083945688880421,
+              "reference": 0.011558809064510591,
+              "ratio": 1.1319458272783922
+            }
+          },
+          "corner": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.039878398264382685,
+              "reference": 0.04263029882551867,
+              "ratio": 0.935447307737644
+            },
+            "command_jitter": {
+              "candidate": 0.008764797630266514,
+              "reference": 0.009990597989309012,
+              "ratio": 0.8773046057549074
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.020563781094998148,
+          "reference": 0.02089420699040848,
+          "ratio": 0.9841857651950124,
+          "difference": -0.00033042589541033146
+        },
+        "command_jitter": {
+          "candidate": 0.007645567145271764,
+          "reference": 0.0077681359259674995,
+          "ratio": 0.9842215968072843,
+          "difference": -0.00012256878069573547
+        }
+      },
+      "training_validation_weights": {
+        "courses": 6,
+        "completed": 6,
+        "groups": {
+          "speed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.0018950076277376307,
+              "reference": 0.0015329358979236823,
+              "ratio": 1.2361949578611633
+            },
+            "command_jitter": {
+              "candidate": 0.0010879581166683592,
+              "reference": 0.001755000724082897,
+              "ratio": 0.6199188990288814
+            }
+          },
+          "mixed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.019917937392874126,
+              "reference": 0.01851938624778309,
+              "ratio": 1.0755182232488105
+            },
+            "command_jitter": {
+              "candidate": 0.013083945688880421,
+              "reference": 0.011558809064510591,
+              "ratio": 1.1319458272783922
+            }
+          },
+          "corner": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.039878398264382685,
+              "reference": 0.04263029882551867,
+              "ratio": 0.935447307737644
+            },
+            "command_jitter": {
+              "candidate": 0.008764797630266514,
+              "reference": 0.009990597989309012,
+              "ratio": 0.8773046057549074
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.017237037616413386,
+          "reference": 0.016875721560785886,
+          "ratio": 1.0214104063240228,
+          "difference": 0.00036131605562749955
+        },
+        "command_jitter": {
+          "candidate": 0.008365425155040749,
+          "reference": 0.008029504438501096,
+          "ratio": 1.041835796855523,
+          "difference": 0.00033592071653965223
+        }
+      },
+      "validation_actual": {
+        "courses": 60,
+        "completed": 60,
+        "groups": {
+          "speed": {
+            "courses": 20,
+            "completed": 20,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.0048906226723273655,
+              "reference": 0.004047814696214127,
+              "ratio": 1.208213082703985
+            },
+            "command_jitter": {
+              "candidate": 0.0012474996990836419,
+              "reference": 0.0019520514737698994,
+              "ratio": 0.639071108444906
+            }
+          },
+          "mixed": {
+            "courses": 30,
+            "completed": 30,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.018057266526289195,
+              "reference": 0.012183282735503084,
+              "ratio": 1.4821347348091036
+            },
+            "command_jitter": {
+              "candidate": 0.011093859350444548,
+              "reference": 0.00869923317342194,
+              "ratio": 1.2752686506137936
+            }
+          },
+          "corner": {
+            "courses": 10,
+            "completed": 10,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.04157592490495578,
+              "reference": 0.04231143481617537,
+              "ratio": 0.982616757989535
+            },
+            "command_jitter": {
+              "candidate": 0.010831828558424563,
+              "reference": 0.009177481962381183,
+              "ratio": 1.1802614925122823
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.01758816163807968,
+          "reference": 0.014492818735852146,
+          "ratio": 1.2135777006974025,
+          "difference": 0.003095342902227535
+        },
+        "command_jitter": {
+          "candidate": 0.007768067667987582,
+          "reference": 0.006529880738364467,
+          "ratio": 1.1896186131468678,
+          "difference": 0.001238186929623115
+        }
+      },
+      "weighting_shift_in_candidate_minus_reference": {
+        "geometry_lateral_rmse_m": 0.000691741951037831,
+        "command_jitter": 0.0004584894972353877
+      },
+      "six_training_slots": [
+        {
+          "slot": 0,
+          "group": "speed",
+          "track_hash": "009cbda49b989f1a90b8eb927c62edca9110e5f8f21c23cf8fa350021695f604",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.0006178110174802947,
+            "reference": 0.00034316807419245766
+          },
+          "command_jitter": {
+            "candidate": 3.15782623989899e-08,
+            "reference": 4.521846162114692e-11
+          }
+        },
+        {
+          "slot": 1,
+          "group": "speed",
+          "track_hash": "f0df1a612204194fe031d03eec662089322499937296d22eead5b9d0143feea8",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.0031722042379949667,
+            "reference": 0.0027227037216549068
+          },
+          "command_jitter": {
+            "candidate": 0.0021758846550743193,
+            "reference": 0.003510001402947332
+          }
+        },
+        {
+          "slot": 2,
+          "group": "mixed",
+          "track_hash": "eb390fffa00e7064e7afb54b38ffe4faf3fc40636fcdd956d83255fc9e0384f2",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.018404760142282973,
+            "reference": 0.014715004217847383
+          },
+          "command_jitter": {
+            "candidate": 0.012413000305035815,
+            "reference": 0.009215246953677215
+          }
+        },
+        {
+          "slot": 3,
+          "group": "mixed",
+          "track_hash": "3acd8f8049104a8d7a614e777a0d89a416f01cad2315e2a510494816a3e79070",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.02143111464346528,
+            "reference": 0.022323768277718804
+          },
+          "command_jitter": {
+            "candidate": 0.013754891072725026,
+            "reference": 0.013902371175343969
+          }
+        },
+        {
+          "slot": 4,
+          "group": "corner",
+          "track_hash": "8f8ff540bda0711a8d966448994a63f04c2835f7ba76e4857e4f68f452ebd98f",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.0395929881554369,
+            "reference": 0.04388259958722972
+          },
+          "command_jitter": {
+            "candidate": 0.007929741886810525,
+            "reference": 0.009973231887764396
+          }
+        },
+        {
+          "slot": 5,
+          "group": "corner",
+          "track_hash": "2cd38cc9c2702b67e033fa16f66898e3327123bffdf647fd3db49bce5e5c4602",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.04016380837332847,
+            "reference": 0.041377998063807625
+          },
+          "command_jitter": {
+            "candidate": 0.009599853373722503,
+            "reference": 0.010007964090853628
+          }
+        }
+      ]
+    },
+    {
+      "generation": 41,
+      "genome_id": 4005,
+      "candidate_rank": 0,
+      "genotype_sha256": "fc2e87f18a3f81e550b7a545156f557dc3905f31d848076fa3a44dbfb3a692d7",
+      "training_joint_feasible": true,
+      "training_joint_violation": 0.0,
+      "validation_failed_gates": [
+        "command_jitter",
+        "geometry_lateral_rmse_m"
+      ],
+      "retention_completed": 20,
+      "training_equal": {
+        "courses": 6,
+        "completed": 6,
+        "groups": {
+          "speed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.004292682433783042,
+              "reference": 0.003358830351123092,
+              "ratio": 1.2780289520569856
+            },
+            "command_jitter": {
+              "candidate": 0.0008873916478529186,
+              "reference": 0.001899020352938259,
+              "ratio": 0.46728917174579093
+            }
+          },
+          "mixed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.022046457128517577,
+              "reference": 0.019068258370645293,
+              "ratio": 1.156186196976284
+            },
+            "command_jitter": {
+              "candidate": 0.013885229873801443,
+              "reference": 0.012029439262123517,
+              "ratio": 1.1542707495536522
+            }
+          },
+          "corner": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.03692787556916889,
+              "reference": 0.04260070220337067,
+              "ratio": 0.8668372505429516
+            },
+            "command_jitter": {
+              "candidate": 0.010364268951850563,
+              "reference": 0.01124740889837792,
+              "ratio": 0.921480586817225
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.021089005043823168,
+          "reference": 0.021675930308379686,
+          "ratio": 0.9729227186004737,
+          "difference": -0.0005869252645565176
+        },
+        "command_jitter": {
+          "candidate": 0.008378963491168307,
+          "reference": 0.008391956171146565,
+          "ratio": 0.998451769800356,
+          "difference": -1.2992679978257593e-05
+        }
+      },
+      "training_validation_weights": {
+        "courses": 6,
+        "completed": 6,
+        "groups": {
+          "speed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.004292682433783042,
+              "reference": 0.003358830351123092,
+              "ratio": 1.2780289520569856
+            },
+            "command_jitter": {
+              "candidate": 0.0008873916478529186,
+              "reference": 0.001899020352938259,
+              "ratio": 0.46728917174579093
+            }
+          },
+          "mixed": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.022046457128517577,
+              "reference": 0.019068258370645293,
+              "ratio": 1.156186196976284
+            },
+            "command_jitter": {
+              "candidate": 0.013885229873801443,
+              "reference": 0.012029439262123517,
+              "ratio": 1.1542707495536522
+            }
+          },
+          "corner": {
+            "courses": 2,
+            "completed": 2,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.03692787556916889,
+              "reference": 0.04260070220337067,
+              "ratio": 0.8668372505429516
+            },
+            "command_jitter": {
+              "candidate": 0.010364268951850563,
+              "reference": 0.01124740889837792,
+              "ratio": 0.921480586817225
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.01860876863704795,
+          "reference": 0.01775385633625879,
+          "ratio": 1.0481536115082315,
+          "difference": 0.0008549123007891603
+        },
+        "command_jitter": {
+          "candidate": 0.008965790311493456,
+          "reference": 0.008522294565104165,
+          "ratio": 1.052039476340709,
+          "difference": 0.000443495746389291
+        }
+      },
+      "validation_actual": {
+        "courses": 60,
+        "completed": 60,
+        "groups": {
+          "speed": {
+            "courses": 20,
+            "completed": 20,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.004903832533578898,
+              "reference": 0.004047814696214127,
+              "ratio": 1.2114765377390901
+            },
+            "command_jitter": {
+              "candidate": 0.0012610788241180278,
+              "reference": 0.0019520514737698994,
+              "ratio": 0.646027443980547
+            }
+          },
+          "mixed": {
+            "courses": 30,
+            "completed": 30,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.01814031155963477,
+              "reference": 0.012183282735503084,
+              "ratio": 1.4889510449242398
+            },
+            "command_jitter": {
+              "candidate": 0.01169034477519446,
+              "reference": 0.00869923317342194,
+              "ratio": 1.3438362373031936
+            }
+          },
+          "corner": {
+            "courses": 10,
+            "completed": 10,
+            "geometry_lateral_rmse_m": {
+              "candidate": 0.03907483187359338,
+              "reference": 0.04231143481617537,
+              "ratio": 0.9235052425746465
+            },
+            "command_jitter": {
+              "candidate": 0.012230329617417688,
+              "reference": 0.009177481962381183,
+              "ratio": 1.3326454541180504
+            }
+          }
+        },
+        "geometry_lateral_rmse_m": {
+          "candidate": 0.017217238603275915,
+          "reference": 0.014492818735852146,
+          "ratio": 1.187984126282083,
+          "difference": 0.0027244198674237687
+        },
+        "command_jitter": {
+          "candidate": 0.008303920265206188,
+          "reference": 0.006529880738364467,
+          "ratio": 1.2716802339771467,
+          "difference": 0.0017740395268417211
+        }
+      },
+      "weighting_shift_in_candidate_minus_reference": {
+        "geometry_lateral_rmse_m": 0.0014418375653456779,
+        "command_jitter": 0.0004564884263675486
+      },
+      "six_training_slots": [
+        {
+          "slot": 0,
+          "group": "speed",
+          "track_hash": "65b91c1e04b73a3ad0338dd6d4a46ecccc5c388680fa45668e394ad65a431b38",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.0005554496595868614,
+            "reference": 0.0002993371634143176
+          },
+          "command_jitter": {
+            "candidate": 6.498406934932763e-08,
+            "reference": 3.981573633654236e-11
+          }
+        },
+        {
+          "slot": 1,
+          "group": "speed",
+          "track_hash": "7964271841cd610adffd4f0bfa8b8613ef54681919b12024914c1bdfe7e75d74",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.008029915207979223,
+            "reference": 0.006418323538831866
+          },
+          "command_jitter": {
+            "candidate": 0.0017747183116364879,
+            "reference": 0.003798040666060782
+          }
+        },
+        {
+          "slot": 2,
+          "group": "mixed",
+          "track_hash": "f9469d68da246f6a510f1b69d64a82ce7718d73eb374f32cb3633b19462b0854",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.027238549479001686,
+            "reference": 0.02410117954566099
+          },
+          "command_jitter": {
+            "candidate": 0.014891286606502544,
+            "reference": 0.013273096889246615
+          }
+        },
+        {
+          "slot": 3,
+          "group": "mixed",
+          "track_hash": "cc7ac7a31a20b141604574b40fe93b9cf622924b525047aa15f6998cdf64d2db",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.016854364778033464,
+            "reference": 0.0140353371956296
+          },
+          "command_jitter": {
+            "candidate": 0.01287917314110034,
+            "reference": 0.010785781635000416
+          }
+        },
+        {
+          "slot": 4,
+          "group": "corner",
+          "track_hash": "07ee789d72bcccb3935ee385a9314b6f4eadb57ad099b226b77a8ee3e7635420",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.038754315360337174,
+            "reference": 0.04299863758026065
+          },
+          "command_jitter": {
+            "candidate": 0.012898920320094247,
+            "reference": 0.012001804351682748
+          }
+        },
+        {
+          "slot": 5,
+          "group": "corner",
+          "track_hash": "de9926f7138d9d304c9932a879ced00e7806df7c43790c246942d8517c24e5a6",
+          "completed": true,
+          "geometry_lateral_rmse_m": {
+            "candidate": 0.03510143577800061,
+            "reference": 0.04220276682648069
+          },
+          "command_jitter": {
+            "candidate": 0.00782961758360688,
+            "reference": 0.01049301344507309
+          }
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\genome-fitness.csv": "f959f93e3591cef05139cb8ef7738fdfaf5a293628610df9c13d430508523ee4",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0000.json": "c6dfc9433cbea2ffbd8a1ada30c12ac57bd417953a2519a8c6611bc1fbf9fcb1",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0001.json": "8217f9a93302f85196f017fb0ecd9394d502ab664c78e18485c95ab05ea0187f",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0002.json": "25b7f2fbc12c689f4009abe886a72dfc5d7e40afbc7739aad8054f7b6f650941",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0003.json": "2f2bf3946377227af058b514b093eafa780512243c05db8f83c7fd39c801f688",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0004.json": "ba94b7bf63f5a1c3d2b4a7c13ca495f51fcc467a8accce12d6b55279a2bd3dc2",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0005.json": "8f82bb26c86c4d3a1263da3aa3418c7bb9348dfdf0145ea35ed11428aa258809",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0006.json": "f9561ce924581e98422d9bf76c4a9cfe027a75cc3d02a78adaf7ff51388e9bbc",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0007.json": "6663274d7f36a2c4de8f3c2cb1f822cc575a3e27da41b292b057d7dfb10ef0b7",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0008.json": "65387abaa6924f6cfc509d9ae283e48278673cd82e07dae58261fa29ddefb131",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0009.json": "eae08c82dd451037a855ca8f535a15433fb5d50a62df1832442d660793224bad",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0010.json": "a7cc863affe8e628db77ab8bcb2c9c79d357d5ccf7383ab708230b73f9ca9ca0",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0011.json": "95aeff9ee2241cea688070f211761dfbbc7f4346c731cef8aed19203b1718cf1",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0012.json": "8b5563849e1ff3b171755b496db6e268b5604c27f8a8ef3fa9a51388996d81b9",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0013.json": "c2b17b69ff38049dcedf1733ff04a0a10d75e8f9126a5aa54c1a1d070f69ea14",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0014.json": "520d67ce5c485e55aaf22dfc8ea22ebbc2adb42936c8089316cbb40cbaeb5345",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0015.json": "f8cbfdd19d1bd0564ed8dcc9009fed4f8b74806ab4c9e3855d96f8561383980b",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0016.json": "484c7cfa57621ab49265aff0575b67fd424bd44080e4cb23bd5c35f86183fc36",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0017.json": "092428fa3353df23755c359a11602dbf25c0a6168802fc7cfa33a6b02d66065e",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0018.json": "8e7e20403f83665486985667763793175607030b215792d386cc98b7daa938ea",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0019.json": "ced11660f74941fcba2bda2f087a63c8cf5b9eef62aed0c5755f4fba567e6dc6",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0020.json": "775434283aae9b20930d49907fd2d96cf1b8da2aeac1fd27ca633dc6afef1be7",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0021.json": "5809b640618b9eacb7ccd8d73550a3d8ccd149fa7f4101ff089f174236b7e123",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0022.json": "3108e9e3cc21f3e1c8812540b19c02677e3c76f072e1e024e1b05c2aa85f9693",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0023.json": "1a97762b55706fdbac56e8cb06838581776ec56d0c9420dbac51627aaa055bdd",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0024.json": "ec374c7fbd363be5ecb4e1558e4a9e45a5e614e4c9721f8f5e1e9cf5257a48a6",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0025.json": "b4472a8767c2e9a13202a7c3d8a7a8eebcaf2e896ec364167a74e9274191171b",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0026.json": "9f71c837cebd251cfd294cd1771f1de492f61a4c84c260f6145aaa9e72182d64",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0027.json": "72cebabb6b473ca1470be24218ba8cbd6991750acd3df84e9ff613c7799bebf4",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0028.json": "a043a3814de6d9409f55a82e3ae59e56e4ca8bd190bf1f2024758d046e94c011",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0029.json": "ccf5b9b768d4a2d2f983acf96e541906a6a229842c94bf53927d27c44873d239",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0030.json": "186d6486c5af7076cb646cbf3c1894ae52e0cde30064f4b4e28a19c4bff7c092",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0031.json": "f11d0952d3c8a3a6424b12f92860dd62c0413b0e8a7221301e063960bfd5cce7",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0032.json": "2fe88311313966a8cb44d43b8b8e2563b920c6ff498b76d9d403cd54ce37a736",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0033.json": "6ee25405d44fae8068cb014377b7403ba949fc1408fd56641fb2cc09624a662e",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0034.json": "e8466093d285e20e575d80d52ee43310c4fc844f93d5ee6ee852e1c309c43689",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0035.json": "94709c82365c6ed4239783af5948a48a350e2edbab6fe6a6f2ba24b120dc24ca",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0036.json": "3647d3354b69bfe9d8ee24e66f998d77fb852718e938cdff6e7ebe960e71bf99",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0037.json": "693a6d8a96e71e0cc5ad984a9378c35c2afd667628a5ef337544ed698fb2f888",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0038.json": "f22809e58a98f3802b3800e449d94baa72d8efb36a86782e2de917b13e658b05",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0039.json": "0835f1df5405b9fc59c563ee5b3f207c12974647dfab9cd0ad9f8250b0ec5003",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0040.json": "e74a8ae2242a212e7c57206907687b7396b9e043e795ac8f478d551918206c0e",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0041.json": "52d2b34b69b76a69b68669da738337c2bf4a7f7b2fe5c096043e26ac416fd0f0",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0042.json": "ff75bea9af0acaa024e0a86b156b84318ecf0d86f6edb267993eb2258bbaf7ef",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0043.json": "caceb527d80f7d1a69235e27f7143fa91cc532df48f90261ab8775fd8a5edd53",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0044.json": "83b8e18c455970741000d633a2d0df1aad25ddb231fab0c3d2104b1dfa4a7ec7",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0045.json": "26c6ab2134e6c5e2a94c9a6ab831ffa2731256f1254bbc8ce2b05ff59ff8e508",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0046.json": "e19f4798d5bfd7c6eebff02c6b33978352e74567c2615f577771fb959dfe019b",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0047.json": "52144c36ab1ba0bd65e15a6649ef6dc4f46cfaf74a22876fd042b8e74b52991d",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0048.json": "deee0be9b230fb4e71f079536eb65bbd112eacca7193d76327e5f1c876aa441c",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation\\generation-0049.json": "857d71528831daec79e34db45fe343bf6845deecb426635d98f7b9179d16842c",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\prepared\\inputs\\reference-validation.json": "804710a90dd01910030ced266e1b2f91800f0771afce94d1fc00251725bdc6f8",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\aeb3cc4d3dedf04191f5d02ffeae41ec2705f026fe6cc7bd84a16eb56150fdd0.json": "ad170664615c9da83257e48a9878cb39eea13118a1e4ae2498cce7dd872dcdee",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\e5db9a4e5ef9ebdf7727974630b6a16223d2a7e8f0a5631f7006a6386624eebf.json": "9e07d0b766cb9efb68f3308ab51ab432dd22022549d9e3991e36f77e7947d160",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\d7924449f08ff86719bd3ff955408cab6acc218c8c0011cbeae48e688900b531.json": "9e0b398a6d2cf6f0bd7fd7c2e871d7a5f3fa841b472e7556c84f8082fd0abf27",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\03b2fc9a4b4bc89288f839f49aa49e18850cfd765d9c8cf5886b78d9d7109795.json": "3c6c003a6b872131f833e213f9325fb362d95ff30e98daa01262f0ae1cdd6676",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\bc4d5e19e3514d374563281af64c809550c75690443b9503a3ef1cc38842d92d.json": "0b3f6150050e86afdca330e69df79815f70c381d1c1fc4b71f885d9fd7792beb",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\98e96e769676c4686e5bac41616b05f612840f87af9fc9474a6df47640d3742e.json": "d65a9f1841a8ecfa6c49f371fc3bae716e3fab92066cfb43b648eed2e24cbb3b",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\56d657bcf5795b38361dd4363338c30465dfeac440724f87944b0ea32c556077.json": "dc49f7ca0003471d285f7603c343c091cac8c376cede0fddfc72f3ddbd73eaa0",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\c207762e3a4b8d6afdd143965fe2224a39399d47e9987bb77fcfbd282a7a34e7.json": "3e43ffad9eb65dea84256412b5a74e06cb42c55873a4c17036397e8ee3762cf4",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\3f768c0c8363c24892ea3bd326359af36950dd5d556cecde48deae830ee03bf3.json": "0bd63c1452dc0c61c3a5bc4445915d89d54686b3c37a45f4e312bc5a6c33bb0b",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\acbe95deddd78f88a127ac821b72e374dd3714d84b67133d37ad856f8ca1099e.json": "b8e1f1786e5a653b89af7ffbf575d8abbedaab54ab6e5b888d1ab7dda9f76281",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\72684fbf113971aab3b88408f39963b5d57c1e2616a7b70bd45e97d03fc01575.json": "bd93e7364f992b9ac57024374d1fe05ed7180f08d9fc3223380766ddc06593c9",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\a1e2f7947e5fa15a6834f25bd342d3496c14109e3b7dde712bdc129c2990bee3.json": "d708a7a8b4bbb95b113398721698d29eccfa786c9d582003acf816205068f7c0",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\a2f66f655a7361aec6c0e3a6877037396c403ffc04ea00eae5fe5d378daf3a5f.json": "35235095a5965a666724b6ab8ac82ce80090d04f1d1d39b84ea22e9bd75d7e3e",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\60ee18362baf1a767549805310c293c4650c4e5fccd32f2e371ab9d612734f66.json": "50ee89992894c9cf0d0b6d0e86f22ad361bbc2fb9b6c1e1d8e05308130c7776d",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\2d4a51e5ce9e92c2841c46b2f81a7904839cc3dbd0109725348d2a3d33bea267.json": "e9534ae9faa76aed475c5f75aadd4f65f8493687eb3b647ee6537ef2eb3c9e63",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\fc2e87f18a3f81e550b7a545156f557dc3905f31d848076fa3a44dbfb3a692d7.json": "2ec7e73b0bfeb1edf6e18b7f8b7eda09779c8fd621cf76fa77a82f22233b31e6",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\2e15aee7b1baa1e2299e5269796ca249d4188d0ee26602dc7c62a64937703485.json": "83393b6d1a859532747d9743c9359130eaa16c2853dc5071d005e1ac7dd814ee",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\training-raw\\generation-0049.json": "73d3a6a1f0e5fab6418508d0ac7c05a3578249c656f1b4e2a0ac689a24217487",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\prepared\\batches\\generation-0049\\reference.json": "62f4e8bcb960ef1c22450929e17b9d851aa432787c961fdb2868760ad480c3f7",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\prepared\\batches\\generation-0049\\batch.json": "08905d06c9b236946112b2cdfdca8397b8433c399b528da3a8279339bd8bbd8a",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\validation-cache\\f520e5e3592fcd8563156ad1ab8a7def8554aa83c72f42997d8760410ec7c3fa.json": "55af7f06dff11e0916d2bec875cd6e2be63bb720ad913da0e0eeb53ff03b33e8",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\training-raw\\generation-0016.json": "38ee855281855e1f18252ca5b71bf4b460d8a4e43714b0961e2b428d287d5cb6",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\prepared\\batches\\generation-0016\\reference.json": "c68a4824f662d355f4091333aef16541678261fcd2629f8f5689bbc591aa96e4",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\prepared\\batches\\generation-0016\\batch.json": "967a4f5c231df8b2132be725f1d94de01fad9c9d7ee44c94119ec0b19612549e",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\training-raw\\generation-0037.json": "e41fe5ba939ed389865dffa0d1762a5daf45f50bcc14ec987ba1e380f0c2768c",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\prepared\\batches\\generation-0037\\reference.json": "2caeec54f42dc3852728ac5292ba7348e9a889f7679a8c5f1e34e9623993b82d",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\prepared\\batches\\generation-0037\\batch.json": "95dd4911609eb237c12b01df38a9e2a18f371afbb7eff100233d3cf4fd8286da",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\training-raw\\generation-0041.json": "a9d97a0547253aee97828bfcae5f6a5e9268032b690285a67ebc45154691a01a",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\prepared\\batches\\generation-0041\\reference.json": "a753ab42f6a01f2e955e71fd34ef7579d58786a906d0a06d62543a8d1899d22a",
+    "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\prepared\\batches\\generation-0041\\batch.json": "99f520e2d4946f95eceb81b9e26d554a709fde25cb85e9f833f85da5f86d2567"
+  },
+  "helper_sha256": "c26e4c53a92efc0ff407023f54345fc0f4fad411f42722905c9cda3869a7bbde"
+}

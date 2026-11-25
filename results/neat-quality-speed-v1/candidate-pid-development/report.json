@@ -1,0 +1,440 @@
+{
+  "all_episode_observed_summaries": {
+    "candidate": {
+      "completed": 60,
+      "courses": 60,
+      "failure_rows": [],
+      "failures": {},
+      "maximum_observed_raw_yaw_rms_rad_s": 0.0984379945847831,
+      "maximum_observed_steering_rms": 0.014746660674010221,
+      "minimum_required_window_speed_m_s": 0.872140076014209,
+      "missing_windows": 0,
+      "observed_mean_command_jitter": 0.00623726652972583,
+      "observed_mean_geometric_rmse_m": 0.01397259509890525,
+      "required_windows": 20
+    },
+    "fast": {
+      "completed": 60,
+      "courses": 60,
+      "failure_rows": [],
+      "failures": {},
+      "maximum_observed_raw_yaw_rms_rad_s": 1.3956360889993387,
+      "maximum_observed_steering_rms": 0.16766222369395234,
+      "minimum_required_window_speed_m_s": 0.8297531528110975,
+      "missing_windows": 0,
+      "observed_mean_command_jitter": 0.006529880738364467,
+      "observed_mean_geometric_rmse_m": 0.014492818735852146,
+      "required_windows": 20
+    },
+    "pid": {
+      "completed": 59,
+      "courses": 60,
+      "failure_rows": [
+        {
+          "average_forward_speed_m_s": 0.42564119932431455,
+          "base_score": 0.4661343376375919,
+          "cap_m_s": 1.0,
+          "command_jitter": 0.002133920073866531,
+          "completed": false,
+          "completion_time_s": null,
+          "components": {
+            "completion_term": 0.0,
+            "elapsed_term": -0.017405723897713957,
+            "jitter_term": -0.0004267840147733062,
+            "legacy_term": -0.004888553995455345,
+            "progress_term": 0.4888553995455345,
+            "speed_term": 0.0,
+            "straight_speed_deficit_term": 0.0,
+            "straight_steering_term": 0.0,
+            "straight_yaw_term": 0.0,
+            "tracking_term": 0.0
+          },
+          "control_steps": 503,
+          "difficulty": "advanced",
+          "elapsed_s": 8.38333333333387,
+          "error": "",
+          "features": "crossing;gap;gentle_curve;hairpin;straight;tight_curve;u_turn;zigzag",
+          "geometry_lateral_rmse_m": 0.11276928449274685,
+          "group": "mixed",
+          "lateral_rmse_m": 0.43430958704249806,
+          "legacy_return": -126756.39873792049,
+          "line_loss_events": 4,
+          "line_loss_seconds": 3.2,
+          "mean_action_L": 0.41350071573250524,
+          "mean_action_R": 0.3898229177575986,
+          "motor_asymmetry": 0.4497336060749602,
+          "peak_forward_speed_m_s": 0.9476421300672629,
+          "physics_steps": 5030,
+          "progress": 0.4888553995455345,
+          "progress_m": 2.354534514205745,
+          "route_length_m": 4.816423253981942,
+          "score": 0.4661343376375919,
+          "sensor_index_rmse": 2.8037858696969695,
+          "split": "validation",
+          "straight_speed_m_s": null,
+          "straight_windows": [],
+          "termination": "off_route",
+          "time_limit_s": 48.164232539819416,
+          "track_hash": "c88e3267bccd56c5d45ad79c1d980e5728b714b2f6d842fb987015881fdcd80d",
+          "track_name": "advanced-7332457145046129683",
+          "track_seed": 7332457145046129683,
+          "unplanned_line_loss_events": 3
+        }
+      ],
+      "failures": {
+        "off_route": 1
+      },
+      "maximum_observed_raw_yaw_rms_rad_s": 0.07436762033682935,
+      "maximum_observed_steering_rms": 0.015763640372025208,
+      "minimum_required_window_speed_m_s": 0.9269472161412492,
+      "missing_windows": 0,
+      "observed_mean_command_jitter": 0.0011874663911380244,
+      "observed_mean_geometric_rmse_m": 0.022102097319510742,
+      "required_windows": 20
+    }
+  },
+  "candidate": {
+    "candidate_rank": 1,
+    "command_jitter": 0.00623726652972583,
+    "completed": 60,
+    "drive_evaluated": true,
+    "eligible": false,
+    "generation": 21,
+    "genome_id": 2081,
+    "genotype_sha256": "369c307f11d669f6a8c7913c2d8f83b163466b4a34d098207c5e01200d3803d0",
+    "geometric_rmse_m": 0.01397259509890525,
+    "maximum_straight_steering_rms": 0.014746660674010221,
+    "maximum_straight_yaw_rms_rad_s": 0.0984379945847831,
+    "minimum_straight_speed_m_s": 0.872140076014209,
+    "missing_windows": 0,
+    "model_file": "champions\\generation-0021-rank-1.pkl",
+    "paired_time_ratio": 1.0164842776007779,
+    "reasons": [
+      "straight_speed"
+    ],
+    "retention_completed": 20,
+    "shared_finishes": 60,
+    "steering_evaluated": true,
+    "straight_yaw_rms": 0.04035303359213058,
+    "training_fitness": 77.6451136343484
+  },
+  "candidate_remains_unqualified": true,
+  "captured_report_source_sha256": "3057cb467d79aa99b724a00f2fe933baa640f5dd4ef01bf1e2aca2896e5b3a2f",
+  "inputs": {
+    "baseline_manifest": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\frozen\\manifest.json",
+      "sha256": "05982391fe2db2dff7d79035bec0668edfa7458cd84c6c13f63249f3ae56cbfa"
+    },
+    "candidate": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation-cache\\369c307f11d669f6a8c7913c2d8f83b163466b4a34d098207c5e01200d3803d0.json",
+      "sha256": "fd03bfffc6a48d55e098838a8729a4edc819b2d70308b40d1e4a32e9ee9badbd"
+    },
+    "candidate_model": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0021-rank-1.pkl",
+      "sha256": "26e19823c830e87df70f8ddd65b5d80fb33bf71ebc922a5e87f8e68dc010c438"
+    },
+    "fast": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\fast-neat-g134.json",
+      "sha256": "8425802a1658f2ad426a56479ac119cc7fd066f3fe82c10d231a8cad91d3ed7a"
+    },
+    "fast_model": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\frozen\\fast-neat-g134.pkl",
+      "sha256": "6114a6859544fec99c26dad124d7ac44d9b0e077a43102532f5fca02114b4314"
+    },
+    "pid": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\pid-fullspeed-1m.json",
+      "sha256": "737370e16cba9451ad06f76084f53ffdc11801d5999193bf7cbe590a46b1ac93"
+    },
+    "pid_model": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\frozen\\pid-fullspeed-1m.json",
+      "sha256": "c6c68b53342600db0078e991bbb729064d829d360c4840a720dbf5e66d94c24b"
+    },
+    "protocol": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\prepared\\protocol.json",
+      "sha256": "20c6741dbac45b07a85bb935845dbcad1a803202a40e015895f4ce344605d884"
+    },
+    "report_source": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\research\\report_quality_candidate_pid.py",
+      "sha256": "3057cb467d79aa99b724a00f2fe933baa640f5dd4ef01bf1e2aca2896e5b3a2f"
+    },
+    "suite": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\prepared\\suite\\suite.json",
+      "sha256": "60ba23f4dd6dc0d0d76b2cb646cc65acd003f01beb2bb22108870d9755c21ff3"
+    },
+    "training_report": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\results\\neat-quality-speed-v1\\training\\report.json",
+      "sha256": "96ba730ac2169a40c7ebead91b1c453fa77d7e1e82182d83b7be1c356832f583"
+    }
+  },
+  "models": {
+    "candidate": {
+      "controller_semantics": "mirrored-sensor-history-v1",
+      "generation": 21,
+      "sha256": "26e19823c830e87df70f8ddd65b5d80fb33bf71ebc922a5e87f8e68dc010c438"
+    },
+    "fast": {
+      "controller_semantics": "mirrored-sensor-history-v1",
+      "generation": 134,
+      "sha256": "6114a6859544fec99c26dad124d7ac44d9b0e077a43102532f5fca02114b4314"
+    },
+    "pid": {
+      "parameters": {
+        "approach_command": 0.40813894373330745,
+        "base": 1.0,
+        "corner_supervision": false,
+        "derivative_filter_s": 0.1,
+        "integral_limit": 0.4,
+        "kd": 0.030299083152036183,
+        "ki": 0.08721231757152294,
+        "kp": 0.33206541625491787,
+        "loss_hold_s": 0.7382309523604921,
+        "minimum_command": 0.03689846560293942,
+        "pivot_command": 0.5789689902404036,
+        "search_command": 0.5070105586192023,
+        "slowdown_gain": 4.0,
+        "turn_lead_m": 0.016964705975112876
+      },
+      "sha256": "c6c68b53342600db0078e991bbb729064d829d360c4840a720dbf5e66d94c24b"
+    }
+  },
+  "recorded_cap_m_s": 1.0,
+  "replay_command": "& .\\.venv\\Scripts\\python.exe 'C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\results\\neat-quality-speed-v1\\candidate-pid-development\\snapshots\\cfc2659d90bb4df9be692246831547704ab0933153c0cd064d515d1fb61e4467\\report-source.py' --snapshot 'C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\results\\neat-quality-speed-v1\\candidate-pid-development\\snapshots\\cfc2659d90bb4df9be692246831547704ab0933153c0cd064d515d1fb61e4467' --out 'C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\results\\neat-quality-speed-v1\\candidate-pid-development'",
+  "report_source_sha256": "3057cb467d79aa99b724a00f2fe933baa640f5dd4ef01bf1e2aca2896e5b3a2f",
+  "scope": "DEVELOPMENT / EXPLORATORY: repeatedly consulted primary validation; no fresh test or official winner promotion.",
+  "shared_success_comparisons": {
+    "candidate_vs_fast": {
+      "command_jitter": {
+        "left": 0.00623726652972583,
+        "right": 0.006529880738364467
+      },
+      "completion_time_s": {
+        "left": 6.115000000000305,
+        "right": 6.01583333333362
+      },
+      "geometry_lateral_rmse_m": {
+        "left": 0.01397259509890525,
+        "right": 0.014492818735852146
+      },
+      "shared_successes": 60,
+      "total_courses": 60,
+      "track_hashes": [
+        "0026df5338fd41323d26eeab19919d12b8947ce41a182e699257f0c63eb67234",
+        "008ea241708f30c30768da87d9b5cb8fd2e939a8c13bda54a3e25198a6f99913",
+        "02fc8df8c7867d647e65e7b1d944e8e9c50babb23366acea23770ff0e1f15d0b",
+        "087044a4607f691fcfbdbef4491e26cce7176f627fe04ec19c50eb57f94b6ce4",
+        "09f711850682f0a065bdcb29783a311204e1e4a48cad5571925c93b7e57f1c63",
+        "0f949b8db90c5178814600872efb9bf93ca728e52cf138df0686fedcd38da336",
+        "11292a1a7b6c2da2a8735118beee2de5b1968133ec8b459b77cccf65a938c8bd",
+        "128408349ceb89b9fd760006a19b46c32b6288aaaf0aa050ea45991cdfbcacab",
+        "14cd63eb90062681c925cad131a1926bcc46e0572d44ecc9cf60b8fabd24c7ac",
+        "15e2a8b6776c8c6bedc5eedff5201938d2acbabb78b2c108708859b2a7492227",
+        "1cad1040d84a75e7a9a15063c98e7482de019538ece640bb3c16d7e57fb32dbb",
+        "256ce27378e8d6ac3b0a12f61ec7e873269e37a495bfc8055416641d475adf48",
+        "26cb0d15766de0c1f7b32925785820aba273b630e593ffb1782723cf1eaeaf48",
+        "29fdc4aa155a155c23fd2ba50f119c46d3fa5540c000de129a7013b648ddc1e3",
+        "3108ee3dda1d2266be1b0ae27e10ce82a6409a9d682e9c3a5bea3cdc2e9d474c",
+        "3658e0e68e090b7b13989ed9f20fd85b290c1ac8b9c6b9a4085bdd6ec5fcc73e",
+        "36b628f18dff176e7f2995de6d04be92abdc261ea5151fac3a29f6603e92e6f9",
+        "38e1e920b11fc684a21fe49be1bfe7eeb70c362800a03cb98a3906db5da9ae1c",
+        "39d1f18294b1d872554f5895134ee1cc768c3a757484d5b5c53604256ee3bddf",
+        "3e46c67858921207d7bfda98bfb4fefb73ac6ff045c3d56809ea116cd45bb92c",
+        "42de3a741be79ba64c817ea8743272b7f0c2fa0de2ee9c9cbbddea9490b26632",
+        "46ab109bde786b8da35a4c91d7db43bc919fe71c96750695842cc12d4ed8b6c2",
+        "498c9b20281fc6f25d0f4050472bf8c3f2b8ff762e7d57423bd970aba025241d",
+        "4a0bf88b8253877921d2e017fa78faea80be28bde81e6c4ecbf0c9d88130b7f3",
+        "4e0cb27f5ede342d0cb6dec95044dc4673d774cb835124664d08c6f97882fcb3",
+        "52c8088b1c7a81525936c16287c1b74d2ff7506ea8de8ed23eb17b7985f5b072",
+        "5459479c439763a66dd7bd32497c13f85e0c635e4b27582c39d8e36dcab22f70",
+        "557fe969f3128cdbe229951a7a8689ad8b7f56dd8dfb9db5b0df48c27c672eca",
+        "55d47af7eb50b20320b5e3fd8d5b06531fe0862797c975e8271cfcd52699e818",
+        "578dc53f97720bb8e7f346791e0375a5d970f31e35577a8dbb627abb93bd6d2d",
+        "5a4c69cf785394ceaf15735b70a993584a43df8d8a005923e9a7a1f94d8c89d1",
+        "5cfe71ef614dc04a809e76f7e36a1793bfaa945e7fd7f17530f47b3bdbe3394f",
+        "61eb30bfa030b54a778cbe13f6eb6f5592d56e24c7d9b250a08563472842964e",
+        "622090e9f1df7b446fcd909170c9545f8c68848677a713270fed01ed4f007184",
+        "62623296f51ddba515be933fdbe1fcd723d075d534f4272d47af7139ed991c80",
+        "63c6396ad4a3ac19553981d548e827f2dd0592d2f8a50ce50502858e947fa64b",
+        "6918199aa2317a02a3c67264c1ebbad03e8cdf793f1744f53271998337720c37",
+        "6d1dca59f1b4efaae5177ae1407d1c8c3aee79c6e885cccead6c3acbb990551d",
+        "7f7c1e7579ad8d2ea11669ccde652e00cf0aeb335e8f8588ab9b87c0acf70a08",
+        "8981d78755ec17e418edd4ddca3ba3f54ec454ad949a307f5d6ddf484a484c3a",
+        "899eb140c12c024fa0ec1ade0c9390737086d89f16bccf482a46db206d67b2c1",
+        "99995290c03b8ed029d24a03a5b6ef82ac5d7f97d31a24ad87e191d356c73d7c",
+        "a9a0f6c88c3fb47b38fa1253033cf2c1dd35b3c14ae05235c541dcf71bc4165a",
+        "a9fad6e408d05fd98140f3caebe99f889c75b5e02560291fdf3ca90720430bfc",
+        "aa6d15bcc72089b2cf354f382bc084ec0c8b6ff1aa6ad195d462ed7c82e980f2",
+        "aab015570aac048ded98baa2afda778b6cd02d63d6b77fc2ea09f3238201ff48",
+        "ae6b4b17674161fe1403eaedd0f3b19efef1de6215e8c69b6388e87e24e87f29",
+        "ae980bd5df5c55d0d4424803fa47c3d2d134cba5ffe7dbba3796a5430c8cd661",
+        "aeb70047f630779859040b7ea4a533fb6f6ee455da6bb713c709498d3d3e5ca3",
+        "c88e3267bccd56c5d45ad79c1d980e5728b714b2f6d842fb987015881fdcd80d",
+        "ce0999bbd8e6dade1bfc40b0b57b55484f15fda979a9eb88696c371c28856471",
+        "d38f20a90659b53a1d79d35c56dfb650779596baa01df2ddb55d720e55676991",
+        "d573b5568f8fc91caa1611978f9fe9eb66ed5f4e2d6ddeded4e7d50f8f8e94e7",
+        "dc365339e36c7f6b43f8e75d57898d2715a0b44b713f077d3a4d6a6409cc5113",
+        "eb20642e91cc849e229c21d70621a98df4e4accdaa35a95c155be6f2f1d51449",
+        "ebf82de847245ee556d95054937aa270bdf042303be6879dabaa958b60967fd8",
+        "f54e2848d6f62e84e82f52415f18f4c0cdce4b0b284d799b1cf7b97a8a1e8994",
+        "f55505476aa46949d91e5b6625654587d4c19d80842b54df610e8ec7e9a7af68",
+        "fb53e1ee49a09a2d61394d822c4df9b395e5f6a30d93648159a4c6c6f54da840",
+        "fc1d7cb689d534c8ac1d0e91272b56c2d425851810a3fd266b058d4ecc84dd36"
+      ]
+    },
+    "candidate_vs_pid": {
+      "command_jitter": {
+        "left": 0.00618962495121818,
+        "right": 0.0011714248032951684
+      },
+      "completion_time_s": {
+        "left": 6.09209039548053,
+        "right": 7.122598870056898
+      },
+      "geometry_lateral_rmse_m": {
+        "left": 0.013987963623225668,
+        "right": 0.020565365333523686
+      },
+      "shared_successes": 59,
+      "total_courses": 60,
+      "track_hashes": [
+        "0026df5338fd41323d26eeab19919d12b8947ce41a182e699257f0c63eb67234",
+        "008ea241708f30c30768da87d9b5cb8fd2e939a8c13bda54a3e25198a6f99913",
+        "02fc8df8c7867d647e65e7b1d944e8e9c50babb23366acea23770ff0e1f15d0b",
+        "087044a4607f691fcfbdbef4491e26cce7176f627fe04ec19c50eb57f94b6ce4",
+        "09f711850682f0a065bdcb29783a311204e1e4a48cad5571925c93b7e57f1c63",
+        "0f949b8db90c5178814600872efb9bf93ca728e52cf138df0686fedcd38da336",
+        "11292a1a7b6c2da2a8735118beee2de5b1968133ec8b459b77cccf65a938c8bd",
+        "128408349ceb89b9fd760006a19b46c32b6288aaaf0aa050ea45991cdfbcacab",
+        "14cd63eb90062681c925cad131a1926bcc46e0572d44ecc9cf60b8fabd24c7ac",
+        "15e2a8b6776c8c6bedc5eedff5201938d2acbabb78b2c108708859b2a7492227",
+        "1cad1040d84a75e7a9a15063c98e7482de019538ece640bb3c16d7e57fb32dbb",
+        "256ce27378e8d6ac3b0a12f61ec7e873269e37a495bfc8055416641d475adf48",
+        "26cb0d15766de0c1f7b32925785820aba273b630e593ffb1782723cf1eaeaf48",
+        "29fdc4aa155a155c23fd2ba50f119c46d3fa5540c000de129a7013b648ddc1e3",
+        "3108ee3dda1d2266be1b0ae27e10ce82a6409a9d682e9c3a5bea3cdc2e9d474c",
+        "3658e0e68e090b7b13989ed9f20fd85b290c1ac8b9c6b9a4085bdd6ec5fcc73e",
+        "36b628f18dff176e7f2995de6d04be92abdc261ea5151fac3a29f6603e92e6f9",
+        "38e1e920b11fc684a21fe49be1bfe7eeb70c362800a03cb98a3906db5da9ae1c",
+        "39d1f18294b1d872554f5895134ee1cc768c3a757484d5b5c53604256ee3bddf",
+        "3e46c67858921207d7bfda98bfb4fefb73ac6ff045c3d56809ea116cd45bb92c",
+        "42de3a741be79ba64c817ea8743272b7f0c2fa0de2ee9c9cbbddea9490b26632",
+        "46ab109bde786b8da35a4c91d7db43bc919fe71c96750695842cc12d4ed8b6c2",
+        "498c9b20281fc6f25d0f4050472bf8c3f2b8ff762e7d57423bd970aba025241d",
+        "4a0bf88b8253877921d2e017fa78faea80be28bde81e6c4ecbf0c9d88130b7f3",
+        "4e0cb27f5ede342d0cb6dec95044dc4673d774cb835124664d08c6f97882fcb3",
+        "52c8088b1c7a81525936c16287c1b74d2ff7506ea8de8ed23eb17b7985f5b072",
+        "5459479c439763a66dd7bd32497c13f85e0c635e4b27582c39d8e36dcab22f70",
+        "557fe969f3128cdbe229951a7a8689ad8b7f56dd8dfb9db5b0df48c27c672eca",
+        "55d47af7eb50b20320b5e3fd8d5b06531fe0862797c975e8271cfcd52699e818",
+        "578dc53f97720bb8e7f346791e0375a5d970f31e35577a8dbb627abb93bd6d2d",
+        "5a4c69cf785394ceaf15735b70a993584a43df8d8a005923e9a7a1f94d8c89d1",
+        "5cfe71ef614dc04a809e76f7e36a1793bfaa945e7fd7f17530f47b3bdbe3394f",
+        "61eb30bfa030b54a778cbe13f6eb6f5592d56e24c7d9b250a08563472842964e",
+        "622090e9f1df7b446fcd909170c9545f8c68848677a713270fed01ed4f007184",
+        "62623296f51ddba515be933fdbe1fcd723d075d534f4272d47af7139ed991c80",
+        "63c6396ad4a3ac19553981d548e827f2dd0592d2f8a50ce50502858e947fa64b",
+        "6918199aa2317a02a3c67264c1ebbad03e8cdf793f1744f53271998337720c37",
+        "6d1dca59f1b4efaae5177ae1407d1c8c3aee79c6e885cccead6c3acbb990551d",
+        "7f7c1e7579ad8d2ea11669ccde652e00cf0aeb335e8f8588ab9b87c0acf70a08",
+        "8981d78755ec17e418edd4ddca3ba3f54ec454ad949a307f5d6ddf484a484c3a",
+        "899eb140c12c024fa0ec1ade0c9390737086d89f16bccf482a46db206d67b2c1",
+        "99995290c03b8ed029d24a03a5b6ef82ac5d7f97d31a24ad87e191d356c73d7c",
+        "a9a0f6c88c3fb47b38fa1253033cf2c1dd35b3c14ae05235c541dcf71bc4165a",
+        "a9fad6e408d05fd98140f3caebe99f889c75b5e02560291fdf3ca90720430bfc",
+        "aa6d15bcc72089b2cf354f382bc084ec0c8b6ff1aa6ad195d462ed7c82e980f2",
+        "aab015570aac048ded98baa2afda778b6cd02d63d6b77fc2ea09f3238201ff48",
+        "ae6b4b17674161fe1403eaedd0f3b19efef1de6215e8c69b6388e87e24e87f29",
+        "ae980bd5df5c55d0d4424803fa47c3d2d134cba5ffe7dbba3796a5430c8cd661",
+        "aeb70047f630779859040b7ea4a533fb6f6ee455da6bb713c709498d3d3e5ca3",
+        "ce0999bbd8e6dade1bfc40b0b57b55484f15fda979a9eb88696c371c28856471",
+        "d38f20a90659b53a1d79d35c56dfb650779596baa01df2ddb55d720e55676991",
+        "d573b5568f8fc91caa1611978f9fe9eb66ed5f4e2d6ddeded4e7d50f8f8e94e7",
+        "dc365339e36c7f6b43f8e75d57898d2715a0b44b713f077d3a4d6a6409cc5113",
+        "eb20642e91cc849e229c21d70621a98df4e4accdaa35a95c155be6f2f1d51449",
+        "ebf82de847245ee556d95054937aa270bdf042303be6879dabaa958b60967fd8",
+        "f54e2848d6f62e84e82f52415f18f4c0cdce4b0b284d799b1cf7b97a8a1e8994",
+        "f55505476aa46949d91e5b6625654587d4c19d80842b54df610e8ec7e9a7af68",
+        "fb53e1ee49a09a2d61394d822c4df9b395e5f6a30d93648159a4c6c6f54da840",
+        "fc1d7cb689d534c8ac1d0e91272b56c2d425851810a3fd266b058d4ecc84dd36"
+      ]
+    },
+    "fast_vs_pid": {
+      "command_jitter": {
+        "left": 0.006518668909553511,
+        "right": 0.0011714248032951684
+      },
+      "completion_time_s": {
+        "left": 5.9932203389833365,
+        "right": 7.122598870056898
+      },
+      "geometry_lateral_rmse_m": {
+        "left": 0.014604944359650375,
+        "right": 0.020565365333523686
+      },
+      "shared_successes": 59,
+      "total_courses": 60,
+      "track_hashes": [
+        "0026df5338fd41323d26eeab19919d12b8947ce41a182e699257f0c63eb67234",
+        "008ea241708f30c30768da87d9b5cb8fd2e939a8c13bda54a3e25198a6f99913",
+        "02fc8df8c7867d647e65e7b1d944e8e9c50babb23366acea23770ff0e1f15d0b",
+        "087044a4607f691fcfbdbef4491e26cce7176f627fe04ec19c50eb57f94b6ce4",
+        "09f711850682f0a065bdcb29783a311204e1e4a48cad5571925c93b7e57f1c63",
+        "0f949b8db90c5178814600872efb9bf93ca728e52cf138df0686fedcd38da336",
+        "11292a1a7b6c2da2a8735118beee2de5b1968133ec8b459b77cccf65a938c8bd",
+        "128408349ceb89b9fd760006a19b46c32b6288aaaf0aa050ea45991cdfbcacab",
+        "14cd63eb90062681c925cad131a1926bcc46e0572d44ecc9cf60b8fabd24c7ac",
+        "15e2a8b6776c8c6bedc5eedff5201938d2acbabb78b2c108708859b2a7492227",
+        "1cad1040d84a75e7a9a15063c98e7482de019538ece640bb3c16d7e57fb32dbb",
+        "256ce27378e8d6ac3b0a12f61ec7e873269e37a495bfc8055416641d475adf48",
+        "26cb0d15766de0c1f7b32925785820aba273b630e593ffb1782723cf1eaeaf48",
+        "29fdc4aa155a155c23fd2ba50f119c46d3fa5540c000de129a7013b648ddc1e3",
+        "3108ee3dda1d2266be1b0ae27e10ce82a6409a9d682e9c3a5bea3cdc2e9d474c",
+        "3658e0e68e090b7b13989ed9f20fd85b290c1ac8b9c6b9a4085bdd6ec5fcc73e",
+        "36b628f18dff176e7f2995de6d04be92abdc261ea5151fac3a29f6603e92e6f9",
+        "38e1e920b11fc684a21fe49be1bfe7eeb70c362800a03cb98a3906db5da9ae1c",
+        "39d1f18294b1d872554f5895134ee1cc768c3a757484d5b5c53604256ee3bddf",
+        "3e46c67858921207d7bfda98bfb4fefb73ac6ff045c3d56809ea116cd45bb92c",
+        "42de3a741be79ba64c817ea8743272b7f0c2fa0de2ee9c9cbbddea9490b26632",
+        "46ab109bde786b8da35a4c91d7db43bc919fe71c96750695842cc12d4ed8b6c2",
+        "498c9b20281fc6f25d0f4050472bf8c3f2b8ff762e7d57423bd970aba025241d",
+        "4a0bf88b8253877921d2e017fa78faea80be28bde81e6c4ecbf0c9d88130b7f3",
+        "4e0cb27f5ede342d0cb6dec95044dc4673d774cb835124664d08c6f97882fcb3",
+        "52c8088b1c7a81525936c16287c1b74d2ff7506ea8de8ed23eb17b7985f5b072",
+        "5459479c439763a66dd7bd32497c13f85e0c635e4b27582c39d8e36dcab22f70",
+        "557fe969f3128cdbe229951a7a8689ad8b7f56dd8dfb9db5b0df48c27c672eca",
+        "55d47af7eb50b20320b5e3fd8d5b06531fe0862797c975e8271cfcd52699e818",
+        "578dc53f97720bb8e7f346791e0375a5d970f31e35577a8dbb627abb93bd6d2d",
+        "5a4c69cf785394ceaf15735b70a993584a43df8d8a005923e9a7a1f94d8c89d1",
+        "5cfe71ef614dc04a809e76f7e36a1793bfaa945e7fd7f17530f47b3bdbe3394f",
+        "61eb30bfa030b54a778cbe13f6eb6f5592d56e24c7d9b250a08563472842964e",
+        "622090e9f1df7b446fcd909170c9545f8c68848677a713270fed01ed4f007184",
+        "62623296f51ddba515be933fdbe1fcd723d075d534f4272d47af7139ed991c80",
+        "63c6396ad4a3ac19553981d548e827f2dd0592d2f8a50ce50502858e947fa64b",
+        "6918199aa2317a02a3c67264c1ebbad03e8cdf793f1744f53271998337720c37",
+        "6d1dca59f1b4efaae5177ae1407d1c8c3aee79c6e885cccead6c3acbb990551d",
+        "7f7c1e7579ad8d2ea11669ccde652e00cf0aeb335e8f8588ab9b87c0acf70a08",
+        "8981d78755ec17e418edd4ddca3ba3f54ec454ad949a307f5d6ddf484a484c3a",
+        "899eb140c12c024fa0ec1ade0c9390737086d89f16bccf482a46db206d67b2c1",
+        "99995290c03b8ed029d24a03a5b6ef82ac5d7f97d31a24ad87e191d356c73d7c",
+        "a9a0f6c88c3fb47b38fa1253033cf2c1dd35b3c14ae05235c541dcf71bc4165a",
+        "a9fad6e408d05fd98140f3caebe99f889c75b5e02560291fdf3ca90720430bfc",
+        "aa6d15bcc72089b2cf354f382bc084ec0c8b6ff1aa6ad195d462ed7c82e980f2",
+        "aab015570aac048ded98baa2afda778b6cd02d63d6b77fc2ea09f3238201ff48",
+        "ae6b4b17674161fe1403eaedd0f3b19efef1de6215e8c69b6388e87e24e87f29",
+        "ae980bd5df5c55d0d4424803fa47c3d2d134cba5ffe7dbba3796a5430c8cd661",
+        "aeb70047f630779859040b7ea4a533fb6f6ee455da6bb713c709498d3d3e5ca3",
+        "ce0999bbd8e6dade1bfc40b0b57b55484f15fda979a9eb88696c371c28856471",
+        "d38f20a90659b53a1d79d35c56dfb650779596baa01df2ddb55d720e55676991",
+        "d573b5568f8fc91caa1611978f9fe9eb66ed5f4e2d6ddeded4e7d50f8f8e94e7",
+        "dc365339e36c7f6b43f8e75d57898d2715a0b44b713f077d3a4d6a6409cc5113",
+        "eb20642e91cc849e229c21d70621a98df4e4accdaa35a95c155be6f2f1d51449",
+        "ebf82de847245ee556d95054937aa270bdf042303be6879dabaa958b60967fd8",
+        "f54e2848d6f62e84e82f52415f18f4c0cdce4b0b284d799b1cf7b97a8a1e8994",
+        "f55505476aa46949d91e5b6625654587d4c19d80842b54df610e8ec7e9a7af68",
+        "fb53e1ee49a09a2d61394d822c4df9b395e5f6a30d93648159a4c6c6f54da840",
+        "fc1d7cb689d534c8ac1d0e91272b56c2d425851810a3fd266b058d4ecc84dd36"
+      ]
+    }
+  },
+  "snapshot": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\results\\neat-quality-speed-v1\\candidate-pid-development\\snapshots\\cfc2659d90bb4df9be692246831547704ab0933153c0cd064d515d1fb61e4467",
+  "snapshot_manifest_sha256": "cfc2659d90bb4df9be692246831547704ab0933153c0cd064d515d1fb61e4467"
+}

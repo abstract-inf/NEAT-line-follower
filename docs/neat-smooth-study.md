@@ -164,3 +164,18 @@ Delivery verification on 23 November 2026: **58 tests passed** across the new wo
 ## Archive audit outcome — 24 November 2026
 
 The completed audit found **0/14 qualifying existing candidates**. Completion remained 58–60/60 at 1 m/s and 20/20 at 0.5 m/s, but every candidate violated the speed, physical yaw and steering requirements on some straight windows. Perfectly centered isolated starts were smooth; post-turn recovery exposed oscillation. Seed 1 generation 134 averaged 0.972 m/s on isolated straights and 0.830 m/s on post-turn straights. The [audit report](../runs/neat-smooth-study-v1/audit-review/report.md) saves all candidate results, the five-parent breakdown, limitations, reproducible JSON and PNG/SVG figures. The planned pilot can proceed without `--force-pilot`; no pilot was launched while reviewing these results.
+
+## Completed paired pilot outcome
+
+Both seed-1 branches completed their 100-generation budgets. The frozen `review-pilot` command verified shared parents, evolution seed, references and all generation batches, and recorded `successful=false`: **neither branch produced a fully qualifying champion, so confirmation is blocked.** Actual training budgets were 60,000 episodes (old) and 60,012 (smooth), with 8,000 validation episodes each. All champions retained 20/20 low-speed completions.
+
+Straight yaw/steering gates passed for 84/100 smooth-fitness champions and 0/100 old-fitness champions. The smooth run nevertheless sacrificed speed. Its generation-83 champion completed 60/60, improved geometric RMSE and whole-course jitter against the parent, and passed the straight motion gates, but sustained about 0.713 m/s and took 12.07% longer on shared successful tracks. It is an illustrative trade-off, not a qualifying winner. The final smooth champion was slower than the target and had worse overall command jitter despite low straight yaw.
+
+The [paired pilot report](../results/neat-smooth-study-v1/pilot-comparison/report.md) records all champion metrics, preserved model paths/hashes, three PNG/SVG figure pairs and a diagnostic rescore showing that the new validation fitness can prefer a slower smooth controller. This supports revisiting the speed/smoothness reward balance in a separate protocol rather than automatically starting confirmation. These are one-lineage repeated-validation findings, not fresh test results. Runtime worker counts changed from 2 in the old run to 4/6/8 in the smooth run, so logged wall-time differences do not isolate fitness efficiency.
+
+Regenerate the report without simulation or evolution:
+
+```powershell
+& .\.venv\Scripts\python.exe run_neat_smooth_study.py review-pilot
+& .\.venv\Scripts\python.exe research/compare_smooth_pilots.py
+```

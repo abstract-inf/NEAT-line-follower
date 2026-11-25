@@ -1,0 +1,39 @@
+NEAT Training Process Flowchart
+Initialize Speed Range
+(100 to 500 px/s)
+Outer Loop: Training for Each Speed
+Yes All Speeds Processed?
+No
+Load NEAT & Robot
+Configurations
+Initialize/Restore NEAT Population
+(Current Speed)
+Inner Loop: Generations for Current Speed
+Yes Max Generations Reached
+(500 Gen.)?
+No
+Start New Generation
+Genome Evaluation
+(ParallelProcessing)
+Has Finished For Each Genome in Population
+No
+Yes Robot Finished
+(Green/Red Zone)?
+No
+Simulate Robot NEAT Evolutionary Operators
+(Time-Limited)
+Selection
+Read Sensors, Take Action,
+Update State
+Crossover
+Calculate Incremental Fitness
+Mutation
+Return Final Fitness
+Collect All Genome Fitnesses
+Save Generation Checkpoint
+Save Best Genome
+(Current Speed)
+Save Performance Statistics
+(Current Speed)
+Fig. 3: NEAT Training Process Flowchart
+11

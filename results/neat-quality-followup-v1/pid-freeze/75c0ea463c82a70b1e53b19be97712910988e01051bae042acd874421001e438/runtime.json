@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "Pillow": "12.3.0",
+    "matplotlib": "3.11.2",
+    "mujoco": "4.0.0",
+    "neat-python": "0.92",
+    "numpy": "2.5.4"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+}

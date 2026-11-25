@@ -1,0 +1,99 @@
+{
+  "name": "smooth-speed-11483628869999077559",
+  "sections": [
+    {
+      "kind": "straight",
+      "length": 1.0277631647185654,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-chicane"
+    },
+    {
+      "kind": "straight",
+      "length": 0.5996275116908083,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-chicane"
+    },
+    {
+      "kind": "straight",
+      "length": 0.4032139639670562,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-chicane"
+    },
+    {
+      "kind": "straight",
+      "length": 0.4826926551134533,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-chicane"
+    },
+    {
+      "kind": "straight",
+      "length": 0.46915043293905034,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "straight",
+      "length": 6.898380503470351,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-straight"
+    }
+  ],
+  "start": [
+    -4.906911997228636,
+    -0.21200033985129318,
+    0
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 11,
+  "resolution": 0.002,
+  "seed": 11483628869999077559,
+  "difficulty": "speed",
+  "split": "validation",
+  "generator_version": "2.0",
+  "runout": 0.25
+}

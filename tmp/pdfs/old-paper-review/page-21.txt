@@ -1,0 +1,24 @@
+[13] Stanley, K. O., Bryant, B. D. & Miikkulainen, R. Real-time neuroevolution in
+the nero video game. Trans. Evol. Comp 9, 653–668 (2005). URL https://doi.
+org/10.1109/TEVC.2005.856210.
+[14] Stanley, K. O., D’Ambrosio, D. B. & Gauci, J. A hypercube-based encoding for
+evolving large-scale neural networks. Artificial life 15, 185–212 (2009).
+[15] Alitappeh, R. J., Mahmoudi, N., Jafari, M. R. & Foladi, A. – (ed.) Autonomous
+robot navigation: Deep learning approaches for line following and obstacle avoid-
+ance. (ed.–) 2024 20th CSI International Symposium on Artificial Intelligence
+and Signal Processing (AISP), 1–6 (IEEE, 2024).
+[16] Huang, J., Chen, Y., Mumtaz, J. & Zhong, L. Neuro-evolution of augment-
+ing topologies for dynamic scheduling of flexible job shop problem. Engineering
+Proceedings 75 (2024).
+[17] Pygame. Pygame (2019). URL https://www.pygame.org/news.
+[18] Stanley, K. O. Welcome to neat-python’s documentation! – neat-python
+0.92documentation(2015). URLhttps://neat-python.readthedocs.io/en/latest/.
+(accessed May 08, 2025).
+[19] Macenski, S., Foote, T., Gerkey, B., Lalancette, C. & Woodall, W. Robot oper-
+ating system 2: Design, architecture, and uses in the wild. Science Robotics 7,
+eabm6074 (2022).
+[20] Koenig, N. & Howard, A. – (ed.) Design and use paradigms for gazebo, an open-
+source multi-robot simulator. (ed.–)2004 IEEE/RSJ international conference on
+intelligent robots and systems (IROS)(IEEE Cat. No. 04CH37566), 2149–2154
+(IEEE, 2004).
+21

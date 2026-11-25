@@ -1,0 +1,59 @@
+{
+  "scope": "User-accepted development selection; not five-seed confirmation or a fresh-test winner.",
+  "cap_m_s": 1.0,
+  "model_sha256": "9a04af4033ce75ab745422ee1183bb089756b92c5aab1f47bba7cf1cd067208e",
+  "source": "runs/neat-simple-pilot-50-v1/development/lambda-0/champions/generation-0044-rank-0.pkl",
+  "genotype_sha256": "141cba6068602d96d2b699a61137016a69359a31c4cc9fd3aad4a9cf671625d4",
+  "protocol_sha256": "a95c244174cc921b423827cde6e1789971d6e1044a71cfdca6f17cc0b8ffaac5",
+  "report_sha256": "5772a6f6b9fe887c41eedb3d907a6a572a5ffe375d477e7285826b87d309392f",
+  "snapshot_sha256": "5c4e5e5ea6f1f2461040cdaba557279f983f78da5daa11f47a382f5f373a673a",
+  "decision_sha256": "30d804fc54c96fa284701f466b6d0c26a0c4559ef724440ac61404c73e0c951f",
+  "primary": {
+    "completed": 60,
+    "completion_by_group": {
+      "corner": {
+        "completed": 10,
+        "courses": 10
+      },
+      "mixed": {
+        "completed": 30,
+        "courses": 30
+      },
+      "speed": {
+        "completed": 20,
+        "courses": 20
+      }
+    },
+    "courses": 60,
+    "failures": {},
+    "maximum_straight_yaw_rms_rad_s": 0.2693375063265039,
+    "mean_command_change_rms": 0.08570123529940757,
+    "mean_geometric_rmse_m": 0.01723121348044493,
+    "minimum_straight_speed_m_s": 0.9548270187802986,
+    "missing_windows": 0
+  },
+  "retention": {
+    "completed": 20,
+    "completion_by_group": {
+      "corner": {
+        "completed": 4,
+        "courses": 4
+      },
+      "mixed": {
+        "completed": 10,
+        "courses": 10
+      },
+      "speed": {
+        "completed": 6,
+        "courses": 6
+      }
+    },
+    "courses": 20,
+    "failures": {},
+    "maximum_straight_yaw_rms_rad_s": 0.12634438133455725,
+    "mean_command_change_rms": 0.0713144495359317,
+    "mean_geometric_rmse_m": 0.0033903972691577593,
+    "minimum_straight_speed_m_s": 0.4776414069296265,
+    "missing_windows": 0
+  }
+}

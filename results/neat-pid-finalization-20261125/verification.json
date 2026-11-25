@@ -1,0 +1,16 @@
+{
+  "verified_episode_records": 600,
+  "fresh_unique_geometries": 150,
+  "course_groups": {
+    "mixed": 90,
+    "speed": 30,
+    "corner": 30
+  },
+  "prior_protected_geometries_checked": 17108,
+  "prior_geometry_overlap": 0,
+  "controller_hashes_match": true,
+  "evaluation_source_hashes_match": true,
+  "cap_and_track_alignment": true,
+  "no_episode_errors": true,
+  "scope": "Exploratory single-ancestry prototype; original validation quality gates remain failed."
+}

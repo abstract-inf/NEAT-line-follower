@@ -1,0 +1,96 @@
+{
+  "scope": "Exploratory fresh-test comparison of a validation-ineligible NEAT prototype, one ancestry; no official winner or five-seed confirmation.",
+  "controllers": {
+    "neat-prototype.pkl": {
+      "source": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-joint-study-v1\\development\\joint\\champions\\generation-0049-rank-1.pkl",
+      "sha256": "e1be2276a7acc26f0b1eaaa1d716602862cb6d99721dbf664e048be7cd8be78c"
+    },
+    "pid-100.json": {
+      "source": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\pid-quality-tuning-v1\\cap-100\\pid-fullspeed.json",
+      "sha256": "d6df8d4275b568583dcaf652a131f7c3f17f4d6923998828eb1322562c78b5cc"
+    },
+    "pid-050.json": {
+      "source": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\pid-quality-tuning-v1\\cap-050\\pid-fullspeed.json",
+      "sha256": "dabef23380b282c736540529daaca1951ba9ae8f7f4ea5f0ef002c80e80048ca"
+    }
+  },
+  "dependencies": {
+    "neat-python": "0.92",
+    "mujoco": "4.0.0",
+    "numpy": "2.5.4",
+    "Pillow": "12.3.0",
+    "matplotlib": "3.11.2"
+  },
+  "engine_source_files": {
+    "configs/geometry-freeze.json": "2b9aca6a6f9ad03033c9f97364cf604daa07ec189908358f8d1ff1c9450b54f8",
+    "configs/geometry-pilot.json": "6e72e701e9f230700e3880f67c6e76ba960d552473d3fe36cc8305947f883b96",
+    "configs/pid-pilot.json": "3e4bc002b29d091f43a9bfa17ea4cf63d60930df710af7e9028f72210ed1393c",
+    "configs/progressive-generator.json": "64267b4a982ee66fb1957f2cd071da35eb1dc9295f52f1f8bbf0e0425c436ab7",
+    "configs/robot-competition.json": "147b896a4c334b093adefca031c46ee3d7ecfa62afeead4ba84f94f453d9fbaf",
+    "configs/robot-offset-140mm.json": "6d897814c2b0c9c6de4b1e57168b350b6db90deb03e92681283ed3d3f0623b31",
+    "configs/robot-paper.json": "3817c27d0d81efeb5efe5ea73fb1be33b9e4934f7d16ab984b2006815a358c14",
+    "line_follower/__init__.py": "535514864b6f53a1df36827db1fa95d055ff7be59abcbb0d784037f13e3c145d",
+    "line_follower/__main__.py": "ca604455417822edfb4767e4050adfdb06241a6a2cdc35e83c9e3d6a015dacb3",
+    "line_follower/analysis.py": "ae3b4accc8986334f9404028f9ee60740be228c4981ffa62c39a0c00a96530eb",
+    "line_follower/assets/robot.xml": "25f65c3f0ae58a9702d71a87605466209ac61a3d05cb280ced5cbe4fb67f2e92",
+    "line_follower/config.py": "80706622e7c09258d8f903859f2bab4f37094a47f00ade0d485575480be268fe",
+    "line_follower/configs/neat-corner.txt": "c2f4f46ad0c9b9e8bc88bc1fc73e636a57a0cb4d2e347d69ea7502bb8564b579",
+    "line_follower/configs/neat.txt": "361d1cf1f23f357570ce78106193085c9598fd9bd72cdc656bff447d31713906",
+    "line_follower/controllers.py": "dcbcbe65f895b22eeee1c6527ebe9b42394049b661429318028e5212cee40496",
+    "line_follower/curriculum.py": "059ff12a5f8636d6de63354235096796333cf4dd0f87fea7703bec2e9a0c7717",
+    "line_follower/diagnostics.py": "6c98b6d66607cf263c6244153c2bd6d051019ecf7b161a51ff72e9ed644110a1",
+    "line_follower/episodes.py": "3ac14c42a4093ddda6c5bf387aabb996f01cdf514da20bea24b739b86b3b188f",
+    "line_follower/experiments.py": "b6d1849e4a3ae8b18b7bf17b1729520dd66bde0ea07290906bc76a10bb623b87",
+    "line_follower/fast_study.py": "3bb8d9b9df1957c611e62628cface0590cdd9650e42ac33ec76d7371a30bdc7a",
+    "line_follower/fitness.py": "613c20d2bb5c9c03b4b608c17caf29e6eb1acc78b2f16f785e042533b8f6ea92",
+    "line_follower/geometry_pilot.py": "435e936acf2aed22cfe932eeba5cb33c68e4016961effa534e7ee9e64ddf3f61",
+    "line_follower/gpu_backend.py": "82533d33f3c1771bfff60d9e5dde6f458127f6693629ee0464af7206120cd372",
+    "line_follower/gpu_probe.py": "309ba4c8a8c96df832241b8dba8b78c20eb299d4d2ac1ef20f3b24805dc6a3cf",
+    "line_follower/pid.py": "51f45b9adb64a46d63da7d937aab7933b8e607bc28b5e3c7e6719c12e5c4204e",
+    "line_follower/pid_experiments.py": "d0b20f85c75896cdbaa85e0d861f37bdbb7d96a7344a27a3a56f98dc3192aa05",
+    "line_follower/population_view.py": "c863daba5dea74a931a56987b87b7ad3e9989f3cd6e9ab61cc65c475ca112f89",
+    "line_follower/robot_design.py": "5bff90c8f9106df15403bc51d7173afabc8250385185bd671e2aae40c52f42fa",
+    "line_follower/simulation.py": "01cb0f034546bddce8a83251b58bb1c46645d9e2ba6fb8679249827bf6b82cea",
+    "line_follower/suites.py": "264a2d27d13de14ab4464767f239001e238fae1799bfab5f5876428cdd0ce80f",
+    "line_follower/tracks.py": "b5b906a48147b4427c1f4c88a5138ea2b115e4c6eca60480466aa753df33dedc",
+    "line_follower/validation.py": "c9a4108d18f0874ff5f7b58a28d23a3780ab2c0f2b484c5667688a2a046e4c82",
+    "line_follower/viewer.py": "cdc99d23c23ebf2e8dcb3ce4a1b253387e9c7d298e3b7e7e7c3668ce43ea1fa6",
+    "neat_joint_study/fitness.py": "ed59192f90f476958e2ab0138eb3e5e94125a42d7744d668d6056b332da0f31f",
+    "neat_joint_study/protocol.py": "f857561f520cedcc47ec1d2a758275523881bf9a48a242881d684448423a1fdf",
+    "neat_quality_followup/__init__.py": "d93b1c9e7fd338a906a7cad14a117da4f1c20df7b80503f9478d97d2bc005949",
+    "neat_quality_followup/fitness.py": "db16573f9a0b988eb9ff6c5f9eaf1b088d601cce3e8913eb0e204916498b7edd",
+    "neat_quality_followup/protocol.py": "28bde82e0044b27258a58b0a12d19a608d46ae4d53fd1b48cab5d6430542cd15",
+    "neat_quality_followup/training.py": "b28dfc4fb45c4ac239a48919814d29be8d62d3435656aafaa36ab49ca036d941",
+    "neat_quality_study/__init__.py": "561f3eca9ba7cedb0a3361ee81d8c1bcbd1fb67b68cefb23b1869149a69df6d0",
+    "neat_quality_study/analysis.py": "9dce1ce78fbbf51198ba2a2194cae768bebe7a183b4ef967ac012dc5ddacc1b3",
+    "neat_quality_study/fitness.py": "ee209f21bde238d0aee04149a90d64da7fea715c2b02087068c4ab143beba2ad",
+    "neat_quality_study/protocol.py": "8f48579a823e419370f63d2febafb19122af0c099fc90b254dbfb1490d806cba",
+    "neat_quality_study/training.py": "22a1b51c0fa8a6947e410d3e78cee676feadc262e248e51f35a438a425e9e386",
+    "neat_smooth_study/__init__.py": "8e24ab789717711fd528649eb7639d0087a1687ec4b0fccaf7c313ac47047fbc",
+    "neat_smooth_study/common.py": "ef5b36e832eba875803dab4bfc56e0909153e5436f128659732fa9581ec420a5",
+    "neat_smooth_study/courses.py": "6c36be0cd158d3957c75acd1fe390c62d3b464b46580377e87f84beabf5630e1",
+    "neat_smooth_study/engine.py": "2c003f485a1acbd2481b934344259e73dd3690e96e18f3d17c4451c9bffb89c3",
+    "neat_smooth_study/media.py": "4a2404d4252ba47d65bd8aeb8148aefc38b134160cc8771ae4e609ccd6d7ce06",
+    "neat_smooth_study/metrics.py": "9103c8156e392b3ec63946ccb5b81d968a467cb42a3860e8bffa9dba4a889e26",
+    "neat_smooth_study/reporting.py": "5505747460309b067550f68c26c28280f16d81acfd7f757d0ab2d6960c825ad5",
+    "neat_smooth_study/tuning.py": "6de8dbdd659a058c7d6e1335feb9d3aaf893c20ae52509b7eacbac52a70c631f",
+    "neat_smooth_study/workflow.py": "18a9e557778d424dfae7699e0d65775eb18e0c6e59e0c36ea27125ece5fdb382",
+    "requirements-lock.txt": "9c0ab183ae02c0aa4f14a9408f93d4746c71138039fb52a41bf09deed51da35d",
+    "run_neat_joint_study.py": "3ea67dcbf6de32feae5669eef437c6d80b4213d980a437f63f1f8809fae3a811",
+    "run_neat_quality_followup.py": "4e46db540d3db19812640b7a536ca63cf3570becbc6af861a39e6b119d0dd594",
+    "run_neat_quality_study.py": "6b8997a041de3eed312b20d04a6006e15edb486988eb1620ecf13e0ce27fd98f"
+  },
+  "report_source_sha256": "fe39a44e7346c0aeaced6b218f12a3a964ba9159b2636f1cdae86417269e2893",
+  "neat_selection": "Fixed joint g49 rank1: all60+20 complete, speed/yaw/steering/time pass; geometric RMSE and jitter fail. No test-based selection.",
+  "test_rule": {
+    "namespace": "finalization-heldout-20261125",
+    "mixed": 90,
+    "speed": 30,
+    "corner": 30,
+    "caps": [
+      0.5,
+      1.0
+    ]
+  },
+  "pid_150": "No eligible policy; excluded from this validated-baseline comparison and retained as failed tuning evidence."
+}

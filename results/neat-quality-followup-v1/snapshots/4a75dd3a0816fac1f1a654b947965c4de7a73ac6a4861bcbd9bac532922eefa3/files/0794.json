@@ -1,0 +1,183 @@
+{
+  "name": "advanced-1569949260107632248",
+  "sections": [
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.01679474928517083,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 3.141592653589793,
+      "radius": 0.19666884011127833,
+      "width": 0.01679474928517083,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.01679474928517083,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.01818158254233533,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -3.141592653589793,
+      "radius": 0.2402041469983759,
+      "width": 0.01818158254233533,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.01818158254233533,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "straight",
+      "length": 0.4359947997030622,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02608482359823862,
+      "feature": "straight"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 1.2935916205763935,
+      "radius": 0.3822729335848337,
+      "width": 0.016044742553912972,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.016044742553912972,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.021185074526115878,
+      "feature": "corner"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.021185074526115878,
+      "feature": "corner"
+    },
+    {
+      "kind": "straight",
+      "length": 0.3833852613370765,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.021185074526115878,
+      "feature": "corner"
+    },
+    {
+      "kind": "straight",
+      "length": 0.4693982027039153,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02614126816736733,
+      "feature": "straight"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.2149913725208203,
+      "radius": 0.1217617558262616,
+      "width": 0.020557131257864517,
+      "feature": "tight_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.020557131257864517,
+      "feature": "tight_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.0471975511965976,
+      "radius": 0.22729142739183694,
+      "width": 0.01226103198127227,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 2.0943951023931953,
+      "radius": 0.22729142739183694,
+      "width": 0.01226103198127227,
+      "feature": "s_curve"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.0471975511965976,
+      "radius": 0.22729142739183694,
+      "width": 0.01226103198127227,
+      "feature": "s_curve"
+    }
+  ],
+  "start": [
+    -0.09140637371694121,
+    0.1705951123874921,
+    0.19634336699494748
+  ],
+  "gaps": [
+    [
+      2.1124021028468354,
+      2.17796789730869
+    ]
+  ],
+  "branches": [
+    {
+      "at": 0.9712176242482786,
+      "length": 0.13344294644732466,
+      "angle": 1.5707963267948966,
+      "width": 0.02,
+      "crossing": true
+    },
+    {
+      "at": 2.372096093751861,
+      "length": 0.16553552554094658,
+      "angle": 1.5707963267948966,
+      "width": 0.02,
+      "crossing": false
+    }
+  ],
+  "arena_size": 4.0,
+  "resolution": 0.001,
+  "seed": 1569949260107632248,
+  "difficulty": "advanced",
+  "split": "training",
+  "generator_version": "1.0",
+  "runout": 0.25
+}

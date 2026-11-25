@@ -1,0 +1,43 @@
+{
+  "name": "smooth-speed-12162302621104857286",
+  "sections": [
+    {
+      "kind": "straight",
+      "length": 1.1842404972360263,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-turn"
+    },
+    {
+      "kind": "straight",
+      "length": 6.504909412398472,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-straight"
+    }
+  ],
+  "start": [
+    -2.980341374521912,
+    -2.3882211259038986,
+    0
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 7,
+  "resolution": 0.002,
+  "seed": 12162302621104857286,
+  "difficulty": "speed",
+  "split": "training",
+  "generator_version": "2.0",
+  "runout": 0.25
+}

@@ -1,0 +1,286 @@
+{
+  "formula": "Keep incomplete fitness; completed: 10*courses + 9*speed_utility/(1+quality_violation)",
+  "sources": {
+    "complete.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\complete.json",
+      "sha256": "c403d055a578c8cfc1b112daea0c676aa5ccf46f979b3e9bcc2329eabc84669e",
+      "bytes": 790
+    },
+    "fitness-calibration.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\results\\neat-quality-speed-v1\\fitness-calibration.json",
+      "sha256": "b7f35dfb3e953b74f2bf18af511b1439f9bc303f0cfc8c2f188708af5c090ee5",
+      "bytes": 399695
+    },
+    "generations.csv": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\generations.csv",
+      "sha256": "5a1608a826319b97aa1025d44b4a3f0c85ec15f30ab3b2f21bdfb252aa2afabb",
+      "bytes": 5418
+    },
+    "genome-fitness.csv": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\genome-fitness.csv",
+      "sha256": "18ffc2563c8a54c6692a0661e132a41aada3c3effed8ded0d09cd9b4c7826711",
+      "bytes": 2352581
+    },
+    "protocol.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\prepared\\protocol.json",
+      "sha256": "20c6741dbac45b07a85bb935845dbcad1a803202a40e015895f4ce344605d884",
+      "bytes": 1261164
+    },
+    "v1-fitness.py": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\prepared\\source\\neat_quality_study\\fitness.py",
+      "sha256": "ee209f21bde238d0aee04149a90d64da7fea715c2b02087068c4ab143beba2ad",
+      "bytes": 5638
+    },
+    "validation/generation-0000.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0000.json",
+      "sha256": "4a3b4d95e50d5ac0b53025a60599f18daaa84f93a05d3250a16b6b78c8ae616e",
+      "bytes": 2307
+    },
+    "validation/generation-0001.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0001.json",
+      "sha256": "2e26b1bdf02df97452a8d6e0b22d81137755351d1e46dc324e42f75d3f68e745",
+      "bytes": 2550
+    },
+    "validation/generation-0002.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0002.json",
+      "sha256": "daff7839b41f52a3fae598362e7782991cbae8be155fb69419d33f8032ff0e53",
+      "bytes": 2388
+    },
+    "validation/generation-0003.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0003.json",
+      "sha256": "f120a1e23a2de28e82ad0acc1cf04c84241244ac2f3868ac8b0ef7769529440f",
+      "bytes": 2276
+    },
+    "validation/generation-0004.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0004.json",
+      "sha256": "165fa93fbb5d77340a8228ff41137bd73ac7ce32cab8ba7e8a160a4be8675e3f",
+      "bytes": 2414
+    },
+    "validation/generation-0005.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0005.json",
+      "sha256": "3c6ca07b6e74cf92c4b7699bc6dcafeccbefcc363dad4fe49792dbda22e9151e",
+      "bytes": 2425
+    },
+    "validation/generation-0006.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0006.json",
+      "sha256": "cb88f9167b4536e40f52e22ff7498247e7ff8a5f4198ac6a8a58b32ddd915f73",
+      "bytes": 2289
+    },
+    "validation/generation-0007.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0007.json",
+      "sha256": "cd29bb231756f7695b38278a763508976f90818ce978a0c22be75bf8cedb5f34",
+      "bytes": 2479
+    },
+    "validation/generation-0008.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0008.json",
+      "sha256": "1ce263975da5206bc0490c7fb804569e79aa65752a571c4a07587cdd02d2b673",
+      "bytes": 2462
+    },
+    "validation/generation-0009.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0009.json",
+      "sha256": "b4307e5c3a442ed0a87f92cdfaccb6f1ec5216af3188a2b790421847b10a6adb",
+      "bytes": 2525
+    },
+    "validation/generation-0010.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0010.json",
+      "sha256": "e1be681d6dc6d02aac463ba3e2575bbbf0422cb1709f64a64193ffebcd5ff9ee",
+      "bytes": 2368
+    },
+    "validation/generation-0011.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0011.json",
+      "sha256": "f66ef6f8cdf24fc8f5c44f206168e5d5d79f412abebcdb22d7de518bf5543b7e",
+      "bytes": 2239
+    },
+    "validation/generation-0012.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0012.json",
+      "sha256": "5e69e23c6723a72df5d25f9f182e83e0af88ae8562347042f5a8ad950e7c008f",
+      "bytes": 2503
+    },
+    "validation/generation-0013.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0013.json",
+      "sha256": "a364489cb62df48bb9f67856b19999f97ebe82eae93bcab6fdf794afb655497d",
+      "bytes": 2432
+    },
+    "validation/generation-0014.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0014.json",
+      "sha256": "5223810ec92a40fc326f25c00e86e5f61c2a0efef7f5dc75899ecace00defa13",
+      "bytes": 2398
+    },
+    "validation/generation-0015.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0015.json",
+      "sha256": "16fb8b9f4fa1385a05696105535d164b9150f6737d73ddea5c8eff6a04e12926",
+      "bytes": 2335
+    },
+    "validation/generation-0016.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0016.json",
+      "sha256": "e864bb3ddf546d2641c5e0423a9714f6093e42e03d023836e12b7f71f6576467",
+      "bytes": 2204
+    },
+    "validation/generation-0017.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0017.json",
+      "sha256": "90280166dec3ca267c0310658da42338e70eb56eda3eada0a4fefeb95b253648",
+      "bytes": 2244
+    },
+    "validation/generation-0018.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0018.json",
+      "sha256": "1b204b12dd6cc71a5bf3430da09e9b5db76b04e37600a079cd000ed9d80b0afb",
+      "bytes": 2354
+    },
+    "validation/generation-0019.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0019.json",
+      "sha256": "d9ceff91c14a76fa9aad4d34cafe6a3c5af14c4391d957611c03b1e22cc371b8",
+      "bytes": 2357
+    },
+    "validation/generation-0020.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0020.json",
+      "sha256": "5426bce80aedb7e16a2b23fcb16146427cb1f705c6dc6159fc29a380cd8f16e5",
+      "bytes": 2424
+    },
+    "validation/generation-0021.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0021.json",
+      "sha256": "98cd658b299872604faac78f6437bc4355bd96940a146cd767036f9faa6a8eef",
+      "bytes": 2171
+    },
+    "validation/generation-0022.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0022.json",
+      "sha256": "b3a6664d3ed32d8d79fe3c61f6d1289815a0a41b105efbe9b28ba90251965af8",
+      "bytes": 2196
+    },
+    "validation/generation-0023.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0023.json",
+      "sha256": "ecea329a2a1b90eeef30ae431c3ee9cb1cad194f01f7cf232490c078df7d902c",
+      "bytes": 2171
+    },
+    "validation/generation-0024.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0024.json",
+      "sha256": "f4e35d01971e4c6f9a74b9b056237a61b287c5a4d3eebaf3a53fa29649df11e3",
+      "bytes": 2247
+    },
+    "validation/generation-0025.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0025.json",
+      "sha256": "e2b77631b3f839b2f34999d796de65891249197aa894ba2b441c4485fa89836b",
+      "bytes": 2246
+    },
+    "validation/generation-0026.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0026.json",
+      "sha256": "bcecc932ee6c77aa8ed31f4887116e3191805be49a0bf016ff5c087440c2ac57",
+      "bytes": 2264
+    },
+    "validation/generation-0027.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0027.json",
+      "sha256": "9797767a8e28c899812083a2fcb309637c7315a5ccbce59617c18794b6b59f9a",
+      "bytes": 2206
+    },
+    "validation/generation-0028.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0028.json",
+      "sha256": "3bfd856fec1e6b1d08461b1e4aa1b4f733646730615d201f333af59bb2a509e4",
+      "bytes": 2206
+    },
+    "validation/generation-0029.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0029.json",
+      "sha256": "c50e781fd96d7cbaea42717e76f3dbc83c5b551b15ab07ee3c2fe1f0bbbf4879",
+      "bytes": 2211
+    },
+    "validation/generation-0030.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0030.json",
+      "sha256": "52d949a248c77fe993726b1e24bfb852de452a1692b8943168afbafbe19ffc37",
+      "bytes": 2134
+    },
+    "validation/generation-0031.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0031.json",
+      "sha256": "cd8edfb09171fcd7289635aee345751a80b5e2230042ac2dabbebb58b6414aae",
+      "bytes": 2301
+    },
+    "validation/generation-0032.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0032.json",
+      "sha256": "6203f3f4cc4f9e638d2a964298445ac132909596d8d6f5b47f07e8ad893631a8",
+      "bytes": 2209
+    },
+    "validation/generation-0033.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0033.json",
+      "sha256": "77ca4c55b3538ac7274d8a36a26ec64eeabd1177dfa1be7e155fc25fb0431e36",
+      "bytes": 2304
+    },
+    "validation/generation-0034.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0034.json",
+      "sha256": "c88bd13f8fec2e65e13a8e19b9ec2aa4240e9d23cab029cd920148f098a46e04",
+      "bytes": 2383
+    },
+    "validation/generation-0035.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0035.json",
+      "sha256": "3c03df747238157a5f7f42adfe9bdcf5c4a811a4dd83f4987b67d51b4ab84974",
+      "bytes": 2261
+    },
+    "validation/generation-0036.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0036.json",
+      "sha256": "925b91df935431419672e30fcf56eca31cced7808ef2c9a9d3dc7684b60b8595",
+      "bytes": 2145
+    },
+    "validation/generation-0037.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0037.json",
+      "sha256": "80a7ce5c445e25b3461e8cfeb0d1fc2cd033b2d9b3688df230e26323e2f8abc9",
+      "bytes": 2257
+    },
+    "validation/generation-0038.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0038.json",
+      "sha256": "94ebdd00a78e8eed73f1a25afd8985d42447010febaa3d823dab7f53d642ee7c",
+      "bytes": 2162
+    },
+    "validation/generation-0039.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0039.json",
+      "sha256": "d15e8980d442edd4fc817afe8602952ca8b16ea4ebd6fff72bac499878523701",
+      "bytes": 2168
+    },
+    "validation/generation-0040.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0040.json",
+      "sha256": "d3b49e7e023983259306ae74e8b0b09fae5471bf37f8e3be7c9b2c6a35ca5562",
+      "bytes": 2160
+    },
+    "validation/generation-0041.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0041.json",
+      "sha256": "9486e246432c642b9b2cc95b182b4dbe969010929826a577fef231fe64177f55",
+      "bytes": 2132
+    },
+    "validation/generation-0042.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0042.json",
+      "sha256": "45aaff2bb795bff7cf37fe0db6c53da6639075504ae0eb491feb0f6c38a193b7",
+      "bytes": 2286
+    },
+    "validation/generation-0043.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0043.json",
+      "sha256": "0d1fc93a2493ce13b70342d06d7ce59a4204f4cdf9a85cd88c312a447b9ebe51",
+      "bytes": 2180
+    },
+    "validation/generation-0044.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0044.json",
+      "sha256": "5954925a949cdbf9def8db3ce2f743f62256ee85e418522b3b2bef4c6e4c1f46",
+      "bytes": 2222
+    },
+    "validation/generation-0045.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0045.json",
+      "sha256": "62e710e8f70ca8c35974c6949057f6c6749544b06c70f1ea21744b2d3d26d137",
+      "bytes": 2245
+    },
+    "validation/generation-0046.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0046.json",
+      "sha256": "00088a950d5c0fc965126d988873107555e32e412460fc73b4cd7699cc39e4d0",
+      "bytes": 2349
+    },
+    "validation/generation-0047.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0047.json",
+      "sha256": "7e7c033eac94c93c60bdf5aed5040b16d0c521fb7bc132d40ab9840beb1ea5f3",
+      "bytes": 2278
+    },
+    "validation/generation-0048.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0048.json",
+      "sha256": "e8568ead8a6b5bc30d6b9e0dfb82f3a569fc44794deb61d859abaea4578afec1",
+      "bytes": 2279
+    },
+    "validation/generation-0049.json": {
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation\\generation-0049.json",
+      "sha256": "b7c0a9da72cca70cb688751215deffb20660e8ccd6eee8703ae74b51861b7ceb",
+      "bytes": 2199
+    }
+  },
+  "diagnostic_source_sha256": "e16d4024a6b5ac56b7f7009d95da5bed8213ebd3c844232440a74722e38a2a62"
+}

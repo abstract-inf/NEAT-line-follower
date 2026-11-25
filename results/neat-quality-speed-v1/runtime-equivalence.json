@@ -1,0 +1,40 @@
+{
+  "scope": "Re-evaluated archived controllers on the same courses using the new chunked six-worker evaluator. Diagnostic reward components intentionally differ; physical behavior and independent measurements match.",
+  "checks": [
+    {
+      "controller": "stable-neat-g83",
+      "episodes": 80,
+      "behavior_fields": [
+        "completed",
+        "termination",
+        "control_steps",
+        "elapsed_s",
+        "progress",
+        "geometry_lateral_rmse_m",
+        "command_jitter",
+        "average_forward_speed_m_s",
+        "peak_forward_speed_m_s",
+        "straight_windows"
+      ],
+      "exact_match": true
+    },
+    {
+      "controller": "fast-neat-g134",
+      "episodes": 80,
+      "behavior_fields": [
+        "completed",
+        "termination",
+        "control_steps",
+        "elapsed_s",
+        "progress",
+        "geometry_lateral_rmse_m",
+        "command_jitter",
+        "average_forward_speed_m_s",
+        "peak_forward_speed_m_s",
+        "straight_windows"
+      ],
+      "exact_match": true
+    }
+  ],
+  "total_exactly_matching_episodes": 160
+}

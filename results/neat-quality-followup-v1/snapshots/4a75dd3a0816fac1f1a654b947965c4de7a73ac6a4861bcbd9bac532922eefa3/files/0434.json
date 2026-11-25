@@ -1,0 +1,179 @@
+{
+  "name": "intermediate-14073342890428880027",
+  "sections": [
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02075870692568107,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.23279982945912403,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02075870692568107,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.02075870692568107,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.21332289688177497,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02075870692568107,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.02075870692568107,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.26901087184274053,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02075870692568107,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.02075870692568107,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.22,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02075870692568107,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02075870692568107,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.012620323930091932,
+      "feature": "corner"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.012620323930091932,
+      "feature": "corner"
+    },
+    {
+      "kind": "straight",
+      "length": 0.26368699895183845,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.012620323930091932,
+      "feature": "corner"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -0.8170198308496271,
+      "radius": 0.4089292299688156,
+      "width": 0.026352834996580553,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.026352834996580553,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2697997440472077,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02632106328482045,
+      "feature": "straight"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 1.1590160238072418,
+      "radius": 0.35267566251782273,
+      "width": 0.02583003163545294,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02583003163545294,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.017108021144403303,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": 3.141592653589793,
+      "radius": 0.24152323989388755,
+      "width": 0.017108021144403303,
+      "feature": "u_turn"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.017108021144403303,
+      "feature": "u_turn"
+    }
+  ],
+  "start": [
+    0.2691689813607389,
+    0.1487977517547408,
+    1.335762681591488
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 4.0,
+  "resolution": 0.001,
+  "seed": 14073342890428880027,
+  "difficulty": "intermediate",
+  "split": "training",
+  "generator_version": "1.0",
+  "runout": 0.25
+}

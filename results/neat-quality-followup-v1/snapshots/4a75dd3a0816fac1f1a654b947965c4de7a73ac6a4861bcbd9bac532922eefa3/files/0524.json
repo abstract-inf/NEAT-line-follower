@@ -1,0 +1,75 @@
+{
+  "name": "corner-drill-17718987302209293704",
+  "sections": [
+    {
+      "kind": "straight",
+      "length": 0.35119914662541774,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025901155661184828,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.025901155661184828,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.28812111938082813,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025901155661184828,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.025901155661184828,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2389893012442779,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025901155661184828,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.025901155661184828,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.394727861476635,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025901155661184828,
+      "feature": "zigzag"
+    }
+  ],
+  "start": [
+    -0.82,
+    -0.15,
+    0.0
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 4.0,
+  "resolution": 0.001,
+  "seed": 17718987302209293704,
+  "difficulty": "advanced",
+  "split": "training",
+  "generator_version": "2.0",
+  "runout": 0.25
+}

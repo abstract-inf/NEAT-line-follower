@@ -1,0 +1,24 @@
+{
+  "generations": 50,
+  "signature": {
+    "protocol_sha256": "3af16e455460590a2252a6b15c7ba0c4a367dd9aae81843d607589bb8b51f3bf",
+    "parent_sha256": "4cc2ae72f09495868f15a0845c552297fe88b25cfb0944380fe56c15d620a18c",
+    "initial_population_sha256": "61a4d6c2ee61a7a344601f062a0b82c335b02ae99cf65378a704cb240efc645d",
+    "reference_validation_sha256": "804710a90dd01910030ced266e1b2f91800f0771afce94d1fc00251725bdc6f8",
+    "arm": "smooth",
+    "fitness_version": "continuous-quality-speed-1.0",
+    "settings": {
+      "generations": 50,
+      "population": 100,
+      "courses_per_genome": 6,
+      "validation_candidates_per_generation": 3,
+      "worker_recycle_tasks": 128,
+      "mask_cache_bytes": 67108864,
+      "cap_m_s": 1.0
+    },
+    "evolution_seed": 7036297164298145801
+  },
+  "training_episodes": 30000,
+  "qualified": false,
+  "best_sha256": null
+}

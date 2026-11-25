@@ -1,0 +1,30 @@
+{
+  "file": "pid-fullspeed.json",
+  "sha256": "d6df8d4275b568583dcaf652a131f7c3f17f4d6923998828eb1322562c78b5cc",
+  "candidate": "refine2-169",
+  "eligible": true,
+  "summary": {
+    "eligible": true,
+    "rejection_reasons": [],
+    "error": null,
+    "completed": 61,
+    "tracks": 61,
+    "suite_completed": 60,
+    "suite_tracks": 60,
+    "long_case_completed": true,
+    "speed_feasible": true,
+    "isolated_tracks": 10,
+    "required_isolated_windows": 10,
+    "observed_straight_windows": 20,
+    "minimum_isolated_speed_m_s": 0.9905121017281028,
+    "failure_penalized_mean_time_s": 8.383879781420445,
+    "steady_yaw_rms": 0.037019752427222725,
+    "command_jitter": 0.0011361117712037929,
+    "geometric_rmse_m": 0.021642928304507526,
+    "failure_terminations": {}
+  },
+  "signature": {
+    "protocol_sha256": "586d0120cd3be1e0c1000a12990078bc3719b25891cf1e2016731d00709289de",
+    "cap": 1.0
+  }
+}

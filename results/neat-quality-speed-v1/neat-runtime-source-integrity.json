@@ -1,0 +1,108 @@
+{
+  "scope": "Read-only source check against installed distribution RECORD; complements version pinning, not independent package authentication.",
+  "package_version": "0.92",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "files": {
+    "neat/__init__.py": {
+      "sha256": "78d592cd4d0c6fbd30a8387252d40e4a3048696eca7fcfcbbbd14be566f55724",
+      "installed_distribution_record_matches": true
+    },
+    "neat/activations.py": {
+      "sha256": "d97d19e1883c8f6f89cb54a2fd339fafef7968f5c285d31951947268b1cc6110",
+      "installed_distribution_record_matches": true
+    },
+    "neat/aggregations.py": {
+      "sha256": "a7aecb535a2b2500c42a389cc77ffca5065e15e5c7065e38fe23ee28e76ed2dd",
+      "installed_distribution_record_matches": true
+    },
+    "neat/attributes.py": {
+      "sha256": "bfc257b7c62976427c8b0bd729644be172a0b56d73826e01dc65d82cfde94035",
+      "installed_distribution_record_matches": true
+    },
+    "neat/checkpoint.py": {
+      "sha256": "4fb83e625a2bac540ee385a3699cd773f353ba95ca586a1b51623b51aaca696c",
+      "installed_distribution_record_matches": true
+    },
+    "neat/config.py": {
+      "sha256": "08ba969a2c267c02d130a0b174f594d0ce23f73fb4ddbe3dc2a5fcc0d4973343",
+      "installed_distribution_record_matches": true
+    },
+    "neat/ctrnn/__init__.py": {
+      "sha256": "5d842223705234e0f14cdc184c4d5df510ee2b125e2c9d4b13484de80438feb5",
+      "installed_distribution_record_matches": true
+    },
+    "neat/distributed.py": {
+      "sha256": "5ce3af43f163aaeb1835871c53541f0d97586208b0695fcd8287dd7486263537",
+      "installed_distribution_record_matches": true
+    },
+    "neat/genes.py": {
+      "sha256": "5c5745f748aa7e7a0530cc03adffb0ad7035cb128a5bc5111786c9fdaafdda9f",
+      "installed_distribution_record_matches": true
+    },
+    "neat/genome.py": {
+      "sha256": "03882dec6077167330dfb777d3a2d1960e91c125feaa22d6060ffdc0c819a1ea",
+      "installed_distribution_record_matches": true
+    },
+    "neat/graphs.py": {
+      "sha256": "bc6a825b8faca08cca6eb9e6d19462c7954be3191a32ec3dd6ba0f56096221a0",
+      "installed_distribution_record_matches": true
+    },
+    "neat/iznn/__init__.py": {
+      "sha256": "9ac8cd683987687695f2de4f5ca2b77c21df16b2893f8f49157f1b10d599efe9",
+      "installed_distribution_record_matches": true
+    },
+    "neat/math_util.py": {
+      "sha256": "2aad81e1bef41d58439bb459bc85970af9e17fcb7268f4cf8e442168658c12db",
+      "installed_distribution_record_matches": true
+    },
+    "neat/nn/__init__.py": {
+      "sha256": "c2101befdc947f40ea0044b2253eb7d9379855bc1c89113345d4836bc65c20d2",
+      "installed_distribution_record_matches": true
+    },
+    "neat/nn/feed_forward.py": {
+      "sha256": "fc4d63cc6fd9b85855885b64e04b3ad2040500d840eac7e573f6b272e06dfa2a",
+      "installed_distribution_record_matches": true
+    },
+    "neat/nn/recurrent.py": {
+      "sha256": "d3a0a6c14739803ccbd12bbb0a7bffb3b7f6d513e1fad15314912453ea5d0522",
+      "installed_distribution_record_matches": true
+    },
+    "neat/parallel.py": {
+      "sha256": "4cc5d471d63511b0c3062aebcfe613baba744d3fef5d4eaa9dff9efe8392a4cf",
+      "installed_distribution_record_matches": true
+    },
+    "neat/population.py": {
+      "sha256": "781ef164e75bb982b6699785456e18a3bbb32c2077874b37f1b381c2c2061039",
+      "installed_distribution_record_matches": true
+    },
+    "neat/reporting.py": {
+      "sha256": "59037840529d3d1f01adaeea53b1c043204efe5650274ab28144c4e01aedc60c",
+      "installed_distribution_record_matches": true
+    },
+    "neat/reproduction.py": {
+      "sha256": "325b4dd9068b7ae2ae6dc53a79e32b10105c49a1e625153dd3bd538f6bf3b728",
+      "installed_distribution_record_matches": true
+    },
+    "neat/six_util.py": {
+      "sha256": "317a9a78b3f9a23fd5ee3fe4119af358b251e2a4f6f930d3c42a89720e530b25",
+      "installed_distribution_record_matches": true
+    },
+    "neat/species.py": {
+      "sha256": "392150d6d9f366df668eee6db826ba026e04369a90346885dc7a862ac61f6624",
+      "installed_distribution_record_matches": true
+    },
+    "neat/stagnation.py": {
+      "sha256": "91044c4bce50c969b252de7236b19b6403bbc15e4dd439121cedb6c65195556a",
+      "installed_distribution_record_matches": true
+    },
+    "neat/statistics.py": {
+      "sha256": "ab97163d505979d708b0cd1dc6413f9152917411af7eb68cdb39ef6b5394471d",
+      "installed_distribution_record_matches": true
+    },
+    "neat/threaded.py": {
+      "sha256": "52793f3e802c0c798d647146f146f1b812c382e143f02e7fa9c0dd53e4fa29f9",
+      "installed_distribution_record_matches": true
+    }
+  },
+  "all_recorded_sources_match": true
+}

@@ -1,0 +1,50 @@
+deviation at each time step for a trial. For each speed, cumulative errors were aver-
+agedover10independentattemptstoaccountforrun-to-runvariability.Alldatawere
+sampled at 60 Hz.
+Figure4c illustratesthedistributionoflinedeviationfrequencies,sampledat60Hz
+and aggregated across 10 trials for each speed. The y-axis represents the deviation of
+therobot’sperceivedcenterfromtheactualline,wherenegativevaluesdenoteleftward
+veering and positive values denote rightward veering. At lower speeds (100–350 pix-
+els/s),boxplotsshowtightclusteringofdeviationsaround0,withnarrowinterquartile
+ranges and minimal outliers, indicating that the PID controller maintained alignment
+withhighconsistency.However,speedsabove350pixels/sshowbroaderdistributions,
+particularly at 450 and 500 pixels/s, where the interquartile ranges expand and more
+extreme deviations occur. This indicates a degradation in precision and robustness at
+higher speeds.
+Figure 4d shows the line position over time at a speed of 450 pixels/s, where the
+PID controller achieved the fastest lap time of 20.433 s (Table 2). The plot illustrates
+how the robot deviates from the track at sharp turns but manages to realign with the
+center line. The line position p(a,t) ∈[0,14] at attempt a and time step t is computed
+as in (15), where s(a,t) >0 indicates that sensor i is active:
+i
+ i (cid:80)1 = 4 0 i·s( i a,t) , if (cid:80) 14 s(a,t) >0,
+p(a,t) = (cid:80)14 s(a,t) i=0 i (15)
+p i
+(
+=
+a
+0
+,t−
+i
+1), otherwise.
+Edge cases:
+• Leftmost sensors active: p(a,t) =0
+• Rightmost sensors active: p(a,t) =14
+• Single sensor active: p(a,t) = sensor index
+Figure 4b shows the speed difference between left and right motors (left−right).
+ThisfigureshowshowwellthePIDcontrollermanagedtokeepthedifferencebetween
+the left and right motors’ speed balanced, especially at the speeds 400 and 450. Con-
+versely at the high speed of 500 pixels/second the difference was pronounced, the
+controller generally at that speed preferred the left motor over the right motor, hence
+the positive difference, this could be because of the consistent overshooting the robot
+does because of the high speed.
+Table 2 summarizes the total error cumulated, RMSE, average lap time, and the
+minimum(i.e.,shortest)timeforlapcompletionover10attemptsforeachspeed,plus
+minus their standard deviation. The total error, which is the cumulative sum of the
+line deviation for each attempt, was surprisingly the highest at the lowest speed of
+100 pixels/second with an average total error of 277.492, this positive error also sug-
+gests the possible tendency to have the line shifted a little bit to the right side of the
+robot. The speed of 450 pixels/second achieved the lowest absolute total error with a
+relatively high RMSE (3.165), it also finished the lap with a time of 20.433 making
+it the fastest lap time by the PID controller. The slowest lap time was at speed 100,
+14

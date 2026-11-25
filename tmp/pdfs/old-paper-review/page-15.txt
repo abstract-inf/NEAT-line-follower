@@ -1,0 +1,45 @@
+Speed Avg Total Commulative Error Avg RMSE Avg Time (s) Min Time (s)
+100 277.492(±0.541) 0.546(±0.381) 66.455(±0.175) 66.217
+150 169.208(±0.600) 0.604(±0.442) 42.998(±0.214) 42.800
+200 123.987(±0.851) 0.852(±0.685) 31.865(±0.071) 31.750
+250 117.112(±1.599) 1.599(±1.340) 26.277(±0.240) 25.850
+300 119.284(±2.183) 2.184(±1.810) 23.953(±0.238) 23.633
+350 109.271(±2.748) 2.748(±2.228) 21.440(±0.310) 20.867
+400 171.900(±3.045) 3.047(±2.400) 20.973(±0.246) 20.550
+450 106.864(±3.167) 3.165(±2.400) 21.300(±0.452) 20.433
+500 152.081(±3.173) 3.214(±2.367) 68.818(±35.415) 21.867
+Table 2: PID Attempts Error Metrics at Different Speeds each for 10 Attempts
+whichisexpectedwithsuchalowspeed.AnalysisofthePIDcontroller’sperformance
+across varying speeds revealed a consistent trend: a marked increase in the standard
+deviation of average task completion time, Root Mean Squared Error (RMSE), and
+totalerror.Thisescalatingvariabilitysignifiesasubstantialdecreaseinthecontroller’s
+predictabilityandconsistencyathigheroperationalspeeds.Thesefindingscollectively
+indicatethatthefixedsetofproportional(K ),integral(K ),andderivative(K )con-
+p i d
+stants, while effective at lower speeds, can only facilitate an optimal balance between
+robot speed and control stability up to a certain performance threshold. Beyond this
+point, the observed degradation in performance strongly suggests the necessity for
+recalibration or an adaptive tuning mechanism for the PID parameters.
+6.2 NEAT Analysis
+For the NEAT algorithm, training was conducted at various maximum robot speeds
+over500generations.AsshowninFigure5e,theevolutionofbestfitnessacrossgener-
+ations for each speed reveals a clear performance trend. Speeds from 100 to 300 px/s
+successfully learned to navigate the path and maintain a centered position, achieving
+highfitnessvaluesthatplateauedquickly.Incontrast,speedsrangingfrom350to500
+px/s consistently failed to learn correct steering control, with the robots often los-
+ing the line after a brief period of traversal. This indicates that the NEAT controller
+struggled to achieve stability and path completion at higher velocities.
+Figure5apresentsthecumulativeerror,whichmeasurestherobot’sdeviationfrom
+thecentrallinesensor.Acumulativeerrorof-31.60at150px/s,whichwasthelowest
+recorded, demonstrates strong performance at this speed. Another notable result was
+the cumulative error of -48.40 at 350 px/s. The negative sign of these errors suggests
+a tendency for the robot to maintain the line on the left side of the sensor’s central
+position.However,theseeminglylowerrorof98.97forthe500px/sspeedismisleading.
+The robot at this speed drifted, corrected itself but in the wrong direction, and then
+veered off the track completely, leading to an incomplete path and a low final error
+that does not reflect stable performance. This highlights the algorithm’s inability to
+consistently and correctly steer the robot at high speeds.
+Analysis of the higher speed trials suggests a common behavioral pattern where
+the algorithm, unable to maintain stability, defaults to a strategy of slowing down to
+avoidcrashes.Thisbehaviorindicatesthatforthesehigh-speedscenarios,theoptimal
+15

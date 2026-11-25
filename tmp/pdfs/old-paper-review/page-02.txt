@@ -1,0 +1,46 @@
+1 Introduction
+In the field of robotics, AI has seen a huge development in algorithms used to control
+robots, such as using a Q-learning controller in line-following robots [1] or employ-
+ing deep reinforcement learning for robotics in wheeled navigation, legged navigation,
+and aerial navigation [2]. Artificial neural networks (ANN) have become a wide field
+of research in robotics; moreover, NeuroEvolution has been shown to be a worthy
+competitor of reinforcement learning in developing and optimizing ANNs to control
+robots [3]. Line-following robots are designed to detect and follow a generally pre-
+defined path. These systems have proven valuable in warehouse automation to move
+goodsfromoneplacetoanother[4].Amongthemanytechniquesdevelopedtocontrol
+line-following robots, the PID controller stands out. The PID controller is the most
+popular controller for controlling line-following robots, and some studies have shown
+that NEAT can be used to evolve ANNs for controlling autonomous vehicles, offering
+promising avenues to develop more sophisticated and adaptable robotic systems [5].
+Traditional line following robots use a PID controller to control the stability of the
+robotontheline[6].However,thePIDcontrollerhasseverallimitations.Firstly,diffi-
+cultmanualtuningofthethreeconstants(K ,K ,andK ),whichismostlyachieved
+p i d
+using a heuristic approach for line following robots [7]. Secondly, PID controllers by
+themselves “could not handle sharp 45 degree turns” [7], which highlights the need
+forarobustmethodtomanagesuchenvironments.Thirdly,PIDcontrollers’goalisto
+minimize line tracking error, not global efficiency, thus PID does not necessarily find
+the shortest path [6]. Lastly, Poor Adaptability: changes in the motor speed or exter-
+nal disturbances will likely result in the PID controller failing, because of the fixed
+parameters [6].
+This paper explores the question of whether a NEAT-based control system can
+outperform a PID controller by minimizing errors and reducing lap time for a line-
+followingrobot.Toinvestigatethis,thestudyproposesanewmethodforimplementing
+line-following robots by using an algorithm called NeuroEvolution of Augmenting
+Topologies (NEAT), a genetic algorithm developed to generate and evolve neural
+networks and optimize their weights and size. In contrast to PID, which relies on
+predefined formulas, NEAT allows the robot to learn optimal behaviors through evo-
+lutionary training, making it more adaptable to different environments. This study
+aims to develop a NEAT-based control system for a line-following robot and compare
+its performance with traditional PID controllers in terms of accuracy, adaptability,
+and lap completion time.
+The remainder of this paper is structured as follows: Section 2 provides a review of
+related work, discussing existing approaches for line-following robots, including PID
+controllers and various neural network implementations. Section 3 details the Neu-
+roEvolution of Augmenting Topologies (NEAT) algorithm and its implementation in
+our simulation. Section 4 describes the data collected from both the NEAT and PID
+controllers. Section 5 outlines the research methodology, including the design of the
+2D simulation, the robot, and the track. Finally, Section 6 presents a direct compari-
+sonanddiscussionoftheresults,followedbytheconclusionofourfindingsandfuture
+work.
+2

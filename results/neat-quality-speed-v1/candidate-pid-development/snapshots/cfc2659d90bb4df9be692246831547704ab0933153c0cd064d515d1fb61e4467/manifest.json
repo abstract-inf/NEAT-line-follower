@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "inputs": {
+    "baseline_manifest": {
+      "file": "baseline-manifest.json",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\frozen\\manifest.json",
+      "sha256": "05982391fe2db2dff7d79035bec0668edfa7458cd84c6c13f63249f3ae56cbfa"
+    },
+    "candidate": {
+      "file": "candidate-cache.json",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\validation-cache\\369c307f11d669f6a8c7913c2d8f83b163466b4a34d098207c5e01200d3803d0.json",
+      "sha256": "fd03bfffc6a48d55e098838a8729a4edc819b2d70308b40d1e4a32e9ee9badbd"
+    },
+    "candidate_model": {
+      "file": "candidate-model.pkl",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\development\\seed-01\\champions\\generation-0021-rank-1.pkl",
+      "sha256": "26e19823c830e87df70f8ddd65b5d80fb33bf71ebc922a5e87f8e68dc010c438"
+    },
+    "fast": {
+      "file": "fast-parent-episodes.json",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\fast-neat-g134.json",
+      "sha256": "8425802a1658f2ad426a56479ac119cc7fd066f3fe82c10d231a8cad91d3ed7a"
+    },
+    "fast_model": {
+      "file": "fast-parent-model.pkl",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\frozen\\fast-neat-g134.pkl",
+      "sha256": "6114a6859544fec99c26dad124d7ac44d9b0e077a43102532f5fca02114b4314"
+    },
+    "pid": {
+      "file": "pid-episodes.json",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\pid-fullspeed-1m.json",
+      "sha256": "737370e16cba9451ad06f76084f53ffdc11801d5999193bf7cbe590a46b1ac93"
+    },
+    "pid_model": {
+      "file": "pid-parameters.json",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\baseline-development\\frozen\\pid-fullspeed-1m.json",
+      "sha256": "c6c68b53342600db0078e991bbb729064d829d360c4840a720dbf5e66d94c24b"
+    },
+    "protocol": {
+      "file": "protocol.json",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\prepared\\protocol.json",
+      "sha256": "20c6741dbac45b07a85bb935845dbcad1a803202a40e015895f4ce344605d884"
+    },
+    "report_source": {
+      "file": "report-source.py",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\research\\report_quality_candidate_pid.py",
+      "sha256": "3057cb467d79aa99b724a00f2fe933baa640f5dd4ef01bf1e2aca2896e5b3a2f"
+    },
+    "suite": {
+      "file": "suite.json",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\runs\\neat-quality-speed-v1\\prepared\\suite\\suite.json",
+      "sha256": "60ba23f4dd6dc0d0d76b2cb646cc65acd003f01beb2bb22108870d9755c21ff3"
+    },
+    "training_report": {
+      "file": "training-report.json",
+      "original_path": "C:\\Users\\yazan\\OneDrive\\Desktop\\Yazan Stuff\\Coding Projects\\NEAT Line Follower\\results\\neat-quality-speed-v1\\training\\report.json",
+      "sha256": "96ba730ac2169a40c7ebead91b1c453fa77d7e1e82182d83b7be1c356832f583"
+    }
+  }
+}

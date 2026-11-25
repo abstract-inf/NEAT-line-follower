@@ -90,16 +90,16 @@ def capture(output, plan, task, mask):
     return frames, expected
 
 
-def record(output, plan, task, mask, visual, renderer, destination):
+def record(output, plan, task, mask, visual, renderer, destination, *, course_label='Rhythm Changes'):
     frames, expected = capture(output, plan, task, mask)
     policy = plan['policies'][task['policy']]
     fonts = {n:ImageFont.truetype('C:/Windows/Fonts/segoeui.ttf',n) for n in (18,22,28)}
     backdrop = Image.new('RGB',(1280,720),'#f2f5f7')
     draw = ImageDraw.Draw(backdrop)
-    title = (f"NEAT seed {policy['seed']} | generation {policy['generation']} | trained cap {policy['native_cap_m_s']:.2f} m/s"
+    title = policy.get('display_name') or (f"NEAT seed {policy['seed']} | generation {policy['generation']} | trained cap {policy['native_cap_m_s']:.2f} m/s"
              if policy['family']=='NEAT' else f"Filtered PID + remembered-side recovery | {task['policy']}")
     draw.text((20,12),title,font=fonts[28],fill='#183343')
-    draw.text((20,52),f"Rhythm Changes | evaluation wheel-speed cap {task['cap_m_s']:.2f} m/s | {task['id']}",font=fonts[18],fill='#445b68')
+    draw.text((20,52),f"{course_label} | evaluation wheel-speed cap {task['cap_m_s']:.2f} m/s | {task['id']}",font=fonts[18],fill='#445b68')
     # Fixed overview uses the exact frozen route; this is evaluator-only graphics.
     xy = mask.track.route.points
     lo,hi=xy.min(axis=0),xy.max(axis=0)

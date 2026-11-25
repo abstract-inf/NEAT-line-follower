@@ -1,0 +1,78 @@
+thesensorreadingatindexj.AmiddlesensorbonusB ,asshowninEquation3,
+middle
+is added if the middle line sensor detects the existence of the line beneath it.
+Additionally,toencouragecentertendencywhilefollowingtheline,Equation4was
+developed to give a reward for detecting the line under the three middle sensors only
+when the velocity of the robot is higher than 3. This condition was added because it
+was observed during the training process that each genome had a tendency to fully
+stop the robot when any of the three middle sensors detected the line, which led to
+several issues during the training process. The modification of the center tendency
+equation ensured that the robot moved while detecting the line.
+Toensuresmoothlinetrackingwithnojittering,Equation5wasadded,encourag-
+ing stable motion by penalizing large differences between left and right motor speeds.
+Moreover,itwasobservedthatsomerobotsspuninplaceathighspeedswhiledetect-
+ing the line briefly, then leaving and re-detecting it due to oscillatory movement. To
+addressthis,asteeringpenaltywasintroducedinEquation6topenalizehighangular
+velocities.
+When the robot leaves the track and no line is detected, a penalty function P
+off
+is applied, described in Equation 7, where τ(t) is the consecutive off-track duration
+at t. To encourage high-speed movement and punish slow movement, a speed penalty
+function P , as shown in Equation 8, is applied. This function returns a negative
+speed
+fitness if the robot moves slower than the minimum speed (‘min speed‘), defined as
+half of the maximum speed allowed during training after conversion to m/s.
+Specificareaswithdistinctcolorsonthetrackwereaddedtoencourageordiscour-
+agecertainbehaviors:redindicatesapenalty,greenmeanstrackcompletion(reward),
+and yellow provides an intermediate reward for completing a section of the track.
+Equations9–11definethesefunctions,usinganindicatorfunctionδ(cond)thatreturns
+1iftheconditionholds,and0otherwise.Toguideandinfluenceindividual’sbehavior,
+specific-colored regions were incorporated into the track, each representing a distinct
+objectiveorfeedbackmechanism.Forexample,redregionsindicateundesirablebehav-
+ior(penalty),greendenotessuccessfultrackcompletion(reward),andyellowprovides
+intermediate rewards for reaching key milestones. To integrate these regions into the
+fitnessevaluation,Equations 9, 10,and 11 wereformulated.Eachequationassigns
+a corresponding reward or penalty based on the color of the area traversed, using the
+indicator function , which returns 1 if the condition holds and 0 otherwise.
+T
+(cid:88)(cid:16) (cid:17)
+F = R (t)+B (t)+B (t)+B (t)−P (t)−P (t)−P (t)+B (t)
+speed middle center smooth off speed steer yellow
+t=0
++B (T)−P (T) (1)
+green red
+
+5·|v(t)|, if CS(t)≥2 and |ω(t)|>20◦/step
+10.0·|v(t)|,
+if CS(t)≥2 and |ω(t)|≤20◦/step
+R (t)= (2)
+speed 0 0
+.
+.
+5
+25
+·
+·
+|v
+|v
+(t
+(
+)
+t
+|
+)
+,
+|,
+o
+if
+th
+C
+e
+S
+rw
+(t
+i
+)
+se
+<2 and |ω(t)|>20◦/step
+8

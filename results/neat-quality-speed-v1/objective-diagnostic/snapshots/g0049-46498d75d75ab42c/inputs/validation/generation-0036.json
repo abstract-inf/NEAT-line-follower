@@ -1,0 +1,66 @@
+{
+  "candidates": [
+    {
+      "eligible": false,
+      "reasons": [
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.038324791060632,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.030818487390153557,
+      "command_jitter": 0.006076060017183695,
+      "geometric_rmse_m": 0.012515616245859656,
+      "generation": 36,
+      "candidate_rank": 0,
+      "genome_id": 3621,
+      "genotype_sha256": "069d3dde8d108f398869f2c946d8dfa7800c1603866e94601f0777e94c0a77d9",
+      "model_file": "champions\\generation-0036-rank-0.pkl",
+      "training_fitness": 77.3679290227703,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "paired_time",
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.0772036754859944,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.017307774453939443,
+      "command_jitter": 0.006054208885655144,
+      "geometric_rmse_m": 0.009271771054063483,
+      "generation": 36,
+      "candidate_rank": 1,
+      "genome_id": 3537,
+      "genotype_sha256": "9ff1660c5950785c84a3971369fad688dddbdb8ab435b256b21f38a53199433a",
+      "model_file": "champions\\generation-0036-rank-1.pkl",
+      "training_fitness": 76.89785634825144,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "paired_time",
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.100152375675312,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.015955255869701163,
+      "command_jitter": 0.005616305451086854,
+      "geometric_rmse_m": 0.008324089822872433,
+      "generation": 36,
+      "candidate_rank": 2,
+      "genome_id": 3610,
+      "genotype_sha256": "f14527650c319313e5dd85574fa839410f8ac8e4cce3b2c1ae7966b95d11a4e6",
+      "model_file": "champions\\generation-0036-rank-2.pkl",
+      "training_fitness": 76.64170374555182,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    }
+  ]
+}

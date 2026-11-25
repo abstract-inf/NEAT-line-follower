@@ -1,0 +1,10 @@
+{
+  "report_sha256": "c049aed9142eba7e06e1b725f92d00a2818fa8b580f9f0e7e0ed5ed698cefc5d",
+  "source_sha256": "c1757bd3b81af14e4b42db3e24e9ce11f5861bfea99f3fca4791c5f00f06ea95",
+  "figures": {
+    "completion-quality-tradeoffs.png": "e5b8a13f56f770618647c5a0f13ecac1dd157a9444f441264ab9bbb56655d051",
+    "completion-quality-tradeoffs.svg": "520fa7d432486bfcc0960132428ddecc356c41d43725cc80033ff16c8aedd8fc",
+    "paired-finish-times.png": "59d53fa3b2c6a3b650164a92f460b47c85b68bae6589cdabc0a9b3bd9de3f6a0",
+    "paired-finish-times.svg": "98d7391ad92ed439fa5687b5ce7f1e0a756e83d214329910cdd8258d1bf89175"
+  }
+}

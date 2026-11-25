@@ -1,0 +1,10 @@
+{
+  "scope": "Clean extraction verification only; no evolution or physics. Existing archive preserved.",
+  "archive_sha256": "2ce1ac813af577ba752ac9a3bb6f215541ee67d78d548daa150fc93d85e93b96",
+  "restore_directory": ".cache\\qs-restore-b092cdd2",
+  "entrypoint": "runs\\neat-quality-speed-v1\\prepared\\source\\run_neat_quality_study.py",
+  "returncode": 0,
+  "stdout": "Quality-speed source, dependencies, settings and frozen inputs verified.\n",
+  "stderr": "",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+}

@@ -1,0 +1,69 @@
+{
+  "candidates": [
+    {
+      "eligible": false,
+      "reasons": [
+        "geometry_lateral_rmse_m",
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.020824675624512,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.04161871160790363,
+      "command_jitter": 0.005643190312085975,
+      "geometric_rmse_m": 0.014618951574371007,
+      "generation": 34,
+      "candidate_rank": 0,
+      "genome_id": 3363,
+      "arm": "smooth",
+      "genotype_sha256": "e9021cceb78ec9f1eecbd1cb2c9fde3ba65c77699e5114a7c4adb2cd8817c6a3",
+      "model_file": "champions\\generation-0034-rank-0.pkl",
+      "training_fitness": 67.6282486774921,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "geometry_lateral_rmse_m",
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.0331994274368599,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.05139835102862368,
+      "command_jitter": 0.006018277448654729,
+      "geometric_rmse_m": 0.015278163651372858,
+      "generation": 34,
+      "candidate_rank": 1,
+      "genome_id": 3355,
+      "arm": "smooth",
+      "genotype_sha256": "ee6b72d0eca827eef3d3bb72d21983c14f8f8db2aaaa650fec5031d34f1c179e",
+      "model_file": "champions\\generation-0034-rank-1.pkl",
+      "training_fitness": 67.58348747046762,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.0242415847070259,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.03702877669212525,
+      "command_jitter": 0.0062901718693578745,
+      "geometric_rmse_m": 0.013558278772955458,
+      "generation": 34,
+      "candidate_rank": 2,
+      "genome_id": 3365,
+      "arm": "smooth",
+      "genotype_sha256": "eaa01f7379304d38e2512fa1daa5583a499439906570c78896327511dfc4cc7d",
+      "model_file": "champions\\generation-0034-rank-2.pkl",
+      "training_fitness": 67.54970571845485,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    }
+  ]
+}

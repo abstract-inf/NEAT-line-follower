@@ -1,0 +1,65 @@
+{
+  "candidates": [
+    {
+      "eligible": false,
+      "reasons": [
+        "geometry_lateral_rmse_m",
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.0085884471533468,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.03924602295231421,
+      "command_jitter": 0.006336409969527033,
+      "geometric_rmse_m": 0.014695868268707609,
+      "generation": 41,
+      "candidate_rank": 0,
+      "genome_id": 4065,
+      "genotype_sha256": "b60b903b59b0cb50dc66b18de2e9c79ca27b61e4cd142e38a210fe9afe85cdb0",
+      "model_file": "champions\\generation-0041-rank-0.pkl",
+      "training_fitness": 77.85370132395974,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.010296901694604,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.02739288864176446,
+      "command_jitter": 0.006296303125510107,
+      "geometric_rmse_m": 0.014151380431185356,
+      "generation": 41,
+      "candidate_rank": 1,
+      "genome_id": 3966,
+      "genotype_sha256": "58815ae4f4efeab17dac70046f418488785e6199326de2423d0c28d772bf8aa9",
+      "model_file": "champions\\generation-0041-rank-1.pkl",
+      "training_fitness": 77.76313375683984,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "straight_speed"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 1.0240107124717213,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.04060656901284779,
+      "command_jitter": 0.006230766344271828,
+      "geometric_rmse_m": 0.014071444109839626,
+      "generation": 41,
+      "candidate_rank": 2,
+      "genome_id": 4001,
+      "genotype_sha256": "54ad87214b4b82b4329c6564719d5a616515a0746ee938e0edb133dea392e619",
+      "model_file": "champions\\generation-0041-rank-2.pkl",
+      "training_fitness": 77.57651750211541,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    }
+  ]
+}

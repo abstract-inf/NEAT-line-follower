@@ -1,0 +1,7 @@
+{
+  "file": "prepared-development-bundle.zip",
+  "sha256": "2ce1ac813af577ba752ac9a3bb6f215541ee67d78d548daa150fc93d85e93b96",
+  "bytes": 1079492,
+  "contents": "Frozen prepared source/inputs, completed shared development baseline and environment/check records. No live training/checkpoint is included.",
+  "restore": "Extract into a clean project root retaining runs/neat-quality-speed-v1/... paths, install matching dependencies/Python, then call run_neat_quality_study.py verify."
+}

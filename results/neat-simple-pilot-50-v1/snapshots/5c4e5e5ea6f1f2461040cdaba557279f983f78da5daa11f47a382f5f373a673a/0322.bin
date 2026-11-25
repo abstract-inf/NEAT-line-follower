@@ -1,0 +1,79 @@
+{
+  "candidates": [
+    {
+      "eligible": false,
+      "reasons": [
+        "command_jitter",
+        "primary_mixed_completion",
+        "straight_speed",
+        "straight_steering",
+        "straight_yaw"
+      ],
+      "completed": 59,
+      "paired_time_ratio": 0.9918803418803408,
+      "shared_finishes": 59,
+      "straight_yaw_rms": 0.29745386748085495,
+      "command_jitter": 0.009514871130633432,
+      "geometric_rmse_m": 0.014328460749343463,
+      "generation": 47,
+      "candidate_rank": 0,
+      "genome_id": 4542,
+      "arm": "lambda-0",
+      "genotype_sha256": "dbe9a1b64fc30674ef01befd0cb0556f3001f4656c0f67bbef7b7c63a17d6099",
+      "model_file": "champions\\generation-0047-rank-0.pkl",
+      "training_fitness": 6.408118000051613,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "command_jitter",
+        "geometry_lateral_rmse_m",
+        "straight_steering",
+        "straight_yaw"
+      ],
+      "completed": 60,
+      "paired_time_ratio": 0.9813455233873556,
+      "shared_finishes": 60,
+      "straight_yaw_rms": 0.1164033497979999,
+      "command_jitter": 0.009624407474041202,
+      "geometric_rmse_m": 0.017039355663351206,
+      "generation": 47,
+      "candidate_rank": 1,
+      "genome_id": 4628,
+      "arm": "lambda-0",
+      "genotype_sha256": "9c91423af8afcf558dbd88165f15cef49c9c51d98123377ad7f698ca470290ad",
+      "model_file": "champions\\generation-0047-rank-1.pkl",
+      "training_fitness": 6.407840666129748,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    },
+    {
+      "eligible": false,
+      "reasons": [
+        "command_jitter",
+        "geometry_lateral_rmse_m",
+        "primary_corner_completion",
+        "straight_speed",
+        "straight_steering",
+        "straight_yaw"
+      ],
+      "completed": 58,
+      "paired_time_ratio": 1.0163942105016628,
+      "shared_finishes": 58,
+      "straight_yaw_rms": 0.12877574130705724,
+      "command_jitter": 0.008719745727204457,
+      "geometric_rmse_m": 0.018122712738624383,
+      "generation": 47,
+      "candidate_rank": 2,
+      "genome_id": 4622,
+      "arm": "lambda-0",
+      "genotype_sha256": "e1789115f24e1d32b11438d3803df1a4d47dfac422232c42ec6b8fef6d0f17e7",
+      "model_file": "champions\\generation-0047-rank-2.pkl",
+      "training_fitness": 6.407639360256677,
+      "drive_evaluated": true,
+      "steering_evaluated": true
+    }
+  ]
+}

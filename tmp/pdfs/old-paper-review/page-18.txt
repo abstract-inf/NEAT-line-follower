@@ -1,0 +1,30 @@
+Fig. 6:ObservedAsymmetryinMotorControlCommandsfromaGraduallyIncreas-
+ing Speed Training Methodology
+challenges that can compromise a stable and consistent trajectory, likely contributing
+to the robot’s inability to complete the track at speeds above 300 px/s.
+6.2.1 Insights from the Gradually Increasing Speed Methodology
+An alternative training methodology was explored, where the maximum robot speed
+was gradually increased across generations. While this approach did not result in a
+controllerasrobustastheonetrainedatafixedhighspeed,itrevealedapeculiarand
+noteworthy control strategy adopted by the NEAT algorithm.
+Akeyobservationfromthistrainingmethodwastheevolutionofanasymmetrical
+controlpolicy,wheretherobotreliedalmostexclusivelyonasinglemotorforsteering.
+As shown in Figure 6, the speed of one motor remained nearly constant while all
+steering corrections were executed by modulating the speed of the other motor. This
+is an interesting discovery because it shows that a functional control strategy was
+discovered by the evolutionary algorithm, even if it was not an optimal one. This
+behaviorhighlightstheabilityofNEATtofindunique,albeitunconventional,solutions
+to the control problem.
+Thislearnedasymmetryinmotorcontrolsuggestsalackofgeneralizability,asthis
+strategywouldbelesseffectivefordiversepathswithvariedturns.Italsoconfirmsthe
+tendencyoftheevolutionaryalgorithmtooptimizespecificallyforthepresentedtrack
+without developing a more generalized symmetrical control policy. The fact that the
+controller could complete the path using this method demonstrates NEAT’s adaptive
+natureinexploitingspecificenvironmentalbiases,butatthecostofrobust,generalized
+performance.
+7 Comparison of NEAT and PID
+Based on the empirical results of this study, a direct comparison between the PID
+and NEAT algorithms reveals a critical trade-off between speed and precision in the
+context of line-following robots. While PID demonstrated superior performance in
+terms of lap time, the NEAT controller excelled in maintaining a precise trajectory.
+18

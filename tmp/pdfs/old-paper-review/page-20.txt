@@ -1,0 +1,36 @@
+References
+[1] Saadatmand, S., Azizi, S., Kavousi, M. & Wunsch, D. Chakrabarti, S. & Paul,
+R. (eds) Autonomous control of a line follower robot using a q-learning con-
+troller. (eds Chakrabarti, S. & Paul, R.) 2020 10th Annual Computing and
+Communication Workshop and Conference (CCWC), 556–561 (2020).
+[2] Tang, C. et al. Deep reinforcement learning for robotics: A survey of real-world
+successes. arXiv.org (2024). URL https://arxiv.org/abs/2408.03539.
+[3] Darii, A., Nistor, M. S. & Pickl, S. Neuroevolution and neat at
+evolving neurocontrollers for obstacle avoidance for a robot arm (2024).
+URLhttps://ibn.idsi.md/sites/default/files/imag file/Proceedings-IMCS60-IMI
+2024-280-286.pdf. Accessed: Apr. 09, 2025.
+[4] Sharma, A. & Kulhalli, S. G. – (ed.) Warehouse automation using line follower
+robot. (ed.–) 2023 4th IEEE Global Conference for Advancement in Technology
+(GCAT), 1–5 (IEEE, 2023).
+[5] Lauckner, R. & Kolivand, H. Neat algorithm in autonomous vehicles. Available
+at SSRN 4644203 (2023).
+[6] Balaji, V., Balaji, M., Chandrasekaran, M., Khan, M. K. A. A. & Elamvazuthi,
+I. Optimization of pid control for high speed line tracking robots. Procedia
+Computer Science 76, 147–154 (2015).
+[7] Oguten, S. & Kabas, B. Pid controller optimization for low-cost line follower
+robots. arXiv.org (2021).
+[8] Leal,H.M.,Barbosa,R.S.&Jesus,I.S. Controlofamobileline-followingrobot
+using neural networks. Algorithms 18, 51 (2025).
+[9] Minaya Andino, C. A., Rosero, R., Zambrano, M. & Catota, P. Application
+of multilayer neural networks for controlling a line-following robot in robotic
+competitions. Journal of Automation, Mobile Robotics and Intelligent Systems
+35–42 (2024).
+[10] Kober, J., Bagnell, J. A. & Peters, J. Reinforcement learning in robotics: A
+survey. The International Journal of Robotics Research 32, 1238–1274 (2013).
+URL https://doi.org/10.1177/0278364913495721.
+[11] Arulkumaran, K., Deisenroth, M. P., Brundage, M. & Bharath, A. A. Deep
+reinforcement learning: A brief survey. IEEE Signal Processing Magazine 34,
+26–38 (2017).
+[12] Stanley,K.O.&Miikkulainen,R. Evolvingneuralnetworksthroughaugmenting
+topologies. Evolutionary computation 10, 99–127 (2002).
+20

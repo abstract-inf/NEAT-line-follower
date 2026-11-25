@@ -1,0 +1,23 @@
+{
+  "generations": 50,
+  "signature": {
+    "protocol_sha256": "20c6741dbac45b07a85bb935845dbcad1a803202a40e015895f4ce344605d884",
+    "parent_sha256": "4cc2ae72f09495868f15a0845c552297fe88b25cfb0944380fe56c15d620a18c",
+    "reference_sha256": "6114a6859544fec99c26dad124d7ac44d9b0e077a43102532f5fca02114b4314",
+    "evolution_seed": 7036297164298145801,
+    "fitness_version": "completion-quality-speed-1.0",
+    "settings": {
+      "generations": 50,
+      "population": 100,
+      "courses_per_genome": 6,
+      "validation_candidates_per_generation": 3,
+      "cap_m_s": 1.0,
+      "mask_cache_bytes": 67108864,
+      "worker_recycle_tasks": 128,
+      "study_seed": 2026112401
+    }
+  },
+  "training_episodes": 30000,
+  "qualified": false,
+  "best_sha256": null
+}

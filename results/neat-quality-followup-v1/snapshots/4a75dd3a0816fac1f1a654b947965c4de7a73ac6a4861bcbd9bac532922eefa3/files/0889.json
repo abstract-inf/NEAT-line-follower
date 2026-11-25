@@ -1,0 +1,227 @@
+{
+  "name": "intermediate-14748881325613270944",
+  "sections": [
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.016795349992402595,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2803870876858915,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.016795349992402595,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.016795349992402595,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.25734514845967843,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.016795349992402595,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.016795349992402595,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.261582588117349,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.016795349992402595,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.016795349992402595,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.22,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.016795349992402595,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.016795349992402595,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -0.8550721817124581,
+      "radius": 0.3897120470789469,
+      "width": 0.025937032074988223,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025937032074988223,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.18,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.015552723094663603,
+      "feature": "corner"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.015552723094663603,
+      "feature": "corner"
+    },
+    {
+      "kind": "straight",
+      "length": 0.25411925298708893,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.015552723094663603,
+      "feature": "corner"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.025062835488287555,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.24460818178084753,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025062835488287555,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.025062835488287555,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.2489416534366877,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025062835488287555,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.025062835488287555,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.20937866923323314,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025062835488287555,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 1.5707963267948966,
+      "radius": 0.0,
+      "width": 0.025062835488287555,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.22,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.025062835488287555,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.025062835488287555,
+      "feature": "zigzag"
+    },
+    {
+      "kind": "straight",
+      "length": 0.7259611331206592,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02715982467222361,
+      "feature": "straight"
+    },
+    {
+      "kind": "arc",
+      "length": 0.0,
+      "angle": -1.4803239316839372,
+      "radius": 0.3251525181349731,
+      "width": 0.027284257012717895,
+      "feature": "gentle_curve"
+    },
+    {
+      "kind": "straight",
+      "length": 0.14,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.027284257012717895,
+      "feature": "gentle_curve"
+    }
+  ],
+  "start": [
+    -0.12572258641198714,
+    -0.038457061062715014,
+    -1.4022281078455645
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 4.0,
+  "resolution": 0.001,
+  "seed": 14748881325613270944,
+  "difficulty": "intermediate",
+  "split": "training",
+  "generator_version": "1.0",
+  "runout": 0.25
+}

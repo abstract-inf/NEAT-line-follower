@@ -1,0 +1,8 @@
+{
+  "file": "complete-development-bundle.zip",
+  "sha256": "6c63c7b3f31d087b4814d724adee3c5d51d7a442f9cb4558f0391d7f296f4279",
+  "bytes": 20961623,
+  "files": 1383,
+  "scope": "Completed development stage, including frozen source/inputs, logs, models, population/RNG checkpoint and report. No fresh final test.",
+  "restore": "Extract into a separate clean project root, preserve paths, use the recorded Python/dependencies and run run_neat_quality_study.py verify. Do not extract over an active run."
+}

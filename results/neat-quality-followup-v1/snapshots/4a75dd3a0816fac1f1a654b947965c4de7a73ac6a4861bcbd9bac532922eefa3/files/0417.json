@@ -1,0 +1,99 @@
+{
+  "name": "smooth-speed-364889308104859597",
+  "sections": [
+    {
+      "kind": "straight",
+      "length": 0.9192030830919729,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-chicane"
+    },
+    {
+      "kind": "straight",
+      "length": 0.604011590483194,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-chicane"
+    },
+    {
+      "kind": "straight",
+      "length": 0.6091021437866714,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": -0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-chicane"
+    },
+    {
+      "kind": "straight",
+      "length": 0.419988658564873,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "corner",
+      "length": 0.0,
+      "angle": 0.7853981633974483,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-chicane"
+    },
+    {
+      "kind": "straight",
+      "length": 0.601091153207988,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "straight"
+    },
+    {
+      "kind": "straight",
+      "length": 7.851129926536346,
+      "angle": 0.0,
+      "radius": 0.0,
+      "width": 0.02,
+      "feature": "recovery-straight"
+    }
+  ],
+  "start": [
+    -5.477301913330789,
+    -0.21355034577296922,
+    0
+  ],
+  "gaps": [],
+  "branches": [],
+  "arena_size": 12,
+  "resolution": 0.002,
+  "seed": 364889308104859597,
+  "difficulty": "speed",
+  "split": "training",
+  "generator_version": "2.0",
+  "runout": 0.25
+}

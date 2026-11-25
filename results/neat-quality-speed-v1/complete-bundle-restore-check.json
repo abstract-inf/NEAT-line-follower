@@ -1,0 +1,10 @@
+{
+  "scope": "Completed archive clean extraction and root launcher verification; no evolution or physics.",
+  "archive_sha256": "6c63c7b3f31d087b4814d724adee3c5d51d7a442f9cb4558f0391d7f296f4279",
+  "verified_file_hashes": 1383,
+  "restore_directory": ".cache\\qs-complete-8a80f1f0",
+  "windows_note": "Extended-length path prefix used after normal extraction hit MAX_PATH in nested immutable snapshots. Original ZIP remains unchanged.",
+  "returncode": 0,
+  "stdout": "Quality-speed source, dependencies, settings and frozen inputs verified.\n",
+  "stderr": ""
+}

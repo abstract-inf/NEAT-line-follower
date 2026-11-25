@@ -1,0 +1,41 @@
+sametrackasNEATfor10trials,mirroringtheNEATevaluationprocesstominimize
+bias and account for potential outliers.
+Table 1: Dataset features and their descriptions for generated data from NEAT
+and PID.
+Feature Description
+attempt id The index of the robot’s line-following attempt, incremented for each
+trial
+step Anintegerrepresentingthenumberofupdatecycleinthesimulation
+sensor0tosensor14 Linesensorreadingsfrom15onboardsensors[0or1]
+action L NEAT-computedmotorspeedsfortheleftmotor[-1,1]
+action R NEAT-computedmotorspeedsfortherightmotor[-1,1]
+Table 1 presents the features collected during the data collection process. Each
+row in the dataset represents the state of the robot at a given attempt and step in
+the simulation, and the action taken by the NEAT-based controller. The ‘attempt id’
+serves as the trial number a given row was logged at, while ‘step’ gives the precise
+simulationstepeachrowwascollectedatfortimeseriesanalysis.Sensorinputsinclude
+fifteen-line sensor readings (sensor0 to sensor14), which were used to determine the
+robot’s position relative to the line. Initially, data on the robot’s angular velocity and
+orientation was collected to gain insight into its motion. However, this information
+provedredundant,asitdidnotoffernovelinsightsbeyondwhatwasalreadydiscernible
+from the motor speeds and sensor readings. The ‘action L’ and ‘action R’ feature
+contains the motors speed computed using the NEAT-based motor controller, this
+data is crucial to understanding the robot’s response to each given state for further
+refinement in the future.
+Toensureacomparableevaluation,dataforthePID-controlledline-followingrobot
+was collected using a similar methodology to that of the NEAT algorithm. The PID
+controller was re-implemented and optimized according to the method described in
+[7], following their original code. This optimized PID controller was then run on the
+sametrackasNEATfor10trials,mirroringtheNEATevaluationprocesstominimize
+bias and account for potential outliers.
+5 Research Methodology
+We developed a top-down view 2D simulation using the Python library PyGame [17],
+this simulation was used to test the PID controller and train the NEAT generated
+feed forward network using the NEAT-Python library [18]. As shown in Figure 1, we
+developedadifferential-driverobotwith15-linesensorsinsemi-circleshape.Thesim-
+ulation had many parameters and configurations for the environment and the robot,
+this includes wheels spacing, max speed, acceleration, wheels friction, motor no load
+rpm, and motor stall torque. The robustness of the simulation was first checked by
+testing the PID controller in it and fine tuning the PID constants until the robot was
+able to stay consistently on the line.
+6
