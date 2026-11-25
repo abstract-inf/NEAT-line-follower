@@ -5,7 +5,19 @@ and NEAT interfaces, reproducible evaluation, and user-operated training tools.
 All physical quantities use SI units. The robot is a nominal simulation model,
 not an identified or manufactured hardware replica.
 
-**Current follow-up:** the [smooth-driving NEAT workflow](docs/neat-smooth-study.md)
+**Current accepted result — 25 November 2026:** the compact **lambda = 0**
+fitness prioritizes completion, progress and route speed. Start with the
+[current results index](results/README.md), the
+[verified fitness finding](research/Simple_NEAT_Method_Audit.md#simple-fitness-001--successful-continuation-without-direct-tracking-or-smoothness-penalties),
+and the [Endurance Track replay](docs/endurance-track.md).
+The [completed 50-generation readout](docs/neat-simple-pilot-50-results.md)
+records the selected model, PID comparison and warm-start limitations.
+Further evolution requires an explicit start instruction.
+
+<details>
+<summary>Earlier experiments and reproduction guides</summary>
+
+The [smooth-driving NEAT workflow](docs/neat-smooth-study.md)
 compares continued old-fitness training with a physical-smoothness reward at a
 1 m/s cap. The [curated audit and frozen inputs](results/neat-smooth-study-v1/README.md)
 document the starting models and measured recovery weaknesses. See the
@@ -34,6 +46,8 @@ active development baseline; a bounded 120-configuration study is complete.
 See `research/NEAT_Experimental_Results.md`, `research/PID_Experimental_Results.md`
 and `research/Comparative_Analysis.md`. Historical training commands below
 remain available for reproducibility.
+
+</details>
 
 ## Install and inspect
 

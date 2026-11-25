@@ -17,6 +17,7 @@ dist/
 /output/
 /research/archive/
 /research/artifacts/**/telemetry/
+/tmp/
 
 # Downloaded literature and local presentation
 /Related Work/

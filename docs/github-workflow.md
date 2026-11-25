@@ -1,5 +1,7 @@
 # GitHub workflow for the new MuJoCo experiments
 
+The 25 November cleanup first pushed all then-nonignored work and published `backup/pre-cleanup-20261125`, using the personal `abstract-inf` author identity and authentication. Intentionally ignored files were not copied or uploaded. See [the cleanup record](repository-cleanup-20261125.md) for removed paths and restoration; the [results index](../results/README.md) now opens with the accepted simple-fitness outcome.
+
 Workflow recorded on 24 November 2026. The ignore rules and byte-preserving attributes have been implemented. The first-time setup below is retained as a reproducibility record; do not repeat it in a folder that already contains `.git`.
 
 Use the existing repository, <https://github.com/abstract-inf/NEAT-line-follower>, with a new branch named **`research/mujoco-neat-pid`**. Its current default branch is `main`. Keep `main` as the original paper's implementation while the follow-up study develops on the research branch. When the new paper is finalized, tag the exact code commit and publish a matching data/model release.
